@@ -1,0 +1,45 @@
+/root/miniconda3/lib/python3.12/site-packages/torch/profiler/profiler.py:272: UserWarning: Warning: Profiler clears events at the end of each cycle.Only events from the current cycle will be reported.To keep events across cycles, set acc_events=True.
+  _warn_once(
+USDT:2026-11-14 21:10:30 34065:34065 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:10:30 34065:34065 ActivityProfilerController.cpp:455] profiler_stop
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:455] profiler_stop
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:455] profiler_stop
+M=   16 bf16  streamA=29 streamB=33  task_ovl=  20557.2us kernel_ovl=  17953.5us ( 87.5% of shorter) busyA=  29648.2 busyB=  20513.6
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:455] profiler_stop
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:455] profiler_stop
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:455] profiler_stop
+M=   16  fp4  streamA=53 streamB=57  task_ovl=  21804.7us kernel_ovl=  13834.4us ( 69.5% of shorter) busyA=  19904.0 busyB=  21765.1
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:455] profiler_stop
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:455] profiler_stop
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:455] profiler_stop
+M=  128 bf16  streamA=77 streamB=81  task_ovl=  26012.3us kernel_ovl=  16076.6us ( 80.4% of shorter) busyA=  25590.8 busyB=  20005.1
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:455] profiler_stop
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:455] profiler_stop
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:455] profiler_stop
+M=  128  fp4  streamA=101 streamB=105  task_ovl=  18660.3us kernel_ovl=  11913.5us ( 64.0% of shorter) busyA=  20132.6 busyB=  18626.1
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:455] profiler_stop
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:455] profiler_stop
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:455] profiler_stop
+M= 1024 bf16  streamA=125 streamB=129  task_ovl=  19779.1us kernel_ovl=   5711.8us ( 28.5% of shorter) busyA=  20065.1 busyB=  20793.6
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:455] profiler_stop
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:455] profiler_stop
+USDT:2026-11-14 21:10:31 34065:34065 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:10:32 34065:34065 ActivityProfilerController.cpp:455] profiler_stop
+M= 1024  fp4  streamA=21 streamB=25  task_ovl=  27507.7us kernel_ovl=  12548.8us ( 60.9% of shorter) busyA=  21541.1 busyB=  20600.4
+json -> raw/timeline_overlap.json

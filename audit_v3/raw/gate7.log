@@ -1,0 +1,45 @@
+/root/miniconda3/lib/python3.12/site-packages/torch/profiler/profiler.py:272: UserWarning: Warning: Profiler clears events at the end of each cycle.Only events from the current cycle will be reported.To keep events across cycles, set acc_events=True.
+  _warn_once(
+USDT:2026-11-14 21:33:22 42526:42526 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:33:22 42526:42526 ActivityProfilerController.cpp:455] profiler_stop
+M=   16 bf16  S_A=1.715  cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_t
+USDT:2026-11-14 21:33:23 42526:42526 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:33:23 42526:42526 ActivityProfilerController.cpp:455] profiler_stop
+M=   16  fp4  S_A=1.579  cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m
+USDT:2026-11-14 21:33:25 42526:42526 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:33:25 42526:42526 ActivityProfilerController.cpp:455] profiler_stop
+M=   32 bf16  S_A=1.576  cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x64_64x3_tn
+USDT:2026-11-14 21:33:26 42526:42526 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:33:26 42526:42526 ActivityProfilerController.cpp:455] profiler_stop
+M=   32  fp4  S_A=1.563  cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m
+USDT:2026-11-14 21:33:27 42526:42526 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:33:27 42526:42526 ActivityProfilerController.cpp:455] profiler_stop
+M=   64 bf16  S_A=1.575  cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x64_64x3_tn
+USDT:2026-11-14 21:33:29 42526:42526 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:33:29 42526:42526 ActivityProfilerController.cpp:455] profiler_stop
+M=   64  fp4  S_A=1.621  cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m
+USDT:2026-11-14 21:33:30 42526:42526 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:33:30 42526:42526 ActivityProfilerController.cpp:455] profiler_stop
+M=  128 bf16  S_A=1.573  cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x64_32x4_tn
+USDT:2026-11-14 21:33:31 42526:42526 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:33:31 42526:42526 ActivityProfilerController.cpp:455] profiler_stop
+M=  128  fp4  S_A=1.623  cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m
+USDT:2026-11-14 21:33:32 42526:42526 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:33:32 42526:42526 ActivityProfilerController.cpp:455] profiler_stop
+M=  256 bf16  S_A=1.414  cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x64_64x3_tn
+USDT:2026-11-14 21:33:34 42526:42526 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:33:34 42526:42526 ActivityProfilerController.cpp:455] profiler_stop
+M=  256  fp4  S_A=1.532  cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m
+USDT:2026-11-14 21:33:35 42526:42526 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:33:35 42526:42526 ActivityProfilerController.cpp:455] profiler_stop
+M=  512 bf16  S_A=1.201  cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x64_64x3_tn
+USDT:2026-11-14 21:33:37 42526:42526 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:33:37 42526:42526 ActivityProfilerController.cpp:455] profiler_stop
+M=  512  fp4  S_A=1.568  cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m
+USDT:2026-11-14 21:33:38 42526:42526 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:33:38 42526:42526 ActivityProfilerController.cpp:455] profiler_stop
+M= 1024 bf16  S_A=1.056  cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_64x256_32x4_tn
+USDT:2026-11-14 21:33:39 42526:42526 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:33:39 42526:42526 ActivityProfilerController.cpp:455] profiler_stop
+M= 1024  fp4  S_A=1.562  cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m
+json -> raw/gate7.json
