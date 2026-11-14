@@ -1,0 +1,29 @@
+    M    dt     probe  lvl   rA   rB    TA_ms    TB_ms    SerAB    JntAB    JntBA   S_A   S_B     G
+  256  bf16  fp32_fma    1  142    1    19.25     1.00    21.43    21.29    21.39  1.11  1.54  1.00
+  256  bf16  fp32_fma    2  142    1    19.25     3.99    24.40    28.34    24.40  1.36  1.51  0.93
+  256  bf16  fp32_fma    3  142    1    19.25     7.99    28.28    36.21    28.31  1.49  1.50  1.00
+  256  bf16    tensor    1  142   20    19.25     1.97    22.60    21.93    21.96  1.14  2.12  1.03
+  256  bf16    tensor    2  142   80    19.25     7.86    28.23    25.71    25.68  1.33  2.12  1.10
+  256  bf16    tensor    3  142  320    19.25    31.35    51.76    45.99    46.39  1.48  1.47  1.12
+Traceback (most recent call last):
+  File "/root/fp4_bf16_study/audit_v3/src/gate9_fixedwork.py", line 136, in <module>
+    main()
+  File "/root/fp4_bf16_study/audit_v3/src/gate9_fixedwork.py", line 91, in main
+    cAB = CG.run_concurrent(gA, gB, "AB")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/fp4_bf16_study/audit_v3/src/concurrent_graph.py", line 126, in run_concurrent
+    joint.synchronize()
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/cuda/streams.py", line 254, in synchronize
+    super().synchronize()
+torch.AcceleratorError: CUDA error: unspecified launch failure
+Search for `cudaErrorLaunchFailure' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+[W1114 23:15:44.362279617 CUDAEvent.h:57] Warning: CUDA warning: unspecified launch failure (function ~CUDAEvent)
+[W1114 23:15:44.362331120 CUDAEvent.h:57] Warning: CUDA warning: unspecified launch failure (function ~CUDAEvent)
+[W1114 23:15:44.362337517 CUDAEvent.h:57] Warning: CUDA warning: unspecified launch failure (function ~CUDAEvent)
+[W1114 23:15:44.362343269 CUDAEvent.h:57] Warning: CUDA warning: unspecified launch failure (function ~CUDAEvent)
+[W1114 23:15:44.362348765 CUDAEvent.h:57] Warning: CUDA warning: unspecified launch failure (function ~CUDAEvent)
+[W1114 23:15:44.362354220 CUDAEvent.h:57] Warning: CUDA warning: unspecified launch failure (function ~CUDAEvent)
