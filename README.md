@@ -25,36 +25,36 @@ side leaves capacity that a second task can actually use.
 Everything here is measured on real hardware. Numbers marked "estimated" or
 "derived" say so explicitly.
 
-## TL;DR
+## TL;DR（以 `audit_v3/` 的修正结果为准）
 
 | Question | Answer | Evidence |
 |---|---|---|
-| Does FP4 change scalar/DRAM pressure? | **No.** S_A ≈ 2.0 for both, at every M | `figures/fig1_slowdown_heatmap.png` (fp32/dram rows) |
-| Does FP4 change tensor-pipe pressure? | **Yes, and the direction flips with M** | same figure, tensor row |
-| Can a second task really run concurrently? | **Only tensor work.** FP32/DRAM overlap 3–4%, tensor 37% (max 69%) | `figures/fig2_overlap.png` |
-| Compute ceiling | BF16 212.6 TFLOPS (51% of spec), FP4 1156.0 TFLOPS (69%) | `figures/fig3_pareto.png`, `data/bench_precision_first.json` |
+| Does FP4 change tensor-pipe pressure? | **Yes, and asymmetrically**: with a tensor probe alongside, BF16's `S_A` falls monotonically 1.77 → 1.06 as M grows, FP4 stays flat at ≈1.55–1.66 | `audit_v3/figures/fig_gate3_crossover.png`, `audit_v3/raw/gate3_summary.csv` |
+| Does FP4 change scalar/DRAM pressure? | **Not established.** The old "S_A ≈ 2.0 for both" used impure probes (`torch.add`/`torch.sum`); they were rewritten in `audit_v3/src/probe_*.py` and only the probes themselves were validated (Gate 2), not the full matrix | `audit_v3/raw/gate2.json` |
+| Can a second task really run concurrently? | **Kernel intervals do overlap (24–88%), but there is no evidence of same-SM co-residency.** Even a 1-CTA probe only reaches 24% kernel overlap against a full-grid GEMM | `audit_v3/raw/timeline_overlap.json`, `audit_v3/raw/gate4.json` |
+| Compute ceiling | BF16 212.6 TFLOPS, FP4 1156.0 TFLOPS (both measured, same kernel family) | `data/bench_precision_first.json`, `audit_v3/raw/gate2.json` |
 
-Key scheduling result: **below M≈256 the FP4 side has more tensor headroom;
-above it the BF16 side does.** BF16's tensor slack grows monotonically with M
-(S_A 1.72→1.04), FP4's is U-shaped with a minimum at M=128 (S_A 1.25).
+Key corrected result: **the BF16/FP4 tensor-interference curves cross at M ≈ 32–64, not at
+M ≈ 256** as the first report claimed. BF16 tolerates a tensor probe better and better as M
+grows; FP4 does not improve.
 
 ## Layout
 
 ```
-src/        measurement and reference code
-  nvfp4_recipe.py          NVFP4 encode/decode recipe (FP32 global scale, E4M3 block-16)
-  interference_v2.py       dual-stream interference matrix (duration-matched)
-  interference_full.py     same, full M sweep
-  make_figures.py          all figures
-  bench_precision.py       BF16 vs FP4 throughput
-  overlap_probe.py         torch.profiler trace based overlap (cross-check only)
-  overlap_estimate.py      wall-clock overlap estimate (authoritative)
-tests/      correctness suites (CPU + GPU)
-scripts/    environment / native-MMA proof
-reports/    human-readable findings
-figures/    PNG output
-data/       raw JSON results
+audit_v3/   ← 修正版实验（审计 + 新协议 + Gate 1–4），先看这里
+  source_audit.md       source audit (A1–A12, file:line, severity)
+  methodology.md        reproducible protocol
+  hypotheses.md         H1–H5 with support / counter-evidence / falsification tests
+  corrected_results.md  verified / withdrawn / open, with Gate 1–4 numbers
+  src/                  rewritten probes, CUDA-Graph concurrency, timeline analysis
+  raw/  figures/        raw JSON + logs, figures
+src/        首轮的测量代码（已被 audit_v3 取代，见 src/DEPRECATED.md）
+tests/      数值验收套件（仍有效）
+scripts/    环境快照 / 原生 MMA 证明
+reports/    首轮报告（含撤回公告）
+data/  figures/         首轮数据与图
 ```
+
 
 ## Reproduce
 
