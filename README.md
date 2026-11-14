@@ -1,5 +1,23 @@
 # blackwell — RTX 5090 (SM120) BF16 vs native NVFP4 resource study
 
+> ## ⚠️ 修正公告（2026-11-14 晚）
+>
+> 首轮实验（本 README 下方与 `reports/M1_*`、`src/interference_*.py`）使用的并发协议
+> **有致命缺陷**：两个任务的实际 GPU 起跑时刻相差 **4.5–23 ms**（实测），
+> 串行基线是两次测量相加而非实测。
+>
+> 因此以下内容**已撤回**：
+> - 所有 `S_A` / `S_B` / `G` 的绝对值
+> - 所有 `overlap %`（那不是物理重叠率，只是墙钟派生量）
+> - "FP32/DRAM 探针无余量"、"M≈256 交叉点"等结论
+>
+> **请看 [`audit_v3/`](audit_v3/) 的审计与修正版结果。** 唯一经受住协议修正的定量结论是：
+> M=1024 时 BF16 主任务被 tensor 干扰只慢 4.8%，FP4 被慢 57%。
+>
+> 仍然有效的部分：原生 FP4 MMA 的 SASS 证据、六阶段数值验收、单任务吞吐表。
+> 详见 [`audit_v3/source_audit.md`](audit_v3/source_audit.md) 与
+> [`audit_v3/corrected_results.md`](audit_v3/corrected_results.md)。
+
 Measurements of how BF16 and native NVFP4 (E2M1 payload + E4M3 block-16 scales)
 differ in *hardware resource usage* on a single RTX 5090, and whether the FP4
 side leaves capacity that a second task can actually use.

@@ -1,5 +1,17 @@
 # M1 首轮：BF16 与原生 NVFP4 的硬件资源差异（实测）
 
+> ## ⚠️ 本报告的部分结论已撤回（见 audit_v3）
+>
+> 以下条目**不可再引用**，原因见 [`../audit_v3/source_audit.md`](../audit_v3/source_audit.md)：
+> - 所有 `S_A` / `S_B` / `G` 的绝对值 —— 旧协议的设备端起跑偏差达 4.5–23 ms（实测）
+> - 所有 `overlap %`（FP32 4.4% / DRAM 3.2% / tensor 36.9%）—— 那是墙钟派生量，不是物理重叠
+> - "FP32/DRAM 探针无余量" —— 探针本身不纯（`torch.add` / `torch.sum`）
+> - "M≈256 交叉点" —— 未在修正协议下重测
+> - "BF16 峰值 51% ⇒ 一半 tensor core 空闲" —— 利用率不等于可回收资源
+>
+> 修正版见 [`../audit_v3/corrected_results.md`](../audit_v3/corrected_results.md)。
+> 仍然有效：单任务吞吐表、原生 FP4 指令证据、六阶段数值验收。
+
 日期：2026-11-14　平台：云容器 RTX 5090（驱动 590.44.01 / CUDA 13.1 / torch 2.12.1+cu130），**独占空闲**
 工具：CUDA Events + 双流 + `nvidia-smi` 采样 + `cuobjdump` — **全程未使用 NCU**
 

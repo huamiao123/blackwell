@@ -1,27 +1,27 @@
 [
   {
-    "stream_A": 37,
-    "stream_B": 41,
-    "n_kernels_A": 577,
-    "n_kernels_B": 200,
+    "stream_A": 29,
+    "stream_B": 33,
+    "n_kernels_A": 587,
+    "n_kernels_B": 199,
     "span_A_us": [
-      3804174985012.38,
-      3804175016929.874
+      3804805067945.283,
+      3804805100313.436
     ],
     "span_B_us": [
-      3804174985205.564,
-      3804175005698.3906
+      3804805068132.802,
+      3804805088690.0293
     ],
-    "task_span_overlap_us": 20492.82666015625,
-    "kernel_overlap_us": 17823.89306640625,
-    "busy_A_us": 29133.92333984375,
-    "busy_B_us": 20452.68212890625,
-    "kernel_overlap_frac_of_shorter": 0.8714697150265357,
+    "task_span_overlap_us": 20557.2275390625,
+    "kernel_overlap_us": 17953.50146484375,
+    "busy_A_us": 29648.228515625,
+    "busy_B_us": 20513.6123046875,
+    "kernel_overlap_frac_of_shorter": 0.8751994138419615,
     "task_overlap_frac_of_shorter": 1.0,
-    "tail_A_after_B_us": 11231.4833984375,
+    "tail_A_after_B_us": 11623.40673828125,
     "tail_B_after_A_us": 0.0,
-    "gaps_A_us": 2783.57080078125,
-    "gaps_B_us": 40.14453125,
+    "gaps_A_us": 2719.92431640625,
+    "gaps_B_us": 43.615234375,
     "kernel_names_A": [
       "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8>(cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8::Params)"
     ],
@@ -30,32 +30,40 @@
     ],
     "M": 16,
     "precision": "bf16",
-    "reps_A": 577,
-    "reps_B": 200
+    "reps_A": 587,
+    "reps_B": 199,
+    "stream_A_from_alone": 29,
+    "stream_B_from_alone": 33,
+    "stream_ids_alone_A": [
+      29
+    ],
+    "stream_ids_alone_B": [
+      33
+    ]
   },
   {
-    "stream_A": 69,
-    "stream_B": 73,
-    "n_kernels_A": 626,
-    "n_kernels_B": 192,
+    "stream_A": 53,
+    "stream_B": 57,
+    "n_kernels_A": 614,
+    "n_kernels_B": 193,
     "span_A_us": [
-      3804175160868.275,
-      3804175188956.467
+      3804805300899.546,
+      3804805328775.4917
     ],
     "span_B_us": [
-      3804175161054.61,
-      3804175182690.312
+      3804805301105.274,
+      3804805322909.981
     ],
-    "task_span_overlap_us": 21635.7021484375,
-    "kernel_overlap_us": 13662.71630859375,
-    "busy_A_us": 20111.33349609375,
-    "busy_B_us": 21595.966796875,
-    "kernel_overlap_frac_of_shorter": 0.6793540722323299,
+    "task_span_overlap_us": 21804.70703125,
+    "kernel_overlap_us": 13834.37451171875,
+    "busy_A_us": 19903.9609375,
+    "busy_B_us": 21765.11669921875,
+    "kernel_overlap_frac_of_shorter": 0.6950563536152312,
     "task_overlap_frac_of_shorter": 1.0,
-    "tail_A_after_B_us": 6266.15478515625,
+    "tail_A_after_B_us": 5865.5107421875,
     "tail_B_after_A_us": 0.0,
-    "gaps_A_us": 7976.8583984375,
-    "gaps_B_us": 39.7353515625,
+    "gaps_A_us": 7971.98486328125,
+    "gaps_B_us": 39.59033203125,
     "kernel_names_A": [
       "cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m1_ue4m3xe2m1_f32_bf16_bf16_128x128x256_1x1x1_0_tnn_align32_o_vs16_bias_bf16_relu"
     ],
@@ -64,32 +72,40 @@
     ],
     "M": 16,
     "precision": "fp4",
-    "reps_A": 626,
-    "reps_B": 192
+    "reps_A": 614,
+    "reps_B": 193,
+    "stream_A_from_alone": 53,
+    "stream_B_from_alone": 57,
+    "stream_ids_alone_A": [
+      53
+    ],
+    "stream_ids_alone_B": [
+      57
+    ]
   },
   {
-    "stream_A": 101,
-    "stream_B": 105,
-    "n_kernels_A": 240,
-    "n_kernels_B": 191,
+    "stream_A": 77,
+    "stream_B": 81,
+    "n_kernels_A": 241,
+    "n_kernels_B": 194,
     "span_A_us": [
-      3804175248090.405,
-      3804175277211.431
+      3804805441217.354,
+      3804805470860.886
     ],
     "span_B_us": [
-      3804175248999.138,
-      3804175274343.76
+      3804805442205.285,
+      3804805468217.635
     ],
-    "task_span_overlap_us": 25344.62158203125,
-    "kernel_overlap_us": 15615.1982421875,
-    "busy_A_us": 25201.087890625,
-    "busy_B_us": 19406.78564453125,
-    "kernel_overlap_frac_of_shorter": 0.8046256875407802,
+    "task_span_overlap_us": 26012.349609375,
+    "kernel_overlap_us": 16076.6259765625,
+    "busy_A_us": 25590.841796875,
+    "busy_B_us": 20005.05859375,
+    "kernel_overlap_frac_of_shorter": 0.8036280374397491,
     "task_overlap_frac_of_shorter": 1.0,
-    "tail_A_after_B_us": 2867.67138671875,
+    "tail_A_after_B_us": 2643.25146484375,
     "tail_B_after_A_us": 0.0,
-    "gaps_A_us": 3919.9384765625,
-    "gaps_B_us": 5937.8359375,
+    "gaps_A_us": 4052.6904296875,
+    "gaps_B_us": 6007.291015625,
     "kernel_names_A": [
       "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x64_32x4_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x64_32x4_tn_align8::Params)"
     ],
@@ -98,32 +114,40 @@
     ],
     "M": 128,
     "precision": "bf16",
-    "reps_A": 240,
-    "reps_B": 191
+    "reps_A": 241,
+    "reps_B": 194,
+    "stream_A_from_alone": 77,
+    "stream_B_from_alone": 81,
+    "stream_ids_alone_A": [
+      77
+    ],
+    "stream_ids_alone_B": [
+      81
+    ]
   },
   {
-    "stream_A": 133,
-    "stream_B": 137,
-    "n_kernels_A": 923,
-    "n_kernels_B": 192,
+    "stream_A": 101,
+    "stream_B": 105,
+    "n_kernels_A": 903,
+    "n_kernels_B": 193,
     "span_A_us": [
-      3804175402502.596,
-      3804175429589.024
+      3804805652573.691,
+      3804805679511.326
     ],
     "span_B_us": [
-      3804175402926.595,
-      3804175421412.18
+      3804805652766.778,
+      3804805671427.107
     ],
-    "task_span_overlap_us": 18485.5849609375,
-    "kernel_overlap_us": 11794.0859375,
-    "busy_A_us": 20333.494140625,
-    "busy_B_us": 18451.47705078125,
-    "kernel_overlap_frac_of_shorter": 0.6391946782927402,
+    "task_span_overlap_us": 18660.3291015625,
+    "kernel_overlap_us": 11913.509765625,
+    "busy_A_us": 20132.60107421875,
+    "busy_B_us": 18626.12158203125,
+    "kernel_overlap_frac_of_shorter": 0.6396130140757831,
     "task_overlap_frac_of_shorter": 1.0,
-    "tail_A_after_B_us": 8176.84375,
+    "tail_A_after_B_us": 8084.21923828125,
     "tail_B_after_A_us": 0.0,
-    "gaps_A_us": 6752.93359375,
-    "gaps_B_us": 34.10791015625,
+    "gaps_A_us": 6805.0341796875,
+    "gaps_B_us": 34.20751953125,
     "kernel_names_A": [
       "cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m1_ue4m3xe2m1_f32_bf16_bf16_128x128x256_1x1x1_0_tnn_align32_o_vs16_bias_bf16_relu"
     ],
@@ -132,66 +156,82 @@
     ],
     "M": 128,
     "precision": "fp4",
-    "reps_A": 923,
-    "reps_B": 192
+    "reps_A": 903,
+    "reps_B": 193,
+    "stream_A_from_alone": 101,
+    "stream_B_from_alone": 105,
+    "stream_ids_alone_A": [
+      101
+    ],
+    "stream_ids_alone_B": [
+      105
+    ]
   },
   {
-    "stream_A": 41,
-    "stream_B": 37,
-    "n_kernels_A": 195,
-    "n_kernels_B": 41,
+    "stream_A": 125,
+    "stream_B": 129,
+    "n_kernels_A": 40,
+    "n_kernels_B": 192,
     "span_A_us": [
-      3804175506217.594,
-      3804175541167.044
+      3804805798383.382,
+      3804805818570.206
     ],
     "span_B_us": [
-      3804175505812.476,
-      3804175526166.871
+      3804805798791.061,
+      3804805833592.6997
     ],
-    "task_span_overlap_us": 19949.27685546875,
-    "kernel_overlap_us": 5765.984375,
-    "busy_A_us": 20826.6806640625,
-    "busy_B_us": 20230.4501953125,
-    "kernel_overlap_frac_of_shorter": 0.2850151291411206,
-    "task_overlap_frac_of_shorter": 0.9800967720399567,
-    "tail_A_after_B_us": 15000.1728515625,
-    "tail_B_after_A_us": 0.0,
-    "gaps_A_us": 14122.76904296875,
-    "gaps_B_us": 123.94482421875,
+    "task_span_overlap_us": 19779.14501953125,
+    "kernel_overlap_us": 5711.75,
+    "busy_A_us": 20065.064453125,
+    "busy_B_us": 20793.572265625,
+    "kernel_overlap_frac_of_shorter": 0.284661432976879,
+    "task_overlap_frac_of_shorter": 0.979804688701847,
+    "tail_A_after_B_us": 0.0,
+    "tail_B_after_A_us": 15022.49365234375,
+    "gaps_A_us": 121.759765625,
+    "gaps_B_us": 14008.06640625,
     "kernel_names_A": [
-      "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x128_32x4_nn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x128_32x4_nn_align8::Params)"
+      "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_64x256_32x4_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_64x256_32x4_tn_align8::Params)"
     ],
     "kernel_names_B": [
-      "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_64x256_32x4_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_64x256_32x4_tn_align8::Params)"
+      "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x128_32x4_nn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x128_32x4_nn_align8::Params)"
     ],
     "M": 1024,
     "precision": "bf16",
-    "reps_A": 41,
-    "reps_B": 195
+    "reps_A": 40,
+    "reps_B": 192,
+    "stream_A_from_alone": 125,
+    "stream_B_from_alone": 129,
+    "stream_ids_alone_A": [
+      125
+    ],
+    "stream_ids_alone_B": [
+      129
+    ]
   },
   {
-    "stream_A": 69,
-    "stream_B": 73,
-    "n_kernels_A": 209,
-    "n_kernels_B": 192,
+    "stream_A": 21,
+    "stream_B": 25,
+    "n_kernels_A": 214,
+    "n_kernels_B": 190,
     "span_A_us": [
-      3804175644460.65,
-      3804175673442.683
+      3804805987407.397,
+      3804806017004.6587
     ],
     "span_B_us": [
-      3804175644722.154,
-      3804175672231.358
+      3804805987671.907,
+      3804806015179.642
     ],
-    "task_span_overlap_us": 27509.2041015625,
-    "kernel_overlap_us": 12591.58740234375,
-    "busy_A_us": 21003.4970703125,
-    "busy_B_us": 20566.9892578125,
-    "kernel_overlap_frac_of_shorter": 0.612223172021192,
+    "task_span_overlap_us": 27507.73486328125,
+    "kernel_overlap_us": 12548.75439453125,
+    "busy_A_us": 21541.072265625,
+    "busy_B_us": 20600.40185546875,
+    "kernel_overlap_frac_of_shorter": 0.6091509516451474,
     "task_overlap_frac_of_shorter": 1.0,
-    "tail_A_after_B_us": 1211.3251953125,
+    "tail_A_after_B_us": 1825.0166015625,
     "tail_B_after_A_us": 0.0,
-    "gaps_A_us": 7978.5361328125,
-    "gaps_B_us": 6942.21484375,
+    "gaps_A_us": 8056.189453125,
+    "gaps_B_us": 6907.3330078125,
     "kernel_names_A": [
       "cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m1_ue4m3xe2m1_f32_bf16_bf16_128x128x256_1x1x1_0_tnn_align32_o_vs16_bias_bf16_relu"
     ],
@@ -200,7 +240,15 @@
     ],
     "M": 1024,
     "precision": "fp4",
-    "reps_A": 209,
-    "reps_B": 192
+    "reps_A": 214,
+    "reps_B": 190,
+    "stream_A_from_alone": 21,
+    "stream_B_from_alone": 25,
+    "stream_ids_alone_A": [
+      21
+    ],
+    "stream_ids_alone_B": [
+      25
+    ]
   }
 ]

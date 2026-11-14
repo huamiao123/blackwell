@@ -1,0 +1,26 @@
+== FP32 FMA probe ==
+  reps=   500     0.011 ms    7716.3 GFLOP/s  ptx_fma=4 sass_ffma=None
+  reps=  2000     0.012 ms   29980.7 GFLOP/s  ptx_fma=4 sass_ffma=None
+  reps=  8000     0.034 ms   40404.8 GFLOP/s  ptx_fma=4 sass_ffma=None
+== DRAM probe (working-set sweep) ==
+     16 MiB     0.014 ms   2364.9 GB/s
+     32 MiB     0.017 ms   3925.8 GB/s
+     64 MiB     0.071 ms   1884.9 GB/s
+     96 MiB     0.134 ms   1501.0 GB/s
+    128 MiB     0.179 ms   1499.0 GB/s
+    256 MiB     0.355 ms   1511.3 GB/s
+    512 MiB     0.706 ms   1520.0 GB/s
+   1024 MiB     1.415 ms   1517.3 GB/s
+   1536 MiB     2.117 ms   1521.8 GB/s
+== Tensor probes ==
+/root/miniconda3/lib/python3.12/site-packages/torch/profiler/profiler.py:272: UserWarning: Warning: Profiler clears events at the end of each cycle.Only events from the current cycle will be reported.To keep events across cycles, set acc_events=True.
+  _warn_once(
+USDT:2026-11-14 21:02:43 31389:31389 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:02:43 31389:31389 ActivityProfilerController.cpp:455] profiler_stop
+  bf16     0.100 ms     172.4 TF  void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x128_32x4_nn_align8>(cutlass_
+USDT:2026-11-14 21:02:43 31389:31389 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:02:43 31389:31389 ActivityProfilerController.cpp:455] profiler_stop
+   fp4     0.023 ms     763.1 TF  cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m1_ue4m3xe2m1_f32_bf16_bf16_128x128x256_1
+json -> raw/gate2.json
+
+VERDICT: fp32_ptx_fma=True  dram_peak=3926 GB/s  tensor_kernels=True

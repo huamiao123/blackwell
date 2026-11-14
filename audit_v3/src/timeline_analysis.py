@@ -60,6 +60,21 @@ def load_kernels(trace_path):
     return by_stream
 
 
+def streams_by_kernel_pattern(trace_path, pattern_A, pattern_B, flags=0):
+    """Identify streams by matching kernel names, instead of guessing from counts.
+
+    Returns (stream_A, stream_B) or (None, None) when the match is ambiguous.
+    """
+    import re
+    by = load_kernels(trace_path)
+    hitA = [s for s, ks in by.items() if any(re.search(pattern_A, n, flags) for _, _, n in ks)]
+    hitB = [s for s, ks in by.items() if any(re.search(pattern_B, n, flags) for _, _, n in ks)]
+    a = hitA[0] if len(hitA) == 1 else None
+    b = [s for s in hitB if s != a]
+    b = b[0] if len(b) == 1 else None
+    return a, b
+
+
 def analyse(trace_path, stream_A=None, stream_B=None):
     by = load_kernels(trace_path)
     streams = sorted(by)

@@ -89,13 +89,17 @@ def run_serial(gA, gB, order="AB"):
     return dict(serial_ms=e0.elapsed_time(e1), order=order)
 
 
-def run_concurrent(gA, gB, order="AB"):
+def run_concurrent(gA, gB, order="AB", sA=None, sB=None):
     """Replay both graphs on two streams behind one latch event.
 
     Returns the measurement plus `cpu_submit_ms` (host time spent issuing the two
     replays) and `start_skew_ms` (device-side start gap between the two streams).
+
+    `sA` / `sB` may be supplied so the caller can keep the same streams across
+    captures (needed to identify them later in a GPU timeline).
     """
-    sA, sB = torch.cuda.Stream(), torch.cuda.Stream()
+    sA = sA or torch.cuda.Stream()
+    sB = sB or torch.cuda.Stream()
     ctrl = torch.cuda.current_stream()
     ready, a0, a1, b0, b1, joint = _ev(), _ev(), _ev(), _ev(), _ev(), _ev()
     torch.cuda.synchronize()

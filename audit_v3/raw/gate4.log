@@ -1,0 +1,18 @@
+/root/miniconda3/lib/python3.12/site-packages/torch/profiler/profiler.py:272: UserWarning: Warning: Profiler clears events at the end of each cycle.Only events from the current cycle will be reported.To keep events across cycles, set acc_events=True.
+  _warn_once(
+USDT:2026-11-14 21:05:54 32914:32914 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:05:54 32914:32914 ActivityProfilerController.cpp:455] profiler_stop
+ctas=   1  S_A=0.999  kernel_ovl= 27.8%  task_ovl= 92.9%  skew=0.032 ms
+USDT:2026-11-14 21:05:54 32914:32914 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:05:54 32914:32914 ActivityProfilerController.cpp:455] profiler_stop
+ctas=   4  S_A=1.002  kernel_ovl= 30.1%  task_ovl= 92.9%  skew=0.102 ms
+USDT:2026-11-14 21:05:54 32914:32914 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:05:55 32914:32914 ActivityProfilerController.cpp:455] profiler_stop
+ctas=  16  S_A=1.002  kernel_ovl= 35.6%  task_ovl= 95.3%  skew=0.047 ms
+USDT:2026-11-14 21:05:55 32914:32914 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:05:55 32914:32914 ActivityProfilerController.cpp:455] profiler_stop
+ctas=  64  S_A=0.996  kernel_ovl= 31.6%  task_ovl= 92.9%  skew=0.049 ms
+USDT:2026-11-14 21:05:55 32914:32914 ActivityProfilerController.cpp:415] profiler_start
+USDT:2026-11-14 21:05:55 32914:32914 ActivityProfilerController.cpp:455] profiler_stop
+ctas= 170  S_A=1.162  kernel_ovl= 42.1%  task_ovl= 93.8%  skew=0.046 ms
+json -> raw/gate4.json

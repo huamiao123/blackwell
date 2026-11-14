@@ -1,0 +1,102 @@
+{
+  "fp32_fma": [
+    {
+      "reps": 500,
+      "ms": 0.01128000020980835,
+      "fma_per_launch": 87040000,
+      "gflops": 7716.311913213947,
+      "ptx_has_fma": true,
+      "ptx_fma_count": 4,
+      "sass_has_ffma": null
+    },
+    {
+      "reps": 2000,
+      "ms": 0.011612799763679505,
+      "fma_per_launch": 348160000,
+      "gflops": 29980.711549760315,
+      "ptx_has_fma": true,
+      "ptx_fma_count": 4,
+      "sass_has_ffma": null
+    },
+    {
+      "reps": 8000,
+      "ms": 0.034467199444770814,
+      "fma_per_launch": 1392640000,
+      "gflops": 40404.791292414804,
+      "ptx_has_fma": true,
+      "ptx_fma_count": 4,
+      "sass_has_ffma": null
+    }
+  ],
+  "dram_sweep": [
+    {
+      "mb": 16,
+      "ms": 0.014188799262046813,
+      "gbps": 2364.8535284979134
+    },
+    {
+      "mb": 32,
+      "ms": 0.01709440052509308,
+      "gbps": 3925.780485925206
+    },
+    {
+      "mb": 64,
+      "ms": 0.07120640277862549,
+      "gbps": 1884.9109456809838
+    },
+    {
+      "mb": 96,
+      "ms": 0.1341248035430908,
+      "gbps": 1501.0392312359957
+    },
+    {
+      "mb": 128,
+      "ms": 0.17907840013504028,
+      "gbps": 1498.982880110482
+    },
+    {
+      "mb": 256,
+      "ms": 0.35523200035095215,
+      "gbps": 1511.3247440253053
+    },
+    {
+      "mb": 512,
+      "ms": 0.7063936233520508,
+      "gbps": 1520.0332909359674
+    },
+    {
+      "mb": 1024,
+      "ms": 1.4153023719787599,
+      "gbps": 1517.3320489794448
+    },
+    {
+      "mb": 1536,
+      "ms": 2.1167232513427736,
+      "gbps": 1521.7981235650761
+    }
+  ],
+  "dram_meta": {
+    "mb": 1536,
+    "elements": 402653184,
+    "bytes_read": 1610612736,
+    "bytes_written": 1610612736,
+    "bytes_total": 3221225472,
+    "block": 4096
+  },
+  "tensor": [
+    {
+      "dtype": "bf16",
+      "ms": 0.0996496021747589,
+      "tflops": 172.40278745790752,
+      "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x128_32x4_nn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x128_32x4_nn_align8::Params)",
+      "n_kernels": 1
+    },
+    {
+      "dtype": "fp4",
+      "ms": 0.02251359969377518,
+      "tflops": 763.0885072878901,
+      "kernel": "cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m1_ue4m3xe2m1_f32_bf16_bf16_128x128x256_1x1x1_0_tnn_align32_o_vs16_bias_bf16_relu",
+      "n_kernels": 1
+    }
+  ]
+}

@@ -43,8 +43,9 @@ with torch.cuda.stream(sB):
 （S_A≈2.0），说明 **A 先跑、B 后到、B 只在 A 的尾部与下一轮重叠**。这使
 `S_A` 的物理含义变成"A 与 B 尾部相撞时的减速"，而不是"两任务全程竞争"。
 
-**是否推翻结论**：会。所有 S_A/S_B/G 的绝对值不可作为资源竞争强度的度量；
-只有"哪种探针能减速主任务"这个定性排序仍可能成立（需重测确认）。
+**是否推翻结论**：部分推翻。修正后实测差异只有 **−0.21…+0.04**（见 corrected_results §1），
+**不是** ±0.63。先前那个"±0.63"的估计来自 A12 的工作负载 bug，不是提交协议本身。
+起跑偏差本身仍然真实且很大（1.0–14.6 ms），但它对 S_A 的影响是有限的。
 
 **修复**：两条任务各自预构建 CUDA Graph，用同一 latch event 触发，并分别测试
 A→B、B→A 两种提交顺序；同时量化 CPU 提交耗时（`concurrent_graph.py`）。
@@ -170,8 +171,26 @@ JSON 里没有 `T_B_alone/T_A_alone` 的实测比值。
 
 ---
 
-## A11【已确认无问题】
+## A12【FATAL，评审发现】legacy 分支根本没有执行主任务
 
+**位置**：`audit_v3/src/interference_v3.py`（首次提交版本）
+
+```python
+if "legacy" in modes:
+    fA1, fB1 = probe_factory, probe        # ← 错：probe_factory 是"创建探针"的工厂
+    rec["legacy_AB"] = CG.run_concurrent_streams(fA1, fB1, rA, rB, "AB")
+```
+
+`fA` 才是 BF16/FP4 主 GEMM；`probe_factory()` 返回的是一个新的 `TensorProbe` 对象
+（只分配显存，不做 GEMM）。于是 legacy 路径反复"创建探针对象"，而 `alone_A` 是主 GEMM
+的耗时——**分子分母不是同一个任务**。M=1024/BF16 的 `S_A = 0.415` 就是这么产生的。
+
+**影响**：所有旧协议对照数据（legacy 的 S_A/S_B、提交耗时对比）作废。
+**不污染** Graph 模式，因为 Graph 路径用的是正确的 `fA`。
+**修复**：`fA1, fB1 = fA, probe`，并重测 Gate 1。
+**修复后**：旧协议 vs 新协议差异 −0.21…+0.04（不再有数量级差异）。
+
+## A11【已确认无问题】
 - `src/nvfp4_recipe.py` 的 encode/decode 分离（全局 scale FP32 不舍入）——与 torch 语义一致，
   六阶段验收 12/12 通过，`to_blocked` 10/10 逐元素为 0 差异。
 - 原生 MMA 证据（单函数 SASS 256 条 `OMMA.SF`、0 条 `HMMA`、负对照 0）——独立于上述问题。

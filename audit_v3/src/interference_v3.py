@@ -90,7 +90,11 @@ def one_condition(fA, rA, gA, probe_factory, k, sessions, modes):
         rec["conc_AB"] = CG.run_concurrent(gA, gB, "AB")
         rec["conc_BA"] = CG.run_concurrent(gA, gB, "BA")
         if "legacy" in modes:
-            fA1, fB1 = probe_factory, probe
+            # BUGFIX (found in review): this used to be
+            #     fA1, fB1 = probe_factory, probe
+            # which made the legacy path run "construct a probe object" instead of the
+            # main GEMM, so every legacy_* number measured a different workload.
+            fA1, fB1 = fA, probe
             rec["legacy_AB"] = CG.run_concurrent_streams(fA1, fB1, rA, rB, "AB")
             rec["legacy_BA"] = CG.run_concurrent_streams(fA1, fB1, rA, rB, "BA")
         recs.append(rec)

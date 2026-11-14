@@ -49,8 +49,7 @@ for r in d["results"]:
 
 keys = sorted({(r["M"], r["dtype"]) for r in rows})
 hdr = (f"{'M':>5} {'dt':>5} | {'S_A graph':>15} {'S_A legacy':>15} {'delta':>7} | "
-       f"{'S_B graph':>9} {'S_B legacy':>9} | {'skew gr':>8} {'skew lg':>8} | "
-       f"{'submit gr':>9} {'submit lg':>9}")
+       f"{'skew gr AB':>10} {'skew gr BA':>10} | {'skew lg AB':>10} {'skew lg BA':>10}")
 print(hdr); print("-" * len(hdr))
 summary = []
 for M, dt in keys:
@@ -59,17 +58,20 @@ for M, dt in keys:
     l = [r.get(f"S_A_lg_{o}") for r in sel for o in ("AB", "BA") if r.get(f"S_A_lg_{o}")]
     gb = [r[f"S_B_gr_{o}"] for r in sel for o in ("AB", "BA")]
     lb = [r.get(f"S_B_lg_{o}") for r in sel for o in ("AB", "BA") if r.get(f"S_B_lg_{o}")]
-    sk = [r[f"skew_{o}"] for r in sel for o in ("AB", "BA")]
-    skl = [r.get(f"skew_lg_{o}") for r in sel for o in ("AB", "BA") if r.get(f"skew_lg_{o}")]
+    skAB = [r["skew_AB"] for r in sel]
+    skBA = [r["skew_BA"] for r in sel]
+    slAB = [r.get("skew_lg_AB") for r in sel if r.get("skew_lg_AB")]
+    slBA = [r.get("skew_lg_BA") for r in sel if r.get("skew_lg_BA")]
     sub = [r[f"submit_{o}"] for r in sel for o in ("AB", "BA")]
     subl = [r.get(f"submit_lg_{o}") for r in sel for o in ("AB", "BA") if r.get(f"submit_lg_{o}")]
     mg, ml = med(g), med(l)
     print(f"{M:5d} {dt:>5} | {mg:8.3f}±{(max(g)-min(g))/2:5.3f} {ml:8.3f}±{(max(l)-min(l))/2:5.3f} "
-          f"{ml-mg:+7.3f} | {med(gb):9.3f} {med(lb):9.3f} | {med(sk):8.3f} {med(skl):8.3f} | "
-          f"{med(sub):9.3f} {med(subl):9.3f}")
+          f"{ml-mg:+7.3f} | {med(skAB):10.3f} {med(skBA):10.3f} | {med(slAB):10.3f} {med(slBA):10.3f}")
     summary.append(dict(M=M, dtype=dt, S_A_graph=mg, S_A_legacy=ml, delta=ml - mg,
                         S_B_graph=med(gb), S_B_legacy=med(lb),
-                        skew_graph_ms=med(sk), skew_legacy_ms=med(skl),
+                        skew_graph_AB_ms=med(skAB), skew_graph_BA_ms=med(skBA),
+                        skew_legacy_AB_ms=med(slAB), skew_legacy_BA_ms=med(slBA),
+                        skew_graph_max_ms=max(skAB + skBA),
                         submit_graph_ms=med(sub), submit_legacy_ms=med(subl),
                         alone_graph_ms=med([r["alone_graph"] for r in sel]),
                         alone_eager_ms=med([r["alone_eager"] for r in sel])))

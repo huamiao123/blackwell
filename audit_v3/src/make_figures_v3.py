@@ -23,8 +23,8 @@ ax1.set_ylabel("S_A (main-task slowdown)")
 ax1.set_title("Same condition, two protocols")
 ax1.legend(fontsize=8); ax1.grid(alpha=.3, axis="y")
 
-sk_g = [s["skew_graph_ms"] for s in summ]
-sk_l = [s["skew_legacy_ms"] for s in summ]
+sk_g = [s.get("skew_graph_max_ms", float("nan")) for s in summ]
+sk_l = [max(s.get("skew_legacy_AB_ms") or 0.0, s.get("skew_legacy_BA_ms") or 0.0) for s in summ]
 ax2.bar(x - 0.2, sk_g, 0.4, label="graph", color="C0")
 ax2.bar(x + 0.2, sk_l, 0.4, label="legacy", color="C1")
 ax2.set_yscale("log")
