@@ -1,0 +1,14 @@
+file,group,dtype,M,N,K,kernel,mode,cache,p10,p50,p90,tflops
+e1_g0_l2_m128_n4096.json,G0,bf16,128,4096,4096,cublasLt_bf16_fp32acc,core,warm,28.598,28.717,28.819,149.563
+e1_g0_l2_m512_n4096.json,G0,bf16,512,4096,4096,cublasLt_bf16_fp32acc,core,warm,82.317,82.426,82.582,208.429
+e1_g0_m16.json,G0,bf16,16,12288,4096,cublasLt_bf16_fp32acc,core,warm,65.114,65.178,65.274,24.711
+e1_g0_m32.json,G0,bf16,32,12288,4096,cublasLt_bf16_fp32acc,core,warm,43.795,43.92,44.112,73.343
+e1_g0_m64.json,G0,bf16,64,12288,4096,cublasLt_bf16_fp32acc,core,warm,80.502,80.774,81.11,79.759
+e1_g0_m128.json,G0,bf16,128,12288,4096,cublasLt_bf16_fp32acc,core,warm,65.264,65.514,65.574,196.675
+e1_g0_m256.json,G0,bf16,256,12288,4096,cublasLt_bf16_fp32acc,core,warm,120.813,120.922,121.181,213.112
+e1_g0_m512.json,G0,bf16,512,12288,4096,cublasLt_bf16_fp32acc,core,warm,257.395,257.805,258.666,199.917
+e1_g0_m1024.json,G0,bf16,1024,12288,4096,cublasLt_bf16_fp32acc,core,warm,472.416,474.707,474.966,217.143
+e1_g0_l2_m128_n16384.json,G0,bf16,128,16384,4096,cublasLt_bf16_fp32acc,core,warm,95.75,95.846,96.23,179.244
+e1_g0_l2_m512_n16384.json,G0,bf16,512,16384,4096,cublasLt_bf16_fp32acc,core,warm,324.899,326.054,326.387,210.761
+e1_g0_l2_m128_n65536.json,G0,bf16,128,65536,4096,cublasLt_bf16_fp32acc,core,warm,473.344,475.331,475.786,144.572
+e1_g0_l2_m512_n65536.json,G0,bf16,512,65536,4096,cublasLt_bf16_fp32acc,core,warm,1833.939,1835.104,1835.994,149.789
