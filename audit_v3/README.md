@@ -43,6 +43,17 @@ figures/               图
 | 2 三类探针验证 | **完成** | FP32 FMA PTX 校验通过、DRAM 在 96 MiB 出现 L2 台阶、tensor kernel 身份确认 |
 | 3 全 M 重测 | **完成**（126 条件） | BF16 单调 1.767→1.056，FP4 平在 ~1.6，交叉点 M≈32–64 |
 | 4 机制验证（CTA 限制共驻） | **完成（首轮）** | 1 CTA 探针的 kernel 重叠仍只有 24%，支持"无空闲 SM"假说 |
+| 5 统计与前沿 | **完成** | bootstrap 95% CI、归一化 Pareto 图、逐 M kernel 身份表 |
+
+### 新增（第二轮补充）
+
+- **`acceptance_answers.md`** — 逐条回答原任务的 9 个验收问题
+- **bootstrap CI**（`raw/gate5_ci.csv`）：S_A 的 95% CI 宽度约 ±0.01
+- **新发现的严重混杂**：BF16 主任务的 kernel **随 M 变化**（M=16 是 WMMA，
+  M=128/1024 是不同 tile），FP4 恒定。因此 BF16 的 S_A–M 曲线**不能**直接归因于 M，
+  必须在固定 kernel 后重测（见 `corrected_results.md` §7）
+- **M=128 提交顺序不对称复测**（5 会话）：A→B 恒为 ~0.46 ms，B→A ~0.03 ms，
+  但两种顺序下 S_A 完全相同（1.562–1.564），说明该延迟不改变竞争格局
 
 ### 评审后的修正（v2 → v3 数据）
 
@@ -64,6 +75,11 @@ python src/interference_v3.py --gate1 --Ms 16,128,1024 \
 python src/analyze_gate1.py raw/gate1_v2.json
 python src/timeline_capture.py
 python src/make_figures_v3.py
+python src/gate2_probes.py          # 探针自检
+python src/gate4_coresidency.py     # 受限 CTA 共驻实验
+python src/gate5_stats.py           # bootstrap CI + Pareto
+python src/kernel_identity.py       # 逐 M kernel 身份
+python src/analyze_gate3.py         # 全 M 汇总 + 图
 ```
 
 ## 图

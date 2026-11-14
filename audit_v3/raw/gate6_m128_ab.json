@@ -1,0 +1,299 @@
+{
+  "started": "2026-11-14T21:26:15",
+  "finished": "2026-11-14T21:26:18",
+  "args": {
+    "gate1": false,
+    "Ms": "128",
+    "precisions": "bf16",
+    "probes": "tensor",
+    "ks": "1.0",
+    "sessions": 5,
+    "modes": "graph",
+    "probe_dtype": "bf16",
+    "json": "raw/gate6_m128_ab.json",
+    "seed": 0
+  },
+  "results": [
+    {
+      "M": 128,
+      "precision": "bf16",
+      "probe": "tensor",
+      "k": 1.0,
+      "reps_A": 252,
+      "raw": [
+        {
+          "session": 0,
+          "reps_A": 252,
+          "reps_B": 183,
+          "k_nominal": 1.0,
+          "power_w": 38.63,
+          "sm_mhz": 892.0,
+          "temp_c": 42.0,
+          "alone_A_ms": 19.120031356811523,
+          "alone_B_ms": 17.70911979675293,
+          "alone_A_eager_ms": 19.136735916137695,
+          "alone_B_eager_ms": 18.022016525268555,
+          "k_realised": 0.9262076754096977,
+          "serial_AB_ms": 37.05964660644531,
+          "serial_BA_ms": 36.99635314941406,
+          "conc_AB": {
+            "concurrent_ms": 29.89049530029297,
+            "TA_conc_ms": 29.86204719543457,
+            "TB_conc_ms": 24.54377555847168,
+            "cpu_submit_ms": 0.5031909677200019,
+            "start_skew_ms": 0.4768640100955963,
+            "order": "AB"
+          },
+          "conc_BA": {
+            "concurrent_ms": 29.938047409057617,
+            "TA_conc_ms": 29.88652801513672,
+            "TB_conc_ms": 24.61529541015625,
+            "cpu_submit_ms": 0.4666459863074124,
+            "start_skew_ms": 0.027583999559283257,
+            "order": "BA"
+          }
+        },
+        {
+          "session": 1,
+          "reps_A": 252,
+          "reps_B": 183,
+          "k_nominal": 1.0,
+          "power_w": 248.7,
+          "sm_mhz": 2737.0,
+          "temp_c": 56.0,
+          "alone_A_ms": 19.137088775634766,
+          "alone_B_ms": 17.944063186645508,
+          "alone_A_eager_ms": 19.12940788269043,
+          "alone_B_eager_ms": 18.34668731689453,
+          "k_realised": 0.937658982357431,
+          "serial_AB_ms": 37.12303924560547,
+          "serial_BA_ms": 37.0700798034668,
+          "conc_AB": {
+            "concurrent_ms": 29.924320220947266,
+            "TA_conc_ms": 29.88924789428711,
+            "TB_conc_ms": 24.57686424255371,
+            "cpu_submit_ms": 0.49844401655718684,
+            "start_skew_ms": 0.47119998931884766,
+            "order": "AB"
+          },
+          "conc_BA": {
+            "concurrent_ms": 29.942079544067383,
+            "TA_conc_ms": 29.896127700805664,
+            "TB_conc_ms": 24.618751525878906,
+            "cpu_submit_ms": 0.46900002053007483,
+            "start_skew_ms": 0.025567999109625816,
+            "order": "BA"
+          }
+        },
+        {
+          "session": 2,
+          "reps_A": 252,
+          "reps_B": 183,
+          "k_nominal": 1.0,
+          "power_w": 248.7,
+          "sm_mhz": 2737.0,
+          "temp_c": 56.0,
+          "alone_A_ms": 19.13750457763672,
+          "alone_B_ms": 17.933727264404297,
+          "alone_A_eager_ms": 19.132287979125977,
+          "alone_B_eager_ms": 18.3255672454834,
+          "k_realised": 0.9370985225190172,
+          "serial_AB_ms": 37.128639221191406,
+          "serial_BA_ms": 37.061439514160156,
+          "conc_AB": {
+            "concurrent_ms": 29.935583114624023,
+            "TA_conc_ms": 29.908639907836914,
+            "TB_conc_ms": 24.616735458374023,
+            "cpu_submit_ms": 0.47665199963375926,
+            "start_skew_ms": 0.45129600167274475,
+            "order": "AB"
+          },
+          "conc_BA": {
+            "concurrent_ms": 30.036800384521484,
+            "TA_conc_ms": 29.911104202270508,
+            "TB_conc_ms": 24.701919555664062,
+            "cpu_submit_ms": 1.0036769672296941,
+            "start_skew_ms": 0.08761599659919739,
+            "order": "BA"
+          }
+        },
+        {
+          "session": 3,
+          "reps_A": 252,
+          "reps_B": 183,
+          "k_nominal": 1.0,
+          "power_w": 437.27,
+          "sm_mhz": 2850.0,
+          "temp_c": 48.0,
+          "alone_A_ms": 19.125471115112305,
+          "alone_B_ms": 17.93017578125,
+          "alone_A_eager_ms": 19.135456085205078,
+          "alone_B_eager_ms": 18.311328887939453,
+          "k_realised": 0.937502437107663,
+          "serial_AB_ms": 37.133216857910156,
+          "serial_BA_ms": 37.068641662597656,
+          "conc_AB": {
+            "concurrent_ms": 29.920608520507812,
+            "TA_conc_ms": 29.888416290283203,
+            "TB_conc_ms": 24.638303756713867,
+            "cpu_submit_ms": 0.5090889753773808,
+            "start_skew_ms": 0.4848319888114929,
+            "order": "AB"
+          },
+          "conc_BA": {
+            "concurrent_ms": 29.96771240234375,
+            "TA_conc_ms": 29.914335250854492,
+            "TB_conc_ms": 24.63983917236328,
+            "cpu_submit_ms": 0.4707530024461448,
+            "start_skew_ms": 0.0244159996509552,
+            "order": "BA"
+          }
+        },
+        {
+          "session": 4,
+          "reps_A": 252,
+          "reps_B": 183,
+          "k_nominal": 1.0,
+          "power_w": 461.95,
+          "sm_mhz": 2842.0,
+          "temp_c": 53.0,
+          "alone_A_ms": 19.13260841369629,
+          "alone_B_ms": 17.93328094482422,
+          "alone_A_eager_ms": 19.135456085205078,
+          "alone_B_eager_ms": 18.300256729125977,
+          "k_realised": 0.9373150046799934,
+          "serial_AB_ms": 37.125728607177734,
+          "serial_BA_ms": 37.06022262573242,
+          "conc_AB": {
+            "concurrent_ms": 29.923423767089844,
+            "TA_conc_ms": 29.891551971435547,
+            "TB_conc_ms": 24.59561538696289,
+            "cpu_submit_ms": 0.47528999857604504,
+            "start_skew_ms": 0.4524799883365631,
+            "order": "AB"
+          },
+          "conc_BA": {
+            "concurrent_ms": 29.957151412963867,
+            "TA_conc_ms": 29.896223068237305,
+            "TB_conc_ms": 24.622400283813477,
+            "cpu_submit_ms": 0.4750590305775404,
+            "start_skew_ms": 0.0272000003606081,
+            "order": "BA"
+          }
+        }
+      ],
+      "derived": [
+        {
+          "session": 0,
+          "order": "AB",
+          "S_A": 1.5618199906767516,
+          "S_B": 1.385939890867525,
+          "G": 1.2398471900223773,
+          "serial_source": "measured",
+          "cpu_submit_ms": 0.5031909677200019,
+          "start_skew_ms": 0.4768640100955963,
+          "k_realised": 0.9262076754096977
+        },
+        {
+          "session": 0,
+          "order": "BA",
+          "S_A": 1.5631003661764198,
+          "S_B": 1.389978479600641,
+          "G": 1.2357637304769913,
+          "serial_source": "measured",
+          "cpu_submit_ms": 0.4666459863074124,
+          "start_skew_ms": 0.027583999559283257,
+          "k_realised": 0.9262076754096977
+        },
+        {
+          "session": 1,
+          "order": "AB",
+          "S_A": 1.5618492574660536,
+          "S_B": 1.3696376337352918,
+          "G": 1.2405641622434933,
+          "serial_source": "measured",
+          "cpu_submit_ms": 0.49844401655718684,
+          "start_skew_ms": 0.47119998931884766,
+          "k_realised": 0.937658982357431
+        },
+        {
+          "session": 1,
+          "order": "BA",
+          "S_A": 1.562208758673328,
+          "S_B": 1.3719719591826278,
+          "G": 1.2380596260493113,
+          "serial_source": "measured",
+          "cpu_submit_ms": 0.46900002053007483,
+          "start_skew_ms": 0.025567999109625816,
+          "k_realised": 0.937658982357431
+        },
+        {
+          "session": 2,
+          "order": "AB",
+          "S_A": 1.5628286220130754,
+          "S_B": 1.3726502636869289,
+          "G": 1.240284482818491,
+          "serial_source": "measured",
+          "cpu_submit_ms": 0.47665199963375926,
+          "start_skew_ms": 0.45129600167274475,
+          "k_realised": 0.9370985225190172
+        },
+        {
+          "session": 2,
+          "order": "BA",
+          "S_A": 1.5629573898168188,
+          "S_B": 1.3774002019476226,
+          "G": 1.2338677568752827,
+          "serial_source": "measured",
+          "cpu_submit_ms": 1.0036769672296941,
+          "start_skew_ms": 0.08761599659919739,
+          "k_realised": 0.9370985225190172
+        },
+        {
+          "session": 3,
+          "order": "AB",
+          "S_A": 1.562754512575974,
+          "S_B": 1.374125053613736,
+          "G": 1.241058210178405,
+          "serial_source": "measured",
+          "cpu_submit_ms": 0.5090889753773808,
+          "start_skew_ms": 0.4848319888114929,
+          "k_realised": 0.937502437107663
+        },
+        {
+          "session": 3,
+          "order": "BA",
+          "S_A": 1.5641097189609718,
+          "S_B": 1.3742106866643065,
+          "G": 1.2369526630834373,
+          "serial_source": "measured",
+          "cpu_submit_ms": 0.4707530024461448,
+          "start_skew_ms": 0.0244159996509552,
+          "k_realised": 0.937502437107663
+        },
+        {
+          "session": 4,
+          "order": "AB",
+          "S_A": 1.5623354288711282,
+          "S_B": 1.3715067233172138,
+          "G": 1.2406912021882026,
+          "serial_source": "measured",
+          "cpu_submit_ms": 0.47528999857604504,
+          "start_skew_ms": 0.4524799883365631,
+          "k_realised": 0.9373150046799934
+        },
+        {
+          "session": 4,
+          "order": "BA",
+          "S_A": 1.5625795721003606,
+          "S_B": 1.3730003092891836,
+          "G": 1.237107698086899,
+          "serial_source": "measured",
+          "cpu_submit_ms": 0.4750590305775404,
+          "start_skew_ms": 0.0272000003606081,
+          "k_realised": 0.9373150046799934
+        }
+      ]
+    }
+  ]
+}

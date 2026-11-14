@@ -1,0 +1,130 @@
+[
+  {
+    "kind": "main",
+    "M": 16,
+    "dtype": "bf16",
+    "kernel": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8>(cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8::Params)",
+    "count": 5,
+    "cuda_us": 171.2320000000002
+  },
+  {
+    "kind": "main",
+    "M": 16,
+    "dtype": "fp4",
+    "kernel": "cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m1_ue4m3xe2m1_f32_bf16_bf16_128x128x256_1x1x1_0_tnn_align32_o_vs16_bias_bf16_relu",
+    "count": 5,
+    "cuda_us": 138.49400000000034
+  },
+  {
+    "kind": "main",
+    "M": 32,
+    "dtype": "bf16",
+    "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x64_64x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x64_64x3_tn_align8::Params)",
+    "count": 5,
+    "cuda_us": 245.12099999999987
+  },
+  {
+    "kind": "main",
+    "M": 32,
+    "dtype": "fp4",
+    "kernel": "cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m1_ue4m3xe2m1_f32_bf16_bf16_128x128x256_1x1x1_0_tnn_align32_o_vs16_bias_bf16_relu",
+    "count": 5,
+    "cuda_us": 122.34100000000001
+  },
+  {
+    "kind": "main",
+    "M": 64,
+    "dtype": "bf16",
+    "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x64_64x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x64_64x3_tn_align8::Params)",
+    "count": 5,
+    "cuda_us": 256.6410000000003
+  },
+  {
+    "kind": "main",
+    "M": 64,
+    "dtype": "fp4",
+    "kernel": "cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m1_ue4m3xe2m1_f32_bf16_bf16_128x128x256_1x1x1_0_tnn_align32_o_vs16_bias_bf16_relu",
+    "count": 5,
+    "cuda_us": 81.82399999999984
+  },
+  {
+    "kind": "main",
+    "M": 128,
+    "dtype": "bf16",
+    "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x64_32x4_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x64_32x4_tn_align8::Params)",
+    "count": 5,
+    "cuda_us": 382.23799999999994
+  },
+  {
+    "kind": "main",
+    "M": 128,
+    "dtype": "fp4",
+    "kernel": "cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m1_ue4m3xe2m1_f32_bf16_bf16_128x128x256_1x1x1_0_tnn_align32_o_vs16_bias_bf16_relu",
+    "count": 5,
+    "cuda_us": 82.71899999999994
+  },
+  {
+    "kind": "main",
+    "M": 256,
+    "dtype": "bf16",
+    "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x64_64x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x64_64x3_tn_align8::Params)",
+    "count": 5,
+    "cuda_us": 689.4000000000001
+  },
+  {
+    "kind": "main",
+    "M": 256,
+    "dtype": "fp4",
+    "kernel": "cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m1_ue4m3xe2m1_f32_bf16_bf16_128x128x256_1x1x1_0_tnn_align32_o_vs16_bias_bf16_relu",
+    "count": 5,
+    "cuda_us": 169.79199999999997
+  },
+  {
+    "kind": "main",
+    "M": 512,
+    "dtype": "bf16",
+    "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x64_64x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x64_64x3_tn_align8::Params)",
+    "count": 5,
+    "cuda_us": 1241.1529999999998
+  },
+  {
+    "kind": "main",
+    "M": 512,
+    "dtype": "fp4",
+    "kernel": "cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m1_ue4m3xe2m1_f32_bf16_bf16_128x128x256_1x1x1_0_tnn_align32_o_vs16_bias_bf16_relu",
+    "count": 5,
+    "cuda_us": 277.887
+  },
+  {
+    "kind": "main",
+    "M": 1024,
+    "dtype": "bf16",
+    "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_64x256_32x4_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_64x256_32x4_tn_align8::Params)",
+    "count": 5,
+    "cuda_us": 2396.156
+  },
+  {
+    "kind": "main",
+    "M": 1024,
+    "dtype": "fp4",
+    "kernel": "cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m1_ue4m3xe2m1_f32_bf16_bf16_128x128x256_1x1x1_0_tnn_align32_o_vs16_bias_bf16_relu",
+    "count": 5,
+    "cuda_us": 457.6019999999999
+  },
+  {
+    "kind": "probe",
+    "M": 2048,
+    "dtype": "bf16",
+    "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x128_32x4_nn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x128_32x4_nn_align8::Params)",
+    "count": 5,
+    "cuda_us": 492.317
+  },
+  {
+    "kind": "probe",
+    "M": 2048,
+    "dtype": "fp4",
+    "kernel": "cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m1_ue4m3xe2m1_f32_bf16_bf16_128x128x256_1x1x1_0_tnn_align32_o_vs16_bias_bf16_relu",
+    "count": 5,
+    "cuda_us": 95.428
+  }
+]
