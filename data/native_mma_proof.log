@@ -1,0 +1,17 @@
+===== cubin a5c1dbc3334094 =====
+symbol lines: 26
+kernel-name matches: 10
+name: cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m1_ue4m3xe2m1_f32_f16_ue4m3xe2m1_128x128x256_1x1x1_0_tnn_align32_o_vs16_bias_f16_gelu_epiVs16n_stream_k
+OMMA in that ONE function: 256
+    256 OMMA.SF.16864.F32.E2M1.E2M1.UE4M3.4X
+HMMA in that function: 0
+negative control OMMA: 0
+===== cubin 4b0922edfc6aad =====
+symbol lines: 26
+kernel-name matches: 10
+name: cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m1_ue4m3xe2m1_f32_bf16_ue4m3xe2m1_128x128x256_1x1x1_0_tnn_align32_o_vs16_bias_bf16_gelu_epiVs16n_stream_k
+OMMA in that ONE function: 256
+    256 OMMA.SF.16864.F32.E2M1.E2M1.UE4M3.4X
+HMMA in that function: 0
+negative control OMMA: 0
+DONE
