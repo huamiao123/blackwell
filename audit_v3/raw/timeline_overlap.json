@@ -1,0 +1,206 @@
+[
+  {
+    "stream_A": 37,
+    "stream_B": 41,
+    "n_kernels_A": 577,
+    "n_kernels_B": 200,
+    "span_A_us": [
+      3804174985012.38,
+      3804175016929.874
+    ],
+    "span_B_us": [
+      3804174985205.564,
+      3804175005698.3906
+    ],
+    "task_span_overlap_us": 20492.82666015625,
+    "kernel_overlap_us": 17823.89306640625,
+    "busy_A_us": 29133.92333984375,
+    "busy_B_us": 20452.68212890625,
+    "kernel_overlap_frac_of_shorter": 0.8714697150265357,
+    "task_overlap_frac_of_shorter": 1.0,
+    "tail_A_after_B_us": 11231.4833984375,
+    "tail_B_after_A_us": 0.0,
+    "gaps_A_us": 2783.57080078125,
+    "gaps_B_us": 40.14453125,
+    "kernel_names_A": [
+      "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8>(cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8::Params)"
+    ],
+    "kernel_names_B": [
+      "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x128_32x4_nn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x128_32x4_nn_align8::Params)"
+    ],
+    "M": 16,
+    "precision": "bf16",
+    "reps_A": 577,
+    "reps_B": 200
+  },
+  {
+    "stream_A": 69,
+    "stream_B": 73,
+    "n_kernels_A": 626,
+    "n_kernels_B": 192,
+    "span_A_us": [
+      3804175160868.275,
+      3804175188956.467
+    ],
+    "span_B_us": [
+      3804175161054.61,
+      3804175182690.312
+    ],
+    "task_span_overlap_us": 21635.7021484375,
+    "kernel_overlap_us": 13662.71630859375,
+    "busy_A_us": 20111.33349609375,
+    "busy_B_us": 21595.966796875,
+    "kernel_overlap_frac_of_shorter": 0.6793540722323299,
+    "task_overlap_frac_of_shorter": 1.0,
+    "tail_A_after_B_us": 6266.15478515625,
+    "tail_B_after_A_us": 0.0,
+    "gaps_A_us": 7976.8583984375,
+    "gaps_B_us": 39.7353515625,
+    "kernel_names_A": [
+      "cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m1_ue4m3xe2m1_f32_bf16_bf16_128x128x256_1x1x1_0_tnn_align32_o_vs16_bias_bf16_relu"
+    ],
+    "kernel_names_B": [
+      "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x128_32x4_nn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x128_32x4_nn_align8::Params)"
+    ],
+    "M": 16,
+    "precision": "fp4",
+    "reps_A": 626,
+    "reps_B": 192
+  },
+  {
+    "stream_A": 101,
+    "stream_B": 105,
+    "n_kernels_A": 240,
+    "n_kernels_B": 191,
+    "span_A_us": [
+      3804175248090.405,
+      3804175277211.431
+    ],
+    "span_B_us": [
+      3804175248999.138,
+      3804175274343.76
+    ],
+    "task_span_overlap_us": 25344.62158203125,
+    "kernel_overlap_us": 15615.1982421875,
+    "busy_A_us": 25201.087890625,
+    "busy_B_us": 19406.78564453125,
+    "kernel_overlap_frac_of_shorter": 0.8046256875407802,
+    "task_overlap_frac_of_shorter": 1.0,
+    "tail_A_after_B_us": 2867.67138671875,
+    "tail_B_after_A_us": 0.0,
+    "gaps_A_us": 3919.9384765625,
+    "gaps_B_us": 5937.8359375,
+    "kernel_names_A": [
+      "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x64_32x4_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x64_32x4_tn_align8::Params)"
+    ],
+    "kernel_names_B": [
+      "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x128_32x4_nn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x128_32x4_nn_align8::Params)"
+    ],
+    "M": 128,
+    "precision": "bf16",
+    "reps_A": 240,
+    "reps_B": 191
+  },
+  {
+    "stream_A": 133,
+    "stream_B": 137,
+    "n_kernels_A": 923,
+    "n_kernels_B": 192,
+    "span_A_us": [
+      3804175402502.596,
+      3804175429589.024
+    ],
+    "span_B_us": [
+      3804175402926.595,
+      3804175421412.18
+    ],
+    "task_span_overlap_us": 18485.5849609375,
+    "kernel_overlap_us": 11794.0859375,
+    "busy_A_us": 20333.494140625,
+    "busy_B_us": 18451.47705078125,
+    "kernel_overlap_frac_of_shorter": 0.6391946782927402,
+    "task_overlap_frac_of_shorter": 1.0,
+    "tail_A_after_B_us": 8176.84375,
+    "tail_B_after_A_us": 0.0,
+    "gaps_A_us": 6752.93359375,
+    "gaps_B_us": 34.10791015625,
+    "kernel_names_A": [
+      "cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m1_ue4m3xe2m1_f32_bf16_bf16_128x128x256_1x1x1_0_tnn_align32_o_vs16_bias_bf16_relu"
+    ],
+    "kernel_names_B": [
+      "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x128_32x4_nn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x128_32x4_nn_align8::Params)"
+    ],
+    "M": 128,
+    "precision": "fp4",
+    "reps_A": 923,
+    "reps_B": 192
+  },
+  {
+    "stream_A": 41,
+    "stream_B": 37,
+    "n_kernels_A": 195,
+    "n_kernels_B": 41,
+    "span_A_us": [
+      3804175506217.594,
+      3804175541167.044
+    ],
+    "span_B_us": [
+      3804175505812.476,
+      3804175526166.871
+    ],
+    "task_span_overlap_us": 19949.27685546875,
+    "kernel_overlap_us": 5765.984375,
+    "busy_A_us": 20826.6806640625,
+    "busy_B_us": 20230.4501953125,
+    "kernel_overlap_frac_of_shorter": 0.2850151291411206,
+    "task_overlap_frac_of_shorter": 0.9800967720399567,
+    "tail_A_after_B_us": 15000.1728515625,
+    "tail_B_after_A_us": 0.0,
+    "gaps_A_us": 14122.76904296875,
+    "gaps_B_us": 123.94482421875,
+    "kernel_names_A": [
+      "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x128_32x4_nn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x128_32x4_nn_align8::Params)"
+    ],
+    "kernel_names_B": [
+      "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_64x256_32x4_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_64x256_32x4_tn_align8::Params)"
+    ],
+    "M": 1024,
+    "precision": "bf16",
+    "reps_A": 41,
+    "reps_B": 195
+  },
+  {
+    "stream_A": 69,
+    "stream_B": 73,
+    "n_kernels_A": 209,
+    "n_kernels_B": 192,
+    "span_A_us": [
+      3804175644460.65,
+      3804175673442.683
+    ],
+    "span_B_us": [
+      3804175644722.154,
+      3804175672231.358
+    ],
+    "task_span_overlap_us": 27509.2041015625,
+    "kernel_overlap_us": 12591.58740234375,
+    "busy_A_us": 21003.4970703125,
+    "busy_B_us": 20566.9892578125,
+    "kernel_overlap_frac_of_shorter": 0.612223172021192,
+    "task_overlap_frac_of_shorter": 1.0,
+    "tail_A_after_B_us": 1211.3251953125,
+    "tail_B_after_A_us": 0.0,
+    "gaps_A_us": 7978.5361328125,
+    "gaps_B_us": 6942.21484375,
+    "kernel_names_A": [
+      "cutlass3x_sm120_bstensorop_s16864gemm_block_scaled_ue4m3xe2m1_ue4m3xe2m1_f32_bf16_bf16_128x128x256_1x1x1_0_tnn_align32_o_vs16_bias_bf16_relu"
+    ],
+    "kernel_names_B": [
+      "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x128_32x4_nn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x128_32x4_nn_align8::Params)"
+    ],
+    "M": 1024,
+    "precision": "fp4",
+    "reps_A": 209,
+    "reps_B": 192
+  }
+]
