@@ -1,0 +1,7 @@
+M=16 exit=0
+M=32 exit=0
+M=64 exit=0
+M=128 exit=1
+M=256 exit=1
+M=512 exit=0
+M=1024 exit=0
