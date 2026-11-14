@@ -1,0 +1,17 @@
+M=  128 bf16   tensor_L2  S_A=1.017 [1.008,1.019]  S_B=2.072 | footprint=1.0 MB
+M=  128 bf16 tensor_dram  S_A=1.574 [1.573,1.575]  S_B=1.373 | footprint=16.8 MB
+M=  128 bf16        dram  S_A=1.998 [1.997,2.000]  S_B=1.029 | footprint=3221.2 MB
+M=  128 bf16    fp32_fma  S_A=1.364 [1.355,1.375]  S_B=2.261 | footprint=0.3 MB
+M=  128  fp4   tensor_L2  S_A=1.438 [1.430,1.445]  S_B=1.434 | footprint=1.0 MB
+M=  128  fp4 tensor_dram  S_A=1.657 [1.654,1.661]  S_B=1.000 | footprint=16.8 MB
+M=  128  fp4        dram  S_A=1.951 [1.948,1.952]  S_B=1.008 | footprint=3221.2 MB
+M=  128  fp4    fp32_fma  S_A=1.202 [1.180,1.220]  S_B=2.079 | footprint=0.3 MB
+M= 1024 bf16   tensor_L2  S_A=0.995 [0.988,0.996]  S_B=2.347 | footprint=1.0 MB
+M= 1024 bf16 tensor_dram  S_A=1.054 [1.051,1.058]  S_B=1.889 | footprint=16.8 MB
+M= 1024 bf16        dram  S_A=1.943 [1.942,1.944]  S_B=1.173 | footprint=3221.2 MB
+M= 1024 bf16    fp32_fma  S_A=1.163 [1.158,1.164]  S_B=2.386 | footprint=0.3 MB
+M= 1024  fp4   tensor_L2  S_A=1.035 [1.020,1.045]  S_B=2.200 | footprint=1.0 MB
+M= 1024  fp4 tensor_dram  S_A=1.627 [1.603,1.638]  S_B=1.507 | footprint=16.8 MB
+M= 1024  fp4        dram  S_A=2.035 [2.033,2.038]  S_B=1.032 | footprint=3221.2 MB
+M= 1024  fp4    fp32_fma  S_A=1.061 [1.048,1.070]  S_B=2.402 | footprint=0.3 MB
+json -> raw/gate8.json
