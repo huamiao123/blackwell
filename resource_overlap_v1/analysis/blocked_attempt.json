@@ -1,0 +1,13 @@
+{
+  "label": "gate2_fp32_low",
+  "command": ["python3", "~/fp4-llm/results/resource_overlap_v1/src/run_supervised.py", "--label", "gate2_fp32_low", "--target", "probe", "--timeout", "180", "--", "--kind", "fp32", "--chunks", "32", "--reps", "200000", "--trials", "5"],
+  "result": "AUTO_LAUNCH_CONTROLLER_PRESENT_NO_RUN",
+  "workload_spawned": false,
+  "cuda_work_started": false,
+  "followup_observation_time": "2026-11-17T00:03:33+08:00",
+  "foreign_compute_pid": 527046,
+  "foreign_memory_mib": 23752,
+  "gpu_utilization_percent_at_observation": 47,
+  "our_experiment_processes_remaining": [],
+  "automatic_retry": false
+}

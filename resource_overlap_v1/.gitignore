@@ -1,0 +1,5 @@
+__pycache__/
+raw/*.nsys-rep
+sqlite/*.sqlite
+analysis/*_compiler/*.cubin
+local_cache/

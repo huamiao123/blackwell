@@ -1,6 +1,20 @@
 # blackwell — RTX 5090 (SM120) BF16 vs native NVFP4 resource study
 
-## 最新实验：Qwen3-8B Decode / NSYS GPU Metrics（2026-11-16）
+## 最新阶段：资源可利用性研究准备与公平基线（2026-11-17）
+
+关闭 Prefix Cache、使用不同 Prompt 后，完成 B1/B8 × BF16/NVFP4 的 20 次
+Graph Decode 基线。B8 分别约为 11.311/7.225 ms/step；B1 为 10.038/6.730。
+辅助探针与公平串行/并发框架已编写，**尚未通过 GPU 校验或获得并发结果**；
+因其他用户开始计算任务，本轮已停止 GPU 工作。
+
+- [阶段报告与剩余事项](resource_overlap_v1/final_report.md)
+- [实验协议](resource_overlap_v1/methodology.md)
+- [逐次公平基线](resource_overlap_v1/analysis/baseline.csv)
+- [基线图](resource_overlap_v1/figures/baseline_latency.png)
+
+新、旧负载及计时边界不同，不将两轮数据混用为并发指标。
+
+## 前一轮：Qwen3-8B Decode / NSYS GPU Metrics（2026-11-16）
 
 本轮使用真实 Qwen3-8B BF16/NVFP4 请求，对照 Batch=1/8、Eager/Graph，完成
 8 个核心配置的 40 次无 Profiling 基线测量，以及 26 份 NSYS Trace/SQLite。

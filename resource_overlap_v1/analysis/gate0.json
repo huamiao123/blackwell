@@ -1,0 +1,84 @@
+{
+  "status": "CPU protocol checks passed; GPU correctness untested",
+  "gpu_work_launched": false,
+  "inputs": [
+    {
+      "path": "nsys_round2/final_report.md",
+      "bytes": 29762,
+      "lines": 335,
+      "sha256": "2c78c2d36c849cf024d81a4fb78ea8d464e30cf2e83102e851e7ca1c09713a78"
+    },
+    {
+      "path": "nsys_round2/baseline.csv",
+      "bytes": 6587,
+      "lines": 41,
+      "sha256": "e1a889d68155be6a3992d7a953ccc905d37e0bfe2ad33b05c7078968ed72d52e"
+    },
+    {
+      "path": "nsys_round2/analysis/metric_summary.csv",
+      "bytes": 55723,
+      "lines": 451,
+      "sha256": "24338983620e74f34ac9ca1161eb6eaf6bde8b0608fdb9c41290a48702613a05"
+    },
+    {
+      "path": "nsys_round2/analysis/profiler_overhead.csv",
+      "bytes": 3028,
+      "lines": 26,
+      "sha256": "c4c799199ac25fcd7c9a77728647c4c2735227bc7ae5be5d9cc695f31d93362f"
+    },
+    {
+      "path": "nsys_round2/src/original/decode_round2.py",
+      "bytes": 8529,
+      "lines": 145,
+      "sha256": "a79941bdaec8bc03368927898bbb59e76bfc7f8341dfbca7b4eda64ab2eab5b1"
+    },
+    {
+      "path": "nsys_round2/src/original/analyze_round2.py",
+      "bytes": 11962,
+      "lines": 179,
+      "sha256": "1eaeac5502accaa02ede3304589eb316312da8b9d72005af8f941b301e9eee00"
+    },
+    {
+      "path": "audit_v3/corrected_results.md",
+      "bytes": 16064,
+      "lines": 326,
+      "sha256": "8d5fda613a8455d2684b251e7bb6a9386aee8bad195d1224497be2450ee37232"
+    },
+    {
+      "path": "audit_v3/raw/gate9_M1024.json",
+      "bytes": 12475,
+      "lines": 436,
+      "sha256": "e78a9e7332016ddfe91770eaaa969c7354e2428ac6bce8ddd04fcced9a387e91"
+    },
+    {
+      "path": "audit_v3/source_audit.md",
+      "bytes": 10271,
+      "lines": 227,
+      "sha256": "011f691dd496e93f9b15061dbaa7af14631a1baaab513b2bbe5a9a9d8ccdb699"
+    }
+  ],
+  "python_ast_checked": [
+    "analyze_overlap.py",
+    "auxiliary_dram.py",
+    "auxiliary_fp32.py",
+    "auxiliary_tensor.py",
+    "check_gate0.py",
+    "overlap_runner.py",
+    "probe_check.py",
+    "probes.py",
+    "run_supervised.py"
+  ],
+  "old_baseline_rows": 40,
+  "gate9_root_type": "dict",
+  "prompt_rows": 8,
+  "prompt_length": 2048,
+  "prefill_budget": 16384,
+  "prefix_caching": false,
+  "open_checks": [
+    "installed vLLM accepts chunked-prefill=False with this budget",
+    "exact replay and scheduled-batch assertions on real requests",
+    "probe JIT, output checks and PTX/SASS checks",
+    "physical GPU overlap; Graph dispatch is not evidence",
+    "new fair performance baseline; historical baseline not reused as denominator"
+  ]
+}

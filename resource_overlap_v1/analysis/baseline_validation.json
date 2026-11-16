@@ -1,0 +1,93 @@
+{
+  "valid_trials": 20,
+  "summary": [
+    {
+      "source": "gate1_bf16_b1_s1.json",
+      "precision": "bf16",
+      "batch": 1,
+      "valid_repeats": 5,
+      "mean_step_ms": 10.03840787578125,
+      "min_step_ms": 10.02839080859375,
+      "max_step_ms": 10.0493621875,
+      "cv_percent": 0.08889653653342408,
+      "trial_median_p50_ms": 10.0174395,
+      "trial_median_p95_ms": 10.605221,
+      "mean_tokens_per_s": 99.61745372997439,
+      "mean_decode_total_ms": 2569.8324162,
+      "telemetry_samples": 6
+    },
+    {
+      "source": "gate1_bf16_b8_s1.json",
+      "precision": "bf16",
+      "batch": 8,
+      "valid_repeats": 5,
+      "mean_step_ms": 11.310908846875,
+      "min_step_ms": 11.30557965234375,
+      "max_step_ms": 11.3184182890625,
+      "cv_percent": 0.04339282158795237,
+      "trial_median_p50_ms": 11.2797905,
+      "trial_median_p95_ms": 11.920323,
+      "mean_tokens_per_s": 707.2819092697299,
+      "mean_decode_total_ms": 2895.5926648,
+      "telemetry_samples": 6
+    },
+    {
+      "source": "gate1_nvfp4_b1_s1.json",
+      "precision": "nvfp4",
+      "batch": 1,
+      "valid_repeats": 5,
+      "mean_step_ms": 6.73047350625,
+      "min_step_ms": 6.727337265625,
+      "max_step_ms": 6.7329015625,
+      "cv_percent": 0.03404187830400869,
+      "trial_median_p50_ms": 6.7229045,
+      "trial_median_p95_ms": 7.223122,
+      "mean_tokens_per_s": 148.57797029996223,
+      "mean_decode_total_ms": 1723.0012176,
+      "telemetry_samples": 4
+    },
+    {
+      "source": "gate1_nvfp4_b8_s2.json",
+      "precision": "nvfp4",
+      "batch": 8,
+      "valid_repeats": 5,
+      "mean_step_ms": 7.22500727890625,
+      "min_step_ms": 7.219563609375,
+      "max_step_ms": 7.23320578125,
+      "cv_percent": 0.07763858947459146,
+      "trial_median_p50_ms": 7.2049985,
+      "trial_median_p95_ms": 8.686215,
+      "mean_tokens_per_s": 1107.265854192204,
+      "mean_decode_total_ms": 1849.6018634,
+      "telemetry_samples": 3
+    }
+  ],
+  "fairness": [
+    {
+      "batch": 1,
+      "identical_settings": true,
+      "identical_token_ids": true,
+      "prefix_disabled": true,
+      "all_prefill_computed_from_zero": true,
+      "actual_batch_verified": true,
+      "graph_replays_verified": true,
+      "output_hashes_identical": false
+    },
+    {
+      "batch": 8,
+      "identical_settings": true,
+      "identical_token_ids": true,
+      "prefix_disabled": true,
+      "all_prefill_computed_from_zero": true,
+      "actual_batch_verified": true,
+      "graph_replays_verified": true,
+      "output_hashes_identical": false
+    }
+  ],
+  "measurement_limits": [
+    "Five repeated generations per configuration in one process; not five independent model loads.",
+    "Clock/power observations are sparse two-second supervision samples, not continuous averages.",
+    "No new CUDA node trace; current kernel composition verification remains pending.",
+    "Timing boundary differs from historical round2; use these baselines only within this protocol."
+  ]
+}

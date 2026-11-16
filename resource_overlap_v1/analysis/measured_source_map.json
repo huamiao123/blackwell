@@ -1,0 +1,28 @@
+[
+  {
+    "raw": "gate1_bf16_b1_s1.json",
+    "recorded_sha256": "d7cf63fd87f9cd55871b9fa60a9bd05428e4f88c9abd1fbb12699f441722214d",
+    "matching_source": "src/measured_baseline/overlap_runner_baseline_v1.py"
+  },
+  {
+    "raw": "gate1_bf16_b8_s1.json",
+    "recorded_sha256": "d7cf63fd87f9cd55871b9fa60a9bd05428e4f88c9abd1fbb12699f441722214d",
+    "matching_source": "src/measured_baseline/overlap_runner_baseline_v1.py"
+  },
+  {
+    "raw": "gate1_nvfp4_b1_s1.json",
+    "recorded_sha256": "74167956e285623f4da8610b49e09172e5f444454b09bb618ab06eb0369178d2",
+    "matching_source": "src/measured_baseline/overlap_runner_explicit_timestamps.py"
+  },
+  {
+    "raw": "gate1_nvfp4_b8_s2.json",
+    "recorded_sha256": "d7cf63fd87f9cd55871b9fa60a9bd05428e4f88c9abd1fbb12699f441722214d",
+    "matching_source": "src/measured_baseline/overlap_runner_baseline_v1.py"
+  },
+  {
+    "failed_invocation": "gate1_nvfp4_b8_s1",
+    "recorded_sha256": "0a7afa5a96421d8d7bc0c2ae731cec9112dca74b484ac8a07a7fac8fab79be71",
+    "matching_source": "src/measured_baseline/overlap_runner_rejected_schedule_assert.py",
+    "performance_sample": false
+  }
+]

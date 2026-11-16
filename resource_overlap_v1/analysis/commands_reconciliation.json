@@ -1,0 +1,9 @@
+{
+  "original_aggregate_records": 3,
+  "intact_supervision_records": 5,
+  "reason": "A deployment copied a stale aggregate commands.txt. Per-run supervision records were not overwritten.",
+  "original_preserved": "commands.txt",
+  "derived_complete_ledger": "commands_reconciled.jsonl",
+  "missing_actual_workload_commands": false,
+  "blocked_before_spawn": "analysis/blocked_attempt.json"
+}

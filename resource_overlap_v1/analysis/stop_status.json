@@ -1,0 +1,9 @@
+{
+  "time": "2026-11-17T00:05:45.037089+08:00",
+  "status": "GPU work stopped: foreign compute task active",
+  "gpu_who": "GPU 0  NVIDIA GeForce RTX 5090  mem 24474/32607 MiB  util 47%\n  pid 527046   ububtu        23752 MiB\n",
+  "gate1": "20 valid unprofiled fair baseline trials complete",
+  "gate2": "launch refused by precheck, no probe CUDA workload started",
+  "gates3_to6": "not started",
+  "automatic_resume": false
+}
