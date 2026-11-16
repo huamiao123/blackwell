@@ -1,0 +1,451 @@
+trace,name,valid_samples,invalid_samples,mean,p50,p95,peak,active_mean,gap_mean,active_samples,gap_samples
+bf16_b1_kv2048_eager_metrics_10000hz_r02,GPC Clock Frequency [MHz],0,31016,,,,,,,0,0
+bf16_b1_kv2048_eager_metrics_10000hz_r02,SYS Clock Frequency [MHz],0,31016,,,,,,,0,0
+bf16_b1_kv2048_eager_metrics_10000hz_r02,Sync Copy Engine Active [Throughput %],31016,0,0,0.0,0.0,0,0,0,22949,8067
+bf16_b1_kv2048_eager_metrics_10000hz_r02,Sync Copy Engine Active [Cycles Active],31016,0,0,0.0,0.0,0,0,0,22949,8067
+bf16_b1_kv2048_eager_metrics_10000hz_r02,Async Copy Engine Active 0 [Throughput %],31016,0,0,0.0,0.0,0,0,0,22949,8067
+bf16_b1_kv2048_eager_metrics_10000hz_r02,Async Copy Engine Active 0 [Cycles Active],31016,0,0,0.0,0.0,0,0,0,22949,8067
+bf16_b1_kv2048_eager_metrics_10000hz_r02,GR Active [Throughput %],31016,0,75.28211245808615,83.0,100.0,100,84.19342890757767,49.93120119003347,22949,8067
+bf16_b1_kv2048_eager_metrics_10000hz_r02,SMs Active [Throughput %],31016,0,66.37335568738716,77.0,100.0,100,74.41696805961044,43.490888806247675,22949,8067
+bf16_b1_kv2048_eager_metrics_10000hz_r02,SM Issue [Throughput %],31016,0,9.022053133866391,10.0,14.0,15,10.038040873240664,6.131771414404364,22949,8067
+bf16_b1_kv2048_eager_metrics_10000hz_r02,Tensor Active [Throughput %],31016,0,0.2723755481042043,0.0,1.0,1,0.24876900954289946,0.33953142432130906,22949,8067
+bf16_b1_kv2048_eager_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Throughput %],31016,0,0,0.0,0.0,0,0,0,22949,8067
+bf16_b1_kv2048_eager_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg],31016,0,0,0.0,0.0,0,0,0,22949,8067
+bf16_b1_kv2048_eager_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],31016,0,0,0.0,0.0,0,0,0,22949,8067
+bf16_b1_kv2048_eager_metrics_10000hz_r02,Pixel Warps in Flight [Throughput %],31016,0,0,0.0,0.0,0,0,0,22949,8067
+bf16_b1_kv2048_eager_metrics_10000hz_r02,Pixel Warps in Flight [Avg],31016,0,0,0.0,0.0,0,0,0,22949,8067
+bf16_b1_kv2048_eager_metrics_10000hz_r02,Pixel Warps in Flight [Avg Warps per Cycle],31016,0,0,0.0,0.0,0,0,0,22949,8067
+bf16_b1_kv2048_eager_metrics_10000hz_r02,Compute Warps in Flight [Throughput %],31016,0,15.791688160949187,18.0,25.0,25,17.66233822824524,10.470063220528077,22949,8067
+bf16_b1_kv2048_eager_metrics_10000hz_r02,Compute Warps in Flight [Avg],31016,0,3730420.1188741294,4437190.0,5851692.75,6115948,4174103.3901695064,2468230.0366926985,22949,8067
+bf16_b1_kv2048_eager_metrics_10000hz_r02,Compute Warps in Flight [Avg Warps per Cycle],31016,0,15.159369357750839,18.0,24.0,24,16.945879994771015,10.077104251890418,22949,8067
+bf16_b1_kv2048_eager_metrics_10000hz_r02,DRAM Read Bandwidth [Throughput %],31016,0,62.656467629610525,74.0,96.0,97,70.22798379014336,41.11701995785298,22949,8067
+bf16_b1_kv2048_eager_metrics_10000hz_r02,DRAM Write Bandwidth [Throughput %],31016,0,0.7702153727108589,1.0,1.0,1,0.7966795938820863,0.6949299615718358,22949,8067
+bf16_b1_kv2048_eager_metrics_10000hz_r02,PCIe RX Throughput [Throughput %],31016,0,0.9663399535723498,1.0,1.0,1,0.9707176783302105,0.9538862030494608,22949,8067
+bf16_b1_kv2048_eager_metrics_10000hz_r02,PCIe TX Throughput [Throughput %],31016,0,1,1.0,1.0,1,1,1,22949,8067
+bf16_b1_kv2048_eager_metrics_10000hz_r02,PCIe Read Requests to BAR1 [Requests],31016,0,0,0.0,0.0,0,0,0,22949,8067
+bf16_b1_kv2048_eager_metrics_10000hz_r02,PCIe Write Requests to BAR1 [Requests],31016,0,9.909111426360589,12.0,15.0,18,9.568434354438102,10.878269492996157,22949,8067
+bf16_b1_kv2048_graph_metrics_10000hz_r02,GPC Clock Frequency [MHz],0,22465,,,,,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,SYS Clock Frequency [MHz],0,22465,,,,,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,Sync Copy Engine Active [Throughput %],22465,0,0.00017805475183618963,0.0,0.0,4,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,Sync Copy Engine Active [Cycles Active],22465,0,0.3977298019140886,0.0,0.0,8935,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,Async Copy Engine Active 0 [Throughput %],22465,0,0,0.0,0.0,0,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,Async Copy Engine Active 0 [Cycles Active],22465,0,0,0.0,0.0,0,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,GR Active [Throughput %],22465,0,99.97253505452927,100.0,100.0,100,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,SMs Active [Throughput %],22465,0,91.77026485644336,94.0,100.0,100,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,SM Issue [Throughput %],22465,0,10.588738036946362,11.0,12.0,14,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,Tensor Active [Throughput %],22465,0,0.3741820609837525,0.0,1.0,1,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Throughput %],22465,0,0,0.0,0.0,0,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg],22465,0,0,0.0,0.0,0,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],22465,0,0,0.0,0.0,0,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,Pixel Warps in Flight [Throughput %],22465,0,0,0.0,0.0,0,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,Pixel Warps in Flight [Avg],22465,0,0,0.0,0.0,0,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,Pixel Warps in Flight [Avg Warps per Cycle],22465,0,0,0.0,0.0,0,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,Compute Warps in Flight [Throughput %],22465,0,21.898330736701535,22.0,25.0,25,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,Compute Warps in Flight [Avg],22465,0,6026229.198575562,6140095.0,6898397.4,6939854,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,Compute Warps in Flight [Avg Warps per Cycle],22465,0,21.00151346539061,21.0,24.0,24,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,DRAM Read Bandwidth [Throughput %],22465,0,86.41068328511017,88.0,97.0,97,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,DRAM Write Bandwidth [Throughput %],22465,0,0.9109726240819052,1.0,1.0,7,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,PCIe RX Throughput [Throughput %],22465,0,0.14008457600712218,0.0,1.0,2,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,PCIe TX Throughput [Throughput %],22465,0,1,1.0,1.0,1,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,PCIe Read Requests to BAR1 [Requests],22465,0,4.451368795904741e-05,0.0,0.0,1,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r02,PCIe Write Requests to BAR1 [Requests],22465,0,0.7218784776318719,0.0,6.0,15,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,GPC Clock Frequency [MHz],0,22471,,,,,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,SYS Clock Frequency [MHz],0,22471,,,,,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,Sync Copy Engine Active [Throughput %],22471,0,0,0.0,0.0,0,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,Sync Copy Engine Active [Cycles Active],22471,0,0,0.0,0.0,0,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,Async Copy Engine Active 0 [Throughput %],22471,0,0,0.0,0.0,0,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,Async Copy Engine Active 0 [Cycles Active],22471,0,0,0.0,0.0,0,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,GR Active [Throughput %],22471,0,99.97507899069912,100.0,100.0,100,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,SMs Active [Throughput %],22471,0,91.76783409728094,94.0,100.0,100,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,SM Issue [Throughput %],22471,0,10.601797872813849,11.0,12.0,14,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,Tensor Active [Throughput %],22471,0,0.3731921142806284,0.0,1.0,1,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,Vertex/Tess/Geometry Warps in Flight [Throughput %],22471,0,0,0.0,0.0,0,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,Vertex/Tess/Geometry Warps in Flight [Avg],22471,0,0,0.0,0.0,0,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],22471,0,0,0.0,0.0,0,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,Pixel Warps in Flight [Throughput %],22471,0,0,0.0,0.0,0,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,Pixel Warps in Flight [Avg],22471,0,0,0.0,0.0,0,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,Pixel Warps in Flight [Avg Warps per Cycle],22471,0,0,0.0,0.0,0,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,Compute Warps in Flight [Throughput %],22471,0,21.900627475412755,22.0,25.0,25,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,Compute Warps in Flight [Avg],22471,0,6019181.062035512,6131887.0,6897193.5,6941660,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,Compute Warps in Flight [Avg Warps per Cycle],22471,0,21.00209158470918,21.0,24.0,24,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,DRAM Read Bandwidth [Throughput %],22471,0,86.40963909038317,88.0,97.0,97,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,DRAM Write Bandwidth [Throughput %],22471,0,0.9010279916336612,1.0,1.0,1,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,PCIe RX Throughput [Throughput %],22471,0,0.13889012505006454,0.0,1.0,1,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,PCIe TX Throughput [Throughput %],22471,0,1,1.0,1.0,1,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,PCIe Read Requests to BAR1 [Requests],22471,0,0,0.0,0.0,0,,,0,0
+bf16_b1_kv2048_graph_metrics_10000hz_r03,PCIe Write Requests to BAR1 [Requests],22471,0,0.721774731876641,0.0,6.0,12,,,0,0
+bf16_b1_kv2048_graph_node_10000hz_r02,GPC Clock Frequency [MHz],0,3275,,,,,,,0,0
+bf16_b1_kv2048_graph_node_10000hz_r02,SYS Clock Frequency [MHz],0,3275,,,,,,,0,0
+bf16_b1_kv2048_graph_node_10000hz_r02,Sync Copy Engine Active [Throughput %],3275,0,0,0.0,0.0,0,0,0,3196,79
+bf16_b1_kv2048_graph_node_10000hz_r02,Sync Copy Engine Active [Cycles Active],3275,0,0,0.0,0.0,0,0,0,3196,79
+bf16_b1_kv2048_graph_node_10000hz_r02,Async Copy Engine Active 0 [Throughput %],3275,0,0,0.0,0.0,0,0,0,3196,79
+bf16_b1_kv2048_graph_node_10000hz_r02,Async Copy Engine Active 0 [Cycles Active],3275,0,0,0.0,0.0,0,0,0,3196,79
+bf16_b1_kv2048_graph_node_10000hz_r02,GR Active [Throughput %],3275,0,98.60732824427481,100.0,100.0,100,99.96057571964957,43.860759493670884,3196,79
+bf16_b1_kv2048_graph_node_10000hz_r02,SMs Active [Throughput %],3275,0,90.05709923664122,93.0,100.0,100,91.33041301627034,38.54430379746835,3196,79
+bf16_b1_kv2048_graph_node_10000hz_r02,SM Issue [Throughput %],3275,0,11.561832061068703,12.0,13.0,14,11.721214017521902,5.113924050632911,3196,79
+bf16_b1_kv2048_graph_node_10000hz_r02,Tensor Active [Throughput %],3275,0,0.3667175572519084,0.0,1.0,1,0.36983729662077597,0.24050632911392406,3196,79
+bf16_b1_kv2048_graph_node_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Throughput %],3275,0,0,0.0,0.0,0,0,0,3196,79
+bf16_b1_kv2048_graph_node_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg],3275,0,0,0.0,0.0,0,0,0,3196,79
+bf16_b1_kv2048_graph_node_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],3275,0,0,0.0,0.0,0,0,0,3196,79
+bf16_b1_kv2048_graph_node_10000hz_r02,Pixel Warps in Flight [Throughput %],3275,0,0,0.0,0.0,0,0,0,3196,79
+bf16_b1_kv2048_graph_node_10000hz_r02,Pixel Warps in Flight [Avg],3275,0,0,0.0,0.0,0,0,0,3196,79
+bf16_b1_kv2048_graph_node_10000hz_r02,Pixel Warps in Flight [Avg Warps per Cycle],3275,0,0,0.0,0.0,0,0,0,3196,79
+bf16_b1_kv2048_graph_node_10000hz_r02,Compute Warps in Flight [Throughput %],3275,0,21.477862595419847,22.0,25.0,25,21.781289111389235,9.20253164556962,3196,79
+bf16_b1_kv2048_graph_node_10000hz_r02,Compute Warps in Flight [Avg],3275,0,5322134.9893129775,5528928.0,6208906.1,6435253,5397367.84543179,2278537.417721519,3196,79
+bf16_b1_kv2048_graph_node_10000hz_r02,Compute Warps in Flight [Avg Warps per Cycle],3275,0,20.63236641221374,21.0,24.0,24,20.922715894868585,8.886075949367088,3196,79
+bf16_b1_kv2048_graph_node_10000hz_r02,DRAM Read Bandwidth [Throughput %],3275,0,84.6467175572519,88.0,97.0,97,85.84292866082603,36.25316455696203,3196,79
+bf16_b1_kv2048_graph_node_10000hz_r02,DRAM Write Bandwidth [Throughput %],3275,0,0.9422900763358779,1.0,1.0,1,0.9549436795994993,0.43037974683544306,3196,79
+bf16_b1_kv2048_graph_node_10000hz_r02,PCIe RX Throughput [Throughput %],3275,0,0.10961832061068702,0.0,1.0,1,0.10700876095118898,0.21518987341772153,3196,79
+bf16_b1_kv2048_graph_node_10000hz_r02,PCIe TX Throughput [Throughput %],3275,0,1,1.0,1.0,1,1,1,3196,79
+bf16_b1_kv2048_graph_node_10000hz_r02,PCIe Read Requests to BAR1 [Requests],3275,0,0,0.0,0.0,0,0,0,3196,79
+bf16_b1_kv2048_graph_node_10000hz_r02,PCIe Write Requests to BAR1 [Requests],3275,0,0.7071755725190839,0.0,6.0,12,0.7030663329161452,0.8734177215189873,3196,79
+bf16_b8_kv2048_eager_metrics_10000hz_r02,GPC Clock Frequency [MHz],0,31682,,,,,,,0,0
+bf16_b8_kv2048_eager_metrics_10000hz_r02,SYS Clock Frequency [MHz],0,31682,,,,,,,0,0
+bf16_b8_kv2048_eager_metrics_10000hz_r02,Sync Copy Engine Active [Throughput %],31682,0,0,0.0,0.0,0,0,0,25602,6080
+bf16_b8_kv2048_eager_metrics_10000hz_r02,Sync Copy Engine Active [Cycles Active],31682,0,0,0.0,0.0,0,0,0,25602,6080
+bf16_b8_kv2048_eager_metrics_10000hz_r02,Async Copy Engine Active 0 [Throughput %],31682,0,0,0.0,0.0,0,0,0,25602,6080
+bf16_b8_kv2048_eager_metrics_10000hz_r02,Async Copy Engine Active 0 [Cycles Active],31682,0,0,0.0,0.0,0,0,0,25602,6080
+bf16_b8_kv2048_eager_metrics_10000hz_r02,GR Active [Throughput %],31682,0,82.0971213938514,94.0,100.0,100,90.48238418873525,46.78799342105263,25602,6080
+bf16_b8_kv2048_eager_metrics_10000hz_r02,SMs Active [Throughput %],31682,0,72.66722429139574,82.0,100.0,100,79.9551206936958,41.97894736842105,25602,6080
+bf16_b8_kv2048_eager_metrics_10000hz_r02,SM Issue [Throughput %],31682,0,4.891515687140964,5.0,8.0,9,5.247597843918444,3.392105263157895,25602,6080
+bf16_b8_kv2048_eager_metrics_10000hz_r02,Tensor Active [Throughput %],31682,0,9.487058897796857,10.0,13.0,14,10.3762596672135,5.7427631578947365,25602,6080
+bf16_b8_kv2048_eager_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Throughput %],31682,0,0,0.0,0.0,0,0,0,25602,6080
+bf16_b8_kv2048_eager_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg],31682,0,0,0.0,0.0,0,0,0,25602,6080
+bf16_b8_kv2048_eager_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],31682,0,0,0.0,0.0,0,0,0,25602,6080
+bf16_b8_kv2048_eager_metrics_10000hz_r02,Pixel Warps in Flight [Throughput %],31682,0,0,0.0,0.0,0,0,0,25602,6080
+bf16_b8_kv2048_eager_metrics_10000hz_r02,Pixel Warps in Flight [Avg],31682,0,0,0.0,0.0,0,0,0,25602,6080
+bf16_b8_kv2048_eager_metrics_10000hz_r02,Pixel Warps in Flight [Avg Warps per Cycle],31682,0,0,0.0,0.0,0,0,0,25602,6080
+bf16_b8_kv2048_eager_metrics_10000hz_r02,Compute Warps in Flight [Throughput %],31682,0,5.166593018117543,4.0,10.0,15,5.4437153347394736,3.999671052631579,25602,6080
+bf16_b8_kv2048_eager_metrics_10000hz_r02,Compute Warps in Flight [Avg],31682,0,1254213.328041159,1075404.5,2375102.65,3638838,1337723.4372705258,902564.3450657895,25602,6080
+bf16_b8_kv2048_eager_metrics_10000hz_r02,Compute Warps in Flight [Avg Warps per Cycle],31682,0,4.984691623003599,4.0,9.0,14,5.258573548941489,3.8314144736842106,25602,6080
+bf16_b8_kv2048_eager_metrics_10000hz_r02,DRAM Read Bandwidth [Throughput %],31682,0,61.69531595227574,70.0,96.0,97,67.56804155925319,36.966118421052634,25602,6080
+bf16_b8_kv2048_eager_metrics_10000hz_r02,DRAM Write Bandwidth [Throughput %],31682,0,0.9168928729246891,1.0,1.0,1,0.9934380126552613,0.5945723684210527,25602,6080
+bf16_b8_kv2048_eager_metrics_10000hz_r02,PCIe RX Throughput [Throughput %],31682,0,0.9653115333627927,1.0,1.0,1,0.97340051558472,0.93125,25602,6080
+bf16_b8_kv2048_eager_metrics_10000hz_r02,PCIe TX Throughput [Throughput %],31682,0,1,1.0,1.0,1,1,1,25602,6080
+bf16_b8_kv2048_eager_metrics_10000hz_r02,PCIe Read Requests to BAR1 [Requests],31682,0,0,0.0,0.0,0,0,0,25602,6080
+bf16_b8_kv2048_eager_metrics_10000hz_r02,PCIe Write Requests to BAR1 [Requests],31682,0,9.70115523009911,10.0,15.0,18,9.795562846652606,9.303618421052631,25602,6080
+bf16_b8_kv2048_graph_metrics_10000hz_r02,GPC Clock Frequency [MHz],0,24617,,,,,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,SYS Clock Frequency [MHz],0,24617,,,,,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,Sync Copy Engine Active [Throughput %],24617,0,0,0.0,0.0,0,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,Sync Copy Engine Active [Cycles Active],24617,0,0,0.0,0.0,0,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,Async Copy Engine Active 0 [Throughput %],24617,0,0,0.0,0.0,0,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,Async Copy Engine Active 0 [Cycles Active],24617,0,0,0.0,0.0,0,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,GR Active [Throughput %],24617,0,99.97810456188813,100.0,100.0,100,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,SMs Active [Throughput %],24617,0,91.03192915464922,94.0,100.0,100,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,SM Issue [Throughput %],24617,0,5.6406142096924885,5.0,8.0,9,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,Tensor Active [Throughput %],24617,0,10.75175691595239,11.0,13.0,15,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Throughput %],24617,0,0,0.0,0.0,0,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg],24617,0,0,0.0,0.0,0,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],24617,0,0,0.0,0.0,0,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,Pixel Warps in Flight [Throughput %],24617,0,0,0.0,0.0,0,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,Pixel Warps in Flight [Avg],24617,0,0,0.0,0.0,0,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,Pixel Warps in Flight [Avg Warps per Cycle],24617,0,0,0.0,0.0,0,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,Compute Warps in Flight [Throughput %],24617,0,6.409676239996751,6.0,10.0,14,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,Compute Warps in Flight [Avg],24617,0,1791830.0653613356,1758154.0,2844030.0,3823703,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,Compute Warps in Flight [Avg Warps per Cycle],24617,0,6.1927935979201365,6.0,10.0,13,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,DRAM Read Bandwidth [Throughput %],24617,0,79.32607547629686,80.0,96.0,97,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,DRAM Write Bandwidth [Throughput %],24617,0,0.998984441646017,1.0,1.0,1,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,PCIe RX Throughput [Throughput %],24617,0,0.11532680667831173,0.0,1.0,1,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,PCIe TX Throughput [Throughput %],24617,0,1,1.0,1.0,1,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,PCIe Read Requests to BAR1 [Requests],24617,0,0,0.0,0.0,0,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r02,PCIe Write Requests to BAR1 [Requests],24617,0,0.658731770727546,0.0,3.0,13,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,GPC Clock Frequency [MHz],0,24639,,,,,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,SYS Clock Frequency [MHz],0,24639,,,,,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,Sync Copy Engine Active [Throughput %],24639,0,0,0.0,0.0,0,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,Sync Copy Engine Active [Cycles Active],24639,0,0,0.0,0.0,0,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,Async Copy Engine Active 0 [Throughput %],24639,0,0,0.0,0.0,0,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,Async Copy Engine Active 0 [Cycles Active],24639,0,0,0.0,0.0,0,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,GR Active [Throughput %],24639,0,99.98275092333293,100.0,100.0,100,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,SMs Active [Throughput %],24639,0,90.99439912334104,94.0,100.0,100,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,SM Issue [Throughput %],24639,0,5.63383254190511,5.0,8.0,9,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,Tensor Active [Throughput %],24639,0,10.735703559397702,11.0,13.0,15,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,Vertex/Tess/Geometry Warps in Flight [Throughput %],24639,0,0,0.0,0.0,0,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,Vertex/Tess/Geometry Warps in Flight [Avg],24639,0,0,0.0,0.0,0,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],24639,0,0,0.0,0.0,0,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,Pixel Warps in Flight [Throughput %],24639,0,0,0.0,0.0,0,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,Pixel Warps in Flight [Avg],24639,0,0,0.0,0.0,0,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,Pixel Warps in Flight [Avg Warps per Cycle],24639,0,0,0.0,0.0,0,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,Compute Warps in Flight [Throughput %],24639,0,6.428142375908113,6.0,10.0,25,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,Compute Warps in Flight [Avg],24639,0,1798425.3968505214,1762924.0,2866556.3999999845,6722572,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,Compute Warps in Flight [Avg Warps per Cycle],24639,0,6.213360931856001,6.0,10.0,24,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,DRAM Read Bandwidth [Throughput %],24639,0,79.25719387962174,81.0,96.0,97,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,DRAM Write Bandwidth [Throughput %],24639,0,0.9983359714274118,1.0,1.0,1,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,PCIe RX Throughput [Throughput %],24639,0,0.11230163561832866,0.0,1.0,2,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,PCIe TX Throughput [Throughput %],24639,0,1,1.0,1.0,1,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,PCIe Read Requests to BAR1 [Requests],24639,0,0,0.0,0.0,0,,,0,0
+bf16_b8_kv2048_graph_metrics_10000hz_r03,PCIe Write Requests to BAR1 [Requests],24639,0,0.6584682819919639,0.0,3.0,9,,,0,0
+bf16_b8_kv2048_graph_node_10000hz_r02,GPC Clock Frequency [MHz],0,3634,,,,,,,0,0
+bf16_b8_kv2048_graph_node_10000hz_r02,SYS Clock Frequency [MHz],0,3634,,,,,,,0,0
+bf16_b8_kv2048_graph_node_10000hz_r02,Sync Copy Engine Active [Throughput %],3634,0,0,0.0,0.0,0,0,0,3550,84
+bf16_b8_kv2048_graph_node_10000hz_r02,Sync Copy Engine Active [Cycles Active],3634,0,0,0.0,0.0,0,0,0,3550,84
+bf16_b8_kv2048_graph_node_10000hz_r02,Async Copy Engine Active 0 [Throughput %],3634,0,0,0.0,0.0,0,0,0,3550,84
+bf16_b8_kv2048_graph_node_10000hz_r02,Async Copy Engine Active 0 [Cycles Active],3634,0,0,0.0,0.0,0,0,0,3550,84
+bf16_b8_kv2048_graph_node_10000hz_r02,GR Active [Throughput %],3634,0,98.40258668134287,100.0,100.0,100,99.95042253521127,32.98809523809524,3550,84
+bf16_b8_kv2048_graph_node_10000hz_r02,SMs Active [Throughput %],3634,0,89.57870115575123,94.0,100.0,100,91.03830985915494,27.892857142857142,3550,84
+bf16_b8_kv2048_graph_node_10000hz_r02,SM Issue [Throughput %],3634,0,5.874243258117777,5.0,9.0,9,5.955211267605634,2.4523809523809526,3550,84
+bf16_b8_kv2048_graph_node_10000hz_r02,Tensor Active [Throughput %],3634,0,11.692074848651623,12.0,14.0,15,11.872676056338028,4.059523809523809,3550,84
+bf16_b8_kv2048_graph_node_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Throughput %],3634,0,0,0.0,0.0,0,0,0,3550,84
+bf16_b8_kv2048_graph_node_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg],3634,0,0,0.0,0.0,0,0,0,3550,84
+bf16_b8_kv2048_graph_node_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],3634,0,0,0.0,0.0,0,0,0,3550,84
+bf16_b8_kv2048_graph_node_10000hz_r02,Pixel Warps in Flight [Throughput %],3634,0,0,0.0,0.0,0,0,0,3550,84
+bf16_b8_kv2048_graph_node_10000hz_r02,Pixel Warps in Flight [Avg],3634,0,0,0.0,0.0,0,0,0,3550,84
+bf16_b8_kv2048_graph_node_10000hz_r02,Pixel Warps in Flight [Avg Warps per Cycle],3634,0,0,0.0,0.0,0,0,0,3550,84
+bf16_b8_kv2048_graph_node_10000hz_r02,Compute Warps in Flight [Throughput %],3634,0,6.268299394606494,6.0,10.0,10,6.363098591549296,2.261904761904762,3550,84
+bf16_b8_kv2048_graph_node_10000hz_r02,Compute Warps in Flight [Avg],3634,0,1556537.6323610346,1517284.0,2536930.4,2703295,1580955.4597183098,524593.7380952381,3550,84
+bf16_b8_kv2048_graph_node_10000hz_r02,Compute Warps in Flight [Avg Warps per Cycle],3634,0,6.052283984589984,6.0,10.0,10,6.1445070422535215,2.1547619047619047,3550,84
+bf16_b8_kv2048_graph_node_10000hz_r02,DRAM Read Bandwidth [Throughput %],3634,0,76.43313153549808,78.0,96.0,97,77.69633802816901,23.047619047619047,3550,84
+bf16_b8_kv2048_graph_node_10000hz_r02,DRAM Write Bandwidth [Throughput %],3634,0,0.9840396257567419,1.0,1.0,2,0.9997183098591549,0.32142857142857145,3550,84
+bf16_b8_kv2048_graph_node_10000hz_r02,PCIe RX Throughput [Throughput %],3634,0,0.08447991194276279,0.0,1.0,1,0.08169014084507042,0.20238095238095238,3550,84
+bf16_b8_kv2048_graph_node_10000hz_r02,PCIe TX Throughput [Throughput %],3634,0,1,1.0,1.0,1,1,1,3550,84
+bf16_b8_kv2048_graph_node_10000hz_r02,PCIe Read Requests to BAR1 [Requests],3634,0,0,0.0,0.0,0,0,0,3550,84
+bf16_b8_kv2048_graph_node_10000hz_r02,PCIe Write Requests to BAR1 [Requests],3634,0,0.6373142542652724,0.0,3.0,15,0.6380281690140845,0.6071428571428571,3550,84
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,GPC Clock Frequency [MHz],0,48933,,,,,,,0,0
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,SYS Clock Frequency [MHz],0,48933,,,,,,,0,0
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,Sync Copy Engine Active [Throughput %],48933,0,0,0.0,0.0,0,0,0,16779,32154
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,Sync Copy Engine Active [Cycles Active],48933,0,0,0.0,0.0,0,0,0,16779,32154
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,Async Copy Engine Active 0 [Throughput %],48933,0,0,0.0,0.0,0,0,0,16779,32154
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,Async Copy Engine Active 0 [Cycles Active],48933,0,0,0.0,0.0,0,0,0,16779,32154
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,GR Active [Throughput %],48933,0,35.95228169129218,26.0,88.0,100,54.80570951784969,26.113951607887042,16779,32154
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,SMs Active [Throughput %],48933,0,16.34639200539513,5.0,56.0,100,24.082186065915728,12.309603781800087,16779,32154
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,SM Issue [Throughput %],48933,0,2.0994829665052213,1.0,5.0,15,3.1829668037427736,1.53408596131119,16779,32154
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,Tensor Active [Throughput %],48933,0,4.784726053992193,2.0,16.0,18,6.796292985279218,3.7350251912670274,16779,32154
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Throughput %],48933,0,0,0.0,0.0,0,0,0,16779,32154
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg],48933,0,0,0.0,0.0,0,0,0,16779,32154
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],48933,0,0,0.0,0.0,0,0,0,16779,32154
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,Pixel Warps in Flight [Throughput %],48933,0,0,0.0,0.0,0,0,0,16779,32154
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,Pixel Warps in Flight [Avg],48933,0,0,0.0,0.0,0,0,0,16779,32154
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,Pixel Warps in Flight [Avg Warps per Cycle],48933,0,0,0.0,0.0,0,0,0,16779,32154
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,Compute Warps in Flight [Throughput %],48933,0,3.729548566407128,1.0,12.0,25,5.48840812920913,2.8117186042172047,16779,32154
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,Compute Warps in Flight [Avg],48933,0,832568.8689023767,252460.0,2831946.0,6111069,1290469.289468979,593621.5790881383,16779,32154
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,Compute Warps in Flight [Avg Warps per Cycle],48933,0,3.607381521672491,1.0,11.0,24,5.291614518147685,2.7284941220376937,16779,32154
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,DRAM Read Bandwidth [Throughput %],48933,0,13.934951872969162,8.0,36.0,93,23.329519041659218,9.032562045157679,16779,32154
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,DRAM Write Bandwidth [Throughput %],48933,0,0.5463388715181984,1.0,1.0,2,0.7750163895345372,0.42700752627977856,16779,32154
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,PCIe RX Throughput [Throughput %],48933,0,0.9787260131199804,1.0,1.0,1,0.960665117110674,0.9881507743982086,16779,32154
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,PCIe TX Throughput [Throughput %],48933,0,1,1.0,1.0,1,1,1,16779,32154
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,PCIe Read Requests to BAR1 [Requests],48933,0,2.0436106512987146e-05,0.0,0.0,1,5.959830740806961e-05,0,16779,32154
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02,PCIe Write Requests to BAR1 [Requests],48933,0,8.258148897472054,9.0,12.0,15,8.483521068001668,8.140542389749331,16779,32154
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,GPC Clock Frequency [MHz],0,15237,,,,,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,SYS Clock Frequency [MHz],0,15237,,,,,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,Sync Copy Engine Active [Throughput %],15237,0,0,0.0,0.0,0,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,Sync Copy Engine Active [Cycles Active],15237,0,0,0.0,0.0,0,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,Async Copy Engine Active 0 [Throughput %],15237,0,0,0.0,0.0,0,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,Async Copy Engine Active 0 [Cycles Active],15237,0,0,0.0,0.0,0,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,GR Active [Throughput %],15237,0,99.96344424755529,100.0,100.0,100,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,SMs Active [Throughput %],15237,0,51.299730918159746,52.0,100.0,100,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,SM Issue [Throughput %],15237,0,5.378355319288574,5.0,10.0,12,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,Tensor Active [Throughput %],15237,0,13.545120430530945,15.0,18.0,20,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Throughput %],15237,0,0,0.0,0.0,0,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg],15237,0,0,0.0,0.0,0,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],15237,0,0,0.0,0.0,0,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,Pixel Warps in Flight [Throughput %],15237,0,0,0.0,0.0,0,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,Pixel Warps in Flight [Avg],15237,0,0,0.0,0.0,0,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,Pixel Warps in Flight [Avg Warps per Cycle],15237,0,0,0.0,0.0,0,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,Compute Warps in Flight [Throughput %],15237,0,11.257924788344162,11.0,25.0,25,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,Compute Warps in Flight [Avg],15237,0,3074427.3122005644,2974937.0,6901391.6,6974140,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,Compute Warps in Flight [Avg Warps per Cycle],15237,0,10.9060838747785,11.0,24.0,24,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,DRAM Read Bandwidth [Throughput %],15237,0,44.35682877206799,40.0,92.0,93,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,DRAM Write Bandwidth [Throughput %],15237,0,0.9209161908512175,1.0,1.0,1,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,PCIe RX Throughput [Throughput %],15237,0,0.11117674082824704,0.0,1.0,1,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,PCIe TX Throughput [Throughput %],15237,0,1,1.0,1.0,1,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,PCIe Read Requests to BAR1 [Requests],15237,0,0,0.0,0.0,0,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02,PCIe Write Requests to BAR1 [Requests],15237,0,1.064185863358929,0.0,9.0,15,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,GPC Clock Frequency [MHz],0,15295,,,,,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,SYS Clock Frequency [MHz],0,15295,,,,,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,Sync Copy Engine Active [Throughput %],15295,0,0,0.0,0.0,0,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,Sync Copy Engine Active [Cycles Active],15295,0,0,0.0,0.0,0,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,Async Copy Engine Active 0 [Throughput %],15295,0,0,0.0,0.0,0,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,Async Copy Engine Active 0 [Cycles Active],15295,0,0,0.0,0.0,0,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,GR Active [Throughput %],15295,0,99.9644328211834,100.0,100.0,100,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,SMs Active [Throughput %],15295,0,51.1771820856489,52.0,100.0,100,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,SM Issue [Throughput %],15295,0,5.408041843739785,5.0,10.0,12,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,Tensor Active [Throughput %],15295,0,13.617129780974174,15.0,19.0,20,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,Vertex/Tess/Geometry Warps in Flight [Throughput %],15295,0,0,0.0,0.0,0,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,Vertex/Tess/Geometry Warps in Flight [Avg],15295,0,0,0.0,0.0,0,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],15295,0,0,0.0,0.0,0,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,Pixel Warps in Flight [Throughput %],15295,0,0,0.0,0.0,0,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,Pixel Warps in Flight [Avg],15295,0,0,0.0,0.0,0,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,Pixel Warps in Flight [Avg Warps per Cycle],15295,0,0,0.0,0.0,0,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,Compute Warps in Flight [Throughput %],15295,0,11.23811703170971,11.0,25.0,25,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,Compute Warps in Flight [Avg],15295,0,3041378.4452435435,2943601.0,6881293.9,6972146,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,Compute Warps in Flight [Avg Warps per Cycle],15295,0,10.881922196796339,11.0,24.0,24,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,DRAM Read Bandwidth [Throughput %],15295,0,44.19104282445244,40.0,92.0,93,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,DRAM Write Bandwidth [Throughput %],15295,0,0.9215429879045439,1.0,1.0,1,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,PCIe RX Throughput [Throughput %],15295,0,0.13664596273291926,0.0,1.0,1,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,PCIe TX Throughput [Throughput %],15295,0,1,1.0,1.0,1,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,PCIe Read Requests to BAR1 [Requests],15295,0,0,0.0,0.0,0,,,0,0
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03,PCIe Write Requests to BAR1 [Requests],15295,0,1.0602157567832624,0.0,6.0,15,,,0,0
+nvfp4_b1_kv2048_graph_node_10000hz_r02,GPC Clock Frequency [MHz],0,2336,,,,,,,0,0
+nvfp4_b1_kv2048_graph_node_10000hz_r02,SYS Clock Frequency [MHz],0,2336,,,,,,,0,0
+nvfp4_b1_kv2048_graph_node_10000hz_r02,Sync Copy Engine Active [Throughput %],2336,0,0,0.0,0.0,0,0,0,2244,92
+nvfp4_b1_kv2048_graph_node_10000hz_r02,Sync Copy Engine Active [Cycles Active],2336,0,0,0.0,0.0,0,0,0,2244,92
+nvfp4_b1_kv2048_graph_node_10000hz_r02,Async Copy Engine Active 0 [Throughput %],2336,0,0,0.0,0.0,0,0,0,2244,92
+nvfp4_b1_kv2048_graph_node_10000hz_r02,Async Copy Engine Active 0 [Cycles Active],2336,0,0,0.0,0.0,0,0,0,2244,92
+nvfp4_b1_kv2048_graph_node_10000hz_r02,GR Active [Throughput %],2336,0,97.7431506849315,100.0,100.0,100,99.96791443850267,43.47826086956522,2244,92
+nvfp4_b1_kv2048_graph_node_10000hz_r02,SMs Active [Throughput %],2336,0,48.61429794520548,49.0,100.0,100,49.60650623885918,24.41304347826087,2244,92
+nvfp4_b1_kv2048_graph_node_10000hz_r02,SM Issue [Throughput %],2336,0,5.544948630136986,5.0,12.0,12,5.676916221033868,2.3260869565217392,2244,92
+nvfp4_b1_kv2048_graph_node_10000hz_r02,Tensor Active [Throughput %],2336,0,14.123287671232877,16.0,20.0,20,14.40017825311943,7.369565217391305,2244,92
+nvfp4_b1_kv2048_graph_node_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Throughput %],2336,0,0,0.0,0.0,0,0,0,2244,92
+nvfp4_b1_kv2048_graph_node_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg],2336,0,0,0.0,0.0,0,0,0,2244,92
+nvfp4_b1_kv2048_graph_node_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],2336,0,0,0.0,0.0,0,0,0,2244,92
+nvfp4_b1_kv2048_graph_node_10000hz_r02,Pixel Warps in Flight [Throughput %],2336,0,0,0.0,0.0,0,0,0,2244,92
+nvfp4_b1_kv2048_graph_node_10000hz_r02,Pixel Warps in Flight [Avg],2336,0,0,0.0,0.0,0,0,0,2244,92
+nvfp4_b1_kv2048_graph_node_10000hz_r02,Pixel Warps in Flight [Avg Warps per Cycle],2336,0,0,0.0,0.0,0,0,0,2244,92
+nvfp4_b1_kv2048_graph_node_10000hz_r02,Compute Warps in Flight [Throughput %],2336,0,10.70248287671233,10.0,25.0,25,10.92602495543672,5.25,2244,92
+nvfp4_b1_kv2048_graph_node_10000hz_r02,Compute Warps in Flight [Avg],2336,0,2608226.116010274,2529344.5,6043472.0,6106485,2663393.703208556,1262616.706521739,2244,92
+nvfp4_b1_kv2048_graph_node_10000hz_r02,Compute Warps in Flight [Avg Warps per Cycle],2336,0,10.350171232876713,10.0,24.0,24,10.565508021390375,5.0978260869565215,2244,92
+nvfp4_b1_kv2048_graph_node_10000hz_r02,DRAM Read Bandwidth [Throughput %],2336,0,41.27654109589041,38.0,92.0,92,42.26604278074866,17.141304347826086,2244,92
+nvfp4_b1_kv2048_graph_node_10000hz_r02,DRAM Write Bandwidth [Throughput %],2336,0,0.9045376712328768,1.0,1.0,2,0.9237967914438503,0.43478260869565216,2244,92
+nvfp4_b1_kv2048_graph_node_10000hz_r02,PCIe RX Throughput [Throughput %],2336,0,0.11044520547945205,0.0,1.0,1,0.10739750445632798,0.18478260869565216,2244,92
+nvfp4_b1_kv2048_graph_node_10000hz_r02,PCIe TX Throughput [Throughput %],2336,0,1,1.0,1.0,1,1,1,2244,92
+nvfp4_b1_kv2048_graph_node_10000hz_r02,PCIe Read Requests to BAR1 [Requests],2336,0,0,0.0,0.0,0,0,0,2244,92
+nvfp4_b1_kv2048_graph_node_10000hz_r02,PCIe Write Requests to BAR1 [Requests],2336,0,0.9914383561643836,0.0,6.0,12,1,0.782608695652174,2244,92
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,GPC Clock Frequency [MHz],0,50892,,,,,,,0,0
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,SYS Clock Frequency [MHz],0,50892,,,,,,,0,0
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,Sync Copy Engine Active [Throughput %],50892,0,0,0.0,0.0,0,0,0,17019,33873
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,Sync Copy Engine Active [Cycles Active],50892,0,0,0.0,0.0,0,0,0,17019,33873
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,Async Copy Engine Active 0 [Throughput %],50892,0,0,0.0,0.0,0,0,0,17019,33873
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,Async Copy Engine Active 0 [Cycles Active],50892,0,0,0.0,0.0,0,0,0,17019,33873
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,GR Active [Throughput %],50892,0,35.20350939243889,25.0,81.0,100,50.77284211763323,27.38092285891418,17019,33873
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,SMs Active [Throughput %],50892,0,16.55167806334984,9.0,53.0,100,22.325577295963335,13.650665721961444,17019,33873
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,SM Issue [Throughput %],50892,0,2.5203764835337576,2.0,6.0,6,2.6741876726012106,2.443096271366575,17019,33873
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,Tensor Active [Throughput %],50892,0,5.828479918258273,5.0,15.0,18,7.734003172924378,4.8710772591739735,17019,33873
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Throughput %],50892,0,0,0.0,0.0,0,0,0,17019,33873
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg],50892,0,0,0.0,0.0,0,0,0,17019,33873
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],50892,0,0,0.0,0.0,0,0,0,17019,33873
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,Pixel Warps in Flight [Throughput %],50892,0,0,0.0,0.0,0,0,0,17019,33873
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,Pixel Warps in Flight [Avg],50892,0,0,0.0,0.0,0,0,0,17019,33873
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,Pixel Warps in Flight [Avg Warps per Cycle],50892,0,0,0.0,0.0,0,0,0,17019,33873
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,Compute Warps in Flight [Throughput %],50892,0,3.1222392517488013,2.0,10.0,20,3.7115576708384745,2.826144717031264,17019,33873
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,Compute Warps in Flight [Avg],50892,0,709337.3008920852,438400.0,2547765.15,4893175,883930.2166402256,621615.6100729194,17019,33873
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,Compute Warps in Flight [Avg Warps per Cycle],50892,0,3.0430912520631925,2.0,10.0,19,3.6119631000646337,2.757269801907124,17019,33873
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,DRAM Read Bandwidth [Throughput %],50892,0,13.571975949068616,7.0,33.0,97,22.062224572536575,9.306173058187937,17019,33873
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,DRAM Write Bandwidth [Throughput %],50892,0,0.5887565825670046,1.0,1.0,2,0.8333627122627651,0.46585776281994506,17019,33873
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,PCIe RX Throughput [Throughput %],50892,0,0.9801540517173623,1.0,1.0,1,0.9655091368470533,0.9875121778407582,17019,33873
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,PCIe TX Throughput [Throughput %],50892,0,1,1.0,1.0,1,1,1,17019,33873
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,PCIe Read Requests to BAR1 [Requests],50892,0,1.9649453745185886e-05,0.0,0.0,1,0,2.9522038201517433e-05,17019,33873
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02,PCIe Write Requests to BAR1 [Requests],50892,0,7.940501454059577,9.0,12.0,15,8.02579470004113,7.897647093555339,17019,33873
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,GPC Clock Frequency [MHz],0,7251,,,,,,,0,0
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,SYS Clock Frequency [MHz],0,7251,,,,,,,0,0
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,Sync Copy Engine Active [Throughput %],7251,0,0,0.0,0.0,0,0,0,2425,4826
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,Sync Copy Engine Active [Cycles Active],7251,0,0,0.0,0.0,0,0,0,2425,4826
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,Async Copy Engine Active 0 [Throughput %],7251,0,0,0.0,0.0,0,0,0,2425,4826
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,Async Copy Engine Active 0 [Cycles Active],7251,0,0,0.0,0.0,0,0,0,2425,4826
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,GR Active [Throughput %],7251,0,35.57012825817129,25.0,88.0,100,53.63463917525773,26.49295482801492,2425,4826
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,SMs Active [Throughput %],7251,0,16.983588470555784,9.0,55.0,100,23.465154639175257,13.726688769167012,2425,4826
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,SM Issue [Throughput %],7251,0,2.4668321610812303,2.0,5.0,7,2.725360824742268,2.336924989639453,2425,4826
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,Tensor Active [Throughput %],7251,0,5.8287132809267685,5.0,15.0,18,8.077113402061856,4.6989225031081645,2425,4826
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,Vertex/Tess/Geometry Warps in Flight [Throughput %],7251,0,0,0.0,0.0,0,0,0,2425,4826
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,Vertex/Tess/Geometry Warps in Flight [Avg],7251,0,0,0.0,0.0,0,0,0,2425,4826
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],7251,0,0,0.0,0.0,0,0,0,2425,4826
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,Pixel Warps in Flight [Throughput %],7251,0,0,0.0,0.0,0,0,0,2425,4826
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,Pixel Warps in Flight [Avg],7251,0,0,0.0,0.0,0,0,0,2425,4826
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,Pixel Warps in Flight [Avg Warps per Cycle],7251,0,0,0.0,0.0,0,0,0,2425,4826
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,Compute Warps in Flight [Throughput %],7251,0,3.1994207695490275,2.0,11.0,12,3.9183505154639175,2.838168255283879,2425,4826
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,Compute Warps in Flight [Avg],7251,0,731670.6644600745,431018.0,2678387.0,2898211,941773.4338144329,626096.8526730211,2425,4826
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,Compute Warps in Flight [Avg Warps per Cycle],7251,0,3.114191146048821,2.0,11.0,12,3.8197938144329897,2.7596353087443015,2425,4826
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,DRAM Read Bandwidth [Throughput %],7251,0,13.476486001930768,7.0,35.0,97,22.767835051546392,8.80770824699544,2425,4826
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,DRAM Write Bandwidth [Throughput %],7251,0,0.5857123155426838,1.0,1.0,3,0.8618556701030928,0.44695399917115625,2425,4826
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,PCIe RX Throughput [Throughput %],7251,0,0.9503516756309475,1.0,1.0,1,0.965360824742268,0.9428097803564028,2425,4826
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,PCIe TX Throughput [Throughput %],7251,0,1,1.0,1.0,1,1,1,2425,4826
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,PCIe Read Requests to BAR1 [Requests],7251,0,0.00013791201213625708,0.0,0.0,1,0,0.00020721094073767094,2425,4826
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01,PCIe Write Requests to BAR1 [Requests],7251,0,8.020824713832575,9.0,12.0,14,8.490721649484536,7.7847078325735595,2425,4826
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,GPC Clock Frequency [MHz],0,15568,,,,,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,SYS Clock Frequency [MHz],0,15568,,,,,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,Sync Copy Engine Active [Throughput %],15568,0,0.0003211716341212744,0.0,0.0,4,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,Sync Copy Engine Active [Cycles Active],15568,0,0.6138232271325796,0.0,0.0,8719,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,Async Copy Engine Active 0 [Throughput %],15568,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,Async Copy Engine Active 0 [Cycles Active],15568,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,GR Active [Throughput %],15568,0,99.95542137718397,100.0,100.0,100,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,SMs Active [Throughput %],15568,0,53.55781089414183,54.0,100.0,100,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,SM Issue [Throughput %],15568,0,6.687756937307297,7.0,9.0,10,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,Tensor Active [Throughput %],15568,0,16.85585817060637,17.0,20.0,23,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Throughput %],15568,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg],15568,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],15568,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,Pixel Warps in Flight [Throughput %],15568,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,Pixel Warps in Flight [Avg],15568,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,Pixel Warps in Flight [Avg Warps per Cycle],15568,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,Compute Warps in Flight [Throughput %],15568,0,10.29862538540596,10.0,15.0,15,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,Compute Warps in Flight [Avg],15568,0,2817701.804213772,2898518.0,4153852.85,4252457,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,Compute Warps in Flight [Avg Warps per Cycle],15568,0,9.817959917780062,10.0,14.0,15,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,DRAM Read Bandwidth [Throughput %],15568,0,44.043229701952725,40.0,96.0,97,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,DRAM Write Bandwidth [Throughput %],15568,0,0.9968525179856115,1.0,1.0,7,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,PCIe RX Throughput [Throughput %],15568,0,0.1419578622816033,0.0,1.0,1,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,PCIe TX Throughput [Throughput %],15568,0,1,1.0,1.0,1,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,PCIe Read Requests to BAR1 [Requests],15568,0,6.423432682425488e-05,0.0,0.0,1,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02,PCIe Write Requests to BAR1 [Requests],15568,0,1.0415596094552928,0.0,6.0,15,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,GPC Clock Frequency [MHz],0,15560,,,,,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,SYS Clock Frequency [MHz],0,15560,,,,,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,Sync Copy Engine Active [Throughput %],15560,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,Sync Copy Engine Active [Cycles Active],15560,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,Async Copy Engine Active 0 [Throughput %],15560,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,Async Copy Engine Active 0 [Cycles Active],15560,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,GR Active [Throughput %],15560,0,99.95848329048843,100.0,100.0,100,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,SMs Active [Throughput %],15560,0,53.56985861182519,54.0,100.0,100,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,SM Issue [Throughput %],15560,0,6.686503856041131,7.0,9.0,10,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,Tensor Active [Throughput %],15560,0,16.8396529562982,17.0,20.0,23,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,Vertex/Tess/Geometry Warps in Flight [Throughput %],15560,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,Vertex/Tess/Geometry Warps in Flight [Avg],15560,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],15560,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,Pixel Warps in Flight [Throughput %],15560,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,Pixel Warps in Flight [Avg],15560,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,Pixel Warps in Flight [Avg Warps per Cycle],15560,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,Compute Warps in Flight [Throughput %],15560,0,10.29659383033419,10.0,15.0,15,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,Compute Warps in Flight [Avg],15560,0,2821504.085604113,2902979.0,4152847.25,4259328,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,Compute Warps in Flight [Avg Warps per Cycle],15560,0,9.820629820051414,10.0,14.0,15,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,DRAM Read Bandwidth [Throughput %],15560,0,44.05931876606684,40.0,97.0,97,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,DRAM Write Bandwidth [Throughput %],15560,0,0.9967223650385604,1.0,1.0,1,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,PCIe RX Throughput [Throughput %],15560,0,0.11195372750642674,0.0,1.0,1,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,PCIe TX Throughput [Throughput %],15560,0,1,1.0,1.0,1,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,PCIe Read Requests to BAR1 [Requests],15560,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03,PCIe Write Requests to BAR1 [Requests],15560,0,1.0419665809768637,0.0,6.0,15,,,0,0
+nvfp4_b8_kv2048_graph_node_10000hz_r02,GPC Clock Frequency [MHz],0,2381,,,,,,,0,0
+nvfp4_b8_kv2048_graph_node_10000hz_r02,SYS Clock Frequency [MHz],0,2381,,,,,,,0,0
+nvfp4_b8_kv2048_graph_node_10000hz_r02,Sync Copy Engine Active [Throughput %],2381,0,0,0.0,0.0,0,0,0,2299,82
+nvfp4_b8_kv2048_graph_node_10000hz_r02,Sync Copy Engine Active [Cycles Active],2381,0,0,0.0,0.0,0,0,0,2299,82
+nvfp4_b8_kv2048_graph_node_10000hz_r02,Async Copy Engine Active 0 [Throughput %],2381,0,0,0.0,0.0,0,0,0,2299,82
+nvfp4_b8_kv2048_graph_node_10000hz_r02,Async Copy Engine Active 0 [Cycles Active],2381,0,0,0.0,0.0,0,0,0,2299,82
+nvfp4_b8_kv2048_graph_node_10000hz_r02,GR Active [Throughput %],2381,0,97.82486350272994,100.0,100.0,100,99.97651152675076,37.5,2299,82
+nvfp4_b8_kv2048_graph_node_10000hz_r02,SMs Active [Throughput %],2381,0,51.32297354052919,51.0,100.0,100,52.39930404523706,21.146341463414632,2299,82
+nvfp4_b8_kv2048_graph_node_10000hz_r02,SM Issue [Throughput %],2381,0,6.8152036959260816,6.0,10.0,10,6.949108307959983,3.0609756097560976,2299,82
+nvfp4_b8_kv2048_graph_node_10000hz_r02,Tensor Active [Throughput %],2381,0,17.521209575808484,18.0,22.0,23,17.88603740756851,7.2926829268292686,2299,82
+nvfp4_b8_kv2048_graph_node_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Throughput %],2381,0,0,0.0,0.0,0,0,0,2299,82
+nvfp4_b8_kv2048_graph_node_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg],2381,0,0,0.0,0.0,0,0,0,2299,82
+nvfp4_b8_kv2048_graph_node_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],2381,0,0,0.0,0.0,0,0,0,2299,82
+nvfp4_b8_kv2048_graph_node_10000hz_r02,Pixel Warps in Flight [Throughput %],2381,0,0,0.0,0.0,0,0,0,2299,82
+nvfp4_b8_kv2048_graph_node_10000hz_r02,Pixel Warps in Flight [Avg],2381,0,0,0.0,0.0,0,0,0,2299,82
+nvfp4_b8_kv2048_graph_node_10000hz_r02,Pixel Warps in Flight [Avg Warps per Cycle],2381,0,0,0.0,0.0,0,0,0,2299,82
+nvfp4_b8_kv2048_graph_node_10000hz_r02,Compute Warps in Flight [Throughput %],2381,0,9.857202855942882,10.0,15.0,16,10.044802087864289,4.597560975609756,2299,82
+nvfp4_b8_kv2048_graph_node_10000hz_r02,Compute Warps in Flight [Avg],2381,0,2408841.1432171357,2538154.0,3664717.0,3739059,2455842.969986951,1091070.4146341463,2299,82
+nvfp4_b8_kv2048_graph_node_10000hz_r02,Compute Warps in Flight [Avg Warps per Cycle],2381,0,9.501889962200757,10.0,15.0,15,9.682905611135276,4.426829268292683,2299,82
+nvfp4_b8_kv2048_graph_node_10000hz_r02,DRAM Read Bandwidth [Throughput %],2381,0,40.62956740865183,38.0,96.0,97,41.576337538060024,14.085365853658537,2299,82
+nvfp4_b8_kv2048_graph_node_10000hz_r02,DRAM Write Bandwidth [Throughput %],2381,0,0.9764804703905922,1.0,1.0,4,0.9991300565463245,0.34146341463414637,2299,82
+nvfp4_b8_kv2048_graph_node_10000hz_r02,PCIe RX Throughput [Throughput %],2381,0,0.11129777404451911,0.0,1.0,1,0.10830795998260113,0.1951219512195122,2299,82
+nvfp4_b8_kv2048_graph_node_10000hz_r02,PCIe TX Throughput [Throughput %],2381,0,1,1.0,1.0,1,1,1,2299,82
+nvfp4_b8_kv2048_graph_node_10000hz_r02,PCIe Read Requests to BAR1 [Requests],2381,0,0,0.0,0.0,0,0,0,2299,82
+nvfp4_b8_kv2048_graph_node_10000hz_r02,PCIe Write Requests to BAR1 [Requests],2381,0,0.9727005459890802,0.0,6.0,12,0.983906046107003,0.6585365853658537,2299,82
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,GPC Clock Frequency [MHz],0,2381,,,,,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,SYS Clock Frequency [MHz],0,2381,,,,,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,Sync Copy Engine Active [Throughput %],2381,0,0.00125997480050399,0.0,0.0,3,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,Sync Copy Engine Active [Cycles Active],2381,0,3.534229315413692,0.0,0.0,8415,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,Async Copy Engine Active 0 [Throughput %],2381,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,Async Copy Engine Active 0 [Cycles Active],2381,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,GR Active [Throughput %],2381,0,97.94288114237715,100.0,100.0,100,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,SMs Active [Throughput %],2381,0,51.37085258294834,51.0,100.0,100,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,SM Issue [Throughput %],2381,0,6.826963460730785,7.0,10.0,10,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,Tensor Active [Throughput %],2381,0,17.530869382612348,18.0,22.0,23,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Throughput %],2381,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg],2381,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],2381,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,Pixel Warps in Flight [Throughput %],2381,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,Pixel Warps in Flight [Avg],2381,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,Pixel Warps in Flight [Avg Warps per Cycle],2381,0,0,0.0,0.0,0,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,Compute Warps in Flight [Throughput %],2381,0,9.85930281394372,10.0,15.0,15,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,Compute Warps in Flight [Avg],2381,0,2411659.22301554,2530334.0,3680750.0,3743211,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,Compute Warps in Flight [Avg Warps per Cycle],2381,0,9.517849643007139,10.0,15.0,15,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,DRAM Read Bandwidth [Throughput %],2381,0,40.635867282654345,38.0,96.0,97,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,DRAM Write Bandwidth [Throughput %],2381,0,0.9806803863922722,1.0,1.0,5,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,PCIe RX Throughput [Throughput %],2381,0,0.20999580008399832,0.0,1.0,1,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,PCIe TX Throughput [Throughput %],2381,0,1,1.0,1.0,1,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,PCIe Read Requests to BAR1 [Requests],2381,0,0.00041999160016799666,0.0,0.0,1,,,0,0
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02,PCIe Write Requests to BAR1 [Requests],2381,0,0.9693406131877362,0.0,6.0,12,,,0,0

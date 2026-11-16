@@ -1,0 +1,1467 @@
+{
+  "args": {
+    "precision": "nvfp4",
+    "mode": "graph",
+    "batch": 8,
+    "kv": 2048,
+    "steps": 32,
+    "trials": 1,
+    "profile": true,
+    "output": "/home/wangzhihang/fp4-llm/results/nsys_round2/raw/nvfp4_b8_kv2048_graph_node_10000hz_r02.json"
+  },
+  "pid": 463606,
+  "engine_core_pid": 463606,
+  "engine_client": "InprocClient",
+  "settings": {
+    "max_model_len": 4096,
+    "gpu_memory_utilization": 0.85,
+    "linear_backend": "cutlass",
+    "enforce_eager": false,
+    "kv_cache_dtype": "fp8_e4m3",
+    "attention_backend": "FLASHINFER",
+    "disable_log_stats": true,
+    "enable_prefix_caching": true,
+    "max_num_batched_tokens": 8192,
+    "max_num_seqs": 8,
+    "cudagraph_capture_sizes": [
+      1,
+      8
+    ],
+    "seed": 0
+  },
+  "model": "/home/wangzhihang/fp4-llm/models/Qwen3-8B-NVFP4",
+  "torch_version": "2.14.0+cu132",
+  "prompt_sha256": "832679eb8d5116deac20abaefb468ed8a7b1a6f47f3e92d63866253cdb1f4b64",
+  "device": {
+    "name": "NVIDIA GeForce RTX 5090",
+    "capability": [
+      12,
+      0
+    ]
+  },
+  "cuda_allocated_bytes": 28394852864,
+  "cuda_reserved_bytes": 28416409600,
+  "scheduler_type": "AsyncScheduler",
+  "async_scheduling": true,
+  "protocol": "default_scheduler_v2",
+  "runs": [
+    {
+      "trial": 0,
+      "decode_steps": 32,
+      "actual_batches": [
+        8
+      ],
+      "decode_wall_ms": 238.120154,
+      "mean_step_ms": 7.4412548125,
+      "p50_step_ms": 7.274504,
+      "p95_step_ms": 7.825609,
+      "output_tokens_per_s": 1075.0874955338725,
+      "generate_call_wall_ms": 1890.991203,
+      "output_counts": [
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33
+      ],
+      "graph_replays": 32,
+      "steps": [
+        {
+          "step": 1,
+          "start_ns": 1064895298990976,
+          "end_ns": 1064895310689290,
+          "latency_ms": 11.698314
+        },
+        {
+          "step": 2,
+          "start_ns": 1064895310689290,
+          "end_ns": 1064895318269119,
+          "latency_ms": 7.579829
+        },
+        {
+          "step": 3,
+          "start_ns": 1064895318269119,
+          "end_ns": 1064895325586517,
+          "latency_ms": 7.317398
+        },
+        {
+          "step": 4,
+          "start_ns": 1064895325586517,
+          "end_ns": 1064895333265197,
+          "latency_ms": 7.67868
+        },
+        {
+          "step": 5,
+          "start_ns": 1064895333265197,
+          "end_ns": 1064895339893794,
+          "latency_ms": 6.628597
+        },
+        {
+          "step": 6,
+          "start_ns": 1064895339893794,
+          "end_ns": 1064895347317412,
+          "latency_ms": 7.423618
+        },
+        {
+          "step": 7,
+          "start_ns": 1064895347317412,
+          "end_ns": 1064895354692706,
+          "latency_ms": 7.375294
+        },
+        {
+          "step": 8,
+          "start_ns": 1064895354692706,
+          "end_ns": 1064895361898499,
+          "latency_ms": 7.205793
+        },
+        {
+          "step": 9,
+          "start_ns": 1064895361898499,
+          "end_ns": 1064895369031767,
+          "latency_ms": 7.133268
+        },
+        {
+          "step": 10,
+          "start_ns": 1064895369031767,
+          "end_ns": 1064895376457313,
+          "latency_ms": 7.425546
+        },
+        {
+          "step": 11,
+          "start_ns": 1064895376457313,
+          "end_ns": 1064895383821116,
+          "latency_ms": 7.363803
+        },
+        {
+          "step": 12,
+          "start_ns": 1064895383821116,
+          "end_ns": 1064895390997139,
+          "latency_ms": 7.176023
+        },
+        {
+          "step": 13,
+          "start_ns": 1064895390997139,
+          "end_ns": 1064895398163422,
+          "latency_ms": 7.166283
+        },
+        {
+          "step": 14,
+          "start_ns": 1064895398163422,
+          "end_ns": 1064895405112118,
+          "latency_ms": 6.948696
+        },
+        {
+          "step": 15,
+          "start_ns": 1064895405112118,
+          "end_ns": 1064895412937727,
+          "latency_ms": 7.825609
+        },
+        {
+          "step": 16,
+          "start_ns": 1064895412937727,
+          "end_ns": 1064895420150418,
+          "latency_ms": 7.212691
+        },
+        {
+          "step": 17,
+          "start_ns": 1064895420150418,
+          "end_ns": 1064895427059194,
+          "latency_ms": 6.908776
+        },
+        {
+          "step": 18,
+          "start_ns": 1064895427059194,
+          "end_ns": 1064895434738176,
+          "latency_ms": 7.678982
+        },
+        {
+          "step": 19,
+          "start_ns": 1064895434738176,
+          "end_ns": 1064895441957766,
+          "latency_ms": 7.21959
+        },
+        {
+          "step": 20,
+          "start_ns": 1064895441957766,
+          "end_ns": 1064895449113187,
+          "latency_ms": 7.155421
+        },
+        {
+          "step": 21,
+          "start_ns": 1064895449113187,
+          "end_ns": 1064895456609273,
+          "latency_ms": 7.496086
+        },
+        {
+          "step": 22,
+          "start_ns": 1064895456609273,
+          "end_ns": 1064895463877439,
+          "latency_ms": 7.268166
+        },
+        {
+          "step": 23,
+          "start_ns": 1064895463877439,
+          "end_ns": 1064895470645864,
+          "latency_ms": 6.768425
+        },
+        {
+          "step": 24,
+          "start_ns": 1064895470645864,
+          "end_ns": 1064895477936539,
+          "latency_ms": 7.290675
+        },
+        {
+          "step": 25,
+          "start_ns": 1064895477936539,
+          "end_ns": 1064895485721361,
+          "latency_ms": 7.784822
+        },
+        {
+          "step": 26,
+          "start_ns": 1064895485721361,
+          "end_ns": 1064895492932377,
+          "latency_ms": 7.211016
+        },
+        {
+          "step": 27,
+          "start_ns": 1064895492932377,
+          "end_ns": 1064895500311751,
+          "latency_ms": 7.379374
+        },
+        {
+          "step": 28,
+          "start_ns": 1064895500311751,
+          "end_ns": 1064895507522801,
+          "latency_ms": 7.21105
+        },
+        {
+          "step": 29,
+          "start_ns": 1064895507522801,
+          "end_ns": 1064895514803643,
+          "latency_ms": 7.280842
+        },
+        {
+          "step": 30,
+          "start_ns": 1064895514803643,
+          "end_ns": 1064895521909086,
+          "latency_ms": 7.105443
+        },
+        {
+          "step": 31,
+          "start_ns": 1064895521909086,
+          "end_ns": 1064895528920287,
+          "latency_ms": 7.011201
+        },
+        {
+          "step": 32,
+          "start_ns": 1064895528920287,
+          "end_ns": 1064895537017189,
+          "latency_ms": 8.096902
+        }
+      ],
+      "scheduler": [
+        {
+          "outer_step": 0,
+          "batch": 8,
+          "scheduled_tokens": [
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "output_lengths": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "computed_tokens": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "is_decode": false,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 1,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "computed_tokens": [
+            2048,
+            2048,
+            2048,
+            2048,
+            2048,
+            2048,
+            2048,
+            2048
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 2,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "computed_tokens": [
+            2049,
+            2049,
+            2049,
+            2049,
+            2049,
+            2049,
+            2049,
+            2049
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 3,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "computed_tokens": [
+            2050,
+            2050,
+            2050,
+            2050,
+            2050,
+            2050,
+            2050,
+            2050
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 4,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "computed_tokens": [
+            2051,
+            2051,
+            2051,
+            2051,
+            2051,
+            2051,
+            2051,
+            2051
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 5,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "computed_tokens": [
+            2052,
+            2052,
+            2052,
+            2052,
+            2052,
+            2052,
+            2052,
+            2052
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 6,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+          ],
+          "computed_tokens": [
+            2053,
+            2053,
+            2053,
+            2053,
+            2053,
+            2053,
+            2053,
+            2053
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 7,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          "computed_tokens": [
+            2054,
+            2054,
+            2054,
+            2054,
+            2054,
+            2054,
+            2054,
+            2054
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 8,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ],
+          "computed_tokens": [
+            2055,
+            2055,
+            2055,
+            2055,
+            2055,
+            2055,
+            2055,
+            2055
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 9,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ],
+          "computed_tokens": [
+            2056,
+            2056,
+            2056,
+            2056,
+            2056,
+            2056,
+            2056,
+            2056
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 10,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9,
+            9
+          ],
+          "computed_tokens": [
+            2057,
+            2057,
+            2057,
+            2057,
+            2057,
+            2057,
+            2057,
+            2057
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 11,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "computed_tokens": [
+            2058,
+            2058,
+            2058,
+            2058,
+            2058,
+            2058,
+            2058,
+            2058
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 12,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            11,
+            11,
+            11,
+            11,
+            11,
+            11,
+            11,
+            11
+          ],
+          "computed_tokens": [
+            2059,
+            2059,
+            2059,
+            2059,
+            2059,
+            2059,
+            2059,
+            2059
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 13,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            12,
+            12,
+            12,
+            12,
+            12,
+            12,
+            12,
+            12
+          ],
+          "computed_tokens": [
+            2060,
+            2060,
+            2060,
+            2060,
+            2060,
+            2060,
+            2060,
+            2060
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 14,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
+          "computed_tokens": [
+            2061,
+            2061,
+            2061,
+            2061,
+            2061,
+            2061,
+            2061,
+            2061
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 15,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14,
+            14
+          ],
+          "computed_tokens": [
+            2062,
+            2062,
+            2062,
+            2062,
+            2062,
+            2062,
+            2062,
+            2062
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 16,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            15,
+            15,
+            15,
+            15,
+            15,
+            15,
+            15,
+            15
+          ],
+          "computed_tokens": [
+            2063,
+            2063,
+            2063,
+            2063,
+            2063,
+            2063,
+            2063,
+            2063
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 17,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "computed_tokens": [
+            2064,
+            2064,
+            2064,
+            2064,
+            2064,
+            2064,
+            2064,
+            2064
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 18,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            17,
+            17,
+            17,
+            17,
+            17,
+            17,
+            17,
+            17
+          ],
+          "computed_tokens": [
+            2065,
+            2065,
+            2065,
+            2065,
+            2065,
+            2065,
+            2065,
+            2065
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 19,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            18,
+            18,
+            18,
+            18,
+            18,
+            18,
+            18,
+            18
+          ],
+          "computed_tokens": [
+            2066,
+            2066,
+            2066,
+            2066,
+            2066,
+            2066,
+            2066,
+            2066
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 20,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            19,
+            19,
+            19,
+            19,
+            19,
+            19,
+            19,
+            19
+          ],
+          "computed_tokens": [
+            2067,
+            2067,
+            2067,
+            2067,
+            2067,
+            2067,
+            2067,
+            2067
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 21,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "computed_tokens": [
+            2068,
+            2068,
+            2068,
+            2068,
+            2068,
+            2068,
+            2068,
+            2068
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 22,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21
+          ],
+          "computed_tokens": [
+            2069,
+            2069,
+            2069,
+            2069,
+            2069,
+            2069,
+            2069,
+            2069
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 23,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22,
+            22
+          ],
+          "computed_tokens": [
+            2070,
+            2070,
+            2070,
+            2070,
+            2070,
+            2070,
+            2070,
+            2070
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 24,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            23,
+            23,
+            23,
+            23,
+            23,
+            23,
+            23,
+            23
+          ],
+          "computed_tokens": [
+            2071,
+            2071,
+            2071,
+            2071,
+            2071,
+            2071,
+            2071,
+            2071
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 25,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24
+          ],
+          "computed_tokens": [
+            2072,
+            2072,
+            2072,
+            2072,
+            2072,
+            2072,
+            2072,
+            2072
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 26,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            25,
+            25,
+            25,
+            25,
+            25,
+            25,
+            25,
+            25
+          ],
+          "computed_tokens": [
+            2073,
+            2073,
+            2073,
+            2073,
+            2073,
+            2073,
+            2073,
+            2073
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 27,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            26,
+            26,
+            26,
+            26,
+            26,
+            26,
+            26,
+            26
+          ],
+          "computed_tokens": [
+            2074,
+            2074,
+            2074,
+            2074,
+            2074,
+            2074,
+            2074,
+            2074
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 28,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27,
+            27
+          ],
+          "computed_tokens": [
+            2075,
+            2075,
+            2075,
+            2075,
+            2075,
+            2075,
+            2075,
+            2075
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 29,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            28,
+            28,
+            28,
+            28,
+            28,
+            28,
+            28,
+            28
+          ],
+          "computed_tokens": [
+            2076,
+            2076,
+            2076,
+            2076,
+            2076,
+            2076,
+            2076,
+            2076
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 30,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            29,
+            29,
+            29,
+            29,
+            29,
+            29,
+            29,
+            29
+          ],
+          "computed_tokens": [
+            2077,
+            2077,
+            2077,
+            2077,
+            2077,
+            2077,
+            2077,
+            2077
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 31,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            30,
+            30,
+            30,
+            30,
+            30,
+            30,
+            30,
+            30
+          ],
+          "computed_tokens": [
+            2078,
+            2078,
+            2078,
+            2078,
+            2078,
+            2078,
+            2078,
+            2078
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 32,
+          "batch": 8,
+          "scheduled_tokens": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "output_lengths": [
+            31,
+            31,
+            31,
+            31,
+            31,
+            31,
+            31,
+            31
+          ],
+          "computed_tokens": [
+            2079,
+            2079,
+            2079,
+            2079,
+            2079,
+            2079,
+            2079,
+            2079
+          ],
+          "is_decode": true,
+          "num_preempted": 0
+        },
+        {
+          "outer_step": 33,
+          "batch": 0,
+          "scheduled_tokens": [],
+          "output_lengths": [],
+          "computed_tokens": [],
+          "is_decode": false,
+          "num_preempted": 0
+        }
+      ],
+      "generated_token_sha256": "fe12c75cdb4196ab6d4ead7419ffa91d08a929dcd3108f28387070e1f397d248"
+    }
+  ]
+}

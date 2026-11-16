@@ -1,0 +1,23 @@
+{
+  "time": "2026-11-16T21:49:17.227187+08:00",
+  "baseline_rows": 40,
+  "core_configurations": 8,
+  "trace_reports": 26,
+  "sqlite_exports": 26,
+  "image_links": [
+    "figures/01_gpu_timeline.png",
+    "figures/02_dram_read_timeseries.png",
+    "figures/03_sm_tensor_timeseries.png",
+    "figures/04_decode_time_breakdown.png"
+  ],
+  "all_images_exist": true,
+  "report_sha256": "2c78c2d36c849cf024d81a4fb78ea8d464e30cf2e83102e851e7ca1c09713a78",
+  "figures": {
+    "figures/01_gpu_timeline.png": "2ded80c691352cbbcf911103179cf526debaca966bc7741f23d56b521c2154e1",
+    "figures/02_dram_read_timeseries.png": "4213eb89ce3030e6cd364fff65d77558f3f05cd4aa87e6c17a6f24b8c5693b45",
+    "figures/03_sm_tensor_timeseries.png": "dbc006e47ffddcc0a9b71eed0aa69da7e6ef73762f4218b5c4449117d9cb4990",
+    "figures/04_decode_time_breakdown.png": "439f93f8424acb8afe4be7244b98f30572b97eff6dd5ee5e5c6f7cf6e0c1b100"
+  },
+  "independent_interval_union_audit": "passed",
+  "no_more_gpu_work_launched": true
+}

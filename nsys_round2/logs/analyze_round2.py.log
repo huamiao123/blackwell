@@ -1,0 +1,27 @@
+bf16_b1_kv2048_eager_metrics_10000hz_r02 3101.78 ms coverage 0.7399621745405179 samples 35485
+bf16_b1_kv2048_eager_timeline_10000hz_r02 3054.28 ms coverage 0.7513839549983831 samples None
+bf16_b1_kv2048_graph_metrics_10000hz_r02 2246.72 ms coverage None samples 25734
+bf16_b1_kv2048_graph_metrics_10000hz_r03 2247.3 ms coverage None samples 25734
+bf16_b1_kv2048_graph_node_10000hz_r02 327.52 ms coverage 0.9768570708327027 samples 3275
+bf16_b1_kv2048_graph_timeline_10000hz_r02 2250.94 ms coverage None samples None
+bf16_b8_kv2048_eager_metrics_10000hz_r02 3168.57 ms coverage 0.807612086986379 samples 36199
+bf16_b8_kv2048_eager_timeline_10000hz_r02 3142.54 ms coverage 0.8142316254217591 samples None
+bf16_b8_kv2048_graph_metrics_10000hz_r02 2461.68 ms coverage None samples 28238
+bf16_b8_kv2048_graph_metrics_10000hz_r03 2463.96 ms coverage None samples 28268
+bf16_b8_kv2048_graph_node_10000hz_r02 363.41 ms coverage 0.9755347317752813 samples 3634
+bf16_b8_kv2048_graph_timeline_10000hz_r02 2459.65 ms coverage None samples None
+nvfp4_b1_kv2048_eager_metrics_10000hz_r02 4893.62 ms coverage 0.34066932209573547 samples 55933
+nvfp4_b1_kv2048_eager_timeline_10000hz_r02 5106.03 ms coverage 0.3258866807237914 samples None
+nvfp4_b1_kv2048_graph_metrics_10000hz_r02 1523.87 ms coverage None samples 17513
+nvfp4_b1_kv2048_graph_metrics_10000hz_r03 1529.57 ms coverage None samples 17553
+nvfp4_b1_kv2048_graph_node_10000hz_r02 233.58 ms coverage 0.9622423934152107 samples 2336
+nvfp4_b1_kv2048_graph_timeline_10000hz_r02 1520.78 ms coverage None samples None
+nvfp4_b8_kv2048_eager_metrics_10000hz_r02 5088.98 ms coverage 0.33414458646871265 samples 58239
+nvfp4_b8_kv2048_eager_pilot_10000hz_r01 725.19 ms coverage 0.33724994859272345 samples 7251
+nvfp4_b8_kv2048_eager_timeline_10000hz_r02 4864.98 ms coverage 0.34940916199309136 samples None
+nvfp4_b8_kv2048_graph_metrics_10000hz_r02 1556.8 ms coverage None samples 17878
+nvfp4_b8_kv2048_graph_metrics_10000hz_r03 1556.04 ms coverage None samples 17892
+nvfp4_b8_kv2048_graph_node_10000hz_r02 238.13 ms coverage 0.9636232159709675 samples 2381
+nvfp4_b8_kv2048_graph_pilot_10000hz_r02 238.15 ms coverage None samples 2381
+nvfp4_b8_kv2048_graph_timeline_10000hz_r02 1559.38 ms coverage None samples None
+BASELINE_ROWS 40

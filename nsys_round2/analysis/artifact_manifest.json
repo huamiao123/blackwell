@@ -1,0 +1,1842 @@
+[
+  {
+    "path": "analysis/artifact_manifest.json",
+    "bytes": 44542
+  },
+  {
+    "path": "analysis/baseline_sync_diagnostic.csv",
+    "bytes": 3368
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_eager_metrics_10000hz_r02_gaps.csv",
+    "bytes": 7064340
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_eager_metrics_10000hz_r02_kernels.csv",
+    "bytes": 9611525
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_eager_metrics_10000hz_r02_metrics.csv",
+    "bytes": 77283155
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_eager_metrics_10000hz_r02_steps.csv",
+    "bytes": 34599
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_eager_metrics_10000hz_r02_summary.json",
+    "bytes": 1067492
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_eager_metrics_10000hz_r02_validation.json",
+    "bytes": 33192
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_eager_timeline_10000hz_r02_gaps.csv",
+    "bytes": 7165924
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_eager_timeline_10000hz_r02_kernels.csv",
+    "bytes": 9711991
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_eager_timeline_10000hz_r02_steps.csv",
+    "bytes": 34830
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_eager_timeline_10000hz_r02_summary.json",
+    "bytes": 317294
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_eager_timeline_10000hz_r02_validation.json",
+    "bytes": 25715
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_metrics_10000hz_r02_gaps.csv",
+    "bytes": 0
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_metrics_10000hz_r02_kernels.csv",
+    "bytes": 357696
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_metrics_10000hz_r02_metrics.csv",
+    "bytes": 55380964
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_metrics_10000hz_r02_steps.csv",
+    "bytes": 30668
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_metrics_10000hz_r02_summary.json",
+    "bytes": 742943
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_metrics_10000hz_r02_validation.json",
+    "bytes": 34891
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_metrics_10000hz_r03_gaps.csv",
+    "bytes": 0
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_metrics_10000hz_r03_kernels.csv",
+    "bytes": 357696
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_metrics_10000hz_r03_metrics.csv",
+    "bytes": 55396092
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_metrics_10000hz_r03_steps.csv",
+    "bytes": 30686
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_metrics_10000hz_r03_summary.json",
+    "bytes": 743360
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_metrics_10000hz_r03_validation.json",
+    "bytes": 34834
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_node_10000hz_r02_gaps.csv",
+    "bytes": 852737
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_node_10000hz_r02_kernels.csv",
+    "bytes": 1368119
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_node_10000hz_r02_metrics.csv",
+    "bytes": 7840657
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_node_10000hz_r02_steps.csv",
+    "bytes": 4807
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_node_10000hz_r02_summary.json",
+    "bytes": 162173
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_node_10000hz_r02_validation.json",
+    "bytes": 33130
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_timeline_10000hz_r02_gaps.csv",
+    "bytes": 0
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_timeline_10000hz_r02_kernels.csv",
+    "bytes": 361552
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_timeline_10000hz_r02_steps.csv",
+    "bytes": 30916
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_timeline_10000hz_r02_summary.json",
+    "bytes": 199334
+  },
+  {
+    "path": "analysis/bf16_b1_kv2048_graph_timeline_10000hz_r02_validation.json",
+    "bytes": 27355
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_eager_metrics_10000hz_r02_gaps.csv",
+    "bytes": 7060198
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_eager_metrics_10000hz_r02_kernels.csv",
+    "bytes": 9615275
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_eager_metrics_10000hz_r02_metrics.csv",
+    "bytes": 78899253
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_eager_metrics_10000hz_r02_steps.csv",
+    "bytes": 34604
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_eager_metrics_10000hz_r02_summary.json",
+    "bytes": 1084828
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_eager_metrics_10000hz_r02_validation.json",
+    "bytes": 33325
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_eager_timeline_10000hz_r02_gaps.csv",
+    "bytes": 7162679
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_eager_timeline_10000hz_r02_kernels.csv",
+    "bytes": 9716778
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_eager_timeline_10000hz_r02_steps.csv",
+    "bytes": 34831
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_eager_timeline_10000hz_r02_summary.json",
+    "bytes": 323769
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_eager_timeline_10000hz_r02_validation.json",
+    "bytes": 25850
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_metrics_10000hz_r02_gaps.csv",
+    "bytes": 0
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_metrics_10000hz_r02_kernels.csv",
+    "bytes": 358029
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_metrics_10000hz_r02_metrics.csv",
+    "bytes": 60659906
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_metrics_10000hz_r02_steps.csv",
+    "bytes": 30815
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_metrics_10000hz_r02_summary.json",
+    "bytes": 806772
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_metrics_10000hz_r02_validation.json",
+    "bytes": 34967
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_metrics_10000hz_r03_gaps.csv",
+    "bytes": 0
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_metrics_10000hz_r03_kernels.csv",
+    "bytes": 358029
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_metrics_10000hz_r03_metrics.csv",
+    "bytes": 60714141
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_metrics_10000hz_r03_steps.csv",
+    "bytes": 30803
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_metrics_10000hz_r03_summary.json",
+    "bytes": 807318
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_metrics_10000hz_r03_validation.json",
+    "bytes": 34958
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_node_10000hz_r02_gaps.csv",
+    "bytes": 854263
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_node_10000hz_r02_kernels.csv",
+    "bytes": 1368980
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_node_10000hz_r02_metrics.csv",
+    "bytes": 8695826
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_node_10000hz_r02_steps.csv",
+    "bytes": 4839
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_node_10000hz_r02_summary.json",
+    "bytes": 168706
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_node_10000hz_r02_validation.json",
+    "bytes": 33257
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_timeline_10000hz_r02_gaps.csv",
+    "bytes": 0
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_timeline_10000hz_r02_kernels.csv",
+    "bytes": 361851
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_timeline_10000hz_r02_steps.csv",
+    "bytes": 31024
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_timeline_10000hz_r02_summary.json",
+    "bytes": 216382
+  },
+  {
+    "path": "analysis/bf16_b8_kv2048_graph_timeline_10000hz_r02_validation.json",
+    "bytes": 27489
+  },
+  {
+    "path": "analysis/decode_step_stats.csv",
+    "bytes": 2615601
+  },
+  {
+    "path": "analysis/delivery_validation.json",
+    "bytes": 990
+  },
+  {
+    "path": "analysis/environment_audit.json",
+    "bytes": 49270
+  },
+  {
+    "path": "analysis/hardware_telemetry.csv",
+    "bytes": 69755
+  },
+  {
+    "path": "analysis/historical_schema.json",
+    "bytes": 63440
+  },
+  {
+    "path": "analysis/kernel_intervals.csv",
+    "bytes": 54107441
+  },
+  {
+    "path": "analysis/metric_samples.csv",
+    "bytes": 185258012
+  },
+  {
+    "path": "analysis/metric_summary.csv",
+    "bytes": 55723
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_eager_metrics_10000hz_r02_gaps.csv",
+    "bytes": 9523964
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_eager_metrics_10000hz_r02_kernels.csv",
+    "bytes": 12892666
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_eager_metrics_10000hz_r02_metrics.csv",
+    "bytes": 123078221
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_eager_metrics_10000hz_r02_steps.csv",
+    "bytes": 34877
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_eager_metrics_10000hz_r02_summary.json",
+    "bytes": 1650376
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_eager_metrics_10000hz_r02_validation.json",
+    "bytes": 33294
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_eager_timeline_10000hz_r02_gaps.csv",
+    "bytes": 9672815
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_eager_timeline_10000hz_r02_kernels.csv",
+    "bytes": 13028374
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_eager_timeline_10000hz_r02_steps.csv",
+    "bytes": 35115
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_eager_timeline_10000hz_r02_summary.json",
+    "bytes": 496721
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_eager_timeline_10000hz_r02_validation.json",
+    "bytes": 25796
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_metrics_10000hz_r02_gaps.csv",
+    "bytes": 0
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_metrics_10000hz_r02_kernels.csv",
+    "bytes": 360308
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_metrics_10000hz_r02_metrics.csv",
+    "bytes": 37855524
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_metrics_10000hz_r02_steps.csv",
+    "bytes": 30709
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_metrics_10000hz_r02_summary.json",
+    "bytes": 507198
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_metrics_10000hz_r02_validation.json",
+    "bytes": 34840
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_metrics_10000hz_r03_gaps.csv",
+    "bytes": 0
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_metrics_10000hz_r03_kernels.csv",
+    "bytes": 360342
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_metrics_10000hz_r03_metrics.csv",
+    "bytes": 38000286
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_metrics_10000hz_r03_steps.csv",
+    "bytes": 30707
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_metrics_10000hz_r03_summary.json",
+    "bytes": 508971
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_metrics_10000hz_r03_validation.json",
+    "bytes": 34837
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_node_10000hz_r02_gaps.csv",
+    "bytes": 1016498
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_node_10000hz_r02_kernels.csv",
+    "bytes": 1742039
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_node_10000hz_r02_metrics.csv",
+    "bytes": 5645179
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_node_10000hz_r02_steps.csv",
+    "bytes": 4805
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_node_10000hz_r02_summary.json",
+    "bytes": 159257
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_node_10000hz_r02_validation.json",
+    "bytes": 33128
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_timeline_10000hz_r02_gaps.csv",
+    "bytes": 0
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_timeline_10000hz_r02_kernels.csv",
+    "bytes": 364127
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_timeline_10000hz_r02_steps.csv",
+    "bytes": 30929
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_timeline_10000hz_r02_summary.json",
+    "bytes": 138431
+  },
+  {
+    "path": "analysis/nvfp4_b1_kv2048_graph_timeline_10000hz_r02_validation.json",
+    "bytes": 27356
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_eager_metrics_10000hz_r02_gaps.csv",
+    "bytes": 9456905
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_eager_metrics_10000hz_r02_kernels.csv",
+    "bytes": 12894531
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_eager_metrics_10000hz_r02_metrics.csv",
+    "bytes": 128018303
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_eager_metrics_10000hz_r02_steps.csv",
+    "bytes": 34865
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_eager_metrics_10000hz_r02_summary.json",
+    "bytes": 1711623
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_eager_metrics_10000hz_r02_validation.json",
+    "bytes": 33431
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_eager_pilot_10000hz_r01_gaps.csv",
+    "bytes": 1279040
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_eager_pilot_10000hz_r01_kernels.csv",
+    "bytes": 1749794
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_eager_pilot_10000hz_r01_metrics.csv",
+    "bytes": 17701770
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_eager_pilot_10000hz_r01_steps.csv",
+    "bytes": 4653
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_eager_pilot_10000hz_r01_summary.json",
+    "bytes": 283504
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_eager_pilot_10000hz_r01_validation.json",
+    "bytes": 33376
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_eager_timeline_10000hz_r02_gaps.csv",
+    "bytes": 9607433
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_eager_timeline_10000hz_r02_kernels.csv",
+    "bytes": 13026184
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_eager_timeline_10000hz_r02_steps.csv",
+    "bytes": 35107
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_eager_timeline_10000hz_r02_summary.json",
+    "bytes": 475660
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_eager_timeline_10000hz_r02_validation.json",
+    "bytes": 25929
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_metrics_10000hz_r02_gaps.csv",
+    "bytes": 0
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_metrics_10000hz_r02_kernels.csv",
+    "bytes": 360434
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_metrics_10000hz_r02_metrics.csv",
+    "bytes": 38683542
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_metrics_10000hz_r02_steps.csv",
+    "bytes": 30715
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_metrics_10000hz_r02_summary.json",
+    "bytes": 516732
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_metrics_10000hz_r02_validation.json",
+    "bytes": 35030
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_metrics_10000hz_r03_gaps.csv",
+    "bytes": 0
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_metrics_10000hz_r03_kernels.csv",
+    "bytes": 360434
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_metrics_10000hz_r03_metrics.csv",
+    "bytes": 38663918
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_metrics_10000hz_r03_steps.csv",
+    "bytes": 30710
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_metrics_10000hz_r03_summary.json",
+    "bytes": 516626
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_metrics_10000hz_r03_validation.json",
+    "bytes": 34948
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_node_10000hz_r02_gaps.csv",
+    "bytes": 1016884
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_node_10000hz_r02_kernels.csv",
+    "bytes": 1742598
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_node_10000hz_r02_metrics.csv",
+    "bytes": 5755227
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_node_10000hz_r02_steps.csv",
+    "bytes": 4802
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_node_10000hz_r02_summary.json",
+    "bytes": 160389
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_node_10000hz_r02_validation.json",
+    "bytes": 33256
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_pilot_10000hz_r02_gaps.csv",
+    "bytes": 0
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_pilot_10000hz_r02_kernels.csv",
+    "bytes": 49516
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_pilot_10000hz_r02_metrics.csv",
+    "bytes": 5754572
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_pilot_10000hz_r02_steps.csv",
+    "bytes": 4331
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_pilot_10000hz_r02_summary.json",
+    "bytes": 91743
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_pilot_10000hz_r02_validation.json",
+    "bytes": 34965
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_timeline_10000hz_r02_gaps.csv",
+    "bytes": 0
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_timeline_10000hz_r02_kernels.csv",
+    "bytes": 364256
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_timeline_10000hz_r02_steps.csv",
+    "bytes": 30929
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_timeline_10000hz_r02_summary.json",
+    "bytes": 141222
+  },
+  {
+    "path": "analysis/nvfp4_b8_kv2048_graph_timeline_10000hz_r02_validation.json",
+    "bytes": 27489
+  },
+  {
+    "path": "analysis/profiler_overhead.csv",
+    "bytes": 3028
+  },
+  {
+    "path": "analysis/quality_audit.json",
+    "bytes": 2319
+  },
+  {
+    "path": "analysis/report_data.json",
+    "bytes": 14237823
+  },
+  {
+    "path": "analysis/timestamp_validation.json",
+    "bytes": 205563
+  },
+  {
+    "path": "baseline.csv",
+    "bytes": 6587
+  },
+  {
+    "path": "commands.txt",
+    "bytes": 145114
+  },
+  {
+    "path": "environment.txt",
+    "bytes": 47124
+  },
+  {
+    "path": "environment_check_report.md",
+    "bytes": 1743
+  },
+  {
+    "path": "figures/01_gpu_timeline.png",
+    "bytes": 170541
+  },
+  {
+    "path": "figures/01_gpu_timeline.svg",
+    "bytes": 752446
+  },
+  {
+    "path": "figures/02_dram_read_timeseries.png",
+    "bytes": 480805
+  },
+  {
+    "path": "figures/02_dram_read_timeseries.svg",
+    "bytes": 543308
+  },
+  {
+    "path": "figures/03_sm_tensor_timeseries.png",
+    "bytes": 619098
+  },
+  {
+    "path": "figures/03_sm_tensor_timeseries.svg",
+    "bytes": 1015371
+  },
+  {
+    "path": "figures/04_decode_time_breakdown.png",
+    "bytes": 173431
+  },
+  {
+    "path": "figures/04_decode_time_breakdown.svg",
+    "bytes": 93616
+  },
+  {
+    "path": "final_report.md",
+    "bytes": 29762
+  },
+  {
+    "path": "input_token_ids.json",
+    "bytes": 12288
+  },
+  {
+    "path": "logs/analyze_round2.py.log",
+    "bytes": 2266
+  },
+  {
+    "path": "logs/audit_final.py.log",
+    "bytes": 2320
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_eager_baseline_10000hz_r02.log",
+    "bytes": 11316
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_eager_baseline_10000hz_r02_postcheck.txt",
+    "bytes": 14225
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_eager_baseline_10000hz_r02_precheck.txt",
+    "bytes": 14310
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_eager_baseline_10000hz_r02_supervision.json",
+    "bytes": 283925
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_eager_metrics_10000hz_r02.log",
+    "bytes": 15045
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_eager_metrics_10000hz_r02_export.log",
+    "bytes": 8128
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_eager_metrics_10000hz_r02_postcheck.txt",
+    "bytes": 14226
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_eager_metrics_10000hz_r02_precheck.txt",
+    "bytes": 14310
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_eager_metrics_10000hz_r02_supervision.json",
+    "bytes": 270321
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_eager_timeline_10000hz_r02.log",
+    "bytes": 14653
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_eager_timeline_10000hz_r02_export.log",
+    "bytes": 8128
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_eager_timeline_10000hz_r02_postcheck.txt",
+    "bytes": 14229
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_eager_timeline_10000hz_r02_precheck.txt",
+    "bytes": 14306
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_eager_timeline_10000hz_r02_supervision.json",
+    "bytes": 240280
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_baseline_10000hz_r02.log",
+    "bytes": 13890
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_baseline_10000hz_r02_postcheck.txt",
+    "bytes": 14225
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_baseline_10000hz_r02_precheck.txt",
+    "bytes": 14311
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_baseline_10000hz_r02_supervision.json",
+    "bytes": 298871
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_metrics_10000hz_r02.log",
+    "bytes": 14909
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_metrics_10000hz_r02_export.log",
+    "bytes": 8127
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_metrics_10000hz_r02_postcheck.txt",
+    "bytes": 14227
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_metrics_10000hz_r02_precheck.txt",
+    "bytes": 14307
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_metrics_10000hz_r02_supervision.json",
+    "bytes": 255721
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_metrics_10000hz_r03.log",
+    "bytes": 14910
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_metrics_10000hz_r03_export.log",
+    "bytes": 8127
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_metrics_10000hz_r03_postcheck.txt",
+    "bytes": 14225
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_metrics_10000hz_r03_precheck.txt",
+    "bytes": 14311
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_metrics_10000hz_r03_supervision.json",
+    "bytes": 270313
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_node_10000hz_r02.log",
+    "bytes": 14609
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_node_10000hz_r02_export.log",
+    "bytes": 8127
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_node_10000hz_r02_postcheck.txt",
+    "bytes": 14225
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_node_10000hz_r02_precheck.txt",
+    "bytes": 14311
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_node_10000hz_r02_supervision.json",
+    "bytes": 255350
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_timeline_10000hz_r02.log",
+    "bytes": 14570
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_timeline_10000hz_r02_export.log",
+    "bytes": 8127
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_timeline_10000hz_r02_postcheck.txt",
+    "bytes": 14226
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_timeline_10000hz_r02_precheck.txt",
+    "bytes": 14307
+  },
+  {
+    "path": "logs/bf16_b1_kv2048_graph_timeline_10000hz_r02_supervision.json",
+    "bytes": 255259
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_eager_baseline_10000hz_r01.log",
+    "bytes": 12073
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_eager_baseline_10000hz_r01_postcheck.txt",
+    "bytes": 14225
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_eager_baseline_10000hz_r01_precheck.txt",
+    "bytes": 14306
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_eager_baseline_10000hz_r01_supervision.json",
+    "bytes": 1195826
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_eager_baseline_10000hz_r02.log",
+    "bytes": 11314
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_eager_baseline_10000hz_r02_postcheck.txt",
+    "bytes": 14225
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_eager_baseline_10000hz_r02_precheck.txt",
+    "bytes": 14306
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_eager_baseline_10000hz_r02_supervision.json",
+    "bytes": 268983
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_eager_metrics_10000hz_r02.log",
+    "bytes": 15746
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_eager_metrics_10000hz_r02_export.log",
+    "bytes": 8128
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_eager_metrics_10000hz_r02_postcheck.txt",
+    "bytes": 14225
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_eager_metrics_10000hz_r02_precheck.txt",
+    "bytes": 14311
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_eager_metrics_10000hz_r02_supervision.json",
+    "bytes": 330111
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_eager_timeline_10000hz_r02.log",
+    "bytes": 14653
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_eager_timeline_10000hz_r02_export.log",
+    "bytes": 8128
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_eager_timeline_10000hz_r02_postcheck.txt",
+    "bytes": 14226
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_eager_timeline_10000hz_r02_precheck.txt",
+    "bytes": 14306
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_eager_timeline_10000hz_r02_supervision.json",
+    "bytes": 240286
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_baseline_10000hz_r01.log",
+    "bytes": 14330
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_baseline_10000hz_r01_postcheck.txt",
+    "bytes": 14226
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_baseline_10000hz_r01_precheck.txt",
+    "bytes": 14307
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_baseline_10000hz_r01_supervision.json",
+    "bytes": 493153
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_baseline_10000hz_r02.log",
+    "bytes": 14402
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_baseline_10000hz_r02_postcheck.txt",
+    "bytes": 14225
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_baseline_10000hz_r02_precheck.txt",
+    "bytes": 14310
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_baseline_10000hz_r02_supervision.json",
+    "bytes": 478182
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_metrics_10000hz_r02.log",
+    "bytes": 14909
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_metrics_10000hz_r02_export.log",
+    "bytes": 8127
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_metrics_10000hz_r02_postcheck.txt",
+    "bytes": 14225
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_metrics_10000hz_r02_precheck.txt",
+    "bytes": 14304
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_metrics_10000hz_r02_supervision.json",
+    "bytes": 240763
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_metrics_10000hz_r03.log",
+    "bytes": 14907
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_metrics_10000hz_r03_export.log",
+    "bytes": 8127
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_metrics_10000hz_r03_postcheck.txt",
+    "bytes": 14225
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_metrics_10000hz_r03_precheck.txt",
+    "bytes": 14306
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_metrics_10000hz_r03_supervision.json",
+    "bytes": 255345
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_node_10000hz_r02.log",
+    "bytes": 14607
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_node_10000hz_r02_export.log",
+    "bytes": 8127
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_node_10000hz_r02_postcheck.txt",
+    "bytes": 14226
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_node_10000hz_r02_precheck.txt",
+    "bytes": 14306
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_node_10000hz_r02_supervision.json",
+    "bytes": 240381
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_timeline_10000hz_r02.log",
+    "bytes": 14660
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_timeline_10000hz_r02_export.log",
+    "bytes": 8127
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_timeline_10000hz_r02_postcheck.txt",
+    "bytes": 14225
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_timeline_10000hz_r02_precheck.txt",
+    "bytes": 14307
+  },
+  {
+    "path": "logs/bf16_b8_kv2048_graph_timeline_10000hz_r02_supervision.json",
+    "bytes": 285531
+  },
+  {
+    "path": "logs/collect_bundle.py.log",
+    "bytes": 957
+  },
+  {
+    "path": "logs/environment_0.txt",
+    "bytes": 58
+  },
+  {
+    "path": "logs/environment_1.txt",
+    "bytes": 34422
+  },
+  {
+    "path": "logs/environment_2.txt",
+    "bytes": 11920
+  },
+  {
+    "path": "logs/environment_3.txt",
+    "bytes": 235
+  },
+  {
+    "path": "logs/environment_4.txt",
+    "bytes": 201
+  },
+  {
+    "path": "logs/final_gpu_status.json",
+    "bytes": 14759
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_eager_baseline_10000hz_r02.log",
+    "bytes": 25041
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_eager_baseline_10000hz_r02_postcheck.txt",
+    "bytes": 14226
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_eager_baseline_10000hz_r02_precheck.txt",
+    "bytes": 14310
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_eager_baseline_10000hz_r02_supervision.json",
+    "bytes": 298883
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_eager_metrics_10000hz_r02.log",
+    "bytes": 33394
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_eager_metrics_10000hz_r02_export.log",
+    "bytes": 8128
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_eager_metrics_10000hz_r02_postcheck.txt",
+    "bytes": 14227
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_eager_metrics_10000hz_r02_precheck.txt",
+    "bytes": 14307
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_eager_metrics_10000hz_r02_supervision.json",
+    "bytes": 255729
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_eager_timeline_10000hz_r02.log",
+    "bytes": 31000
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_eager_timeline_10000hz_r02_export.log",
+    "bytes": 8128
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_eager_timeline_10000hz_r02_postcheck.txt",
+    "bytes": 14226
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_eager_timeline_10000hz_r02_precheck.txt",
+    "bytes": 14311
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_eager_timeline_10000hz_r02_supervision.json",
+    "bytes": 225720
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_baseline_10000hz_r02.log",
+    "bytes": 27613
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_baseline_10000hz_r02_postcheck.txt",
+    "bytes": 14225
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_baseline_10000hz_r02_precheck.txt",
+    "bytes": 14311
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_baseline_10000hz_r02_supervision.json",
+    "bytes": 239058
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_metrics_10000hz_r02.log",
+    "bytes": 28570
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_metrics_10000hz_r02_export.log",
+    "bytes": 8127
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_metrics_10000hz_r02_postcheck.txt",
+    "bytes": 14227
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_metrics_10000hz_r02_precheck.txt",
+    "bytes": 14307
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_metrics_10000hz_r02_supervision.json",
+    "bytes": 225438
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_metrics_10000hz_r03.log",
+    "bytes": 28572
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_metrics_10000hz_r03_export.log",
+    "bytes": 8127
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_metrics_10000hz_r03_postcheck.txt",
+    "bytes": 14226
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_metrics_10000hz_r03_precheck.txt",
+    "bytes": 14307
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_metrics_10000hz_r03_supervision.json",
+    "bytes": 225449
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_node_10000hz_r02.log",
+    "bytes": 28361
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_node_10000hz_r02_export.log",
+    "bytes": 8127
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_node_10000hz_r02_postcheck.txt",
+    "bytes": 14226
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_node_10000hz_r02_precheck.txt",
+    "bytes": 14310
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_node_10000hz_r02_supervision.json",
+    "bytes": 210482
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_timeline_10000hz_r02.log",
+    "bytes": 28406
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_timeline_10000hz_r02_export.log",
+    "bytes": 8127
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_timeline_10000hz_r02_postcheck.txt",
+    "bytes": 14225
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_timeline_10000hz_r02_precheck.txt",
+    "bytes": 14310
+  },
+  {
+    "path": "logs/nvfp4_b1_kv2048_graph_timeline_10000hz_r02_supervision.json",
+    "bytes": 210399
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_baseline_10000hz_r01.log",
+    "bytes": 25065
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_baseline_10000hz_r01_postcheck.txt",
+    "bytes": 14226
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_baseline_10000hz_r01_precheck.txt",
+    "bytes": 14305
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_baseline_10000hz_r01_supervision.json",
+    "bytes": 328419
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_baseline_10000hz_r02.log",
+    "bytes": 25043
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_baseline_10000hz_r02_postcheck.txt",
+    "bytes": 14225
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_baseline_10000hz_r02_precheck.txt",
+    "bytes": 14310
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_baseline_10000hz_r02_supervision.json",
+    "bytes": 313827
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_metrics_10000hz_r02.log",
+    "bytes": 33307
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_metrics_10000hz_r02_export.log",
+    "bytes": 8128
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_metrics_10000hz_r02_postcheck.txt",
+    "bytes": 14227
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_metrics_10000hz_r02_precheck.txt",
+    "bytes": 14307
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_metrics_10000hz_r02_supervision.json",
+    "bytes": 269930
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_pilot_10000hz_r01.log",
+    "bytes": 26592
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_pilot_10000hz_r01_export.log",
+    "bytes": 8128
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_pilot_10000hz_r01_postcheck.txt",
+    "bytes": 14567
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_pilot_10000hz_r01_precheck.txt",
+    "bytes": 14306
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_pilot_10000hz_r01_supervision.json",
+    "bytes": 283245
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_timeline_10000hz_r02.log",
+    "bytes": 31088
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_timeline_10000hz_r02_export.log",
+    "bytes": 8128
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_timeline_10000hz_r02_postcheck.txt",
+    "bytes": 14229
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_timeline_10000hz_r02_precheck.txt",
+    "bytes": 14310
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_eager_timeline_10000hz_r02_supervision.json",
+    "bytes": 255250
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_baseline_10000hz_r01.log",
+    "bytes": 28158
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_baseline_10000hz_r01_postcheck.txt",
+    "bytes": 14223
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_baseline_10000hz_r01_precheck.txt",
+    "bytes": 14307
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_baseline_10000hz_r01_supervision.json",
+    "bytes": 432985
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_baseline_10000hz_r02.log",
+    "bytes": 27600
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_baseline_10000hz_r02_postcheck.txt",
+    "bytes": 14225
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_baseline_10000hz_r02_precheck.txt",
+    "bytes": 14310
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_baseline_10000hz_r02_supervision.json",
+    "bytes": 239051
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_metrics_10000hz_r02.log",
+    "bytes": 28659
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_metrics_10000hz_r02_export.log",
+    "bytes": 8127
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_metrics_10000hz_r02_postcheck.txt",
+    "bytes": 14226
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_metrics_10000hz_r02_precheck.txt",
+    "bytes": 14305
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_metrics_10000hz_r02_supervision.json",
+    "bytes": 225455
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_metrics_10000hz_r03.log",
+    "bytes": 28659
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_metrics_10000hz_r03_export.log",
+    "bytes": 8127
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_metrics_10000hz_r03_postcheck.txt",
+    "bytes": 14226
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_metrics_10000hz_r03_precheck.txt",
+    "bytes": 14305
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_metrics_10000hz_r03_supervision.json",
+    "bytes": 225440
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_node_10000hz_r02.log",
+    "bytes": 28445
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_node_10000hz_r02_export.log",
+    "bytes": 8127
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_node_10000hz_r02_postcheck.txt",
+    "bytes": 14227
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_node_10000hz_r02_precheck.txt",
+    "bytes": 14310
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_node_10000hz_r02_supervision.json",
+    "bytes": 210472
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_pilot_10000hz_r02.log",
+    "bytes": 28884
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_pilot_10000hz_r02_postcheck.txt",
+    "bytes": 14226
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_pilot_10000hz_r02_precheck.txt",
+    "bytes": 14306
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_pilot_10000hz_r02_supervision.json",
+    "bytes": 330062
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_timeline_10000hz_r02.log",
+    "bytes": 28406
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_timeline_10000hz_r02_export.log",
+    "bytes": 8127
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_timeline_10000hz_r02_postcheck.txt",
+    "bytes": 14226
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_timeline_10000hz_r02_precheck.txt",
+    "bytes": 14310
+  },
+  {
+    "path": "logs/nvfp4_b8_kv2048_graph_timeline_10000hz_r02_supervision.json",
+    "bytes": 210385
+  },
+  {
+    "path": "logs/plan_baseline_d1.json",
+    "bytes": 1277
+  },
+  {
+    "path": "logs/plan_baseline_d2.json",
+    "bytes": 1277
+  },
+  {
+    "path": "logs/plan_nodes_d1.json",
+    "bytes": 662
+  },
+  {
+    "path": "logs/plan_nodes_d2.json",
+    "bytes": 662
+  },
+  {
+    "path": "logs/plan_repeat_d1.json",
+    "bytes": 670
+  },
+  {
+    "path": "logs/plan_repeat_d2.json",
+    "bytes": 670
+  },
+  {
+    "path": "logs/plan_traces_d1.json",
+    "bytes": 2483
+  },
+  {
+    "path": "logs/plan_traces_d2.json",
+    "bytes": 2483
+  },
+  {
+    "path": "raw/bf16_b1_kv2048_eager_baseline_10000hz_r02.json",
+    "bytes": 600138
+  },
+  {
+    "path": "raw/bf16_b1_kv2048_eager_metrics_10000hz_r02.json",
+    "bytes": 121017
+  },
+  {
+    "path": "raw/bf16_b1_kv2048_eager_metrics_10000hz_r02.nsys-rep",
+    "bytes": 9144174
+  },
+  {
+    "path": "raw/bf16_b1_kv2048_eager_timeline_10000hz_r02.json",
+    "bytes": 121010
+  },
+  {
+    "path": "raw/bf16_b1_kv2048_eager_timeline_10000hz_r02.nsys-rep",
+    "bytes": 7687478
+  },
+  {
+    "path": "raw/bf16_b1_kv2048_graph_baseline_10000hz_r02.json",
+    "bytes": 599493
+  },
+  {
+    "path": "raw/bf16_b1_kv2048_graph_metrics_10000hz_r02.json",
+    "bytes": 120898
+  },
+  {
+    "path": "raw/bf16_b1_kv2048_graph_metrics_10000hz_r02.nsys-rep",
+    "bytes": 1886527
+  },
+  {
+    "path": "raw/bf16_b1_kv2048_graph_metrics_10000hz_r03.json",
+    "bytes": 120893
+  },
+  {
+    "path": "raw/bf16_b1_kv2048_graph_metrics_10000hz_r03.nsys-rep",
+    "bytes": 1893118
+  },
+  {
+    "path": "raw/bf16_b1_kv2048_graph_node_10000hz_r02.json",
+    "bytes": 17077
+  },
+  {
+    "path": "raw/bf16_b1_kv2048_graph_node_10000hz_r02.nsys-rep",
+    "bytes": 1149183
+  },
+  {
+    "path": "raw/bf16_b1_kv2048_graph_timeline_10000hz_r02.json",
+    "bytes": 120937
+  },
+  {
+    "path": "raw/bf16_b1_kv2048_graph_timeline_10000hz_r02.nsys-rep",
+    "bytes": 761766
+  },
+  {
+    "path": "raw/bf16_b8_kv2048_eager_baseline_10000hz_r01.json",
+    "bytes": 1038843
+  },
+  {
+    "path": "raw/bf16_b8_kv2048_eager_baseline_10000hz_r02.json",
+    "bytes": 1046401
+  },
+  {
+    "path": "raw/bf16_b8_kv2048_eager_metrics_10000hz_r02.json",
+    "bytes": 210277
+  },
+  {
+    "path": "raw/bf16_b8_kv2048_eager_metrics_10000hz_r02.nsys-rep",
+    "bytes": 9469099
+  },
+  {
+    "path": "raw/bf16_b8_kv2048_eager_timeline_10000hz_r02.json",
+    "bytes": 210265
+  },
+  {
+    "path": "raw/bf16_b8_kv2048_eager_timeline_10000hz_r02.nsys-rep",
+    "bytes": 7982237
+  },
+  {
+    "path": "raw/bf16_b8_kv2048_graph_baseline_10000hz_r01.json",
+    "bytes": 1038850
+  },
+  {
+    "path": "raw/bf16_b8_kv2048_graph_baseline_10000hz_r02.json",
+    "bytes": 1046387
+  },
+  {
+    "path": "raw/bf16_b8_kv2048_graph_metrics_10000hz_r02.json",
+    "bytes": 210268
+  },
+  {
+    "path": "raw/bf16_b8_kv2048_graph_metrics_10000hz_r02.nsys-rep",
+    "bytes": 1966771
+  },
+  {
+    "path": "raw/bf16_b8_kv2048_graph_metrics_10000hz_r03.json",
+    "bytes": 210275
+  },
+  {
+    "path": "raw/bf16_b8_kv2048_graph_metrics_10000hz_r03.nsys-rep",
+    "bytes": 1973138
+  },
+  {
+    "path": "raw/bf16_b8_kv2048_graph_node_10000hz_r02.json",
+    "bytes": 28389
+  },
+  {
+    "path": "raw/bf16_b8_kv2048_graph_node_10000hz_r02.nsys-rep",
+    "bytes": 1157315
+  },
+  {
+    "path": "raw/bf16_b8_kv2048_graph_timeline_10000hz_r02.json",
+    "bytes": 210279
+  },
+  {
+    "path": "raw/bf16_b8_kv2048_graph_timeline_10000hz_r02.nsys-rep",
+    "bytes": 764542
+  },
+  {
+    "path": "raw/nvfp4_b1_kv2048_eager_baseline_10000hz_r02.json",
+    "bytes": 600152
+  },
+  {
+    "path": "raw/nvfp4_b1_kv2048_eager_metrics_10000hz_r02.json",
+    "bytes": 121014
+  },
+  {
+    "path": "raw/nvfp4_b1_kv2048_eager_metrics_10000hz_r02.nsys-rep",
+    "bytes": 19157837
+  },
+  {
+    "path": "raw/nvfp4_b1_kv2048_eager_timeline_10000hz_r02.json",
+    "bytes": 121029
+  },
+  {
+    "path": "raw/nvfp4_b1_kv2048_eager_timeline_10000hz_r02.nsys-rep",
+    "bytes": 17175094
+  },
+  {
+    "path": "raw/nvfp4_b1_kv2048_graph_baseline_10000hz_r02.json",
+    "bytes": 598884
+  },
+  {
+    "path": "raw/nvfp4_b1_kv2048_graph_metrics_10000hz_r02.json",
+    "bytes": 120782
+  },
+  {
+    "path": "raw/nvfp4_b1_kv2048_graph_metrics_10000hz_r02.nsys-rep",
+    "bytes": 1676970
+  },
+  {
+    "path": "raw/nvfp4_b1_kv2048_graph_metrics_10000hz_r03.json",
+    "bytes": 120774
+  },
+  {
+    "path": "raw/nvfp4_b1_kv2048_graph_metrics_10000hz_r03.nsys-rep",
+    "bytes": 1677042
+  },
+  {
+    "path": "raw/nvfp4_b1_kv2048_graph_node_10000hz_r02.json",
+    "bytes": 17051
+  },
+  {
+    "path": "raw/nvfp4_b1_kv2048_graph_node_10000hz_r02.nsys-rep",
+    "bytes": 1286889
+  },
+  {
+    "path": "raw/nvfp4_b1_kv2048_graph_timeline_10000hz_r02.json",
+    "bytes": 120778
+  },
+  {
+    "path": "raw/nvfp4_b1_kv2048_graph_timeline_10000hz_r02.nsys-rep",
+    "bytes": 759457
+  },
+  {
+    "path": "raw/nvfp4_b8_kv2048_eager_baseline_10000hz_r01.json",
+    "bytes": 1038828
+  },
+  {
+    "path": "raw/nvfp4_b8_kv2048_eager_baseline_10000hz_r02.json",
+    "bytes": 1046374
+  },
+  {
+    "path": "raw/nvfp4_b8_kv2048_eager_metrics_10000hz_r02.json",
+    "bytes": 210274
+  },
+  {
+    "path": "raw/nvfp4_b8_kv2048_eager_metrics_10000hz_r02.nsys-rep",
+    "bytes": 19294159
+  },
+  {
+    "path": "raw/nvfp4_b8_kv2048_eager_pilot_10000hz_r01.json",
+    "bytes": 27965
+  },
+  {
+    "path": "raw/nvfp4_b8_kv2048_eager_pilot_10000hz_r01.nsys-rep",
+    "bytes": 2925989
+  },
+  {
+    "path": "raw/nvfp4_b8_kv2048_eager_timeline_10000hz_r02.json",
+    "bytes": 210264
+  },
+  {
+    "path": "raw/nvfp4_b8_kv2048_eager_timeline_10000hz_r02.nsys-rep",
+    "bytes": 17235769
+  },
+  {
+    "path": "raw/nvfp4_b8_kv2048_graph_baseline_10000hz_r01.json",
+    "bytes": 1038683
+  },
+  {
+    "path": "raw/nvfp4_b8_kv2048_graph_baseline_10000hz_r02.json",
+    "bytes": 1045090
+  },
+  {
+    "path": "raw/nvfp4_b8_kv2048_graph_metrics_10000hz_r02.json",
+    "bytes": 210017
+  },
+  {
+    "path": "raw/nvfp4_b8_kv2048_graph_metrics_10000hz_r02.nsys-rep",
+    "bytes": 1695455
+  },
+  {
+    "path": "raw/nvfp4_b8_kv2048_graph_metrics_10000hz_r03.json",
+    "bytes": 210014
+  },
+  {
+    "path": "raw/nvfp4_b8_kv2048_graph_metrics_10000hz_r03.nsys-rep",
+    "bytes": 1693974
+  },
+  {
+    "path": "raw/nvfp4_b8_kv2048_graph_node_10000hz_r02.json",
+    "bytes": 28362
+  },
+  {
+    "path": "raw/nvfp4_b8_kv2048_graph_node_10000hz_r02.nsys-rep",
+    "bytes": 1296694
+  },
+  {
+    "path": "raw/nvfp4_b8_kv2048_graph_pilot_10000hz_r02.json",
+    "bytes": 28361
+  },
+  {
+    "path": "raw/nvfp4_b8_kv2048_graph_pilot_10000hz_r02.nsys-rep",
+    "bytes": 784621
+  },
+  {
+    "path": "raw/nvfp4_b8_kv2048_graph_timeline_10000hz_r02.json",
+    "bytes": 210027
+  },
+  {
+    "path": "raw/nvfp4_b8_kv2048_graph_timeline_10000hz_r02.nsys-rep",
+    "bytes": 761969
+  },
+  {
+    "path": "sqlite/bf16_b1_kv2048_eager_metrics_10000hz_r02.sqlite",
+    "bytes": 49467392
+  },
+  {
+    "path": "sqlite/bf16_b1_kv2048_eager_timeline_10000hz_r02.sqlite",
+    "bytes": 20193280
+  },
+  {
+    "path": "sqlite/bf16_b1_kv2048_graph_metrics_10000hz_r02.sqlite",
+    "bytes": 22548480
+  },
+  {
+    "path": "sqlite/bf16_b1_kv2048_graph_metrics_10000hz_r03.sqlite",
+    "bytes": 22814720
+  },
+  {
+    "path": "sqlite/bf16_b1_kv2048_graph_node_10000hz_r02.sqlite",
+    "bytes": 5632000
+  },
+  {
+    "path": "sqlite/bf16_b1_kv2048_graph_timeline_10000hz_r02.sqlite",
+    "bytes": 1818624
+  },
+  {
+    "path": "sqlite/bf16_b8_kv2048_eager_metrics_10000hz_r02.sqlite",
+    "bytes": 50200576
+  },
+  {
+    "path": "sqlite/bf16_b8_kv2048_eager_timeline_10000hz_r02.sqlite",
+    "bytes": 20201472
+  },
+  {
+    "path": "sqlite/bf16_b8_kv2048_graph_metrics_10000hz_r02.sqlite",
+    "bytes": 24788992
+  },
+  {
+    "path": "sqlite/bf16_b8_kv2048_graph_metrics_10000hz_r03.sqlite",
+    "bytes": 24870912
+  },
+  {
+    "path": "sqlite/bf16_b8_kv2048_graph_node_10000hz_r02.sqlite",
+    "bytes": 5677056
+  },
+  {
+    "path": "sqlite/bf16_b8_kv2048_graph_timeline_10000hz_r02.sqlite",
+    "bytes": 1818624
+  },
+  {
+    "path": "sqlite/nvfp4_b1_kv2048_eager_metrics_10000hz_r02.sqlite",
+    "bytes": 89387008
+  },
+  {
+    "path": "sqlite/nvfp4_b1_kv2048_eager_timeline_10000hz_r02.sqlite",
+    "bytes": 42622976
+  },
+  {
+    "path": "sqlite/nvfp4_b1_kv2048_graph_metrics_10000hz_r02.sqlite",
+    "bytes": 16015360
+  },
+  {
+    "path": "sqlite/nvfp4_b1_kv2048_graph_metrics_10000hz_r03.sqlite",
+    "bytes": 15945728
+  },
+  {
+    "path": "sqlite/nvfp4_b1_kv2048_graph_node_10000hz_r02.sqlite",
+    "bytes": 5107712
+  },
+  {
+    "path": "sqlite/nvfp4_b1_kv2048_graph_timeline_10000hz_r02.sqlite",
+    "bytes": 1806336
+  },
+  {
+    "path": "sqlite/nvfp4_b8_kv2048_eager_metrics_10000hz_r02.sqlite",
+    "bytes": 91299840
+  },
+  {
+    "path": "sqlite/nvfp4_b8_kv2048_eager_pilot_10000hz_r01.sqlite",
+    "bytes": 11952128
+  },
+  {
+    "path": "sqlite/nvfp4_b8_kv2048_eager_timeline_10000hz_r02.sqlite",
+    "bytes": 42569728
+  },
+  {
+    "path": "sqlite/nvfp4_b8_kv2048_graph_metrics_10000hz_r02.sqlite",
+    "bytes": 16371712
+  },
+  {
+    "path": "sqlite/nvfp4_b8_kv2048_graph_metrics_10000hz_r03.sqlite",
+    "bytes": 16343040
+  },
+  {
+    "path": "sqlite/nvfp4_b8_kv2048_graph_node_10000hz_r02.sqlite",
+    "bytes": 5177344
+  },
+  {
+    "path": "sqlite/nvfp4_b8_kv2048_graph_pilot_10000hz_r02.sqlite",
+    "bytes": 3608576
+  },
+  {
+    "path": "sqlite/nvfp4_b8_kv2048_graph_timeline_10000hz_r02.sqlite",
+    "bytes": 1806336
+  }
+]

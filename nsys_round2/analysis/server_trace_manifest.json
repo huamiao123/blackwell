@@ -1,0 +1,265 @@
+{
+  "server_project": "~/fp4-llm/results/nsys_round2",
+  "files": [
+    {
+      "path": "raw/bf16_b1_kv2048_eager_metrics_10000hz_r02.nsys-rep",
+      "bytes": 9144174,
+      "sha256": "34cf07b469fad11ddc373b07845a4644a73c714cf99636cc849edc73dbcf67fa"
+    },
+    {
+      "path": "raw/bf16_b1_kv2048_eager_timeline_10000hz_r02.nsys-rep",
+      "bytes": 7687478,
+      "sha256": "2cc100ad7c05a531ea932ff9d283a96896c6cd610de51bae6ffad034651e95dd"
+    },
+    {
+      "path": "raw/bf16_b1_kv2048_graph_metrics_10000hz_r02.nsys-rep",
+      "bytes": 1886527,
+      "sha256": "19280ceaac6ac7b785ae0f00fe1761f2918cdb2b2402e3b5fe7978df1ff78fcf"
+    },
+    {
+      "path": "raw/bf16_b1_kv2048_graph_metrics_10000hz_r03.nsys-rep",
+      "bytes": 1893118,
+      "sha256": "c309f3c96f1627759c0ec56166c69ed2969c6a641681e29b3ceb8d0f98ac9512"
+    },
+    {
+      "path": "raw/bf16_b1_kv2048_graph_node_10000hz_r02.nsys-rep",
+      "bytes": 1149183,
+      "sha256": "084b024f706ca766624d34bf268cb1a50db8049134cdda6fd042484a356c761e"
+    },
+    {
+      "path": "raw/bf16_b1_kv2048_graph_timeline_10000hz_r02.nsys-rep",
+      "bytes": 761766,
+      "sha256": "4ad592219efaec5fdfff2f05249ac46dedff06919e74d8b6a3480556d46c74ff"
+    },
+    {
+      "path": "raw/bf16_b8_kv2048_eager_metrics_10000hz_r02.nsys-rep",
+      "bytes": 9469099,
+      "sha256": "a9407134ef014585a736a1bf160b5aa4c5b308fb4e69e962ea714b7957f0aeb7"
+    },
+    {
+      "path": "raw/bf16_b8_kv2048_eager_timeline_10000hz_r02.nsys-rep",
+      "bytes": 7982237,
+      "sha256": "1f734c93a623f8c1e617fc9f91e4addf957734787bd378e8a05a349851cedfcd"
+    },
+    {
+      "path": "raw/bf16_b8_kv2048_graph_metrics_10000hz_r02.nsys-rep",
+      "bytes": 1966771,
+      "sha256": "065aeeb08431bae571e1eec486bd0a2666c10605e23c6802db42d310b9662e0e"
+    },
+    {
+      "path": "raw/bf16_b8_kv2048_graph_metrics_10000hz_r03.nsys-rep",
+      "bytes": 1973138,
+      "sha256": "30531a3dcbadbc8590d99454cee84d13c9e90f95f959f4ac6fedffe0aa6bb760"
+    },
+    {
+      "path": "raw/bf16_b8_kv2048_graph_node_10000hz_r02.nsys-rep",
+      "bytes": 1157315,
+      "sha256": "ff8ea694a2dea83d1160966ae92c2b1ae9e55ae33523efbe0273aeeeacd8ac30"
+    },
+    {
+      "path": "raw/bf16_b8_kv2048_graph_timeline_10000hz_r02.nsys-rep",
+      "bytes": 764542,
+      "sha256": "3aa36144414d3111bd1a0e1e3cf1812f64f705735503ce76d7a2ba2bda1c11d3"
+    },
+    {
+      "path": "raw/nvfp4_b1_kv2048_eager_metrics_10000hz_r02.nsys-rep",
+      "bytes": 19157837,
+      "sha256": "94f62029c50632c830218433968f72c73cbdaa7b880f5e4180b1e4a0346a63c7"
+    },
+    {
+      "path": "raw/nvfp4_b1_kv2048_eager_timeline_10000hz_r02.nsys-rep",
+      "bytes": 17175094,
+      "sha256": "8a0028573a7a47feaead58e9cc7aee47535cd4830298783fd67466b6b8baee8b"
+    },
+    {
+      "path": "raw/nvfp4_b1_kv2048_graph_metrics_10000hz_r02.nsys-rep",
+      "bytes": 1676970,
+      "sha256": "972d4ab5b4d4b604dda96995be5394e14658e5974afffe42c91c744ddc92f7a2"
+    },
+    {
+      "path": "raw/nvfp4_b1_kv2048_graph_metrics_10000hz_r03.nsys-rep",
+      "bytes": 1677042,
+      "sha256": "c34539d1c4ce4b12fcca39a54bb9d6efbe018840fb000de9fd74fdc2de689389"
+    },
+    {
+      "path": "raw/nvfp4_b1_kv2048_graph_node_10000hz_r02.nsys-rep",
+      "bytes": 1286889,
+      "sha256": "f285e51d15ebbd1daf4f810590ecfb67b17128fd06c04b36c08f365e86f13c47"
+    },
+    {
+      "path": "raw/nvfp4_b1_kv2048_graph_timeline_10000hz_r02.nsys-rep",
+      "bytes": 759457,
+      "sha256": "7d60629e43303a77755ef6452dc45862a60baa4545aba207c5e8df13776a75d0"
+    },
+    {
+      "path": "raw/nvfp4_b8_kv2048_eager_metrics_10000hz_r02.nsys-rep",
+      "bytes": 19294159,
+      "sha256": "a771f5ec8fb57d99233589625d3edd08168b9302843a8333c28fa8f3e0221e48"
+    },
+    {
+      "path": "raw/nvfp4_b8_kv2048_eager_pilot_10000hz_r01.nsys-rep",
+      "bytes": 2925989,
+      "sha256": "dca778fe1bea33ac605c4d5f3f7c9009bd353eef304d3650da17c84872c5546d"
+    },
+    {
+      "path": "raw/nvfp4_b8_kv2048_eager_timeline_10000hz_r02.nsys-rep",
+      "bytes": 17235769,
+      "sha256": "f3aa4f1cb835cf94732a099a51424177e65dd67071aba9ffe0cb655b144a8d9b"
+    },
+    {
+      "path": "raw/nvfp4_b8_kv2048_graph_metrics_10000hz_r02.nsys-rep",
+      "bytes": 1695455,
+      "sha256": "b9dd95c4cb43613e71a1c4029b8d7ae9303fd63755562cb025042d246de1a2ef"
+    },
+    {
+      "path": "raw/nvfp4_b8_kv2048_graph_metrics_10000hz_r03.nsys-rep",
+      "bytes": 1693974,
+      "sha256": "6407ce07ff27b86711d1bc1dbaff4bafd262c6bfc4c38b01c8d209468d6410f1"
+    },
+    {
+      "path": "raw/nvfp4_b8_kv2048_graph_node_10000hz_r02.nsys-rep",
+      "bytes": 1296694,
+      "sha256": "56608f76e25c277df9b7e04587d067b1247460212900751a2e0b770c9b602c44"
+    },
+    {
+      "path": "raw/nvfp4_b8_kv2048_graph_pilot_10000hz_r02.nsys-rep",
+      "bytes": 784621,
+      "sha256": "87a9d3c159d12ffd6d23fb2252c7955b378b15f59afe120327bdd43e690ab0ea"
+    },
+    {
+      "path": "raw/nvfp4_b8_kv2048_graph_timeline_10000hz_r02.nsys-rep",
+      "bytes": 761969,
+      "sha256": "abb7439bd917d4c449575613c94c2ce4292bf7bf21fb8498d38cc20f5e0ad499"
+    },
+    {
+      "path": "sqlite/bf16_b1_kv2048_eager_metrics_10000hz_r02.sqlite",
+      "bytes": 49467392,
+      "sha256": "cd54ea5cd297b9c2fe3eb1468b05c6707676527bf7f7faa6276f172d1a180aa7"
+    },
+    {
+      "path": "sqlite/bf16_b1_kv2048_eager_timeline_10000hz_r02.sqlite",
+      "bytes": 20193280,
+      "sha256": "8818ab1935a03ebd178e5b79e38decb3157373f5c1a2fb210078d42d38bb9db9"
+    },
+    {
+      "path": "sqlite/bf16_b1_kv2048_graph_metrics_10000hz_r02.sqlite",
+      "bytes": 22548480,
+      "sha256": "590df93fc71408e50c9b71fa2dfc36dada30b5848e41c8dd6ebb2f5ffb5cdd9f"
+    },
+    {
+      "path": "sqlite/bf16_b1_kv2048_graph_metrics_10000hz_r03.sqlite",
+      "bytes": 22814720,
+      "sha256": "151fc77eeabd485cc06ed456f621d006a27d927e2796df426a345a80df16eda7"
+    },
+    {
+      "path": "sqlite/bf16_b1_kv2048_graph_node_10000hz_r02.sqlite",
+      "bytes": 5632000,
+      "sha256": "a01ce95e0be6bca05938f855d15c5354787e2137d92c8d8c7c517f0f8aff7c41"
+    },
+    {
+      "path": "sqlite/bf16_b1_kv2048_graph_timeline_10000hz_r02.sqlite",
+      "bytes": 1818624,
+      "sha256": "e64f05264d0d3b005697fc3e9c74f688476f67903fd81763eb6698eb30e8f1b2"
+    },
+    {
+      "path": "sqlite/bf16_b8_kv2048_eager_metrics_10000hz_r02.sqlite",
+      "bytes": 50200576,
+      "sha256": "9558bc75f9da406151bb1ceea94a58696c636d1fdece07e12cbe14e5f0bd8579"
+    },
+    {
+      "path": "sqlite/bf16_b8_kv2048_eager_timeline_10000hz_r02.sqlite",
+      "bytes": 20201472,
+      "sha256": "34194b25d1c6f2ad0d6075200acd3bdc4dc3dd030e619cef4c03f778beecd210"
+    },
+    {
+      "path": "sqlite/bf16_b8_kv2048_graph_metrics_10000hz_r02.sqlite",
+      "bytes": 24788992,
+      "sha256": "e71f44f1898ab3292852ea543187f0ec00f78f5258b37dc1556c4ed483dfad59"
+    },
+    {
+      "path": "sqlite/bf16_b8_kv2048_graph_metrics_10000hz_r03.sqlite",
+      "bytes": 24870912,
+      "sha256": "408264742c2fdadd78b777ee1bdf6e1e59a09a1430847d5b937ba4b11d5e9b2f"
+    },
+    {
+      "path": "sqlite/bf16_b8_kv2048_graph_node_10000hz_r02.sqlite",
+      "bytes": 5677056,
+      "sha256": "5e24c9b6c021fba683d2bee03660bcd155b78c30ae7f1db0dbf614ec29d46769"
+    },
+    {
+      "path": "sqlite/bf16_b8_kv2048_graph_timeline_10000hz_r02.sqlite",
+      "bytes": 1818624,
+      "sha256": "95150939e042d9d914e6977e72d735a0258e722c5d1739c957aa5cf5bf2661a2"
+    },
+    {
+      "path": "sqlite/nvfp4_b1_kv2048_eager_metrics_10000hz_r02.sqlite",
+      "bytes": 89387008,
+      "sha256": "1a3f8f0509b717d8edbf04de33297d7e7c60e810e57824f7ddfa2cb0c54c845c"
+    },
+    {
+      "path": "sqlite/nvfp4_b1_kv2048_eager_timeline_10000hz_r02.sqlite",
+      "bytes": 42622976,
+      "sha256": "fded52982aa89acc6b4434b218288db0525adf324e18b6372edde60ce7383541"
+    },
+    {
+      "path": "sqlite/nvfp4_b1_kv2048_graph_metrics_10000hz_r02.sqlite",
+      "bytes": 16015360,
+      "sha256": "5191f93bed3acc43a5bee8b0a6fd71881e64f19f3895262e858e91767cf9439a"
+    },
+    {
+      "path": "sqlite/nvfp4_b1_kv2048_graph_metrics_10000hz_r03.sqlite",
+      "bytes": 15945728,
+      "sha256": "8e2babc92169634dcbdf68083c3e15d3288e1df42af77806eaad30e975a9023a"
+    },
+    {
+      "path": "sqlite/nvfp4_b1_kv2048_graph_node_10000hz_r02.sqlite",
+      "bytes": 5107712,
+      "sha256": "b88d2268983f9ac20188e17e46c321c1418e7b57f3a45ef393bd8b49a12fccac"
+    },
+    {
+      "path": "sqlite/nvfp4_b1_kv2048_graph_timeline_10000hz_r02.sqlite",
+      "bytes": 1806336,
+      "sha256": "b161f8a4270f6b2d70b9de7a32b0c0e1409c75872070774a509a3c32ffd891d1"
+    },
+    {
+      "path": "sqlite/nvfp4_b8_kv2048_eager_metrics_10000hz_r02.sqlite",
+      "bytes": 91299840,
+      "sha256": "fc88d440fc5e989256e4c28a2a28c5858034341588bc75057448491e3c1cc86b"
+    },
+    {
+      "path": "sqlite/nvfp4_b8_kv2048_eager_pilot_10000hz_r01.sqlite",
+      "bytes": 11952128,
+      "sha256": "213e3398bc2b12b4f99ea392ae6a8c50e4d52f589ce24b64b457909472e93612"
+    },
+    {
+      "path": "sqlite/nvfp4_b8_kv2048_eager_timeline_10000hz_r02.sqlite",
+      "bytes": 42569728,
+      "sha256": "50ece898ecb0098ea4f060435cc847cd1fba03bead258d95d2f6e9c33e264d31"
+    },
+    {
+      "path": "sqlite/nvfp4_b8_kv2048_graph_metrics_10000hz_r02.sqlite",
+      "bytes": 16371712,
+      "sha256": "22e95b08e954578971824c19f3deb2b1dc187ea6d52abd5c139cce67bd379669"
+    },
+    {
+      "path": "sqlite/nvfp4_b8_kv2048_graph_metrics_10000hz_r03.sqlite",
+      "bytes": 16343040,
+      "sha256": "d054b7c18906221b614be3d4319992d13bdcb747b52ff130c1d4026bac08fc4b"
+    },
+    {
+      "path": "sqlite/nvfp4_b8_kv2048_graph_node_10000hz_r02.sqlite",
+      "bytes": 5177344,
+      "sha256": "a60ac0375bf085481b81daa3dda5e9cfe4ab8fc41e291eaa61407973e77d427f"
+    },
+    {
+      "path": "sqlite/nvfp4_b8_kv2048_graph_pilot_10000hz_r02.sqlite",
+      "bytes": 3608576,
+      "sha256": "d9d1bb464b817081096dd1226b6313e08330016ff53236f8e2217f52f7572e72"
+    },
+    {
+      "path": "sqlite/nvfp4_b8_kv2048_graph_timeline_10000hz_r02.sqlite",
+      "bytes": 1806336,
+      "sha256": "d6ebe6b3a60e9b21b5d5283498120291bd405acae74a55531d73b19de777b927"
+    }
+  ]
+}

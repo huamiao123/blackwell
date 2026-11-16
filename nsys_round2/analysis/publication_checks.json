@@ -1,0 +1,17 @@
+{
+  "source_artifact_hashes": "297 verified",
+  "baseline_rows": 40,
+  "core_configurations": 8,
+  "lossless_gzip_payloads": "3 verified against source SHA256",
+  "original_gpu_and_analysis_scripts": "hashes verified",
+  "credential_scan": "297 text files, no matches",
+  "report_regeneration": "identical apart from generation timestamp",
+  "png_regeneration_exact": {
+    "01_gpu_timeline.png": true,
+    "02_dram_read_timeseries.png": true,
+    "03_sm_tensor_timeseries.png": true,
+    "04_decode_time_breakdown.png": true
+  },
+  "gpu_work_during_publication": false,
+  "git_index_source_sha256": "297/297 byte-exact"
+}

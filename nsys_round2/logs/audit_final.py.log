@@ -1,0 +1,111 @@
+{
+  "issues": [],
+  "baseline_configs": [
+    [
+      1,
+      "bf16",
+      "eager"
+    ],
+    [
+      1,
+      "bf16",
+      "graph"
+    ],
+    [
+      1,
+      "nvfp4",
+      "eager"
+    ],
+    [
+      1,
+      "nvfp4",
+      "graph"
+    ],
+    [
+      8,
+      "bf16",
+      "eager"
+    ],
+    [
+      8,
+      "bf16",
+      "graph"
+    ],
+    [
+      8,
+      "nvfp4",
+      "eager"
+    ],
+    [
+      8,
+      "nvfp4",
+      "graph"
+    ]
+  ],
+  "formal_prompt_hashes": [
+    "832679eb8d5116deac20abaefb468ed8a7b1a6f47f3e92d63866253cdb1f4b64"
+  ],
+  "independent_sweep_checks": [
+    {
+      "trace": "bf16_b1_kv2048_graph_node_10000hz_r02",
+      "union_sweep_match": true,
+      "coverage": 0.9768570708327027
+    },
+    {
+      "trace": "bf16_b1_kv2048_eager_timeline_10000hz_r02",
+      "union_sweep_match": true,
+      "coverage": 0.7513839549983831
+    },
+    {
+      "trace": "nvfp4_b8_kv2048_graph_node_10000hz_r02",
+      "union_sweep_match": true,
+      "coverage": 0.9636232159709675
+    },
+    {
+      "trace": "nvfp4_b8_kv2048_eager_metrics_10000hz_r02",
+      "union_sweep_match": true,
+      "coverage": 0.33414458646871265
+    },
+    {
+      "trace": "nvfp4_b8_kv2048_eager_timeline_10000hz_r02",
+      "union_sweep_match": true,
+      "coverage": 0.34940916199309136
+    },
+    {
+      "trace": "bf16_b1_kv2048_eager_metrics_10000hz_r02",
+      "union_sweep_match": true,
+      "coverage": 0.7399621745405179
+    },
+    {
+      "trace": "bf16_b8_kv2048_eager_timeline_10000hz_r02",
+      "union_sweep_match": true,
+      "coverage": 0.8142316254217591
+    },
+    {
+      "trace": "nvfp4_b1_kv2048_eager_timeline_10000hz_r02",
+      "union_sweep_match": true,
+      "coverage": 0.3258866807237914
+    },
+    {
+      "trace": "bf16_b8_kv2048_eager_metrics_10000hz_r02",
+      "union_sweep_match": true,
+      "coverage": 0.807612086986379
+    },
+    {
+      "trace": "nvfp4_b1_kv2048_graph_node_10000hz_r02",
+      "union_sweep_match": true,
+      "coverage": 0.9622423934152107
+    },
+    {
+      "trace": "bf16_b8_kv2048_graph_node_10000hz_r02",
+      "union_sweep_match": true,
+      "coverage": 0.9755347317752813
+    },
+    {
+      "trace": "nvfp4_b1_kv2048_eager_metrics_10000hz_r02",
+      "union_sweep_match": true,
+      "coverage": 0.34066932209573547
+    }
+  ],
+  "artifact_count": 446
+}

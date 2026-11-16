@@ -1,0 +1,41 @@
+{
+  "created": "2026-11-16T21:20:49.492565+08:00",
+  "jobs": [
+    [
+      "python3",
+      "/home/wangzhihang/fp4-llm/scripts/run_one.py",
+      "--precision",
+      "bf16",
+      "--mode",
+      "graph",
+      "--kind",
+      "metrics",
+      "--batch",
+      "8",
+      "--repeat",
+      "3",
+      "--steps",
+      "256",
+      "--timeout",
+      "210"
+    ],
+    [
+      "python3",
+      "/home/wangzhihang/fp4-llm/scripts/run_one.py",
+      "--precision",
+      "nvfp4",
+      "--mode",
+      "graph",
+      "--kind",
+      "metrics",
+      "--batch",
+      "8",
+      "--repeat",
+      "3",
+      "--steps",
+      "256",
+      "--timeout",
+      "210"
+    ]
+  ]
+}

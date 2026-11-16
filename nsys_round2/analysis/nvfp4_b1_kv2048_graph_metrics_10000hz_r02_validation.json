@@ -1,0 +1,1621 @@
+{
+  "file": "/home/wangzhihang/fp4-llm/results/nsys_round2/sqlite/nvfp4_b1_kv2048_graph_metrics_10000hz_r02.sqlite",
+  "tables": [
+    "ANALYSIS_DETAILS",
+    "ANALYSIS_FILE",
+    "CUPTI_ACTIVITY_KIND_CUDA_EVENT",
+    "CUPTI_ACTIVITY_KIND_GRAPH_TRACE",
+    "CUPTI_ACTIVITY_KIND_KERNEL",
+    "CUPTI_ACTIVITY_KIND_MEMCPY",
+    "CUPTI_ACTIVITY_KIND_RUNTIME",
+    "CUPTI_ACTIVITY_KIND_SYNCHRONIZATION",
+    "DIAGNOSTIC_EVENT",
+    "ENUM_CUDA_DEV_MEM_EVENT_OPER",
+    "ENUM_CUDA_FUNC_CACHE_CONFIG",
+    "ENUM_CUDA_KERNEL_LAUNCH_TYPE",
+    "ENUM_CUDA_MEMCPY_OPER",
+    "ENUM_CUDA_MEMPOOL_OPER",
+    "ENUM_CUDA_MEMPOOL_TYPE",
+    "ENUM_CUDA_MEM_KIND",
+    "ENUM_CUDA_SHARED_MEM_LIMIT_CONFIG",
+    "ENUM_CUDA_UNIF_MEM_ACCESS_TYPE",
+    "ENUM_CUDA_UNIF_MEM_MIGRATION",
+    "ENUM_CUPTI_OVERHEAD_TYPE",
+    "ENUM_CUPTI_STREAM_TYPE",
+    "ENUM_CUPTI_SYNC_TYPE",
+    "ENUM_DIAGNOSTIC_SEVERITY_LEVEL",
+    "ENUM_DIAGNOSTIC_SOURCE_TYPE",
+    "ENUM_DIAGNOSTIC_TIMESTAMP_SOURCE",
+    "ENUM_NSYS_EVENT_CLASS",
+    "ENUM_NSYS_EVENT_TYPE",
+    "ENUM_NSYS_GENERIC_EVENT_FIELD_ETW_FLAGS",
+    "ENUM_NSYS_GENERIC_EVENT_FIELD_ETW_PROPERTY",
+    "ENUM_NSYS_GENERIC_EVENT_FIELD_ETW_TYPE",
+    "ENUM_NSYS_GENERIC_EVENT_FIELD_TYPE",
+    "ENUM_NSYS_GENERIC_EVENT_GROUP",
+    "ENUM_NSYS_GENERIC_EVENT_SOURCE",
+    "GENERIC_EVENT_SOURCES",
+    "GENERIC_EVENT_TYPES",
+    "GENERIC_EVENT_TYPE_FIELDS",
+    "GPU_METRICS",
+    "META_DATA_CAPTURE",
+    "META_DATA_EXPORT",
+    "NVTX_EVENTS",
+    "PROCESSES",
+    "PROFILER_OVERHEAD",
+    "ProcessStreams",
+    "StringIds",
+    "TARGET_INFO_CUDA_CONTEXT_INFO",
+    "TARGET_INFO_CUDA_DEVICE",
+    "TARGET_INFO_CUDA_STREAM",
+    "TARGET_INFO_GPU",
+    "TARGET_INFO_GPU_METRICS",
+    "TARGET_INFO_SESSION_START_TIME",
+    "TARGET_INFO_SYSTEM_ENV",
+    "ThreadNames"
+  ],
+  "schema": {
+    "GPU_METRICS": [
+      {
+        "cid": 0,
+        "name": "rawTimestamp",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 1,
+        "name": "timestamp",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "typeId",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "metricId",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "value",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      }
+    ],
+    "TARGET_INFO_GPU_METRICS": [
+      {
+        "cid": 0,
+        "name": "typeId",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 1,
+        "name": "sourceId",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "typeName",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "metricId",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "metricName",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      }
+    ],
+    "TARGET_INFO_GPU": [
+      {
+        "cid": 0,
+        "name": "vmId",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 1,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "name",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "busLocation",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "isDiscrete",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "l2CacheSize",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "totalMemory",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "memoryBandwidth",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "clockRate",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "smCount",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 10,
+        "name": "pwGpuId",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 11,
+        "name": "uuid",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 12,
+        "name": "luid",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 13,
+        "name": "chipName",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 14,
+        "name": "cuDevice",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 15,
+        "name": "ctxswDevPath",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 16,
+        "name": "ctrlDevPath",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 17,
+        "name": "revision",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 18,
+        "name": "nodeMask",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 19,
+        "name": "constantMemory",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 20,
+        "name": "maxIPC",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 21,
+        "name": "maxRegistersPerBlock",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 22,
+        "name": "maxShmemPerBlock",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 23,
+        "name": "maxShmemPerBlockOptin",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 24,
+        "name": "maxShmemPerSm",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 25,
+        "name": "maxRegistersPerSm",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 26,
+        "name": "threadsPerWarp",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 27,
+        "name": "asyncEngines",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 28,
+        "name": "maxWarpsPerSm",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 29,
+        "name": "maxBlocksPerSm",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 30,
+        "name": "maxThreadsPerBlock",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 31,
+        "name": "maxBlockDimX",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 32,
+        "name": "maxBlockDimY",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 33,
+        "name": "maxBlockDimZ",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 34,
+        "name": "maxGridDimX",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 35,
+        "name": "maxGridDimY",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 36,
+        "name": "maxGridDimZ",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 37,
+        "name": "computeMajor",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 38,
+        "name": "computeMinor",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 39,
+        "name": "smMajor",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 40,
+        "name": "smMinor",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      }
+    ],
+    "CUPTI_ACTIVITY_KIND_KERNEL": [
+      {
+        "cid": 0,
+        "name": "start",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 1,
+        "name": "end",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "deviceId",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "contextId",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "greenContextId",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "streamId",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "correlationId",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "globalPid",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "demangledName",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "shortName",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 10,
+        "name": "mangledName",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 11,
+        "name": "launchType",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 12,
+        "name": "cacheConfig",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 13,
+        "name": "registersPerThread",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 14,
+        "name": "gridX",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 15,
+        "name": "gridY",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 16,
+        "name": "gridZ",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 17,
+        "name": "blockX",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 18,
+        "name": "blockY",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 19,
+        "name": "blockZ",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 20,
+        "name": "staticSharedMemory",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 21,
+        "name": "dynamicSharedMemory",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 22,
+        "name": "localMemoryPerThread",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 23,
+        "name": "localMemoryTotal",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 24,
+        "name": "gridId",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 25,
+        "name": "sharedMemoryExecuted",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 26,
+        "name": "graphNodeId",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 27,
+        "name": "sharedMemoryLimitConfig",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 28,
+        "name": "qmdBulkReleaseDone",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 29,
+        "name": "qmdPreexitDone",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 30,
+        "name": "qmdLastCtaDone",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 31,
+        "name": "graphId",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 32,
+        "name": "clusterX",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 33,
+        "name": "clusterY",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 34,
+        "name": "clusterZ",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 35,
+        "name": "clusterSchedulingPolicy",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 36,
+        "name": "maxPotentialClusterSize",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 37,
+        "name": "maxActiveClusters",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 38,
+        "name": "sharedMemoryRequestedPercentage",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 39,
+        "name": "tensorSizeMinusOneElements",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      }
+    ],
+    "NVTX_EVENTS": [
+      {
+        "cid": 0,
+        "name": "start",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 1,
+        "name": "end",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "eventType",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "rangeId",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "category",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "color",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "text",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "globalTid",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "endGlobalTid",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "textId",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 10,
+        "name": "domainId",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 11,
+        "name": "uint64Value",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 12,
+        "name": "int64Value",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 13,
+        "name": "doubleValue",
+        "type": "REAL",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 14,
+        "name": "uint32Value",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 15,
+        "name": "int32Value",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 16,
+        "name": "floatValue",
+        "type": "REAL",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 17,
+        "name": "jsonTextId",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 18,
+        "name": "jsonText",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 19,
+        "name": "binaryData",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      }
+    ],
+    "CUPTI_ACTIVITY_KIND_GRAPH_TRACE": [
+      {
+        "cid": 0,
+        "name": "start",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 1,
+        "name": "end",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "deviceId",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "contextId",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "greenContextId",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "streamId",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "correlationId",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "globalPid",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "graphId",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "graphExecId",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      }
+    ],
+    "TARGET_INFO_CUDA_DEVICE": [
+      {
+        "cid": 0,
+        "name": "gpuId",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 1,
+        "name": "cudaId",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "pid",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "uuid",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "numMultiprocessors",
+        "type": "INTEGER",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 0
+      }
+    ]
+  },
+  "decode_window": {
+    "start": 40321410,
+    "end": 1791779526,
+    "text": "ROUND2_DECODE_WINDOW",
+    "globalTid": 289450815340805
+  },
+  "gpu_inventory": [
+    {
+      "vmId": 281474976710656,
+      "id": 0,
+      "name": "NVIDIA GeForce RTX 5090",
+      "busLocation": "0000:27:00.0",
+      "isDiscrete": 1,
+      "l2CacheSize": 100663296,
+      "totalMemory": 33635434496,
+      "memoryBandwidth": 1792128000000,
+      "clockRate": 2467000000,
+      "smCount": 170,
+      "pwGpuId": 0,
+      "uuid": "022c5f55-490e-ec54-3887-5f12510d273d",
+      "luid": 0,
+      "chipName": "GB202",
+      "cuDevice": 0,
+      "ctxswDevPath": "",
+      "ctrlDevPath": "",
+      "revision": 161,
+      "nodeMask": 0,
+      "constantMemory": 65536,
+      "maxIPC": 0,
+      "maxRegistersPerBlock": 65536,
+      "maxShmemPerBlock": 49152,
+      "maxShmemPerBlockOptin": 101376,
+      "maxShmemPerSm": 102400,
+      "maxRegistersPerSm": 65536,
+      "threadsPerWarp": 32,
+      "asyncEngines": 2,
+      "maxWarpsPerSm": 48,
+      "maxBlocksPerSm": 24,
+      "maxThreadsPerBlock": 1024,
+      "maxBlockDimX": 1024,
+      "maxBlockDimY": 1024,
+      "maxBlockDimZ": 64,
+      "maxGridDimX": 2147483647,
+      "maxGridDimY": 65535,
+      "maxGridDimZ": 65535,
+      "computeMajor": 12,
+      "computeMinor": 0,
+      "smMajor": 10,
+      "smMinor": 4
+    }
+  ],
+  "cuda_devices": [
+    {
+      "gpuId": 0,
+      "cudaId": 0,
+      "pid": 475397,
+      "uuid": "022c5f55-490e-ec54-3887-5f12510d273d",
+      "numMultiprocessors": 170
+    }
+  ],
+  "metric_sources": [
+    {
+      "sourceId": 281479271677952,
+      "nameId": 0,
+      "timeSourceId": 3,
+      "sourceGroupId": 0,
+      "hyperType": null,
+      "hyperVersion": null,
+      "hyperStructPrefix": null,
+      "hyperMacroPrefix": null,
+      "hyperFilterFlags": null,
+      "hyperDomain": null,
+      "data": null
+    }
+  ],
+  "metric_source_names": [
+    {
+      "typeId": 281479271677952,
+      "sourceId": 281479271677952,
+      "name": ""
+    },
+    {
+      "typeId": 281479271678720,
+      "sourceId": 281479271677952,
+      "name": ""
+    }
+  ],
+  "diagnostics": [
+    {
+      "timestamp": -26063213367,
+      "timestampType": 1,
+      "source": 2,
+      "severity": 1,
+      "text": "Process was launched by the profiler, see /tmp/nvidia/nsight_systems/quadd_session_10475388/streams/pid_475397_stdout.log and stderr.log for program output",
+      "globalPid": 289450814865408
+    },
+    {
+      "timestamp": -25779595526,
+      "timestampType": 1,
+      "source": 1,
+      "severity": 1,
+      "text": "Common injection library initialized successfully.",
+      "globalPid": 289450814865408
+    },
+    {
+      "timestamp": -15146541366,
+      "timestampType": 1,
+      "source": 1,
+      "severity": 1,
+      "text": "Buffers holding CUDA trace data will be flushed on CudaProfilerStop() call. See --flush-on-cudaprofilerstop to control this behavior.",
+      "globalPid": 289450814865408
+    },
+    {
+      "timestamp": -15128791169,
+      "timestampType": 1,
+      "source": 1,
+      "severity": 1,
+      "text": "Loaded CUPTI library: /opt/nvidia/nsight-systems/2026.1.3/target-linux-x64/libcupti.so.13.3",
+      "globalPid": 289450814865408
+    },
+    {
+      "timestamp": -14926104891,
+      "timestampType": 1,
+      "source": 1,
+      "severity": 1,
+      "text": "Enabling trace for device graph launch",
+      "globalPid": 289450814865408
+    },
+    {
+      "timestamp": -14926097293,
+      "timestampType": 1,
+      "source": 1,
+      "severity": 1,
+      "text": "CUDA injection initialized successfully.",
+      "globalPid": 289450814865408
+    },
+    {
+      "timestamp": -8902857798,
+      "timestampType": 1,
+      "source": 1,
+      "severity": 1,
+      "text": "NVTX injection initialized successfully.",
+      "globalPid": 289450814865408
+    },
+    {
+      "timestamp": 0,
+      "timestampType": 1,
+      "source": 3,
+      "severity": 1,
+      "text": "Profiling has started.",
+      "globalPid": -144115188075855872
+    },
+    {
+      "timestamp": 40194124,
+      "timestampType": 1,
+      "source": 1,
+      "severity": 1,
+      "text": "Profiling started due to cudaProfilerStart API invoked in the application.",
+      "globalPid": 289450814865408
+    },
+    {
+      "timestamp": 268801403,
+      "timestampType": 2,
+      "source": 3,
+      "severity": 2,
+      "text": "Not all NVTX events might have been collected.",
+      "globalPid": 289450814865408
+    },
+    {
+      "timestamp": 268811554,
+      "timestampType": 2,
+      "source": 3,
+      "severity": 1,
+      "text": "Number of NVTX events collected: \t770.",
+      "globalPid": 289450814865408
+    },
+    {
+      "timestamp": 268816087,
+      "timestampType": 2,
+      "source": 3,
+      "severity": 2,
+      "text": "Not all CUDA events might have been collected.",
+      "globalPid": 289450814865408
+    },
+    {
+      "timestamp": 268817707,
+      "timestampType": 2,
+      "source": 3,
+      "severity": 1,
+      "text": "Number of CUDA events collected: \t21646.",
+      "globalPid": 289450814865408
+    },
+    {
+      "timestamp": 1814465755,
+      "timestampType": 1,
+      "source": 3,
+      "severity": 1,
+      "text": "Profiling has stopped.",
+      "globalPid": -144115188075855872
+    },
+    {
+      "timestamp": 1815066519,
+      "timestampType": 1,
+      "source": 1,
+      "severity": 1,
+      "text": "Hardware tracing used for CUDA tracing.",
+      "globalPid": 289450814865408
+    },
+    {
+      "timestamp": 1816751768,
+      "timestampType": 1,
+      "source": 1,
+      "severity": 1,
+      "text": "Number of CUPTI events produced: \t26392, CUPTI buffers: 50.",
+      "globalPid": 289450814865408
+    },
+    {
+      "timestamp": 2269348139,
+      "timestampType": 1,
+      "source": 2,
+      "severity": 1,
+      "text": "S3EventHandler: S3 trace events were not found, not creating counters",
+      "globalPid": 281474976710656
+    }
+  ],
+  "kernels": [
+    {
+      "count": 4368,
+      "min_start": 41699323,
+      "max_end": 1790377468,
+      "deviceId": 0,
+      "globalPid": 289450814865408
+    }
+  ],
+  "step_markers": 256,
+  "runtime_api_counts": [
+    {
+      "name": "cuKernelGetName",
+      "count": 2560
+    },
+    {
+      "name": "cuLaunchKernelEx",
+      "count": 1808
+    },
+    {
+      "name": "cudaDeviceSynchronize_v3020",
+      "count": 1
+    },
+    {
+      "name": "cudaEventCreateWithFlags_v3020",
+      "count": 512
+    },
+    {
+      "name": "cudaEventDestroy_v3020",
+      "count": 513
+    },
+    {
+      "name": "cudaEventQuery_v3020",
+      "count": 2069
+    },
+    {
+      "name": "cudaEventRecordWithFlags_v11010",
+      "count": 1554
+    },
+    {
+      "name": "cudaEventSynchronize_v3020",
+      "count": 257
+    },
+    {
+      "name": "cudaGraphLaunch_v10000",
+      "count": 256
+    },
+    {
+      "name": "cudaLaunchKernel_v7000",
+      "count": 2560
+    },
+    {
+      "name": "cudaMemcpyAsync_v3020",
+      "count": 1040
+    },
+    {
+      "name": "cudaStreamIsCapturing_v10000",
+      "count": 2850
+    },
+    {
+      "name": "cudaStreamWaitEvent_v3020",
+      "count": 256
+    }
+  ],
+  "sampling": {
+    "count": 18407,
+    "min_ns": -146926,
+    "max_ns": 1840611329,
+    "dt_p50_ns": 100000.0,
+    "dt_p95_ns": 100032,
+    "dt_max_ns": 100032,
+    "inside_window": 17513,
+    "intervals_gt_1_5x_median": 0
+  },
+  "metrics": [
+    {
+      "name": "Async Copy Engine Active 0 [Cycles Active]",
+      "count": 17513,
+      "min": 0,
+      "max": 0,
+      "mean": 0.0
+    },
+    {
+      "name": "Async Copy Engine Active 0 [Throughput %]",
+      "count": 17513,
+      "min": 0,
+      "max": 0,
+      "mean": 0.0
+    },
+    {
+      "name": "Compute Warps in Flight [Avg Warps per Cycle]",
+      "count": 17513,
+      "min": 0,
+      "max": 24,
+      "mean": 10.854850682350254
+    },
+    {
+      "name": "Compute Warps in Flight [Avg]",
+      "count": 17513,
+      "min": 0,
+      "max": 6974140,
+      "mean": 3044270.412436476
+    },
+    {
+      "name": "Compute Warps in Flight [Throughput %]",
+      "count": 17513,
+      "min": 0,
+      "max": 25,
+      "mean": 11.204990578427454
+    },
+    {
+      "name": "DRAM Read Bandwidth [Throughput %]",
+      "count": 17513,
+      "min": 0,
+      "max": 93,
+      "mean": 44.10614971735282
+    },
+    {
+      "name": "DRAM Write Bandwidth [Throughput %]",
+      "count": 17513,
+      "min": 0,
+      "max": 3,
+      "mean": 0.9180608690686918
+    },
+    {
+      "name": "GPC Clock Frequency [MHz]",
+      "count": 17513,
+      "min": -1815291841,
+      "max": -1356237296,
+      "mean": -1470342002.1586251
+    },
+    {
+      "name": "GR Active [Throughput %]",
+      "count": 17513,
+      "min": 1,
+      "max": 100,
+      "mean": 99.63410038257294
+    },
+    {
+      "name": "PCIe RX Throughput [Throughput %]",
+      "count": 17513,
+      "min": 0,
+      "max": 1,
+      "mean": 0.11106035516473477
+    },
+    {
+      "name": "PCIe Read Requests to BAR1 [Requests]",
+      "count": 17513,
+      "min": 0,
+      "max": 0,
+      "mean": 0.0
+    },
+    {
+      "name": "PCIe TX Throughput [Throughput %]",
+      "count": 17513,
+      "min": 1,
+      "max": 1,
+      "mean": 1.0
+    },
+    {
+      "name": "PCIe Write Requests to BAR1 [Requests]",
+      "count": 17513,
+      "min": 0,
+      "max": 15,
+      "mean": 1.05818534802718
+    },
+    {
+      "name": "Pixel Warps in Flight [Avg Warps per Cycle]",
+      "count": 17513,
+      "min": 0,
+      "max": 0,
+      "mean": 0.0
+    },
+    {
+      "name": "Pixel Warps in Flight [Avg]",
+      "count": 17513,
+      "min": 0,
+      "max": 0,
+      "mean": 0.0
+    },
+    {
+      "name": "Pixel Warps in Flight [Throughput %]",
+      "count": 17513,
+      "min": 0,
+      "max": 0,
+      "mean": 0.0
+    },
+    {
+      "name": "SM Issue [Throughput %]",
+      "count": 17513,
+      "min": 0,
+      "max": 12,
+      "mean": 5.3765202992063035
+    },
+    {
+      "name": "SMs Active [Throughput %]",
+      "count": 17513,
+      "min": 0,
+      "max": 100,
+      "mean": 51.053388911094615
+    },
+    {
+      "name": "SYS Clock Frequency [MHz]",
+      "count": 17513,
+      "min": -1854297296,
+      "max": -1809207296,
+      "mean": -1826980827.6183977
+    },
+    {
+      "name": "Sync Copy Engine Active [Cycles Active]",
+      "count": 17513,
+      "min": 0,
+      "max": 0,
+      "mean": 0.0
+    },
+    {
+      "name": "Sync Copy Engine Active [Throughput %]",
+      "count": 17513,
+      "min": 0,
+      "max": 0,
+      "mean": 0.0
+    },
+    {
+      "name": "Tensor Active [Throughput %]",
+      "count": 17513,
+      "min": 0,
+      "max": 20,
+      "mean": 13.544795294923771
+    },
+    {
+      "name": "Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle]",
+      "count": 17513,
+      "min": 0,
+      "max": 0,
+      "mean": 0.0
+    },
+    {
+      "name": "Vertex/Tess/Geometry Warps in Flight [Avg]",
+      "count": 17513,
+      "min": 0,
+      "max": 0,
+      "mean": 0.0
+    },
+    {
+      "name": "Vertex/Tess/Geometry Warps in Flight [Throughput %]",
+      "count": 17513,
+      "min": 0,
+      "max": 0,
+      "mean": 0.0
+    }
+  ],
+  "activity_boundary_check": [
+    {
+      "metric": "DRAM Read Bandwidth [Throughput %]",
+      "phase": "after",
+      "samples": 489,
+      "mean": 2.198364008179959
+    },
+    {
+      "metric": "DRAM Read Bandwidth [Throughput %]",
+      "phase": "before",
+      "samples": 405,
+      "mean": 0.1037037037037037
+    },
+    {
+      "metric": "DRAM Read Bandwidth [Throughput %]",
+      "phase": "decode",
+      "samples": 17513,
+      "mean": 44.10614971735282
+    },
+    {
+      "metric": "SMs Active [Throughput %]",
+      "phase": "after",
+      "samples": 489,
+      "mean": 2.1513292433537834
+    },
+    {
+      "metric": "SMs Active [Throughput %]",
+      "phase": "before",
+      "samples": 405,
+      "mean": 0.0
+    },
+    {
+      "metric": "SMs Active [Throughput %]",
+      "phase": "decode",
+      "samples": 17513,
+      "mean": 51.053388911094615
+    },
+    {
+      "metric": "Tensor Active [Throughput %]",
+      "phase": "after",
+      "samples": 489,
+      "mean": 0.7484662576687117
+    },
+    {
+      "metric": "Tensor Active [Throughput %]",
+      "phase": "before",
+      "samples": 405,
+      "mean": 0.0
+    },
+    {
+      "metric": "Tensor Active [Throughput %]",
+      "phase": "decode",
+      "samples": 17513,
+      "mean": 13.544795294923771
+    }
+  ],
+  "validation": {
+    "gpu_identity_match": true,
+    "metrics_source_session_ns": true,
+    "timestamps_used": "GPU_METRICS.timestamp / CUPTI start,end / NVTX start,end; no offsets applied",
+    "ranges_overlap": true,
+    "clock_alignment_status": "shared SessionNs time source, PCI/UUID mapping, overlapping NVTX/CUDA ranges; no timestamp adjustment",
+    "note": "Graph envelopes are never used as kernel coverage. Capture-boundary warnings retained, not suppressed."
+  }
+}

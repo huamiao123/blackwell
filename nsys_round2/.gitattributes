@@ -1,0 +1,7 @@
+# Measurement snapshots keep the exact bytes recorded in publication_manifest.json.
+* -text
+README.md text eol=lf
+.gitattributes text eol=lf
+requirements-analysis.txt text eol=lf
+tools/*.py text eol=lf
+analysis/publication_checks.json text eol=lf

@@ -1,5 +1,26 @@
 # blackwell — RTX 5090 (SM120) BF16 vs native NVFP4 resource study
 
+## 最新实验：Qwen3-8B Decode / NSYS GPU Metrics（2026-11-16）
+
+本轮使用真实 Qwen3-8B BF16/NVFP4 请求，对照 Batch=1/8、Eager/Graph，完成
+8 个核心配置的 40 次无 Profiling 基线测量，以及 26 份 NSYS Trace/SQLite。
+没有开展新的并发探针、Kernel 优化或 NCU 测试。
+
+- [实验入口与复现说明](nsys_round2/README.md)
+- [完整报告及证据等级](nsys_round2/final_report.md)
+- [正常性能基线](nsys_round2/baseline.csv)
+- 四张图：[GPU 时间线](nsys_round2/figures/01_gpu_timeline.png)、
+  [DRAM Read](nsys_round2/figures/02_dram_read_timeseries.png)、
+  [SM/Tensor Active](nsys_round2/figures/03_sm_tensor_timeseries.png)、
+  [Decode 时间分解](nsys_round2/figures/04_decode_time_breakdown.png)
+
+Batch=8 的正常 Graph 路径中，BF16/NVFP4 分别约为 10.96/6.88 ms/步；
+独立 Graph 采样中的 DRAM Read 稳态均值分别约为 79.3%/44.0%。
+两类数字来自不同测量。Eager CUDA tracing 有明显扰动；
+**本轮确认资源使用差异，尚未证明有可无干扰利用的硬件余量。**
+
+以下 `audit_v3/` 与首轮部分保留其原有实验背景和更正记录，不与本轮模型级数据混用。
+
 > ## ⚠️ 修正公告（2026-11-14 晚）
 >
 > 首轮实验（本 README 下方与 `reports/M1_*`、`src/interference_*.py`）使用的并发协议
@@ -41,6 +62,9 @@ grows; FP4 does not improve.
 ## Layout
 
 ```
+nsys_round2/ ← 2026-11-16：真实模型 Decode、NSYS 10 kHz Metrics 与执行模式对照
+  final_report.md  README.md  baseline.csv
+  src/original/  tools/  raw/  analysis/  logs/  figures/
 audit_v3/   ← 修正版实验（审计 + 新协议 + Gate 1–4），先看这里
   source_audit.md       source audit (A1–A12, file:line, severity)
   methodology.md        reproducible protocol

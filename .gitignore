@@ -3,3 +3,10 @@ __pycache__/
 *.pyc
 .venv/
 *.zip
+/nsys_round2_client/
+/nsys_round2/raw/*.nsys-rep
+/nsys_round2/sqlite/
+/nsys_round2/analysis/metric_samples.csv
+/nsys_round2/analysis/kernel_intervals.csv
+/nsys_round2/analysis/report_data.json
+/nsys_round2/rebuilt/
