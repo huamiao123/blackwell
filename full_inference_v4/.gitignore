@@ -1,0 +1,8 @@
+__pycache__/
+.pytest_cache/
+local_cache/
+raw/*.nsys-rep
+raw/*.ncu-rep
+sqlite/
+configs/gpu_window.json
+logs/*permit*.json

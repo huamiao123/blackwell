@@ -1,0 +1,212 @@
+{
+  "scope": "CPU real-tokenizer validation only",
+  "gpu_started": false,
+  "prompts": 88,
+  "categories": [
+    "code",
+    "general_qa",
+    "long_document",
+    "multi_turn",
+    "synthetic_control"
+  ],
+  "configs": [
+    {
+      "config": "E1_bf16.json",
+      "batch": 1,
+      "lengths": [
+        2048
+      ],
+      "common_prefix_tokens": 0,
+      "status": "CPU_VALIDATED"
+    },
+    {
+      "config": "E1_nvfp4.json",
+      "batch": 1,
+      "lengths": [
+        2048
+      ],
+      "common_prefix_tokens": 0,
+      "status": "CPU_VALIDATED"
+    },
+    {
+      "config": "E2_bf16.json",
+      "batch": 8,
+      "lengths": [
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "common_prefix_tokens": 6,
+      "status": "CPU_VALIDATED"
+    },
+    {
+      "config": "E2_nvfp4.json",
+      "batch": 8,
+      "lengths": [
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "common_prefix_tokens": 6,
+      "status": "CPU_VALIDATED"
+    },
+    {
+      "config": "E3_bf16.json",
+      "batch": 1,
+      "lengths": [
+        512
+      ],
+      "common_prefix_tokens": 0,
+      "status": "CPU_VALIDATED"
+    },
+    {
+      "config": "E3_nvfp4.json",
+      "batch": 1,
+      "lengths": [
+        512
+      ],
+      "common_prefix_tokens": 0,
+      "status": "CPU_VALIDATED"
+    },
+    {
+      "config": "E4_bf16.json",
+      "batch": 8,
+      "lengths": [
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512
+      ],
+      "common_prefix_tokens": 5,
+      "status": "CPU_VALIDATED"
+    },
+    {
+      "config": "E4_nvfp4.json",
+      "batch": 8,
+      "lengths": [
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512,
+        512
+      ],
+      "common_prefix_tokens": 5,
+      "status": "CPU_VALIDATED"
+    },
+    {
+      "config": "E5_bf16.json",
+      "batch": 1,
+      "lengths": [
+        2048
+      ],
+      "common_prefix_tokens": 0,
+      "status": "CPU_VALIDATED"
+    },
+    {
+      "config": "E5_nvfp4.json",
+      "batch": 1,
+      "lengths": [
+        2048
+      ],
+      "common_prefix_tokens": 0,
+      "status": "CPU_VALIDATED"
+    },
+    {
+      "config": "E6_bf16.json",
+      "batch": 8,
+      "lengths": [
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "common_prefix_tokens": 5,
+      "status": "CPU_VALIDATED"
+    },
+    {
+      "config": "E6_nvfp4.json",
+      "batch": 8,
+      "lengths": [
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "common_prefix_tokens": 5,
+      "status": "CPU_VALIDATED"
+    },
+    {
+      "config": "E7_bf16.json",
+      "batch": 8,
+      "lengths": [
+        128,
+        256,
+        512,
+        512,
+        1024,
+        2048,
+        2048,
+        4096
+      ],
+      "common_prefix_tokens": 5,
+      "status": "CPU_VALIDATED"
+    },
+    {
+      "config": "E7_nvfp4.json",
+      "batch": 8,
+      "lengths": [
+        128,
+        256,
+        512,
+        512,
+        1024,
+        2048,
+        2048,
+        4096
+      ],
+      "common_prefix_tokens": 5,
+      "status": "CPU_VALIDATED"
+    }
+  ],
+  "dataset_hash": "c15eb1c9a67dc899564c86d6f7fab62f1b39bb938b7c4a0439b4de8015642f6f",
+  "status": "VERIFIED_CPU_ONLY",
+  "real_tokenizer_negative_tests_passed": [
+    "undefined_id",
+    "special_in_body",
+    "wrong_length",
+    "wrong_hash",
+    "wrong_template"
+  ],
+  "torch_imported_during_cpu_tokenization": true,
+  "cuda_initialized_during_cpu_tokenization": false,
+  "old_b8_input_audit": {
+    "undefined_positions": 21,
+    "body_special_positions": 2,
+    "old_file_sha256": "0b03af01e5c8d550fd886df1973be21a19267c7f218f5e02991eac76fe190fc0"
+  }
+}

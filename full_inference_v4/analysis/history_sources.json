@@ -1,0 +1,68 @@
+[
+  {
+    "path": "nsys_round2/final_report.md",
+    "sha256": "2c78c2d36c849cf024d81a4fb78ea8d464e30cf2e83102e851e7ca1c09713a78",
+    "bytes": 29762,
+    "lines": 335
+  },
+  {
+    "path": "nsys_round2/analysis/metric_summary.csv",
+    "sha256": "24338983620e74f34ac9ca1161eb6eaf6bde8b0608fdb9c41290a48702613a05",
+    "bytes": 55723,
+    "lines": 451
+  },
+  {
+    "path": "nsys_round2/analysis/profiler_overhead.csv",
+    "sha256": "c4c799199ac25fcd7c9a77728647c4c2735227bc7ae5be5d9cc695f31d93362f",
+    "bytes": 3028,
+    "lines": 26
+  },
+  {
+    "path": "nsys_round2/src/original/decode_round2.py",
+    "sha256": "a79941bdaec8bc03368927898bbb59e76bfc7f8341dfbca7b4eda64ab2eab5b1",
+    "bytes": 8529,
+    "lines": 145
+  },
+  {
+    "path": "resource_overlap_v1/final_report.md",
+    "sha256": "078d06b38c46136a3366b968f07941f578e8f2e7d582f97eb042db5e6d463285",
+    "bytes": 14073,
+    "lines": 206
+  },
+  {
+    "path": "resource_overlap_v1/methodology.md",
+    "sha256": "bf6c762f446148b555f8bab60142430fd3b892eda9e960eb5da2e2c5b29f6891",
+    "bytes": 8217,
+    "lines": 133
+  },
+  {
+    "path": "resource_overlap_v1/src/overlap_runner.py",
+    "sha256": "74167956e285623f4da8610b49e09172e5f444454b09bb618ab06eb0369178d2",
+    "bytes": 14529,
+    "lines": 269
+  },
+  {
+    "path": "resource_overlap_v1/src/analyze_overlap.py",
+    "sha256": "e7c3b0715844a08f055cd98839227896817efadd6de69cb9b6dbd9864653c2e3",
+    "bytes": 10150,
+    "lines": 182
+  },
+  {
+    "path": "resource_overlap_v1/analysis/failures.md",
+    "sha256": "aa6a980e8a35ba6c7df524ff98ddf9609f051f14e7de8f52e0e136c9897d0ee5",
+    "bytes": 1671,
+    "lines": 27
+  },
+  {
+    "path": "audit_v3/corrected_results.md",
+    "sha256": "8d5fda613a8455d2684b251e7bb6a9386aee8bad195d1224497be2450ee37232",
+    "bytes": 16064,
+    "lines": 326
+  },
+  {
+    "path": "audit_v3/source_audit.md",
+    "sha256": "011f691dd496e93f9b15061dbaa7af14631a1baaab513b2bbe5a9a9d8ccdb699",
+    "bytes": 10271,
+    "lines": 227
+  }
+]

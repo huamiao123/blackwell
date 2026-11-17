@@ -1,0 +1,40 @@
+metric,tool,availability,measurement_scope,measurement_status,evidence,unit
+Async Copy Engine Active 0 [Cycles Active],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+Async Copy Engine Active 0 [Throughput %],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+Compute Warps in Flight [Avg Warps per Cycle],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+Compute Warps in Flight [Avg],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+Compute Warps in Flight [Throughput %],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+DRAM Read Bandwidth [Throughput %],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+DRAM Write Bandwidth [Throughput %],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+GPC Clock Frequency [MHz],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+GR Active [Throughput %],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+PCIe RX Throughput [Throughput %],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+PCIe Read Requests to BAR1 [Requests],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+PCIe TX Throughput [Throughput %],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+PCIe Write Requests to BAR1 [Requests],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+Pixel Warps in Flight [Avg Warps per Cycle],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+Pixel Warps in Flight [Avg],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+Pixel Warps in Flight [Throughput %],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+SM Issue [Throughput %],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+SMs Active [Throughput %],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+SYS Clock Frequency [MHz],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+Sync Copy Engine Active [Cycles Active],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+Sync Copy Engine Active [Throughput %],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+Tensor Active [Throughput %],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+Vertex/Tess/Geometry Warps in Flight [Avg],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+Vertex/Tess/Geometry Warps in Flight [Throughput %],NSYS,HISTORICALLY_OBSERVED,old device-level trace,UNVERIFIED_V41_NO_COLLECTION,nsys_round2/analysis/metric_summary.csv,preserve original exported metric name/unit
+FP32/FMA pipe,NCU,UNVERIFIED_INJECTION,target kernel if collection succeeds,UNAVAILABLE_CURRENT_EVIDENCE,historical vLLM injection failure; current help/version only,UNVERIFIED
+INT/ALU pipe,NCU,UNVERIFIED_INJECTION,target kernel if collection succeeds,UNAVAILABLE_CURRENT_EVIDENCE,historical vLLM injection failure; current help/version only,UNVERIFIED
+L2 hit rate,NCU,UNVERIFIED_INJECTION,target kernel if collection succeeds,UNAVAILABLE_CURRENT_EVIDENCE,historical vLLM injection failure; current help/version only,UNVERIFIED
+L1/TEX hit rate,NCU,UNVERIFIED_INJECTION,target kernel if collection succeeds,UNAVAILABLE_CURRENT_EVIDENCE,historical vLLM injection failure; current help/version only,UNVERIFIED
+Achieved occupancy,NCU,UNVERIFIED_INJECTION,target kernel if collection succeeds,UNAVAILABLE_CURRENT_EVIDENCE,historical vLLM injection failure; current help/version only,UNVERIFIED
+Eligible warps,NCU,UNVERIFIED_INJECTION,target kernel if collection succeeds,UNAVAILABLE_CURRENT_EVIDENCE,historical vLLM injection failure; current help/version only,UNVERIFIED
+Warp stall reasons,NCU,UNVERIFIED_INJECTION,target kernel if collection succeeds,UNAVAILABLE_CURRENT_EVIDENCE,historical vLLM injection failure; current help/version only,UNVERIFIED
+Dynamic MMA instruction count,NCU,UNVERIFIED_INJECTION,target kernel if collection succeeds,UNAVAILABLE_CURRENT_EVIDENCE,historical vLLM injection failure; current help/version only,UNVERIFIED
+Shared-memory bank conflicts,NCU,UNVERIFIED_INJECTION,target kernel if collection succeeds,UNAVAILABLE_CURRENT_EVIDENCE,historical vLLM injection failure; current help/version only,UNVERIFIED
+Register spills,NCU,UNVERIFIED_INJECTION,target kernel if collection succeeds,UNAVAILABLE_CURRENT_EVIDENCE,historical vLLM injection failure; current help/version only,UNVERIFIED
+Grid/block,NSYS launch metadata,SCHEMA_DEPENDENT,"recorded launch, not utilization",UNVERIFIED_NEW_TRACE,Gate 2 PRAGMA schema check required,threads/registers/bytes/identifiers
+Registers per thread,NSYS launch metadata,SCHEMA_DEPENDENT,"recorded launch, not utilization",UNVERIFIED_NEW_TRACE,Gate 2 PRAGMA schema check required,threads/registers/bytes/identifiers
+Static/dynamic shared memory,NSYS launch metadata,SCHEMA_DEPENDENT,"recorded launch, not utilization",UNVERIFIED_NEW_TRACE,Gate 2 PRAGMA schema check required,threads/registers/bytes/identifiers
+Context/stream/correlation/Graph IDs,NSYS launch metadata,SCHEMA_DEPENDENT,"recorded launch, not utilization",UNVERIFIED_NEW_TRACE,Gate 2 PRAGMA schema check required,threads/registers/bytes/identifiers

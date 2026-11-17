@@ -1,0 +1,63 @@
+[
+  {
+    "id": "heapq",
+    "url": "https://raw.githubusercontent.com/python/cpython/v3.12.3/Lib/heapq.py",
+    "title": "CPython heapq.py v3.12.3",
+    "license": "PSF license; see CPYTHON_LICENSE.txt",
+    "sha256": "6d43277e5c76fc0f073cd388fcff852d14d068f6bb6d4886c340f8b75a1229a9",
+    "bytes": 23024,
+    "local_path": "prompts/sources/heapq.txt"
+  },
+  {
+    "id": "statistics",
+    "url": "https://raw.githubusercontent.com/python/cpython/v3.12.3/Lib/statistics.py",
+    "title": "CPython statistics.py v3.12.3",
+    "license": "PSF license; see CPYTHON_LICENSE.txt",
+    "sha256": "b9ef01a757de37e9fbf13d32beeb9530c8271582cabec4998226dcb7e0613cd0",
+    "bytes": 50227,
+    "local_path": "prompts/sources/statistics.txt"
+  },
+  {
+    "id": "CPYTHON_LICENSE",
+    "url": "https://raw.githubusercontent.com/python/cpython/v3.12.3/LICENSE",
+    "title": "CPython license v3.12.3",
+    "license": "PSF license text",
+    "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+    "bytes": 13936,
+    "local_path": "prompts/sources/CPYTHON_LICENSE.txt"
+  },
+  {
+    "id": "pride",
+    "url": "https://raw.githubusercontent.com/GITenberg/Pride-and-Prejudice_1342/master/1342-0.txt",
+    "git_blob_sha": "20c3737a33af2501e4c0597285ad630ef42e8e46",
+    "repository": "GITenberg/Pride-and-Prejudice_1342",
+    "title": "Pride-and-Prejudice_1342",
+    "license": "Public-domain literary work; source includes Project Gutenberg notice",
+    "sha256": "48e0522844402a86a3ea98f0947ba85ea54838db3c59022299298ed968a5a163",
+    "bytes": 724725,
+    "local_path": "prompts/sources/pride.txt"
+  },
+  {
+    "id": "moby",
+    "url": "https://raw.githubusercontent.com/GITenberg/Moby-Dick--Or-The-Whale_2701/master/2701-0.txt",
+    "git_blob_sha": "f50127206f5b53eb48eceb1f75974656a8521199",
+    "repository": "GITenberg/Moby-Dick--Or-The-Whale_2701",
+    "title": "Moby-Dick--Or-The-Whale_2701",
+    "license": "Public-domain literary work; source includes Project Gutenberg notice",
+    "sha256": "baf9b04fcf6e0008f30eaaa6697277751448c1070b20175e0082f28cbb161fd3",
+    "bytes": 1276201,
+    "local_path": "prompts/sources/moby.txt"
+  },
+  {
+    "id": "sherlock",
+    "url": "https://raw.githubusercontent.com/GITenberg/The-Adventures-of-Sherlock-Holmes_1661/master/1661-8.txt",
+    "git_blob_sha": "ea9235417718bb0a438795c1dd7cbf65472b40fb",
+    "repository": "GITenberg/The-Adventures-of-Sherlock-Holmes_1661",
+    "title": "The-Adventures-of-Sherlock-Holmes_1661",
+    "encoding": "iso-8859-1",
+    "license": "Public-domain literary work; source includes Project Gutenberg notice",
+    "sha256": "87a68129bb1dd7c2eecca7a98f97c27bd507d9901a5e1115de765745a127a82e",
+    "bytes": 594951,
+    "local_path": "prompts/sources/sherlock.txt"
+  }
+]

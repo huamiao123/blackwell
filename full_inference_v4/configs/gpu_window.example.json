@@ -1,0 +1,11 @@
+{
+  "enabled": false,
+  "gate": 2,
+  "reviewed_gates": [],
+  "hostname": "SET_FROM_REVIEWED_SERVER",
+  "gpu_uuid": "GPU-022c5f55-490e-ec54-3887-5f12510d273d",
+  "not_before": "2099-01-01T00:00:00+08:00",
+  "expires_at": "2099-01-01T00:01:00+08:00",
+  "allowed_configs": ["E1_bf16", "E1_nvfp4", "E2_bf16", "E2_nvfp4"],
+  "authorization_reference": "Populate only after user reviews Gate 0/1 and gives a bounded GPU window"
+}

@@ -1,0 +1,23 @@
+{
+  "defined_ids": 151669,
+  "tokenizer_json_hash_identical": true,
+  "config_hash_identical": false,
+  "canonical_policy": "All inputs rendered/encoded with BF16 tokenizer, shared identical IDs; thinking=False.",
+  "assets": {
+    "Qwen3-8B-BF16": {
+      "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+      "config.json": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+      "generation_config.json": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2"
+    },
+    "Qwen3-8B-NVFP4": {
+      "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "tokenizer_config.json": "67e5a0a11cd35f9c00ee52e0af4cdc0baa75fea0cb5fce7d1beb251b4621d15c",
+      "chat_template.jinja": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+      "config.json": "3442fb5c8fa88d838108bdb7b2ffdba7811d39741759644ac06b4787f5e8346a",
+      "generation_config.json": "0419e3a8fd1ead1af64a9861a404179d26867fd2e9f98d562d4e5303f6705a8e"
+    }
+  },
+  "runtime_stop_policy": "fixed length: ignore_eos=True; natural EOS deferred explicit normalization",
+  "gpu_started": false
+}

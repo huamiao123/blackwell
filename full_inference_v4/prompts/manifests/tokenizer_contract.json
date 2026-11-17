@@ -1,0 +1,25 @@
+{
+  "tokenizer_version": "5.10.2",
+  "tokenizer_file_hash": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+  "tokenizer_config_hash": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+  "chat_template_hash": "41d5929bf73796beb66809ac700b2cf3ff81694f933e5c14d52b7fd6963c947d",
+  "defined_id_count": 151669,
+  "max_defined_id": 151668,
+  "special_ids": [
+    151643,
+    151644,
+    151645,
+    151646,
+    151647,
+    151648,
+    151649,
+    151650,
+    151651,
+    151652,
+    151653,
+    151654,
+    151655,
+    151656
+  ],
+  "canonical_tokenizer": "Qwen3-8B-BF16"
+}

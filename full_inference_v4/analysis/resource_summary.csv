@@ -1,0 +1,1 @@
+precision,stage,sm_active,sm_issue,tensor_active,fp32_pipe,int_pipe,dram_read,dram_write,l2_throughput,l2_hit_rate,registers,shared_memory,occupancy,eligible_warps,stall_reason,clock,measurement_tool,measurement_scope,measurement_status,confidence

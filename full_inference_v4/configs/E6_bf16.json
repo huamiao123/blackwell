@@ -1,0 +1,49 @@
+{
+  "schema": "v4.1",
+  "experiment": "E6",
+  "precision": "bf16",
+  "batch": 8,
+  "output_mode": "fixed_decode",
+  "decode_steps": 256,
+  "max_output_tokens": 257,
+  "trials": 5,
+  "warmup_trials": 2,
+  "warmup_output_tokens": 33,
+  "prompt_paths": [
+    "prompts/realistic/general_qa_r0_l2048.json",
+    "prompts/realistic/general_qa_r1_l2048.json",
+    "prompts/realistic/code_r2_l2048.json",
+    "prompts/realistic/code_r3_l2048.json",
+    "prompts/realistic/long_document_r4_l2048.json",
+    "prompts/realistic/long_document_r5_l2048.json",
+    "prompts/realistic/multi_turn_r6_l2048.json",
+    "prompts/realistic/multi_turn_r7_l2048.json"
+  ],
+  "dataset_manifest_sha256": "c15eb1c9a67dc899564c86d6f7fab62f1b39bb938b7c4a0439b4de8015642f6f",
+  "prompt_work_hash": "268e3dbd0260a8f7d5bb40ae2d19e56ec4fc4ca233e9ed30904cfcd6181d0a35",
+  "seed": 0,
+  "temperature": 0.0,
+  "ignore_eos": true,
+  "generation_config": "vllm",
+  "stop_token_ids": [],
+  "scope": "offline_generate_with_preencoded_prompts",
+  "engine": {
+    "max_model_len": 4608,
+    "gpu_memory_utilization": 0.85,
+    "linear_backend": "cutlass",
+    "enforce_eager": false,
+    "kv_cache_dtype": "fp8_e4m3",
+    "attention_backend": "FLASHINFER",
+    "disable_log_stats": true,
+    "enable_prefix_caching": false,
+    "enable_chunked_prefill": false,
+    "max_num_batched_tokens": 16384,
+    "max_num_seqs": 8,
+    "cudagraph_capture_sizes": [
+      1,
+      8
+    ],
+    "seed": 0
+  },
+  "config_hash": "65f032bbd9e8a60e123d41dbabaa453943be93dc5834b76fe10727a883b296d1"
+}
