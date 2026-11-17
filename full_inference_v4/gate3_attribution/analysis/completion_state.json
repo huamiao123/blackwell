@@ -1,0 +1,10 @@
+{
+  "time": "2026-11-17T19:26:24.560790+08:00",
+  "window_closed": true,
+  "run_status": "COMPLETED",
+  "sample_events": 257,
+  "replays": 256,
+  "gpu_who": "GPU 0  NVIDIA GeForce RTX 5090  mem 714/32607 MiB  util 0%\n  (no compute processes)\n",
+  "permit_files": [],
+  "automatic_next_gate": false
+}

@@ -1,0 +1,6 @@
+__pycache__/
+configs/gpu_window.json
+sqlite/
+local_cache/
+analysis/*_activities.json
+analysis/*_kernel_catalog.csv

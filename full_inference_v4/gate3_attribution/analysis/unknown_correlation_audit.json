@@ -1,0 +1,184 @@
+{
+  "cpu_only": true,
+  "original_trace": "gate2_e2_nvfp4_p2_r01",
+  "unknown": 2570,
+  "reasons": [
+    {
+      "reason": [
+        "runtime_candidates_1",
+        "dispatch_matches_0"
+      ],
+      "count": 2570
+    }
+  ],
+  "examples": [
+    {
+      "kernel": "void at::native::vectorized_gather_kernel<(int)16, long>(char *, char *, T2 *, int, long, long, long, long, bool)",
+      "correlation": 12228,
+      "gpu_start": 351192601,
+      "apis": [
+        {
+          "name": "cudaLaunchKernel_v7000",
+          "start": 63684877,
+          "end": 63702497,
+          "tid": 295566211600607
+        }
+      ],
+      "containing_ranges": []
+    },
+    {
+      "kernel": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8>(T1::Params)",
+      "correlation": 12248,
+      "gpu_start": 351195545,
+      "apis": [
+        {
+          "name": "cuLaunchKernel",
+          "start": 63778341,
+          "end": 63788931,
+          "tid": 295566211600607
+        }
+      ],
+      "containing_ranges": []
+    },
+    {
+      "kernel": "void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::gpu_index_kernel<void at::native::index_kernel_impl<at::native::OpaqueType<(int)8>>(at::TensorIteratorBase &, c10::ArrayRef<long>, c10::ArrayRef<long>)::[lambda(char *, const char *, long) (instance 1)]>(at::TensorIteratorBase &, c10::ArrayRef<long>, c10::ArrayRef<long>, const T1 &, bool)::[lambda(int) (instance 1)]>(long, T3)",
+      "correlation": 12262,
+      "gpu_start": 351968656,
+      "apis": [
+        {
+          "name": "cudaLaunchKernel_v7000",
+          "start": 63816418,
+          "end": 63824914,
+          "tid": 295566211600607
+        }
+      ],
+      "containing_ranges": []
+    },
+    {
+      "kernel": "void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::gpu_index_kernel<void at::native::index_kernel_impl<at::native::OpaqueType<(int)4>>(at::TensorIteratorBase &, c10::ArrayRef<long>, c10::ArrayRef<long>)::[lambda(char *, const char *, long) (instance 1)]>(at::TensorIteratorBase &, c10::ArrayRef<long>, c10::ArrayRef<long>, const T1 &, bool)::[lambda(int) (instance 1)]>(long, T3)",
+      "correlation": 12276,
+      "gpu_start": 351971345,
+      "apis": [
+        {
+          "name": "cudaLaunchKernel_v7000",
+          "start": 63835567,
+          "end": 63843624,
+          "tid": 295566211600607
+        }
+      ],
+      "containing_ranges": []
+    },
+    {
+      "kernel": "_gumbel_sample_kernel",
+      "correlation": 12305,
+      "gpu_start": 351973777,
+      "apis": [
+        {
+          "name": "cuLaunchKernelEx",
+          "start": 64006031,
+          "end": 64016909,
+          "tid": 295566211600607
+        }
+      ],
+      "containing_ranges": []
+    },
+    {
+      "kernel": "void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at::native::ArgMaxOps<float>, unsigned int, long, (int)4, (int)4>>(T3)",
+      "correlation": 12317,
+      "gpu_start": 351997073,
+      "apis": [
+        {
+          "name": "cudaLaunchKernel_v7000",
+          "start": 64037776,
+          "end": 64044882,
+          "tid": 295566211600607
+        }
+      ],
+      "containing_ranges": []
+    },
+    {
+      "kernel": "void at::native::_scatter_gather_elementwise_kernel<(int)128, (int)8, void at::native::_cuda_scatter_gather_internal_kernel<(bool)0, at::native::OpaqueType<(int)8>, long>::operator ()<at::native::TensorAssign>(at::TensorIterator &, long, long, long, const T1 &)::[lambda(int) (instance 1)]>(int, T3)",
+      "correlation": 12328,
+      "gpu_start": 352000369,
+      "apis": [
+        {
+          "name": "cudaLaunchKernel_v7000",
+          "start": 64060028,
+          "end": 64066429,
+          "tid": 295566211600607
+        }
+      ],
+      "containing_ranges": []
+    },
+    {
+      "kernel": "void at::native::vectorized_elementwise_kernel<(int)4, at::native::FillFunctor<int>, std::array<char *, (unsigned long)1>, (bool)0>(int, T2, T3)",
+      "correlation": 12342,
+      "gpu_start": 352002066,
+      "apis": [
+        {
+          "name": "cudaLaunchKernel_v7000",
+          "start": 64084543,
+          "end": 64089686,
+          "tid": 295566211600607
+        }
+      ],
+      "containing_ranges": []
+    },
+    {
+      "kernel": "_get_num_sampled_and_rejected_kernel",
+      "correlation": 12361,
+      "gpu_start": 352002994,
+      "apis": [
+        {
+          "name": "cuLaunchKernelEx",
+          "start": 64123620,
+          "end": 64131569,
+          "tid": 295566211600607
+        }
+      ],
+      "containing_ranges": []
+    },
+    {
+      "kernel": "_post_update_kernel",
+      "correlation": 12428,
+      "gpu_start": 352005426,
+      "apis": [
+        {
+          "name": "cuLaunchKernelEx",
+          "start": 64337757,
+          "end": 64344905,
+          "tid": 295566211600607
+        }
+      ],
+      "containing_ranges": []
+    },
+    {
+      "kernel": "void at::native::vectorized_gather_kernel<(int)16, long>(char *, char *, T2 *, int, long, long, long, long, bool)",
+      "correlation": 12726,
+      "gpu_start": 358758018,
+      "apis": [
+        {
+          "name": "cudaLaunchKernel_v7000",
+          "start": 66831395,
+          "end": 66850286,
+          "tid": 295566211600607
+        }
+      ],
+      "containing_ranges": []
+    },
+    {
+      "kernel": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8>(T1::Params)",
+      "correlation": 12746,
+      "gpu_start": 358759554,
+      "apis": [
+        {
+          "name": "cuLaunchKernel",
+          "start": 66933982,
+          "end": 66942174,
+          "tid": 295566211600607
+        }
+      ],
+      "containing_ranges": []
+    }
+  ]
+}

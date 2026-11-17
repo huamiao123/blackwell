@@ -1,0 +1,147 @@
+{
+  "scope": "Gate-3 first diagnostic release only; Gate-2 release unchanged",
+  "baseline_commit": "c3963847c619b19a8b642981ace4b0c7463dff16",
+  "exclusions": "this inventory, original binary traces/SQLite and local GPU window",
+  "artifacts": [
+    {
+      "path": "gate3_attribution/.gitignore",
+      "bytes": 115,
+      "sha256": "57e90e8e18416f745205d41fa78a1cc8912bea19bccc2abc5f5b00c3a151ac86"
+    },
+    {
+      "path": "gate3_attribution/README.md",
+      "bytes": 2503,
+      "sha256": "b7cc306cceb55eab8afe9a22670d453809f19aae0665dc9946e0b8f4f3fe52b6"
+    },
+    {
+      "path": "gate3_attribution/analysis/attributed_activities.json.gz",
+      "bytes": 11316345,
+      "sha256": "637d17e255bfb1752136c57d21a284b27d126609996a04d5f97f95a66ae41a0d"
+    },
+    {
+      "path": "gate3_attribution/analysis/completion_state.json",
+      "bytes": 301,
+      "sha256": "e053566fcb1acaba5120da3b7fe0ee82f6c0f808c5aeb1f26422dd018b7674c4"
+    },
+    {
+      "path": "gate3_attribution/analysis/diagnostic_validation.json",
+      "bytes": 2941,
+      "sha256": "2eeadb9e74696a46005ae27de87fff9dca3e51f1d58360a654d67366031d478c"
+    },
+    {
+      "path": "gate3_attribution/analysis/failed_r01_source.json",
+      "bytes": 291,
+      "sha256": "c1cc3281e15d4a45101b5151477098753bef88967e50a2ada84789f759de9a4b"
+    },
+    {
+      "path": "gate3_attribution/analysis/gate3_e2_nvfp4_p2_r02_stage_summary.csv",
+      "bytes": 343,
+      "sha256": "2f9d6e4de4562da9d44e18d8194f1e40f997f636a53e7a94bab05cfdca067eff"
+    },
+    {
+      "path": "gate3_attribution/analysis/gate3_e2_nvfp4_p2_r02_timeline.json",
+      "bytes": 9606,
+      "sha256": "e88ad0bf50a9fe7388e01b3c1156fbc420370c9a87e004c70ad1fe7336824d3b"
+    },
+    {
+      "path": "gate3_attribution/analysis/lm_head_launches.csv",
+      "bytes": 61103,
+      "sha256": "10bdc925ec14c4e4a7d112cfa5390824444b5dd6bdaffb59f78eb2e6c7221ac8"
+    },
+    {
+      "path": "gate3_attribution/analysis/path_timing.csv",
+      "bytes": 811,
+      "sha256": "12f65d8e151cf94d7238e7e6098d323ded0a2635ded36550146fc80885cc3199"
+    },
+    {
+      "path": "gate3_attribution/analysis/preflight_20261117_191436.json",
+      "bytes": 14756,
+      "sha256": "e911f24c2cb47b93b7e186182b6d476f71d9850682de01f39701b42ed00daa61"
+    },
+    {
+      "path": "gate3_attribution/analysis/raw_trace_manifest.json",
+      "bytes": 426,
+      "sha256": "8267ed2c37bcabbb335d7ab25c4c41e35866b7c590756785538ebed12e329bf8"
+    },
+    {
+      "path": "gate3_attribution/analysis/source_provenance.json",
+      "bytes": 6939,
+      "sha256": "28cc3410bbfa77b2d292b29d1adee6dbf020b1033dce88f63f094c2311e9226a"
+    },
+    {
+      "path": "gate3_attribution/analysis/unknown_correlation_audit.json",
+      "bytes": 5708,
+      "sha256": "3d6d9d7f9337ab6f48dd17a51c155e553918dee60ef90ae78a099d52b091d6f0"
+    },
+    {
+      "path": "gate3_attribution/diagnostic_report.md",
+      "bytes": 5959,
+      "sha256": "b84b18f2a353a6cc97880a18d4750b8449802cad13ea34a82f0fb57703d58102"
+    },
+    {
+      "path": "gate3_attribution/src/analyze_diagnostic.py",
+      "bytes": 7548,
+      "sha256": "70d1bbb245e37963257afa9cc3e74a56be293082842a26b130c7c01e9ee2c0d7"
+    },
+    {
+      "path": "gate3_attribution/src/archive/diagnostic_worker_r01.py",
+      "bytes": 6620,
+      "sha256": "cc4ca64db653b31990de547abfa1c0acd5b66f50a34426bc3946677af1da747a"
+    },
+    {
+      "path": "gate3_attribution/src/diagnostic_worker.py",
+      "bytes": 6988,
+      "sha256": "e249efd8a2c5c498c948da2cb3b8795b98de08de7e6d220c5e7c35c2873e71dd"
+    },
+    {
+      "path": "gate3_attribution/src/report_diagnostic.py",
+      "bytes": 6918,
+      "sha256": "e3d6fcb8e80be6ee90ae683f61d21d95bb56c8510e4460f451e2d483c00e7636"
+    },
+    {
+      "path": "gate3_attribution/src/run_diagnostic.py",
+      "bytes": 2114,
+      "sha256": "1f40ed0fd49894db87243ac2102a8dc48ce5be4a35bafa82a3b3089f53814c19"
+    },
+    {
+      "path": "gate3_attribution/tests/test_diagnostic_cpu.py",
+      "bytes": 2103,
+      "sha256": "94d08b31bf15bfb82c6f30c4313a880815c66fb3ceedb8fe96becf2fdc1b6a1b"
+    },
+    {
+      "path": "logs/gate3_e2_nvfp4_p2_r01.log",
+      "bytes": 37177,
+      "sha256": "ba9606b95e69521128d4e867a451d769ee2d32e927313b8fbd57842da5e787e7"
+    },
+    {
+      "path": "logs/gate3_e2_nvfp4_p2_r01_supervision.json",
+      "bytes": 255263,
+      "sha256": "5649cfc1dca07c44b04c7d73a550c9ec1aa46dc0fcfa7be7d1d39023a0179978"
+    },
+    {
+      "path": "logs/gate3_e2_nvfp4_p2_r02.log",
+      "bytes": 29309,
+      "sha256": "24ebba02c708d62c1f7f98ac17314d53c58f52600df8fdcb78ef638743f1fd42"
+    },
+    {
+      "path": "logs/gate3_e2_nvfp4_p2_r02_export.log",
+      "bytes": 8128,
+      "sha256": "ea0c13736f2367f19cc90df42c09bbd66f6550dfb9982cc1e03fb2c4b292612f"
+    },
+    {
+      "path": "logs/gate3_e2_nvfp4_p2_r02_supervision.json",
+      "bytes": 225751,
+      "sha256": "398755bee291043d7854e831d31e14850d6572295ba76df31562f4335e3a52b0"
+    },
+    {
+      "path": "raw/gate3_e2_nvfp4_p2_r01_failure.json",
+      "bytes": 803504,
+      "sha256": "a26b5e87f4c18a429c720b097347c0c0a4ac68f0ea86592ed8a8d306390838cb"
+    },
+    {
+      "path": "raw/gate3_e2_nvfp4_p2_r02.json",
+      "bytes": 1080318,
+      "sha256": "c276b7ee34198694f74069d9d378eb3c33f777591cf4a64314d02af2633cc6e7"
+    }
+  ]
+}

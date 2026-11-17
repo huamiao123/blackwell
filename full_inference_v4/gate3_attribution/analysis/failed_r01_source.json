@@ -1,0 +1,7 @@
+{
+  "run_id": "gate3_e2_nvfp4_p2_r01",
+  "worker_sha256": "cc4ca64db653b31990de547abfa1c0acd5b66f50a34426bc3946677af1da747a",
+  "archive": "src/archive/diagnostic_worker_r01.py",
+  "status": "FAILED_NOT_ACCEPTED",
+  "reason": "instrumentation rejected final EMPTY scheduler dispatch"
+}

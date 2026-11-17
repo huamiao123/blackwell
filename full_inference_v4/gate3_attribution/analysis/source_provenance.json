@@ -1,0 +1,221 @@
+{
+  "cpu_only_snapshot": true,
+  "recorded_at": "2026-11-17T19:30:20.109169+08:00",
+  "snapshot_limit": "Current source snapshots are not an attestation of the installed source at old Gate-2 capture time; active runner hash independently matches new Gate-3 runtime metadata",
+  "active_runner": "vllm/v1/worker/gpu/model_runner.py",
+  "active_runner_runtime_hash_matched": true,
+  "checkout_git": {
+    "returncode": 128,
+    "stdout": "",
+    "stderr": "fatal: 不是 git 仓库（或者任何父目录）：.git"
+  },
+  "sources": [
+    {
+      "path": "vllm/model_executor/models/qwen3.py",
+      "sha256": "06bee457e1278cecc3d0745f45c44b4711243330e8c2c19d5c732625b67f1374",
+      "line_count": 348,
+      "role": "INSPECTED_REFERENCE"
+    },
+    {
+      "path": "vllm/model_executor/models/qwen2.py",
+      "sha256": "6684104ba6dc40325bb1f6e632ec90633fa83a7b95883bb2181e9dc0008c3e21",
+      "line_count": 521,
+      "role": "INSPECTED_REFERENCE"
+    },
+    {
+      "path": "vllm/v1/worker/gpu_model_runner.py",
+      "sha256": "3ba41733f7062b9b70801025ee263979a0b11b8c0cea418d5d18caa26de6524d",
+      "line_count": 7192,
+      "role": "LEGACY_RUNNER_NOT_USED"
+    },
+    {
+      "path": "vllm/v1/executor/uniproc_executor.py",
+      "sha256": "7e6876892c9ad6e8aeae9649b668715b9149c810960965230e005553080ced37",
+      "line_count": 219,
+      "role": "INSPECTED_REFERENCE"
+    },
+    {
+      "path": "vllm/v1/executor/abstract.py",
+      "sha256": "9980c6ed61c3705fc7567b898e99f23c12c56a718cbf9f7f071371463260313f",
+      "line_count": 474,
+      "role": "INSPECTED_REFERENCE"
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/modelopt.py",
+      "sha256": "e76a666bdb653f86effc1094e9427e89a9acba99f0673f1c9e2f0a8784366b4f",
+      "line_count": 2790,
+      "role": "INSPECTED_REFERENCE"
+    },
+    {
+      "path": "vllm/model_executor/layers/logits_processor.py",
+      "sha256": "35cf8235cb529ba2d37358fe9b9e5a29f40b5c3cbcc9e6750c8480c51bd7da83",
+      "line_count": 324,
+      "role": "INSPECTED_REFERENCE"
+    },
+    {
+      "path": "vllm/model_executor/layers/vocab_parallel_embedding.py",
+      "sha256": "0a25685b16b295d0c9f7127ae48fc7cc86d2a961e4e7e7bd8879354540225f44",
+      "line_count": 642,
+      "role": "INSPECTED_REFERENCE"
+    },
+    {
+      "path": "vllm/v1/worker/gpu_worker.py",
+      "sha256": "e46a2659842b5b0238ca5d13ecb4a2dcff91f028493a7117d666edb0785a742c",
+      "line_count": 1732,
+      "role": "INSPECTED_REFERENCE"
+    },
+    {
+      "path": "vllm/v1/worker/cpu/model_runner.py",
+      "sha256": "24a1c916550051327dd5893243a6d4200f3824b91b3af8aa6f6c793fd7c68c3e",
+      "line_count": 16,
+      "role": "INSPECTED_REFERENCE"
+    },
+    {
+      "path": "vllm/v1/worker/gpu/model_runner.py",
+      "sha256": "9145e2601f9e93db5e6c7e648c6741cff55f2a49f046800f79311e4977550121",
+      "line_count": 2519,
+      "role": "ACTIVE_V2_RUNNER"
+    }
+  ],
+  "model_configs": {
+    "Qwen3-8B-BF16": {
+      "sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+      "config": {
+        "architectures": [
+          "Qwen3ForCausalLM"
+        ],
+        "attention_bias": false,
+        "attention_dropout": 0.0,
+        "bos_token_id": 151643,
+        "eos_token_id": 151645,
+        "head_dim": 128,
+        "hidden_act": "silu",
+        "hidden_size": 4096,
+        "initializer_range": 0.02,
+        "intermediate_size": 12288,
+        "max_position_embeddings": 40960,
+        "max_window_layers": 36,
+        "model_type": "qwen3",
+        "num_attention_heads": 32,
+        "num_hidden_layers": 36,
+        "num_key_value_heads": 8,
+        "rms_norm_eps": 1e-06,
+        "rope_scaling": null,
+        "rope_theta": 1000000,
+        "sliding_window": null,
+        "tie_word_embeddings": false,
+        "torch_dtype": "bfloat16",
+        "transformers_version": "4.51.0",
+        "use_cache": true,
+        "use_sliding_window": false,
+        "vocab_size": 151936
+      }
+    },
+    "Qwen3-8B-NVFP4": {
+      "sha256": "3442fb5c8fa88d838108bdb7b2ffdba7811d39741759644ac06b4787f5e8346a",
+      "config": {
+        "architectures": [
+          "Qwen3ForCausalLM"
+        ],
+        "attention_bias": false,
+        "attention_dropout": 0.0,
+        "bos_token_id": 151643,
+        "eos_token_id": 151645,
+        "head_dim": 128,
+        "hidden_act": "silu",
+        "hidden_size": 4096,
+        "initializer_range": 0.02,
+        "intermediate_size": 12288,
+        "layer_types": [
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention",
+          "full_attention"
+        ],
+        "max_position_embeddings": 40960,
+        "max_window_layers": 36,
+        "model_type": "qwen3",
+        "num_attention_heads": 32,
+        "num_hidden_layers": 36,
+        "num_key_value_heads": 8,
+        "rms_norm_eps": 1e-06,
+        "rope_scaling": null,
+        "rope_theta": 1000000,
+        "sliding_window": null,
+        "tie_word_embeddings": false,
+        "torch_dtype": "bfloat16",
+        "transformers_version": "4.53.1",
+        "use_cache": true,
+        "use_sliding_window": false,
+        "vocab_size": 151936,
+        "quantization_config": {
+          "config_groups": {
+            "group_0": {
+              "input_activations": {
+                "dynamic": false,
+                "num_bits": 4,
+                "type": "float",
+                "group_size": 16
+              },
+              "weights": {
+                "dynamic": false,
+                "num_bits": 4,
+                "type": "float",
+                "group_size": 16
+              },
+              "targets": [
+                "Linear"
+              ]
+            }
+          },
+          "ignore": [
+            "lm_head"
+          ],
+          "quant_algo": "NVFP4",
+          "kv_cache_scheme": {
+            "dynamic": false,
+            "num_bits": 8,
+            "type": "float"
+          },
+          "producer": {
+            "name": "modelopt",
+            "version": "0.35.0"
+          },
+          "quant_method": "modelopt"
+        }
+      }
+    }
+  }
+}

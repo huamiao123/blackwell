@@ -1,0 +1,79 @@
+{
+  "status": "VERIFIED_THIS_DIAGNOSTIC_ONLY",
+  "run_id": "gate3_e2_nvfp4_p2_r02",
+  "full_model_wall_ms": 2161.5385,
+  "previous_p2_model_wall_ms": 2164.047509,
+  "nvtx_full_window_ms": 2161.568035,
+  "total_kernel_count": 134176,
+  "native_sm120_e2m1_launches": 37008,
+  "graph_replays": 256,
+  "same_kernel_name_multiset_as_gate2": true,
+  "old_dispatch_unknown_kernels": 2570,
+  "sample_path_kernels": 2570,
+  "remaining_stage_unknown": 0,
+  "lm_head_launches": 257,
+  "lm_head_kernel_union_ms": 190.645698,
+  "lm_head_share_of_p2_full_window": 0.08819787067215769,
+  "runtime_metadata": {
+    "runner_class": "vllm.v1.worker.gpu.model_runner.GPUModelRunner",
+    "runner_source_file": "/home/wangzhihang/fp4-llm/vllm/vllm/v1/worker/gpu/model_runner.py",
+    "runner_source_sha256": "9145e2601f9e93db5e6c7e648c6741cff55f2a49f046800f79311e4977550121",
+    "head_quant_method": "vllm.model_executor.layers.linear.UnquantizedLinearMethod",
+    "head_weight_shape": [
+      151936,
+      4096
+    ],
+    "head_weight_dtype": "torch.bfloat16",
+    "note": "Only shape/type metadata; no tensor data copied to CPU. No layer forward hooks inserted."
+  },
+  "path_timing": [
+    {
+      "stage": "PREFILL",
+      "category": "BACKBONE_AND_PREPARATION",
+      "kernel_count": 518,
+      "kernel_union_ms": 301.20673,
+      "scope": "P2 diagnostic interval union; not P0 net time; backbone logical operators unresolved"
+    },
+    {
+      "stage": "PREFILL",
+      "category": "LM_HEAD",
+      "kernel_count": 1,
+      "kernel_union_ms": 0.777739,
+      "scope": "P2 diagnostic interval union; not P0 net time; backbone logical operators unresolved"
+    },
+    {
+      "stage": "PREFILL",
+      "category": "OTHER_SAMPLE_OUTPUT_PATH",
+      "kernel_count": 9,
+      "kernel_union_ms": 0.04592,
+      "scope": "P2 diagnostic interval union; not P0 net time; backbone logical operators unresolved"
+    },
+    {
+      "stage": "DECODE",
+      "category": "BACKBONE_AND_PREPARATION",
+      "kernel_count": 131088,
+      "kernel_union_ms": 1623.107461,
+      "scope": "P2 diagnostic interval union; not P0 net time; backbone logical operators unresolved"
+    },
+    {
+      "stage": "DECODE",
+      "category": "LM_HEAD",
+      "kernel_count": 256,
+      "kernel_union_ms": 189.867959,
+      "scope": "P2 diagnostic interval union; not P0 net time; backbone logical operators unresolved"
+    },
+    {
+      "stage": "DECODE",
+      "category": "OTHER_SAMPLE_OUTPUT_PATH",
+      "kernel_count": 2304,
+      "kernel_union_ms": 7.133148,
+      "scope": "P2 diagnostic interval union; not P0 net time; backbone logical operators unresolved"
+    }
+  ],
+  "limitations": [
+    "One E2 NVFP4 diagnostic only, not independent performance repeats",
+    "Backbone QKV/O/FFN per-layer graph node identity remains unverified",
+    "No new GPU Metrics or NCU; no dynamic pipeline/cache/stall counters",
+    "No auxiliary concurrency or useful work validation"
+  ]
+}

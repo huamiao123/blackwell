@@ -1,6 +1,19 @@
 # blackwell — RTX 5090 (SM120) BF16 vs native NVFP4 resource study
 
-## 最新阶段：V4.1 完整推理 Gate 2（2026-11-17）
+## 最新阶段：Gate 3 首项算子归因（2026-11-17）
+
+在同一E2 NVFP4完整推理负载中补采一份Node Trace，给实际V2 Model Runner的
+采样与LM Head路径增加标记。新Trace原规则下的2570个UNKNOWN Kernel均已关联
+到Sample路径；其中257次BF16 LM Head合计190.6ms，占该次P2完整窗口约8.8%。
+实际Kernel总数、名称多重集合及37008次原生SM120/E2M1调用均与Gate 2一致。
+
+这只完成Gate 3的一个归因子问题，逐层FFN/QKV/O映射仍未完成；没有开展辅助Kernel
+并发或NCU实验。首次尝试的标记器EMPTY收尾错误已记录，未计入有效结果。
+
+- [补采报告、证据及限制](full_inference_v4/gate3_attribution/diagnostic_report.md)
+- [实际Head Kernel记录](full_inference_v4/gate3_attribution/analysis/lm_head_launches.csv)
+
+## 前一阶段：V4.1 完整推理 Gate 2（2026-11-17）
 
 完成 E1/E2（Batch=1/8、输入2048、输出257、256次真实Decode）的40次无Profiler
 完整推理，以及4份NSYS GPU Metrics和4份独立Node Trace。Prefix Cache关闭，

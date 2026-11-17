@@ -1,0 +1,7 @@
+stage,category,kernel_count,kernel_union_ms,scope
+PREFILL,BACKBONE_AND_PREPARATION,518,301.20673,P2 diagnostic interval union; not P0 net time; backbone logical operators unresolved
+PREFILL,LM_HEAD,1,0.777739,P2 diagnostic interval union; not P0 net time; backbone logical operators unresolved
+PREFILL,OTHER_SAMPLE_OUTPUT_PATH,9,0.04592,P2 diagnostic interval union; not P0 net time; backbone logical operators unresolved
+DECODE,BACKBONE_AND_PREPARATION,131088,1623.107461,P2 diagnostic interval union; not P0 net time; backbone logical operators unresolved
+DECODE,LM_HEAD,256,189.867959,P2 diagnostic interval union; not P0 net time; backbone logical operators unresolved
+DECODE,OTHER_SAMPLE_OUTPUT_PATH,2304,7.133148,P2 diagnostic interval union; not P0 net time; backbone logical operators unresolved
