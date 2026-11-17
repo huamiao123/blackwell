@@ -1,0 +1,9 @@
+{
+  "time": "2026-11-17T18:37:42.510751+08:00",
+  "gpu_who": "GPU 0  NVIDIA GeForce RTX 5090  mem 714/32607 MiB  util 0%\n  (no compute processes)\n",
+  "remaining_own_experiment_processes": [],
+  "permit_files": [],
+  "window_closed": true,
+  "automatic_next_gate": false,
+  "completion": "4 configurations \u00d7 2 independent P0 processes \u00d7 5 runs, plus 8 P1/P2 captures"
+}

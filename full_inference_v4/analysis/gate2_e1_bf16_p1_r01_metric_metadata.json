@@ -1,0 +1,177 @@
+[
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 0,
+    "metricName": "GPC Clock Frequency [MHz]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 1,
+    "metricName": "SYS Clock Frequency [MHz]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 2,
+    "metricName": "Sync Copy Engine Active [Throughput %]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 3,
+    "metricName": "Sync Copy Engine Active [Cycles Active]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 4,
+    "metricName": "Async Copy Engine Active 0 [Throughput %]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 5,
+    "metricName": "Async Copy Engine Active 0 [Cycles Active]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 6,
+    "metricName": "GR Active [Throughput %]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 7,
+    "metricName": "SMs Active [Throughput %]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 8,
+    "metricName": "SM Issue [Throughput %]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 9,
+    "metricName": "Tensor Active [Throughput %]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 10,
+    "metricName": "Vertex/Tess/Geometry Warps in Flight [Throughput %]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 11,
+    "metricName": "Vertex/Tess/Geometry Warps in Flight [Avg]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 12,
+    "metricName": "Vertex/Tess/Geometry Warps in Flight [Avg Warps per Cycle]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 13,
+    "metricName": "Pixel Warps in Flight [Throughput %]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 14,
+    "metricName": "Pixel Warps in Flight [Avg]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 15,
+    "metricName": "Pixel Warps in Flight [Avg Warps per Cycle]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 16,
+    "metricName": "Compute Warps in Flight [Throughput %]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 17,
+    "metricName": "Compute Warps in Flight [Avg]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 18,
+    "metricName": "Compute Warps in Flight [Avg Warps per Cycle]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 19,
+    "metricName": "DRAM Read Bandwidth [Throughput %]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 20,
+    "metricName": "DRAM Write Bandwidth [Throughput %]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 21,
+    "metricName": "PCIe RX Throughput [Throughput %]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 22,
+    "metricName": "PCIe TX Throughput [Throughput %]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 23,
+    "metricName": "PCIe Read Requests to BAR1 [Requests]"
+  },
+  {
+    "typeId": 281479271677952,
+    "sourceId": 281479271677952,
+    "typeName": "",
+    "metricId": 24,
+    "metricName": "PCIe Write Requests to BAR1 [Requests]"
+  }
+]

@@ -20,7 +20,7 @@ class HookContractTests(unittest.TestCase):
         core=NS(scheduler=scheduler,model_executor=model)
         client=type('InprocClient',(),{})();client.engine_core=core
         eng=NS(engine_core=client,add_request=lambda request_id,prompt,params:'actual-id',
-               step=lambda:[NS(request_id='actual-id',finished=True)],
+               step=lambda:[NS(request_id='caller-id',finished=True)],
                output_processor=NS(process_outputs=lambda outputs:None))
         torch=NS(cuda=NS(CUDAGraph=Graph))
         prompt=dict(prompt_id='p',token_ids_sha256=digest([1,2,3,4]),actual_token_length=4)
@@ -29,6 +29,7 @@ class HookContractTests(unittest.TestCase):
         try:
             eng.add_request('caller-id',{},None)
             self.assertIn('actual-id',hooks.state.requests);self.assertNotIn('caller-id',hooks.state.requests)
+            self.assertEqual(hooks.resolve_id('caller-id'),'actual-id')
             selected=scheduler.schedule();model.execute_model(selected,non_block=True)
             eng.output_processor.process_outputs([NS(request_id='actual-id',new_token_ids=[9])])
             eng.step()

@@ -1,1 +1,13 @@
-precision,stage,activity_union_ns,measurement_scope,measurement_status
+trace,experiment,precision,stage,kernel_count,kernel_union_ms,measurement_scope
+gate2_e1_bf16_p2_r01,E1,bf16,DECODE,103440,2345.239452,within node-level diagnostic capture; not P0 time
+gate2_e1_bf16_p2_r01,E1,bf16,PREFILL,410,162.581616,within node-level diagnostic capture; not P0 time
+gate2_e1_bf16_p2_r01,E1,bf16,UNKNOWN,2570,204.796159,within node-level diagnostic capture; not P0 time
+gate2_e1_nvfp4_p2_r01,E1,nvfp4,DECODE,131088,1507.609102,within node-level diagnostic capture; not P0 time
+gate2_e1_nvfp4_p2_r01,E1,nvfp4,PREFILL,518,43.429843,within node-level diagnostic capture; not P0 time
+gate2_e1_nvfp4_p2_r01,E1,nvfp4,UNKNOWN,2570,204.628117,within node-level diagnostic capture; not P0 time
+gate2_e2_bf16_p2_r02,E2,bf16,DECODE,103440,2673.276564,within node-level diagnostic capture; not P0 time
+gate2_e2_bf16_p2_r02,E2,bf16,PREFILL,410,1193.30837,within node-level diagnostic capture; not P0 time
+gate2_e2_bf16_p2_r02,E2,bf16,UNKNOWN,2570,197.214238,within node-level diagnostic capture; not P0 time
+gate2_e2_nvfp4_p2_r01,E2,nvfp4,DECODE,131088,1624.377402,within node-level diagnostic capture; not P0 time
+gate2_e2_nvfp4_p2_r01,E2,nvfp4,PREFILL,518,301.276251,within node-level diagnostic capture; not P0 time
+gate2_e2_nvfp4_p2_r01,E2,nvfp4,UNKNOWN,2570,197.855994,within node-level diagnostic capture; not P0 time

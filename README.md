@@ -1,6 +1,25 @@
 # blackwell — RTX 5090 (SM120) BF16 vs native NVFP4 resource study
 
-## 最新阶段：资源可利用性研究准备与公平基线（2026-11-17）
+## 最新阶段：V4.1 完整推理 Gate 2（2026-11-17）
+
+完成 E1/E2（Batch=1/8、输入2048、输出257、256次真实Decode）的40次无Profiler
+完整推理，以及4份NSYS GPU Metrics和4份独立Node Trace。Prefix Cache关闭，
+Batch内Prompt不同，KV统一fp8_e4m3，主路径为CUDA Graph。
+
+| Batch | BF16完整模型时间 | NVFP4完整模型时间 | 加速 |
+| --- | --- | --- | --- |
+| 1 | 2.727秒 | 1.762秒 | 1.547× |
+| 8 | 4.059秒 | 2.143秒 | 1.894× |
+
+计时为预编码离线`LLM.generate`窗口，包含Prefill和Decode，**不是在线服务E2E**。
+每条件两个独立进程、各五次。资源指标每条件仅一份采样；仍有未完成的阶段/算子归属，
+**未验证额外计算可利用性，也没有开展新的并发或NCU实验**。GPU工作已结束并关闭窗口。
+
+- [完整报告、四张图及证据边界](full_inference_v4/gate2_report.md)
+- [正式性能汇总](full_inference_v4/analysis/gate2_p0_summary.csv)
+- [原始运行与复核入口](full_inference_v4/README.md)
+
+## 前一阶段：资源可利用性研究准备与公平基线（2026-11-17）
 
 关闭 Prefix Cache、使用不同 Prompt 后，完成 B1/B8 × BF16/NVFP4 的 20 次
 Graph Decode 基线。B8 分别约为 11.311/7.225 ms/step；B1 为 10.038/6.730。

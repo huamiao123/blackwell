@@ -1,0 +1,6 @@
+{
+  "cpu_only": true,
+  "random_cases": 100,
+  "exact_match": true,
+  "purpose": "One-time union of phase windows avoids repeated sorting; frozen worker sources unchanged"
+}

@@ -1,0 +1,39 @@
+python : test_bundled_outputs_never_called_token_itl (test_cpu.MeasurementTests.test_bundled_outputs_never_called_token
+_itl) ... ok
+所在位置 行:2 字符: 1
++ python -m unittest discover -s full_inference_v4/tests -v 2>&1 | Tee- ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_bundled_ou...ken_itl) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_clock_exports_not_repaired (test_cpu.MeasurementTests.test_clock_exports_not_repaired) ... ok
+test_config_context_and_matching (test_cpu.MeasurementTests.test_config_context_and_matching) ... ok
+test_correlations_not_cpu_kernel_time_overlap (test_cpu.MeasurementTests.test_correlations_not_cpu_kernel_time_overlap)
+ ... ok
+test_first_output_not_decode_step (test_cpu.MeasurementTests.test_first_output_not_decode_step) ... ok
+test_foreign_process_and_controller_parsers (test_cpu.MeasurementTests.test_foreign_process_and_controller_parsers) ...
+ ok
+test_interval_oracle (test_cpu.MeasurementTests.test_interval_oracle) ... ok
+test_mixed_boundary_from_pre_schedule_snapshot (test_cpu.MeasurementTests.test_mixed_boundary_from_pre_schedule_snapsho
+t) ... ok
+test_operator_unknown_and_fusion_union (test_cpu.MeasurementTests.test_operator_unknown_and_fusion_union) ... ok
+test_partial_work_not_prorated (test_cpu.MeasurementTests.test_partial_work_not_prorated) ... ok
+test_per_request_completion_is_not_batch_completion (test_cpu.MeasurementTests.test_per_request_completion_is_not_batch
+_completion) ... ok
+test_probe_admission_requires_gpu_checks (test_cpu.MeasurementTests.test_probe_admission_requires_gpu_checks) ... ok
+test_profile_pair_must_match_config_and_code (test_cpu.MeasurementTests.test_profile_pair_must_match_config_and_code) .
+.. ok
+test_refuse_direct_gpu_before_imports (test_cpu.MeasurementTests.test_refuse_direct_gpu_before_imports) ... ok
+test_resource_time_weights_and_gaps (test_cpu.MeasurementTests.test_resource_time_weights_and_gaps) ... ok
+test_same_work_metrics_use_measured_serial_and_b_tail (test_cpu.MeasurementTests.test_same_work_metrics_use_measured_se
+rial_and_b_tail) ... ok
+test_teacher_forcing_plan_not_full_prefill_substitute (test_cpu.MeasurementTests.test_teacher_forcing_plan_not_full_pre
+fill_substitute) ... ok
+test_window_disabled_expired_wrong_scope (test_cpu.MeasurementTests.test_window_disabled_expired_wrong_scope) ... ok
+test_returned_request_id_and_replay_dispatch_identity (test_hooks_cpu.HookContractTests.test_returned_request_id_and_re
+play_dispatch_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 1.254s
+
+OK

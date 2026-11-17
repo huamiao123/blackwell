@@ -1,0 +1,115 @@
+{
+  "status": "PASSED_CPU_PUBLICATION_CHECKS",
+  "gpu_launched_by_this_check": false,
+  "p0_valid_generations": 40,
+  "p0_requests": 180,
+  "independent_processes_per_condition": 2,
+  "traces": [
+    {
+      "run_id": "gate2_e1_bf16_p1_r01",
+      "profile": "P1",
+      "identity": "VERIFIED_METADATA",
+      "kernel_count": 4788,
+      "sampling": {
+        "samples": 28343,
+        "dt_median_ns": 100003.0,
+        "dt_p95_ns": 100035,
+        "gap_count": 0,
+        "min_ns": -132327,
+        "max_ns": 2834416182,
+        "samples_inside_cpu_full": 27463
+      }
+    },
+    {
+      "run_id": "gate2_e1_bf16_p2_r01",
+      "profile": "P2",
+      "identity": "VERIFIED_METADATA",
+      "kernel_count": 106420,
+      "sampling": null
+    },
+    {
+      "run_id": "gate2_e1_nvfp4_p1_r01",
+      "profile": "P1",
+      "identity": "VERIFIED_METADATA",
+      "kernel_count": 4896,
+      "sampling": {
+        "samples": 18950,
+        "dt_median_ns": 100003,
+        "dt_p95_ns": 100035,
+        "gap_count": 0,
+        "min_ns": 25742,
+        "max_ns": 1895155959,
+        "samples_inside_cpu_full": 17902
+      }
+    },
+    {
+      "run_id": "gate2_e1_nvfp4_p2_r01",
+      "profile": "P2",
+      "identity": "VERIFIED_METADATA",
+      "kernel_count": 134176,
+      "sampling": null
+    },
+    {
+      "run_id": "gate2_e2_bf16_p1_r01",
+      "profile": "P1",
+      "identity": "VERIFIED_METADATA",
+      "kernel_count": 4788,
+      "sampling": {
+        "samples": 42327,
+        "dt_median_ns": 100007.0,
+        "dt_p95_ns": 100039,
+        "gap_count": 0,
+        "min_ns": -90396,
+        "max_ns": 4233182366,
+        "samples_inside_cpu_full": 41290
+      }
+    },
+    {
+      "run_id": "gate2_e2_bf16_p2_r02",
+      "profile": "P2",
+      "identity": "VERIFIED_METADATA",
+      "kernel_count": 106420,
+      "sampling": null
+    },
+    {
+      "run_id": "gate2_e2_nvfp4_p1_r01",
+      "profile": "P1",
+      "identity": "VERIFIED_METADATA",
+      "kernel_count": 4896,
+      "sampling": {
+        "samples": 22405,
+        "dt_median_ns": 100004.0,
+        "dt_p95_ns": 100037,
+        "gap_count": 0,
+        "min_ns": -132713,
+        "max_ns": 2240569822,
+        "samples_inside_cpu_full": 21666
+      }
+    },
+    {
+      "run_id": "gate2_e2_nvfp4_p2_r01",
+      "profile": "P2",
+      "identity": "VERIFIED_METADATA",
+      "kernel_count": 134176,
+      "sampling": null
+    }
+  ],
+  "frozen_source_matches_current": true,
+  "prompt_manifest_sha256": "c15eb1c9a67dc899564c86d6f7fab62f1b39bb938b7c4a0439b4de8015642f6f",
+  "original_trace_hashes": 16,
+  "completion_state": {
+    "time": "2026-11-17T18:37:42.510751+08:00",
+    "gpu_who": "GPU 0  NVIDIA GeForce RTX 5090  mem 714/32607 MiB  util 0%\n  (no compute processes)\n",
+    "remaining_own_experiment_processes": [],
+    "permit_files": [],
+    "window_closed": true,
+    "automatic_next_gate": false,
+    "completion": "4 configurations \u00d7 2 independent P0 processes \u00d7 5 runs, plus 8 P1/P2 captures"
+  },
+  "limits": [
+    "GPU metrics: one capture per condition, no independent metric repeat",
+    "Logical operator/layer assignment incomplete; UNKNOWN activities retained",
+    "No NCU, no auxiliary concurrency, no useful-work acceleration claim",
+    "This publication check does not independently repeat GPU measurements"
+  ]
+}

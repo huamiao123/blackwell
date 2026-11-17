@@ -6,3 +6,6 @@ raw/*.ncu-rep
 sqlite/
 configs/gpu_window.json
 logs/*permit*.json
+# Lossless gzip copies are committed; originals stay on the experiment server.
+analysis/gate2_*_activities.json
+analysis/gate2_*_kernel_catalog.csv

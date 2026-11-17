@@ -1,0 +1,340 @@
+{
+  "p0": [
+    {
+      "experiment": "E1",
+      "precision": "bf16",
+      "independent_processes": 2,
+      "valid_runs": 10,
+      "full_ms": 2727.1457155,
+      "process_min_mean_ms": 2726.1975314,
+      "process_max_mean_ms": 2728.0938996,
+      "ttft_ms": 155.1062945,
+      "tpot_ms": 10.0460778390625,
+      "itl_p95_request_median_ms": 10.738018499999999,
+      "output_tokens_s": 94.23783893756709
+    },
+    {
+      "experiment": "E1",
+      "precision": "nvfp4",
+      "independent_processes": 2,
+      "valid_runs": 10,
+      "full_ms": 1762.3462699000002,
+      "process_min_mean_ms": 1761.7041086000002,
+      "process_max_mean_ms": 1762.9884312,
+      "ttft_ms": 43.7656694,
+      "tpot_ms": 6.71265416484375,
+      "itl_p95_request_median_ms": 7.2248758749999995,
+      "output_tokens_s": 145.82926450444984
+    },
+    {
+      "experiment": "E2",
+      "precision": "bf16",
+      "independent_processes": 2,
+      "valid_runs": 10,
+      "full_ms": 4059.2583297,
+      "process_min_mean_ms": 4057.4217869999998,
+      "process_max_mean_ms": 4061.0948724,
+      "ttft_ms": 1167.9271094,
+      "tpot_ms": 11.289459325,
+      "itl_p95_request_median_ms": 11.953332875000001,
+      "output_tokens_s": 506.4988422405737
+    },
+    {
+      "experiment": "E2",
+      "precision": "nvfp4",
+      "independent_processes": 2,
+      "valid_runs": 10,
+      "full_ms": 2143.1284998,
+      "process_min_mean_ms": 2140.9306038,
+      "process_max_mean_ms": 2145.3263958,
+      "ttft_ms": 299.8650949125,
+      "tpot_ms": 7.196791254296874,
+      "itl_p95_request_median_ms": 7.6947487500000005,
+      "output_tokens_s": 959.3691752736304
+    }
+  ],
+  "overheads": [
+    {
+      "experiment": "E1",
+      "precision": "bf16",
+      "profile": "P1",
+      "source": "gate2_e1_bf16_p1_r01.json",
+      "full_overhead_percent": 0.7160053234053221,
+      "ttft_overhead_percent": 11.26281080746212,
+      "tpot_overhead_percent": 0.071125091261659,
+      "baseline_processes": 2
+    },
+    {
+      "experiment": "E1",
+      "precision": "bf16",
+      "profile": "P2",
+      "source": "gate2_e1_bf16_p2_r01.json",
+      "full_overhead_percent": 0.5812275966740499,
+      "ttft_overhead_percent": 10.018451894613477,
+      "tpot_overhead_percent": 0.005991657362636182,
+      "baseline_processes": 2
+    },
+    {
+      "experiment": "E1",
+      "precision": "nvfp4",
+      "profile": "P1",
+      "source": "gate2_e1_nvfp4_p1_r01.json",
+      "full_overhead_percent": 1.5912501747792795,
+      "ttft_overhead_percent": 24.417276706842728,
+      "tpot_overhead_percent": 0.9938020591301111,
+      "baseline_processes": 2
+    },
+    {
+      "experiment": "E1",
+      "precision": "nvfp4",
+      "profile": "P2",
+      "source": "gate2_e1_nvfp4_p2_r01.json",
+      "full_overhead_percent": 1.621802343169576,
+      "ttft_overhead_percent": 20.9610494384441,
+      "tpot_overhead_percent": 1.117065580578669,
+      "baseline_processes": 2
+    },
+    {
+      "experiment": "E2",
+      "precision": "bf16",
+      "profile": "P1",
+      "source": "gate2_e2_bf16_p1_r01.json",
+      "full_overhead_percent": 1.7342286590861677,
+      "ttft_overhead_percent": 5.858178149503623,
+      "tpot_overhead_percent": 0.0061684959722585475,
+      "baseline_processes": 2
+    },
+    {
+      "experiment": "E2",
+      "precision": "bf16",
+      "profile": "P2",
+      "source": "gate2_e2_bf16_p2_r02.json",
+      "full_overhead_percent": 0.9687033961917502,
+      "ttft_overhead_percent": 3.401575815840885,
+      "tpot_overhead_percent": -0.037450732001731435,
+      "baseline_processes": 2
+    },
+    {
+      "experiment": "E2",
+      "precision": "nvfp4",
+      "profile": "P1",
+      "source": "gate2_e2_nvfp4_p1_r01.json",
+      "full_overhead_percent": 1.1072735117009902,
+      "ttft_overhead_percent": 6.400119849927877,
+      "tpot_overhead_percent": 0.1359038230723364,
+      "baseline_processes": 2
+    },
+    {
+      "experiment": "E2",
+      "precision": "nvfp4",
+      "profile": "P2",
+      "source": "gate2_e2_nvfp4_p2_r01.json",
+      "full_overhead_percent": 0.9760968230300815,
+      "ttft_overhead_percent": 4.926693690978223,
+      "tpot_overhead_percent": 0.22876470607016142,
+      "baseline_processes": 2
+    }
+  ],
+  "kernel_coverage": [
+    {
+      "trace": "gate2_e1_bf16_p2_r01",
+      "experiment": "E1",
+      "precision": "bf16",
+      "kernel_count": 106420,
+      "kernel_union_ms": 2712.617227,
+      "cpu_nvtx_window_ms": 2743.025626,
+      "coverage": 0.9889142854839665,
+      "unknown_count": 2570,
+      "unknown_union_ms": 204.796159,
+      "unknown_union_ratio": 0.07549762530502428,
+      "profiled_model_wall_ms": 2742.996639
+    },
+    {
+      "trace": "gate2_e1_nvfp4_p2_r01",
+      "experiment": "E1",
+      "precision": "nvfp4",
+      "kernel_count": 134176,
+      "kernel_union_ms": 1755.667062,
+      "cpu_nvtx_window_ms": 1790.939475,
+      "coverage": 0.9803050781489977,
+      "unknown_count": 2570,
+      "unknown_union_ms": 204.628117,
+      "unknown_union_ratio": 0.11655291679670414,
+      "profiled_model_wall_ms": 1790.928043
+    },
+    {
+      "trace": "gate2_e2_bf16_p2_r02",
+      "experiment": "E2",
+      "precision": "bf16",
+      "kernel_count": 106420,
+      "kernel_union_ms": 4063.799172,
+      "cpu_nvtx_window_ms": 4098.662198,
+      "coverage": 0.9914940474926155,
+      "unknown_count": 2570,
+      "unknown_union_ms": 197.214238,
+      "unknown_union_ratio": 0.04852952364349761,
+      "profiled_model_wall_ms": 4098.580503
+    },
+    {
+      "trace": "gate2_e2_nvfp4_p2_r01",
+      "experiment": "E2",
+      "precision": "nvfp4",
+      "kernel_count": 134176,
+      "kernel_union_ms": 2123.509647,
+      "cpu_nvtx_window_ms": 2164.133687,
+      "coverage": 0.9812284979231969,
+      "unknown_count": 2570,
+      "unknown_union_ms": 197.855994,
+      "unknown_union_ratio": 0.09317404998819862,
+      "profiled_model_wall_ms": 2164.047509
+    }
+  ],
+  "kernel_paths": [
+    {
+      "trace": "gate2_e1_bf16_p2_r01",
+      "experiment": "E1",
+      "precision": "bf16",
+      "family_tag": "native_sm120_e2m1",
+      "kernel_count": 0,
+      "time_union_ms": 0.0,
+      "classification": "name-family evidence; not a logical-layer assignment or dynamic instruction count"
+    },
+    {
+      "trace": "gate2_e1_bf16_p2_r01",
+      "experiment": "E1",
+      "precision": "bf16",
+      "family_tag": "gemv_family",
+      "kernel_count": 37121,
+      "time_union_ms": 2386.514658,
+      "classification": "name-family evidence; not a logical-layer assignment or dynamic instruction count"
+    },
+    {
+      "trace": "gate2_e1_bf16_p2_r01",
+      "experiment": "E1",
+      "precision": "bf16",
+      "family_tag": "wmma_family",
+      "kernel_count": 0,
+      "time_union_ms": 0.0,
+      "classification": "name-family evidence; not a logical-layer assignment or dynamic instruction count"
+    },
+    {
+      "trace": "gate2_e1_bf16_p2_r01",
+      "experiment": "E1",
+      "precision": "bf16",
+      "family_tag": "fp4_quantize_named",
+      "kernel_count": 0,
+      "time_union_ms": 0.0,
+      "classification": "name-family evidence; not a logical-layer assignment or dynamic instruction count"
+    },
+    {
+      "trace": "gate2_e1_nvfp4_p2_r01",
+      "experiment": "E1",
+      "precision": "nvfp4",
+      "family_tag": "native_sm120_e2m1",
+      "kernel_count": 37008,
+      "time_union_ms": 1330.421542,
+      "classification": "name-family evidence; not a logical-layer assignment or dynamic instruction count"
+    },
+    {
+      "trace": "gate2_e1_nvfp4_p2_r01",
+      "experiment": "E1",
+      "precision": "nvfp4",
+      "family_tag": "gemv_family",
+      "kernel_count": 257,
+      "time_union_ms": 198.701958,
+      "classification": "name-family evidence; not a logical-layer assignment or dynamic instruction count"
+    },
+    {
+      "trace": "gate2_e1_nvfp4_p2_r01",
+      "experiment": "E1",
+      "precision": "nvfp4",
+      "family_tag": "wmma_family",
+      "kernel_count": 0,
+      "time_union_ms": 0.0,
+      "classification": "name-family evidence; not a logical-layer assignment or dynamic instruction count"
+    },
+    {
+      "trace": "gate2_e1_nvfp4_p2_r01",
+      "experiment": "E1",
+      "precision": "nvfp4",
+      "family_tag": "fp4_quantize_named",
+      "kernel_count": 18504,
+      "time_union_ms": 25.10699,
+      "classification": "name-family evidence; not a logical-layer assignment or dynamic instruction count"
+    },
+    {
+      "trace": "gate2_e2_bf16_p2_r02",
+      "experiment": "E2",
+      "precision": "bf16",
+      "family_tag": "native_sm120_e2m1",
+      "kernel_count": 0,
+      "time_union_ms": 0.0,
+      "classification": "name-family evidence; not a logical-layer assignment or dynamic instruction count"
+    },
+    {
+      "trace": "gate2_e2_bf16_p2_r02",
+      "experiment": "E2",
+      "precision": "bf16",
+      "family_tag": "gemv_family",
+      "kernel_count": 0,
+      "time_union_ms": 0.0,
+      "classification": "name-family evidence; not a logical-layer assignment or dynamic instruction count"
+    },
+    {
+      "trace": "gate2_e2_bf16_p2_r02",
+      "experiment": "E2",
+      "precision": "bf16",
+      "family_tag": "wmma_family",
+      "kernel_count": 37121,
+      "time_union_ms": 2531.850223,
+      "classification": "name-family evidence; not a logical-layer assignment or dynamic instruction count"
+    },
+    {
+      "trace": "gate2_e2_bf16_p2_r02",
+      "experiment": "E2",
+      "precision": "bf16",
+      "family_tag": "fp4_quantize_named",
+      "kernel_count": 0,
+      "time_union_ms": 0.0,
+      "classification": "name-family evidence; not a logical-layer assignment or dynamic instruction count"
+    },
+    {
+      "trace": "gate2_e2_nvfp4_p2_r01",
+      "experiment": "E2",
+      "precision": "nvfp4",
+      "family_tag": "native_sm120_e2m1",
+      "kernel_count": 37008,
+      "time_union_ms": 1447.940326,
+      "classification": "name-family evidence; not a logical-layer assignment or dynamic instruction count"
+    },
+    {
+      "trace": "gate2_e2_nvfp4_p2_r01",
+      "experiment": "E2",
+      "precision": "nvfp4",
+      "family_tag": "gemv_family",
+      "kernel_count": 0,
+      "time_union_ms": 0.0,
+      "classification": "name-family evidence; not a logical-layer assignment or dynamic instruction count"
+    },
+    {
+      "trace": "gate2_e2_nvfp4_p2_r01",
+      "experiment": "E2",
+      "precision": "nvfp4",
+      "family_tag": "wmma_family",
+      "kernel_count": 257,
+      "time_union_ms": 190.674569,
+      "classification": "name-family evidence; not a logical-layer assignment or dynamic instruction count"
+    },
+    {
+      "trace": "gate2_e2_nvfp4_p2_r01",
+      "experiment": "E2",
+      "precision": "nvfp4",
+      "family_tag": "fp4_quantize_named",
+      "kernel_count": 18504,
+      "time_union_ms": 50.08062,
+      "classification": "name-family evidence; not a logical-layer assignment or dynamic instruction count"
+    }
+  ],
+  "resource_scope": "device-level time-weighted means; phase windows cover mapped model activity envelopes, excluding UNKNOWN activities",
+  "statistical_limit": "Within-process CI uses five runs, t(df=4), conditional independence assumption. Across-process N is reported separately; two sessions do not support a tight population CI."
+}

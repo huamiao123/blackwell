@@ -53,10 +53,16 @@ class Hooks:
         self.core=self.eng.engine_core.engine_core
         self.torch=torch;self.profile=profile;self.prompts=prompts;self.state=None
         self.local=threading.local();self.schedule_ids={};self.next_prompt=0
+        self.external_to_internal={}
         self.originals={};self.lock=threading.Lock()
 
     def mark(self,text):
         if self.profile:self.torch.cuda.nvtx.mark(text)
+
+    def resolve_id(self,rid):
+        if self.state and rid in self.state.requests:return rid
+        if rid in self.external_to_internal:return self.external_to_internal[rid]
+        raise RuntimeError('unregistered request ID: '+str(rid))
 
     @contextlib.contextmanager
     def nvtx(self,text):
@@ -82,6 +88,11 @@ class Hooks:
             if not isinstance(rid,str):raise RuntimeError('unknown engine request-id API')
             if self.next_prompt>=len(self.prompts):raise RuntimeError('unexpected request')
             self.state.enqueue(rid,self.prompts[self.next_prompt],before)
+            external=bound.get('request_id')
+            if not isinstance(external,str):raise RuntimeError('missing external request ID')
+            if external in self.external_to_internal:raise RuntimeError('duplicate external request ID')
+            self.external_to_internal[external]=rid
+            self.state.requests[rid]['external_request_id']=external
             self.next_prompt+=1
             self.mark('REQUEST_START|'+rid)
             return result
@@ -127,7 +138,8 @@ class Hooks:
             result=process(outputs,*args,**kwargs)
             now=time.perf_counter_ns()
             for rid,tokens in data:
-                if self.state.output(rid,tokens,now):self.mark('FIRST_TOKEN|'+rid)
+                internal=self.resolve_id(rid)
+                if self.state.output(internal,tokens,now):self.mark('FIRST_TOKEN|'+internal)
             return result
         def step_hook(*args,**kwargs):
             result=step(*args,**kwargs)
@@ -135,7 +147,8 @@ class Hooks:
                 now=time.perf_counter_ns()
                 for o in result:
                     if getattr(o,'finished',False):
-                        self.state.finish(o.request_id,now);self.mark('REQUEST_END|'+o.request_id)
+                        internal=self.resolve_id(o.request_id)
+                        self.state.finish(internal,now);self.mark('REQUEST_END|'+internal)
             return result
         self.originals=dict(add=add,schedule=schedule,execute=execute,process=process,replay=replay,step=step)
         eng.add_request=add_hook;core.scheduler.schedule=schedule_hook
@@ -184,12 +197,12 @@ def execute(config_path,run_id,profile,output):
             with hooks.nvtx('FULL_INFERENCE'):
                 start=time.perf_counter_ns()
                 state=TraceState(c['dataset_manifest_sha256'],start)
-                hooks.state=state;hooks.next_prompt=0;hooks.schedule_ids.clear()
+                hooks.state=state;hooks.next_prompt=0;hooks.schedule_ids.clear();hooks.external_to_internal.clear()
                 outputs=llm.generate(ps,SamplingParams(max_tokens=c['max_output_tokens'],temperature=c['temperature'],
                                       ignore_eos=c['ignore_eos'],seed=c['seed'],stop_token_ids=c['stop_token_ids']),use_tqdm=False)
                 end=time.perf_counter_ns()
                 for o in outputs:
-                    r=state.requests[o.request_id]
+                    r=state.requests[hooks.resolve_id(o.request_id)]
                     if r['output_token_ids']!=list(o.outputs[0].token_ids):raise RuntimeError('output instrumentation mismatch')
                     if r['finished_ns'] is None:raise RuntimeError('request completion hook missing')
                 hooks.state=None
@@ -207,6 +220,17 @@ def execute(config_path,run_id,profile,output):
             result['runs'].append(row)
             save(output,result,overwrite=trial>0)
             print('V41_TRIAL',run_id,trial,row['full_model_wall_ms'],'ms',flush=True)
+        result['invocation_status']='COMPLETED'
+        save(output,result,overwrite=True)
+    except BaseException as error:
+        current=locals().get('state')
+        failure=dict(schema='v4.1_failure',run_id=run_id,error=repr(error),config=c,
+                     code_sha256=result['code_sha256'],completed_runs=result['runs'],
+                     current_requests=current.requests if current else None,
+                     current_iterations=current.iterations if current else None,
+                     current_replays=current.replays if current else None)
+        save(out.with_name(out.stem+'_failure.json'),failure)
+        raise
     finally:
         hooks.restore();hooks.eng.engine_core.shutdown()
 

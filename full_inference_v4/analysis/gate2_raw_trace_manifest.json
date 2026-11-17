@@ -1,0 +1,98 @@
+[
+  {
+    "path": "raw/gate2_e1_bf16_p1_r01.nsys-rep",
+    "bytes": 1978744,
+    "sha256": "7ab439c1d5c55d3c2ca891c107b856331d466dd5d9d0a81c93bd233e4569b286",
+    "storage": "remote original, not committed to Git"
+  },
+  {
+    "path": "raw/gate2_e1_bf16_p2_r01.nsys-rep",
+    "bytes": 3615247,
+    "sha256": "ea43a964b640ef3bc5801eba44d6ff1870a6524f972004c3231855933d8c90fc",
+    "storage": "remote original, not committed to Git"
+  },
+  {
+    "path": "raw/gate2_e1_nvfp4_p1_r01.nsys-rep",
+    "bytes": 1764892,
+    "sha256": "0daec88674290d9d4f0cd62d70b00ff28b0d63a5f0e785b6a675ec07b31494fb",
+    "storage": "remote original, not committed to Git"
+  },
+  {
+    "path": "raw/gate2_e1_nvfp4_p2_r01.nsys-rep",
+    "bytes": 4968514,
+    "sha256": "04f5b0eff8e8574f3145a4006525ade594fa29b5d11c8f41c97ff5ae0c301d64",
+    "storage": "remote original, not committed to Git"
+  },
+  {
+    "path": "raw/gate2_e2_bf16_p1_r01.nsys-rep",
+    "bytes": 2342530,
+    "sha256": "62586d077260d66d773371c9f368ee432a92fdc61972c59f751740bd78478536",
+    "storage": "remote original, not committed to Git"
+  },
+  {
+    "path": "raw/gate2_e2_bf16_p2_r02.nsys-rep",
+    "bytes": 3605075,
+    "sha256": "e7b7f670811f397f4862566f12a8f75713f5325c46340b6f87b938d738ec0a3a",
+    "storage": "remote original, not committed to Git"
+  },
+  {
+    "path": "raw/gate2_e2_nvfp4_p1_r01.nsys-rep",
+    "bytes": 1880584,
+    "sha256": "eae8ea866a3a3064b97ef31ec6f6bb98e3fafbb3251a2248d778b88cc4f62b16",
+    "storage": "remote original, not committed to Git"
+  },
+  {
+    "path": "raw/gate2_e2_nvfp4_p2_r01.nsys-rep",
+    "bytes": 5007683,
+    "sha256": "c1062b1f7adba53ccbb9d4fbfe654e6ea3c2bae8abaa325428a86cde50369851",
+    "storage": "remote original, not committed to Git"
+  },
+  {
+    "path": "sqlite/gate2_e1_bf16_p1_r01.sqlite",
+    "bytes": 24223744,
+    "sha256": "db429143de784e44f83f1ed5b4caba7b518b2dc4c79487513aa311338e705e7d",
+    "storage": "remote original, not committed to Git"
+  },
+  {
+    "path": "sqlite/gate2_e1_bf16_p2_r01.sqlite",
+    "bytes": 12107776,
+    "sha256": "2b6d72ca321c1ad2dc43852a5a1f8f58811f200ab46d77eec4f7ca86fc84032d",
+    "storage": "remote original, not committed to Git"
+  },
+  {
+    "path": "sqlite/gate2_e1_nvfp4_p1_r01.sqlite",
+    "bytes": 16592896,
+    "sha256": "bf84e459d1bcf558ec20133ccda797d2ecfaf75a463963a9bd91826f370097aa",
+    "storage": "remote original, not committed to Git"
+  },
+  {
+    "path": "sqlite/gate2_e1_nvfp4_p2_r01.sqlite",
+    "bytes": 14893056,
+    "sha256": "74b87a620525f65765df8171a81278f72194955a302406d6e34e5a0ac2209ec4",
+    "storage": "remote original, not committed to Git"
+  },
+  {
+    "path": "sqlite/gate2_e2_bf16_p1_r01.sqlite",
+    "bytes": 36159488,
+    "sha256": "90454c5c51247ed7af4d194dfe9c5293bc281c90854044b74b64d87257795776",
+    "storage": "remote original, not committed to Git"
+  },
+  {
+    "path": "sqlite/gate2_e2_bf16_p2_r02.sqlite",
+    "bytes": 12324864,
+    "sha256": "d3fb4c69c035ce04f318e6e6abaea05e3a8d3ec99c2312ea8741eedd9d025778",
+    "storage": "remote original, not committed to Git"
+  },
+  {
+    "path": "sqlite/gate2_e2_nvfp4_p1_r01.sqlite",
+    "bytes": 19279872,
+    "sha256": "d6d1f44fda3b0897a4e418bcc6f566069dfad1a276c861067d6ce9c42c8c634e",
+    "storage": "remote original, not committed to Git"
+  },
+  {
+    "path": "sqlite/gate2_e2_nvfp4_p2_r01.sqlite",
+    "bytes": 14925824,
+    "sha256": "d68808d561b542062f245f45dcb5cbf0e6c4aca823ddda09d5578ec7791af010",
+    "storage": "remote original, not committed to Git"
+  }
+]

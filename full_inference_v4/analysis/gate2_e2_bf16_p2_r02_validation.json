@@ -1,0 +1,286 @@
+{
+  "file": "gate2_e2_bf16_p2_r02.sqlite",
+  "profile": "P2",
+  "experiment": "E2",
+  "precision": "bf16",
+  "gpu_identity": "VERIFIED_METADATA",
+  "kernel_count": 106420,
+  "graph_count": 0,
+  "unknown_stages": 2570,
+  "unknown_reasons": {
+    "UNVERIFIED": 2570
+  },
+  "kernel_families": [
+    [
+      "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8>(T1::Params)",
+      37121
+    ],
+    [
+      "void vllm::reshape_and_cache_flash_kernel<__nv_bfloat16, unsigned char, (vllm::Fp8KVCacheDataType)1>(const T1 *, const T1 *, T2 *, T2 *, const long *, long, long, long, long, long, int, int, int, const float *, const float *, int)",
+      9252
+    ],
+    [
+      "triton_red_fused_fused_add_rms_norm_0",
+      9252
+    ],
+    [
+      "triton_poi_fused_mul_silu_slice_1",
+      9252
+    ],
+    [
+      "triton_red_fused_fused_add_rms_norm_2",
+      9252
+    ],
+    [
+      "kernel_mha(unsigned int, float, const float *, Vec<__nv_bfloat16, (unsigned int)128> *, const Vec<__nv_bfloat16, (unsigned int)128> *, const float *, KVCacheList<(bool)1>, unsigned int, float, const float *, unsigned int, unsigned int, unsigned int, unsigned int *, void *)",
+      9216
+    ],
+    [
+      "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_3",
+      8995
+    ],
+    [
+      "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_4",
+      8995
+    ],
+    [
+      "void at::native::vectorized_elementwise_kernel<(int)4, at::native::FillFunctor<int>, std::array<char *, (unsigned long)1>, (bool)0>(int, T2, T3)",
+      514
+    ],
+    [
+      "void at::native::vectorized_elementwise_kernel<(int)4, at::native::FillFunctor<bool>, std::array<char *, (unsigned long)1>, (bool)0>(int, T2, T3)",
+      257
+    ],
+    [
+      "void <unnamed>::elementwise_kernel_with_index<int, at::native::arange_cuda_out(const c10::Scalar &, const c10::Scalar &, const c10::Scalar &, at::Tensor &)::[lambda() (instance 1)]::operator ()() const::[lambda() (instance 3)]::operator ()() const::[lambda(long) (instance 1)]>(T1, T2, function_traits<T2>::result_type *)",
+      257
+    ],
+    [
+      "_prepare_pos_seq_lens_kernel",
+      257
+    ],
+    [
+      "_combine_sampled_and_draft_tokens_kernel",
+      257
+    ],
+    [
+      "_gather_block_tables_kernel",
+      257
+    ],
+    [
+      "_compute_slot_mappings_kernel",
+      257
+    ],
+    [
+      "triton_red_fused__to_copy_embedding_rms_norm_0",
+      257
+    ],
+    [
+      "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_1",
+      257
+    ],
+    [
+      "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_2",
+      257
+    ],
+    [
+      "void at::native::vectorized_gather_kernel<(int)16, long>(char *, char *, T2 *, int, long, long, long, long, bool)",
+      257
+    ],
+    [
+      "void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::gpu_index_kernel<void at::native::index_kernel_impl<at::native::OpaqueType<(int)8>>(at::TensorIteratorBase &, c10::ArrayRef<long>, c10::ArrayRef<long>)::[lambda(char *, const char *, long) (instance 1)]>(at::TensorIteratorBase &, c10::ArrayRef<long>, c10::ArrayRef<long>, const T1 &, bool)::[lambda(int) (instance 1)]>(long, T3)",
+      257
+    ],
+    [
+      "void at::native::index_elementwise_kernel<(int)128, (int)4, void at::native::gpu_index_kernel<void at::native::index_kernel_impl<at::native::OpaqueType<(int)4>>(at::TensorIteratorBase &, c10::ArrayRef<long>, c10::ArrayRef<long>)::[lambda(char *, const char *, long) (instance 1)]>(at::TensorIteratorBase &, c10::ArrayRef<long>, c10::ArrayRef<long>, const T1 &, bool)::[lambda(int) (instance 1)]>(long, T3)",
+      257
+    ],
+    [
+      "_gumbel_sample_kernel",
+      257
+    ],
+    [
+      "void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at::native::ArgMaxOps<float>, unsigned int, long, (int)4, (int)4>>(T3)",
+      257
+    ],
+    [
+      "void at::native::_scatter_gather_elementwise_kernel<(int)128, (int)8, void at::native::_cuda_scatter_gather_internal_kernel<(bool)0, at::native::OpaqueType<(int)8>, long>::operator ()<at::native::TensorAssign>(at::TensorIterator &, long, long, long, const T1 &)::[lambda(int) (instance 1)]>(int, T3)",
+      257
+    ],
+    [
+      "_get_num_sampled_and_rejected_kernel",
+      257
+    ],
+    [
+      "_post_update_kernel",
+      257
+    ],
+    [
+      "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_64x256_32x4_tn_align8>(T1::Params)",
+      108
+    ],
+    [
+      "void flashinfer::BatchPrefillWithPagedKVCacheKernel<(bool)1, flashinfer::KernelTraits<(flashinfer::MaskMode)1, (unsigned int)128, (unsigned int)2, (unsigned int)2, (unsigned int)8, (unsigned int)8, (unsigned int)4, (unsigned int)1, (flashinfer::PosEncodingMode)0, __nv_bfloat16, __nv_fp8_e4m3, __nv_bfloat16, float, int, flashinfer::DefaultAttention<(bool)0, (bool)0, (bool)0, (bool)0>, (bool)1>, PagedParams>(T3)",
+      36
+    ],
+    [
+      "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x64_64x3_tn_align8>(T1::Params)",
+      36
+    ],
+    [
+      "_apply_write_kernel",
+      20
+    ],
+    [
+      "_prepare_prefill_inputs_kernel",
+      1
+    ],
+    [
+      "_copy_page_indices_kernel",
+      1
+    ]
+  ],
+  "sampling": null,
+  "source_timebase_metadata": [],
+  "diagnostics": [
+    {
+      "timestamp": -41676691728,
+      "timestampType": 1,
+      "source": 2,
+      "severity": 1,
+      "text": "Process was launched by the profiler, see /tmp/nvidia/nsight_systems/quadd_session_10838634/streams/pid_838648_stdout.log and stderr.log for program output",
+      "globalPid": 295545155354624
+    },
+    {
+      "timestamp": -41348048835,
+      "timestampType": 1,
+      "source": 1,
+      "severity": 1,
+      "text": "Common injection library initialized successfully.",
+      "globalPid": 295545155354624
+    },
+    {
+      "timestamp": -29855082674,
+      "timestampType": 1,
+      "source": 1,
+      "severity": 1,
+      "text": "Buffers holding CUDA trace data will be flushed on CudaProfilerStop() call. See --flush-on-cudaprofilerstop to control this behavior.",
+      "globalPid": 295545155354624
+    },
+    {
+      "timestamp": -29837701140,
+      "timestampType": 1,
+      "source": 1,
+      "severity": 1,
+      "text": "Loaded CUPTI library: /opt/nvidia/nsight-systems/2026.1.3/target-linux-x64/libcupti.so.13.3",
+      "globalPid": 295545155354624
+    },
+    {
+      "timestamp": -29630904483,
+      "timestampType": 1,
+      "source": 1,
+      "severity": 1,
+      "text": "Enabling trace for device graph launch",
+      "globalPid": 295545155354624
+    },
+    {
+      "timestamp": -29630892357,
+      "timestampType": 1,
+      "source": 1,
+      "severity": 1,
+      "text": "CUDA injection initialized successfully.",
+      "globalPid": 295545155354624
+    },
+    {
+      "timestamp": -14284571100,
+      "timestampType": 1,
+      "source": 1,
+      "severity": 1,
+      "text": "NVTX injection initialized successfully.",
+      "globalPid": 295545155354624
+    },
+    {
+      "timestamp": 0,
+      "timestampType": 1,
+      "source": 3,
+      "severity": 1,
+      "text": "Profiling has started.",
+      "globalPid": -144115188075855872
+    },
+    {
+      "timestamp": 39976756,
+      "timestampType": 1,
+      "source": 1,
+      "severity": 1,
+      "text": "Profiling started due to cudaProfilerStart API invoked in the application.",
+      "globalPid": 295545155354624
+    },
+    {
+      "timestamp": 276098230,
+      "timestampType": 2,
+      "source": 3,
+      "severity": 2,
+      "text": "Not all NVTX events might have been collected.",
+      "globalPid": 295545155354624
+    },
+    {
+      "timestamp": 276110132,
+      "timestampType": 2,
+      "source": 3,
+      "severity": 1,
+      "text": "Number of NVTX events collected: \t1056.",
+      "globalPid": 295545155354624
+    },
+    {
+      "timestamp": 276114417,
+      "timestampType": 2,
+      "source": 3,
+      "severity": 2,
+      "text": "Not all CUDA events might have been collected.",
+      "globalPid": 295545155354624
+    },
+    {
+      "timestamp": 276115255,
+      "timestampType": 2,
+      "source": 3,
+      "severity": 1,
+      "text": "Number of CUDA events collected: \t124658.",
+      "globalPid": 295545155354624
+    },
+    {
+      "timestamp": 4357053625,
+      "timestampType": 1,
+      "source": 3,
+      "severity": 1,
+      "text": "Profiling has stopped.",
+      "globalPid": -144115188075855872
+    },
+    {
+      "timestamp": 4357572890,
+      "timestampType": 1,
+      "source": 1,
+      "severity": 1,
+      "text": "Hardware tracing used for CUDA tracing.",
+      "globalPid": 295545155354624
+    },
+    {
+      "timestamp": 4363747785,
+      "timestampType": 1,
+      "source": 1,
+      "severity": 1,
+      "text": "Number of CUPTI events produced: \t129122, CUPTI buffers: 50.",
+      "globalPid": 295545155354624
+    },
+    {
+      "timestamp": 4953093124,
+      "timestampType": 1,
+      "source": 2,
+      "severity": 1,
+      "text": "S3EventHandler: S3 trace events were not found, not creating counters",
+      "globalPid": 281474976710656
+    }
+  ],
+  "full_ms": 4098.580503,
+  "replays": 256,
+  "stage_scope": "activity envelopes, not per-kernel utilization"
+}

@@ -1,0 +1,15 @@
+{
+  "time": "2026-11-17T17:59:52.134773+08:00",
+  "gpu_identity": "VERIFIED_METADATA",
+  "kernel_count": 4788,
+  "graph_count": 256,
+  "unknown_stages": 2570,
+  "metric_types": 25,
+  "metric_timestamp_count": 42327,
+  "median_interval_ns": 100007.0,
+  "missing_intervals": 0,
+  "cleaned_our_timed_out_cpu_analysis_pids": [
+    832656
+  ],
+  "note": "CPU aggregation timeout; original trace and workload completed successfully"
+}

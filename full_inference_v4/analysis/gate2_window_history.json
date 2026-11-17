@@ -1,0 +1,23 @@
+[
+  {
+    "enabled": false,
+    "gate": 2,
+    "reviewed_gates": [
+      0,
+      1
+    ],
+    "hostname": "ubuntu",
+    "gpu_uuid": "GPU-022c5f55-490e-ec54-3887-5f12510d273d",
+    "not_before": "2026-11-17T14:13:10.705385+08:00",
+    "expires_at": "2026-11-17T16:13:10.705385+08:00",
+    "allowed_configs": [
+      "E1_bf16",
+      "E1_nvfp4",
+      "E2_bf16",
+      "E2_nvfp4"
+    ],
+    "authorization_reference": "Current user: carefully inspect residual experiments; if none, begin. Two-hour ceiling imposed by operator, not unattended scheduling.",
+    "closed_at": "2026-11-17T14:24:40.459389+08:00",
+    "closed_reason": "Foreign GPU compute process appeared; no automatic wait/resume"
+  }
+]

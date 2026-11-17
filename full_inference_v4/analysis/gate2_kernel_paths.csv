@@ -1,0 +1,17 @@
+trace,experiment,precision,family_tag,kernel_count,time_union_ms,classification
+gate2_e1_bf16_p2_r01,E1,bf16,native_sm120_e2m1,0,0.0,name-family evidence; not a logical-layer assignment or dynamic instruction count
+gate2_e1_bf16_p2_r01,E1,bf16,gemv_family,37121,2386.514658,name-family evidence; not a logical-layer assignment or dynamic instruction count
+gate2_e1_bf16_p2_r01,E1,bf16,wmma_family,0,0.0,name-family evidence; not a logical-layer assignment or dynamic instruction count
+gate2_e1_bf16_p2_r01,E1,bf16,fp4_quantize_named,0,0.0,name-family evidence; not a logical-layer assignment or dynamic instruction count
+gate2_e1_nvfp4_p2_r01,E1,nvfp4,native_sm120_e2m1,37008,1330.421542,name-family evidence; not a logical-layer assignment or dynamic instruction count
+gate2_e1_nvfp4_p2_r01,E1,nvfp4,gemv_family,257,198.701958,name-family evidence; not a logical-layer assignment or dynamic instruction count
+gate2_e1_nvfp4_p2_r01,E1,nvfp4,wmma_family,0,0.0,name-family evidence; not a logical-layer assignment or dynamic instruction count
+gate2_e1_nvfp4_p2_r01,E1,nvfp4,fp4_quantize_named,18504,25.10699,name-family evidence; not a logical-layer assignment or dynamic instruction count
+gate2_e2_bf16_p2_r02,E2,bf16,native_sm120_e2m1,0,0.0,name-family evidence; not a logical-layer assignment or dynamic instruction count
+gate2_e2_bf16_p2_r02,E2,bf16,gemv_family,0,0.0,name-family evidence; not a logical-layer assignment or dynamic instruction count
+gate2_e2_bf16_p2_r02,E2,bf16,wmma_family,37121,2531.850223,name-family evidence; not a logical-layer assignment or dynamic instruction count
+gate2_e2_bf16_p2_r02,E2,bf16,fp4_quantize_named,0,0.0,name-family evidence; not a logical-layer assignment or dynamic instruction count
+gate2_e2_nvfp4_p2_r01,E2,nvfp4,native_sm120_e2m1,37008,1447.940326,name-family evidence; not a logical-layer assignment or dynamic instruction count
+gate2_e2_nvfp4_p2_r01,E2,nvfp4,gemv_family,0,0.0,name-family evidence; not a logical-layer assignment or dynamic instruction count
+gate2_e2_nvfp4_p2_r01,E2,nvfp4,wmma_family,257,190.674569,name-family evidence; not a logical-layer assignment or dynamic instruction count
+gate2_e2_nvfp4_p2_r01,E2,nvfp4,fp4_quantize_named,18504,50.08062,name-family evidence; not a logical-layer assignment or dynamic instruction count

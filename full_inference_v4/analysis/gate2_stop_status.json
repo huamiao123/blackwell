@@ -1,0 +1,8 @@
+{
+  "time": "2026-11-17T14:24:40.459389+08:00",
+  "gpu_who": "GPU 0  NVIDIA GeForce RTX 5090  mem 24474/32607 MiB  util 5%\n  pid 769577   ububtu        23752 MiB\n",
+  "window_closed": true,
+  "automatic_resume": false,
+  "status": "First model trial failed instrumentation; rerun blocked before workload by foreign GPU process",
+  "no_gpu_permits_remaining": true
+}

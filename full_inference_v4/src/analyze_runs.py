@@ -17,7 +17,7 @@ def analyze(root=ROOT):
     latency=[];iterations=[];paired=[]
     for f in sorted((root/'raw').glob('*.json')):
         d=load(f)
-        if d.get('schema')!='v4.1' or 'runs' not in d:continue
+        if d.get('schema')!='v4.1' or 'runs' not in d or d.get('invocation_status')!='COMPLETED':continue
         for run in d['runs']:
             for r in run['request_summary']:
                 latency.append(dict(source=f.name,precision=d['config']['precision'],experiment=d['config']['experiment'],

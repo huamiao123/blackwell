@@ -1,0 +1,4 @@
+stage,kernel_count,activity_union_ns,scope,measurement_status
+DECODE,103440,2345239452,stage activity envelope; graphs may contain internal gaps,UNVERIFIED
+PREFILL,410,162581616,stage activity envelope; graphs may contain internal gaps,UNVERIFIED
+UNKNOWN,2570,204796159,stage activity envelope; graphs may contain internal gaps,UNVERIFIED

@@ -1,0 +1,82 @@
+{
+  "time": "2026-11-17T18:07:51.064381+08:00",
+  "gpu_who": "GPU 0  NVIDIA GeForce RTX 5090  mem 714/32607 MiB  util 0%\n  (no compute processes)\n",
+  "controllers": [],
+  "window_closed": true,
+  "automatic_resume": false,
+  "gpu_permit_files": [],
+  "runs": [
+    {
+      "run_id": "gate2_e1_bf16_p0_r01",
+      "start": "2026-11-17T14:14:01.388679+08:00",
+      "end": "2026-11-17T14:14:54.850345+08:00",
+      "status": "STOPPED_OR_FAILED",
+      "error": "WORKLOAD_FAILED",
+      "gpu_workload_started": true
+    },
+    {
+      "run_id": "gate2_e1_bf16_p0_r02",
+      "start": "2026-11-17T14:22:05.427300+08:00",
+      "end": "2026-11-17T14:22:05.648484+08:00",
+      "status": "STOPPED_OR_FAILED",
+      "error": "GPU_BUSY_NO_RUN [769577]",
+      "gpu_workload_started": false
+    },
+    {
+      "run_id": "gate2_e1_bf16_p0_r03",
+      "start": "2026-11-17T17:44:24.336188+08:00",
+      "end": "2026-11-17T17:45:13.578229+08:00",
+      "status": "COMPLETED",
+      "error": null,
+      "gpu_workload_started": true
+    },
+    {
+      "run_id": "gate2_e1_nvfp4_p0_r01",
+      "start": "2026-11-17T17:47:07.922329+08:00",
+      "end": "2026-11-17T17:48:05.702439+08:00",
+      "status": "COMPLETED",
+      "error": null,
+      "gpu_workload_started": true
+    },
+    {
+      "run_id": "gate2_e2_bf16_p0_r01",
+      "start": "2026-11-17T17:49:29.564444+08:00",
+      "end": "2026-11-17T17:50:32.301305+08:00",
+      "status": "COMPLETED",
+      "error": null,
+      "gpu_workload_started": true
+    },
+    {
+      "run_id": "gate2_e2_bf16_p1_r01",
+      "start": "2026-11-17T17:54:30.459203+08:00",
+      "end": "2026-11-17T17:55:16.601963+08:00",
+      "status": "COMPLETED",
+      "error": null,
+      "gpu_workload_started": true
+    },
+    {
+      "run_id": "gate2_e2_bf16_p2_r01",
+      "start": "2026-11-17T18:04:23.965951+08:00",
+      "end": "2026-11-17T18:04:24.230418+08:00",
+      "status": "STOPPED_OR_FAILED",
+      "error": "AUTO_CONTROLLER_PRESENT_NO_RUN",
+      "gpu_workload_started": false
+    },
+    {
+      "run_id": "gate2_e2_nvfp4_p0_r01",
+      "start": "2026-11-17T17:52:32.579382+08:00",
+      "end": "2026-11-17T17:53:10.665857+08:00",
+      "status": "COMPLETED",
+      "error": null,
+      "gpu_workload_started": true
+    },
+    {
+      "run_id": "gate2_e2_nvfp4_p1_r01",
+      "start": "2026-11-17T18:02:13.212834+08:00",
+      "end": "2026-11-17T18:02:52.621986+08:00",
+      "status": "COMPLETED",
+      "error": null,
+      "gpu_workload_started": true
+    }
+  ]
+}
