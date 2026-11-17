@@ -1,0 +1,5 @@
+logical_op,layer_id,kernel_count,kernel_union_ms,kernel_p50_us,kernel_mean_us,grid_xyz,block_xyz,registers_per_thread,dynamic_shared_bytes,static_shared_bytes,scope
+qkv_proj,ALL,9216,180.14359,19.552,19.546830512152777,"[(1, 48, 1)]","[(384, 1, 1)]",[168],[88064],[0],one full-inference P2 diagnostic; per-kernel samples are not independent runs
+o_proj,ALL,9216,139.307562,14.976,15.115837890625,"[(1, 32, 1)]","[(384, 1, 1)]",[168],[88064],[0],one full-inference P2 diagnostic; per-kernel samples are not independent runs
+gate_up_proj,ALL,9216,590.863855,64.033,64.11283148871529,"[(1, 192, 1)]","[(384, 1, 1)]",[168],[88064],[0],one full-inference P2 diagnostic; per-kernel samples are not independent runs
+down_proj,ALL,9216,358.366529,38.625,38.88525705295139,"[(1, 32, 1)]","[(384, 1, 1)]",[168],[88064],[0],one full-inference P2 diagnostic; per-kernel samples are not independent runs

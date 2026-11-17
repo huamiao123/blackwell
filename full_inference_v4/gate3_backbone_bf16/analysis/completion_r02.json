@@ -1,0 +1,35 @@
+{
+  "time": "2026-11-17T22:27:28.332095+08:00",
+  "window_closed": true,
+  "gpu_who": "GPU 0  NVIDIA GeForce RTX 5090  mem 714/32607 MiB  util 0%\n  (no compute processes)\n",
+  "permit_files": [],
+  "own_processes": [],
+  "run_status": "COMPLETED",
+  "supervisor_status": "COMPLETED",
+  "supervisor_end": "2026-11-17T22:25:50.511884+08:00",
+  "model_wall_ms": 4106.821481,
+  "replays": 256,
+  "used_captures": [
+    {
+      "index": 150,
+      "matrix_nodes": 144,
+      "bindings": {
+        "EXACT_UNIQUE_MODULE_REFERENCE": 144
+      }
+    }
+  ],
+  "sqlite_check": {
+    "integrity": [
+      [
+        "ok"
+      ]
+    ],
+    "kernels": [
+      [
+        106420
+      ]
+    ]
+  },
+  "automatic_next_gate": false,
+  "connection_event": "SSH reset/timeouts; connectivity restored; remote state inspected before any retry"
+}

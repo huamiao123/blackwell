@@ -1,0 +1,19 @@
+{
+  "status": "PASSED_CPU_EXPORT_AND_REFERENCE_INTEGRITY",
+  "gpu_launched": false,
+  "cases": [
+    {
+      "precision": "nvfp4",
+      "original_json_sha256": "44a4d06ab4e0e509f86f704791919f236a3a4f327092ed613e31fba5f348f885",
+      "modules": 144,
+      "kernel_executions": 36864
+    },
+    {
+      "precision": "bf16",
+      "original_json_sha256": "03bb36dca6faf285f27f6f18b23f3b3865e734d6a8bdbeb0a76ecbadfad37ddc",
+      "modules": 144,
+      "kernel_executions": 36864
+    }
+  ],
+  "limits": "SQL/CUPTI joins were validated on the server; this release check verifies exported metadata and byte integrity, not new GPU measurements"
+}

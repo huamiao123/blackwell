@@ -1,0 +1,4 @@
+__pycache__/
+configs/gpu_window.json
+analysis/*_activities.json
+analysis/*_kernel_catalog.csv

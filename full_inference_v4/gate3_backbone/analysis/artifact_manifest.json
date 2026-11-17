@@ -1,0 +1,282 @@
+{
+  "scope": "Gate-3 E2 Decode paired projection diagnostics; prior releases unchanged",
+  "baseline_commit": "6e202493903fe1116f4296a4f5eeb86ec7c2f4c6",
+  "accepted_runs": [
+    "gate3_bb_e2_nvfp4_p2_r01",
+    "gate3_bb_e2_bf16_p2_r02"
+  ],
+  "excluded_attempt": "gate3_bb_e2_bf16_p2_r01",
+  "exclusions": "this inventory, original traces/databases/uncompressed large JSON, GPU window files and caches",
+  "artifacts": [
+    {
+      "path": "gate3_backbone/.gitignore",
+      "bytes": 94,
+      "sha256": "7d9856cc72056ac3e6a1baea7b91a90cb0036b785ef34dcaf3346096fbd9b6a3"
+    },
+    {
+      "path": "gate3_backbone/README.md",
+      "bytes": 2093,
+      "sha256": "9b0feeb22a074063ab0c3a57e4a0a9fb9b6989ee549a3e3314798bd994f5a308"
+    },
+    {
+      "path": "gate3_backbone/analysis/api_cpu_check.json",
+      "bytes": 128,
+      "sha256": "0308a02c32b17c1b76ed4fbb661c65c44d0c8daec6651665227cccafde4a340f"
+    },
+    {
+      "path": "gate3_backbone/analysis/attributed_activities.json.gz",
+      "bytes": 11845120,
+      "sha256": "f0e6c88c2f94531f6098d8f6a863f9f40e8c4760c5d9a88ff0dbb2e0981b6fd6"
+    },
+    {
+      "path": "gate3_backbone/analysis/completion_state.json",
+      "bytes": 38194,
+      "sha256": "8541ee244b6c0ed4728e07afa5631902113cf39651614e6cd2dff979bfa9ce86"
+    },
+    {
+      "path": "gate3_backbone/analysis/gate3_bb_e2_nvfp4_p2_r01_stage_summary.csv",
+      "bytes": 343,
+      "sha256": "ba9bdd34e7b10a650b74b5bcfd03cbbc4e10ff44f8467af626d1cd0a23ca3e28"
+    },
+    {
+      "path": "gate3_backbone/analysis/gate3_bb_e2_nvfp4_p2_r01_timeline.json",
+      "bytes": 9609,
+      "sha256": "0e7f60ca390f70a13e7e8a2604c71414bfdd404da3cfd50e7597cf2029f0350c"
+    },
+    {
+      "path": "gate3_backbone/analysis/graph_operator_mapping.csv",
+      "bytes": 61134,
+      "sha256": "c9c3a4d4f0560606f8769d393d826435035ca3df40345b74d260d02a445b787f"
+    },
+    {
+      "path": "gate3_backbone/analysis/layer_operator_timing.csv",
+      "bytes": 25369,
+      "sha256": "f045b24df2afd630375ded956c6a5854e7560d331655e378616fb7b104b497c1"
+    },
+    {
+      "path": "gate3_backbone/analysis/operator_timing.csv",
+      "bytes": 896,
+      "sha256": "8c59f2cc6c3fdca6d1eeaefa0253bb8b297b57d1d6c966bce1162a40a71b22a5"
+    },
+    {
+      "path": "gate3_backbone/analysis/precision_comparison.csv",
+      "bytes": 1893,
+      "sha256": "ad81cb0a1b546770b8a2d963e41cf9727c8a09647c24068ec8c01444d57a0b2f"
+    },
+    {
+      "path": "gate3_backbone/analysis/raw_trace_manifest.json",
+      "bytes": 643,
+      "sha256": "8ab6cffda77126517995755084ce2fe88f478d62a329b93ec5deec28584f4ae2"
+    },
+    {
+      "path": "gate3_backbone/analysis/release_validation.json",
+      "bytes": 641,
+      "sha256": "57655a72e25bd7ff1fd88501f0d26be77ae911b14c4af972a46cbd6710944d6e"
+    },
+    {
+      "path": "gate3_backbone/analysis/validation.json",
+      "bytes": 4454,
+      "sha256": "7a052882a328d162e80cf6d2dc540f9c60f6721926106c8784fc713b71b4bb83"
+    },
+    {
+      "path": "gate3_backbone/figures/projection_resources.png",
+      "bytes": 137493,
+      "sha256": "c72bef5022afda2bbedba6ce2aa48411c81c17a34f42b1b9393e834df202a003"
+    },
+    {
+      "path": "gate3_backbone/paired_report.md",
+      "bytes": 8072,
+      "sha256": "7b2e75068031c6e4ac780cdaa220ca653cbbc0984312f59ffc93ea31584092e5"
+    },
+    {
+      "path": "gate3_backbone/src/analyze_backbone.py",
+      "bytes": 7963,
+      "sha256": "b658d098d18efccae2c98126add2133e6423b521c4a7db14655cddaf3c83beee"
+    },
+    {
+      "path": "gate3_backbone/src/backbone_worker.py",
+      "bytes": 2483,
+      "sha256": "db509d2ff436de1203a6054e3b56313a720065501f01ff686f9bea79982c9286"
+    },
+    {
+      "path": "gate3_backbone/src/graph_binding.py",
+      "bytes": 5668,
+      "sha256": "9693579366b7103f0cb16a9d0e3d250ae5fe273f1bd9d25f268a5dea949f6af6"
+    },
+    {
+      "path": "gate3_backbone/src/run_backbone.py",
+      "bytes": 1021,
+      "sha256": "52f46fcbe3cbf983bb5bade4b46d7d612a5ceb33a19be3bbe5f14f71bb35e353"
+    },
+    {
+      "path": "gate3_backbone/tests/test_binding_cpu.py",
+      "bytes": 1366,
+      "sha256": "d55a0f617234bd2ef56e505a5018ad7ea9b0f980f04a4e63831a79e51eb8ea39"
+    },
+    {
+      "path": "gate3_backbone/tools/report_and_plot.py",
+      "bytes": 12159,
+      "sha256": "87ec6dd7338ff87362107c2ea9c0da902b0253cb5d8e8834eea8f6b78bf10c9c"
+    },
+    {
+      "path": "gate3_backbone/tools/validate_release.py",
+      "bytes": 3076,
+      "sha256": "27c355681dc3b54f1e156f82bbf2fed064c63ba2ab6aff747c9bc5947f1e405f"
+    },
+    {
+      "path": "gate3_backbone_bf16/.gitignore",
+      "bytes": 94,
+      "sha256": "7d9856cc72056ac3e6a1baea7b91a90cb0036b785ef34dcaf3346096fbd9b6a3"
+    },
+    {
+      "path": "gate3_backbone_bf16/README.md",
+      "bytes": 1173,
+      "sha256": "4451b0dfc89cd7a07292724aa665a3ee17b460aebfcd3019e9383cb933308936"
+    },
+    {
+      "path": "gate3_backbone_bf16/analysis/api_cpu_check.json",
+      "bytes": 128,
+      "sha256": "0308a02c32b17c1b76ed4fbb661c65c44d0c8daec6651665227cccafde4a340f"
+    },
+    {
+      "path": "gate3_backbone_bf16/analysis/attributed_activities.json.gz",
+      "bytes": 4158354,
+      "sha256": "a9443d847edb1362ef2e6be839a06d295221b6270a6e0a01b4d11c93afd16772"
+    },
+    {
+      "path": "gate3_backbone_bf16/analysis/completion_r02.json",
+      "bytes": 824,
+      "sha256": "dc1d28461bb728b005cdf087653e5441406328759c96a7f46001421c3d60dea3"
+    },
+    {
+      "path": "gate3_backbone_bf16/analysis/completion_state.json",
+      "bytes": 569,
+      "sha256": "7465e6c751ee4c35e338d2a7c937a40da0e1cc44c04bf0331b0b90ada7a38830"
+    },
+    {
+      "path": "gate3_backbone_bf16/analysis/failed_r01_source.json",
+      "bytes": 275,
+      "sha256": "c714a9019432a960cd8640cb64dd85372bd9739ed6921a66014f74ea628d1151"
+    },
+    {
+      "path": "gate3_backbone_bf16/analysis/gate3_bb_e2_bf16_p2_r02_stage_summary.csv",
+      "bytes": 344,
+      "sha256": "7649a43ebf33744ccbb84de3a402146079f2e40fdc4bc595fc3d315462b65ceb"
+    },
+    {
+      "path": "gate3_backbone_bf16/analysis/gate3_bb_e2_bf16_p2_r02_timeline.json",
+      "bytes": 9571,
+      "sha256": "1857757463b1dbe6b0769600df56fef485c1240125a78d954394f8bc58c22d14"
+    },
+    {
+      "path": "gate3_backbone_bf16/analysis/graph_operator_mapping.csv",
+      "bytes": 34781,
+      "sha256": "c952aab5ffad56a105c7a36e6de6e6fbf8ac341e75a780ace87920acec8b5a2f"
+    },
+    {
+      "path": "gate3_backbone_bf16/analysis/layer_operator_timing.csv",
+      "bytes": 25302,
+      "sha256": "e1808204592aeae1cc5964eb9dc234ef57a19e7d03f8b1be436dab15753460e0"
+    },
+    {
+      "path": "gate3_backbone_bf16/analysis/operator_timing.csv",
+      "bytes": 894,
+      "sha256": "4e8b0d897cf4bf2e8426c9a82b87d86a080f3c343b5b3f42487e0e9ca7caae33"
+    },
+    {
+      "path": "gate3_backbone_bf16/analysis/raw_trace_manifest.json",
+      "bytes": 639,
+      "sha256": "c5d2f80c4a0ff7471ab6d7acf04fbd50c39bb1ae56e1e2f7b45ba31a09801430"
+    },
+    {
+      "path": "gate3_backbone_bf16/analysis/validation.json",
+      "bytes": 4463,
+      "sha256": "da4c3d19172e9ae10f7e92bbf8b3f4865f24e9a7ccc0303e152aab9dcaa6de0e"
+    },
+    {
+      "path": "gate3_backbone_bf16/src/analyze_bf16.py",
+      "bytes": 8281,
+      "sha256": "cec086da1e8ad029940e4ae29109debea3a5864985ae1657893dd4992c3ff0af"
+    },
+    {
+      "path": "gate3_backbone_bf16/src/archive/bf16_observer_r01.py",
+      "bytes": 3141,
+      "sha256": "f5674c18485774c4715fb8002645fd5099203a2341de71b4211d953a88255a1c"
+    },
+    {
+      "path": "gate3_backbone_bf16/src/bf16_observer.py",
+      "bytes": 3141,
+      "sha256": "5a25b2090d5c8bce70a6c4003970e173b3a35b72db041e4c6bf83335d7b05a70"
+    },
+    {
+      "path": "gate3_backbone_bf16/src/bf16_worker.py",
+      "bytes": 856,
+      "sha256": "56c5f7d7bb9d3b95882e52f6c78510c9bf8647d12b7565f6e69ff162cc1d8927"
+    },
+    {
+      "path": "gate3_backbone_bf16/src/run_bf16.py",
+      "bytes": 2020,
+      "sha256": "61c3d1459f443fe709f193f06f2f4b651ad2bdabc3007ed5ba30a300dcf1442d"
+    },
+    {
+      "path": "gate3_backbone_bf16/tests/test_observer_cpu.py",
+      "bytes": 1592,
+      "sha256": "7d7c15fed26e50407640410789fbc04d8d694216fa5c6ac85efbd46ff696eda8"
+    },
+    {
+      "path": "gate3_backbone_bf16/tests/test_scope_cpu.py",
+      "bytes": 1107,
+      "sha256": "c43c9b9dcd108efc01c6154b1463700f0ecf377f4be50199c2072e834641ccaa"
+    },
+    {
+      "path": "logs/gate3_bb_e2_bf16_p2_r01.log",
+      "bytes": 15090,
+      "sha256": "26022ecebc2d7affee6304931c991a7c0f711aeb6b75969685e1488c3a2dd253"
+    },
+    {
+      "path": "logs/gate3_bb_e2_bf16_p2_r01_supervision.json",
+      "bytes": 270251,
+      "sha256": "8a5777efe0e3f447a41a9c0b4057c77ffdd34aa6291ffedfc5a537b00ddf6455"
+    },
+    {
+      "path": "logs/gate3_bb_e2_bf16_p2_r02.log",
+      "bytes": 15118,
+      "sha256": "3c4b55f0d5bbf4d551b9b1b28c34084329ca6c71108a12288edf8c2ebcd3e4d1"
+    },
+    {
+      "path": "logs/gate3_bb_e2_bf16_p2_r02_export.log",
+      "bytes": 8128,
+      "sha256": "b4031e9c4d54cd8511c7afe13fb9dc6e601701a91e0622cca1137b9f05323f14"
+    },
+    {
+      "path": "logs/gate3_bb_e2_bf16_p2_r02_supervision.json",
+      "bytes": 330394,
+      "sha256": "34b9384a9fdf8131b7896b75f49d32bb5c90abc053f8055f71347a5d4c1c8c14"
+    },
+    {
+      "path": "logs/gate3_bb_e2_nvfp4_p2_r01.log",
+      "bytes": 29458,
+      "sha256": "02d5114ea782d6149243f9c5b534b2f06afcb2d58ffcb00555dc434b504d53b6"
+    },
+    {
+      "path": "logs/gate3_bb_e2_nvfp4_p2_r01_export.log",
+      "bytes": 8128,
+      "sha256": "c3da42220d2805377b40a18b6fd8a4fee10f41cc543ebe3116641491dbc0e9bb"
+    },
+    {
+      "path": "logs/gate3_bb_e2_nvfp4_p2_r01_supervision.json",
+      "bytes": 255614,
+      "sha256": "84c46737ec9e48e13e7d34a5ffdb36b51722a0d12fbf6e5b6f45b18798d8db4e"
+    },
+    {
+      "path": "raw/gate3_bb_e2_bf16_p2_r02.json.gz",
+      "bytes": 169540,
+      "sha256": "a43299b222c5b32f68ac60f91a5960f713887ef6f7950e58370d6b59d41ff7b2"
+    },
+    {
+      "path": "raw/gate3_bb_e2_nvfp4_p2_r01.json.gz",
+      "bytes": 463569,
+      "sha256": "79059d29e1e166d07ea04bd766f32940cf915dce2e44645b03bb9483853c0d56"
+    }
+  ]
+}

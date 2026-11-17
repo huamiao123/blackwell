@@ -1,0 +1,20 @@
+[
+  {
+    "path": "raw/gate3_bb_e2_nvfp4_p2_r01.json",
+    "bytes": 13847894,
+    "sha256": "44a4d06ab4e0e509f86f704791919f236a3a4f327092ed613e31fba5f348f885",
+    "storage": "remote original, not committed"
+  },
+  {
+    "path": "raw/gate3_bb_e2_nvfp4_p2_r01.nsys-rep",
+    "bytes": 4991610,
+    "sha256": "ee4bbf40292fe571ff12fc3430f720635d2468b201755aeb86617368a95b7dd6",
+    "storage": "remote original, not committed"
+  },
+  {
+    "path": "sqlite/gate3_bb_e2_nvfp4_p2_r01.sqlite",
+    "bytes": 14999552,
+    "sha256": "ed010d05eb724e55b8df32ff73ec4a1966d703c31444d151c946f1b87a328a44",
+    "storage": "remote original, not committed"
+  }
+]

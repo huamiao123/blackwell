@@ -1,0 +1,7 @@
+{
+  "run_id": "gate3_bb_e2_bf16_p2_r01",
+  "observer_sha256": "f5674c18485774c4715fb8002645fd5099203a2341de71b4211d953a88255a1c",
+  "archive": "src/archive/bf16_observer_r01.py",
+  "status": "FAILED_NO_MEASURED_TRACE",
+  "reason": "collector matrix_kernels schema mismatch"
+}

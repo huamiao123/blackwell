@@ -1,0 +1,9 @@
+precision,logical_op,actual_kernel_calls,kernel_union_ms,p2_full_window_ms,share_of_own_p2_full_window,grid_ctas,threads_per_cta,registers_per_thread,registers_times_threads_lower_bound,shared_bytes_per_cta,evidence,scope
+bf16,qkv_proj,9216,300.165291,4106.893515,0.07308816016380207,384,32,124,3968,16896,actual module tensor reference + CUDA tools ID,core GEMM only; separate P2 capture; not P0 or full logical-operator chain
+bf16,o_proj,9216,220.496564,4106.893515,0.053689379379976455,256,32,124,3968,16896,actual module tensor reference + CUDA tools ID,core GEMM only; separate P2 capture; not P0 or full logical-operator chain
+bf16,gate_up_proj,9216,1128.323611,4106.893515,0.27473894973875407,1536,32,124,3968,16896,actual module tensor reference + CUDA tools ID,core GEMM only; separate P2 capture; not P0 or full logical-operator chain
+bf16,down_proj,9216,691.68166,4106.893515,0.1684196723079634,256,32,124,3968,16896,actual module tensor reference + CUDA tools ID,core GEMM only; separate P2 capture; not P0 or full logical-operator chain
+nvfp4,qkv_proj,9216,180.14359,2160.585446,0.08337721164118218,48,384,168,64512,88064,actual module tensor reference + CUDA tools ID,core GEMM only; separate P2 capture; not P0 or full logical-operator chain
+nvfp4,o_proj,9216,139.307562,2160.585446,0.06447676589597835,32,384,168,64512,88064,actual module tensor reference + CUDA tools ID,core GEMM only; separate P2 capture; not P0 or full logical-operator chain
+nvfp4,gate_up_proj,9216,590.863855,2160.585446,0.27347395868739915,192,384,168,64512,88064,actual module tensor reference + CUDA tools ID,core GEMM only; separate P2 capture; not P0 or full logical-operator chain
+nvfp4,down_proj,9216,358.366529,2160.585446,0.1658654739452503,32,384,168,64512,88064,actual module tensor reference + CUDA tools ID,core GEMM only; separate P2 capture; not P0 or full logical-operator chain

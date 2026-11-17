@@ -1,6 +1,21 @@
 # blackwell — RTX 5090 (SM120) BF16 vs native NVFP4 resource study
 
-## 最新阶段：Gate 3 首项算子归因（2026-11-17）
+## 最新阶段：Gate 3 E2 Decode投影与Launch资源对照（2026-11-17）
+
+NVFP4和BF16各补采一份完整推理Node Trace，通过实际模块权重引用、Graph对象与CUDA tools ID，
+各自映射36层四类投影、共36864次Decode主GEMM。两种精度的Kernel构成分别与Gate 2一致。
+
+FP4的CTA数为BF16的八分之一，但每CTA从32线程/16.5 KiB Shared Memory，变为
+384线程/86 KiB；寄存器×线程的每CTA需求下界从3968变为64512。
+这说明需要区分同SM共驻和其他SM执行，**尚未证明额外计算可被有效利用**。
+
+- [配对报告、资源图与证据限制](full_inference_v4/gate3_backbone/paired_report.md)
+- [逐算子资源与时间表](full_inference_v4/gate3_backbone/analysis/precision_comparison.csv)
+
+本轮GPU已释放，窗口关闭。Prefill、Attention、完整融合链等Gate 3内容仍待补齐；
+没有开展NCU、并发探针或真实有用计算验证。
+
+## 前一阶段：Gate 3 首项算子归因（2026-11-17）
 
 在同一E2 NVFP4完整推理负载中补采一份Node Trace，给实际V2 Model Runner的
 采样与LM Head路径增加标记。新Trace原规则下的2570个UNKNOWN Kernel均已关联
