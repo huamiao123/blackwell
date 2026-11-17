@@ -1,0 +1,11 @@
+{
+  "enabled": false,
+  "hostname": "REQUIRES_EXPLICIT_WINDOW",
+  "allowed_tasks": [
+    "gate4_residency"
+  ],
+  "not_before": null,
+  "expires_at": null,
+  "authorization_reference": null,
+  "note": "Example only; no implicit permission and no polling"
+}

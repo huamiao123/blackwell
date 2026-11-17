@@ -1,0 +1,142 @@
+{
+  "schema": 1,
+  "layer_selection_reason": "middle layer fixed before new experiments",
+  "cases": [
+    {
+      "case_id": "nvfp4_qkv_proj",
+      "precision": "nvfp4",
+      "operator": "qkv_proj",
+      "layer": 18,
+      "module": "model.layers.18.self_attn.qkv_proj",
+      "historical_graph_id": 452,
+      "historical_tools_id": 1941325218046,
+      "historical_node_id": 254,
+      "grid": [
+        1,
+        48,
+        1
+      ],
+      "block": [
+        384,
+        1,
+        1
+      ],
+      "parameter_sha256": "5621cbe7932b8beb80f5355a1b3a7009e8789a1fa001fc86747ebe3ac20a5c8a",
+      "cta": {
+        "precision": "nvfp4",
+        "logical_op": "qkv_proj",
+        "threads": 384,
+        "registers_per_thread": 168,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 88064,
+        "grid_ctas": 48,
+        "source": "gate3_backbone/analysis/operator_timing.csv",
+        "source_sha256": "8c59f2cc6c3fdca6d1eeaefa0253bb8b297b57d1d6c966bce1162a40a71b22a5"
+      },
+      "address_scope": "historical identity only: never load historical device addresses into a new process",
+      "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+    },
+    {
+      "case_id": "nvfp4_gate_up_proj",
+      "precision": "nvfp4",
+      "operator": "gate_up_proj",
+      "layer": 18,
+      "module": "model.layers.18.mlp.gate_up_proj",
+      "historical_graph_id": 452,
+      "historical_tools_id": 1941325218055,
+      "historical_node_id": 263,
+      "grid": [
+        1,
+        192,
+        1
+      ],
+      "block": [
+        384,
+        1,
+        1
+      ],
+      "parameter_sha256": "66d67e9754235537a10129c326589fabd131d9e8b676e20835d2fd5873c0f1fa",
+      "cta": {
+        "precision": "nvfp4",
+        "logical_op": "gate_up_proj",
+        "threads": 384,
+        "registers_per_thread": 168,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 88064,
+        "grid_ctas": 192,
+        "source": "gate3_backbone/analysis/operator_timing.csv",
+        "source_sha256": "8c59f2cc6c3fdca6d1eeaefa0253bb8b297b57d1d6c966bce1162a40a71b22a5"
+      },
+      "address_scope": "historical identity only: never load historical device addresses into a new process",
+      "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+    },
+    {
+      "case_id": "bf16_qkv_proj",
+      "precision": "bf16",
+      "operator": "qkv_proj",
+      "layer": 18,
+      "module": "model.layers.18.self_attn.qkv_proj",
+      "historical_graph_id": 452,
+      "historical_tools_id": 1941325217991,
+      "historical_node_id": 199,
+      "grid": [
+        8,
+        48,
+        1
+      ],
+      "block": [
+        32,
+        1,
+        1
+      ],
+      "parameter_sha256": "a706d2f93455842bee1c10dd720468bc74d1f2199b4d24c8fd60ccc757779c79",
+      "cta": {
+        "precision": "bf16",
+        "logical_op": "qkv_proj",
+        "threads": 32,
+        "registers_per_thread": 124,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 16896,
+        "grid_ctas": 384,
+        "source": "gate3_backbone_bf16/analysis/operator_timing.csv",
+        "source_sha256": "4e8b0d897cf4bf2e8426c9a82b87d86a080f3c343b5b3f42487e0e9ca7caae33"
+      },
+      "address_scope": "historical identity only: never load historical device addresses into a new process",
+      "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+    },
+    {
+      "case_id": "bf16_gate_up_proj",
+      "precision": "bf16",
+      "operator": "gate_up_proj",
+      "layer": 18,
+      "module": "model.layers.18.mlp.gate_up_proj",
+      "historical_graph_id": 452,
+      "historical_tools_id": 1941325217998,
+      "historical_node_id": 206,
+      "grid": [
+        8,
+        192,
+        1
+      ],
+      "block": [
+        32,
+        1,
+        1
+      ],
+      "parameter_sha256": "e5650a3d3ae441eca602a5680d051de707fc9045dc98a551af1636606eceaa20",
+      "cta": {
+        "precision": "bf16",
+        "logical_op": "gate_up_proj",
+        "threads": 32,
+        "registers_per_thread": 124,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 16896,
+        "grid_ctas": 1536,
+        "source": "gate3_backbone_bf16/analysis/operator_timing.csv",
+        "source_sha256": "4e8b0d897cf4bf2e8426c9a82b87d86a080f3c343b5b3f42487e0e9ca7caae33"
+      },
+      "address_scope": "historical identity only: never load historical device addresses into a new process",
+      "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+    }
+  ]
+}

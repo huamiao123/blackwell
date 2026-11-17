@@ -1,0 +1,19 @@
+{
+  "sm_count": 170,
+  "registers_per_sm": 65536,
+  "shared_per_sm": 102400,
+  "warp_size": 32,
+  "warps_per_sm": 48,
+  "ctas_per_sm": 24,
+  "max_threads_per_block": 1024,
+  "registers_per_block": 65536,
+  "shared_optin_per_block": 101376,
+  "l2_bytes": 100663296,
+  "uuid": "022c5f55-490e-ec54-3887-5f12510d273d",
+  "threads_per_sm": 1536,
+  "threads_per_sm_source": "derived from Gate-3 warp_size × maxWarpsPerSm, not a live device query",
+  "register_allocation_granularity": "UNAVAILABLE_NOT_QUERIED",
+  "shared_allocation_granularity": "UNAVAILABLE_NOT_QUERIED",
+  "source": "gate3_backbone/analysis/validation.json:gpu_inventory[0]",
+  "source_sha256": "7a052882a328d162e80cf6d2dc540f9c60f6721926106c8784fc713b71b4bb83"
+}

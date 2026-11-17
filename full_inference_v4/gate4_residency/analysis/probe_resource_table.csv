@@ -1,0 +1,5 @@
+symbol,probe_type,variant,threads,registers_per_thread,static_shared_bytes,dynamic_shared_bytes,actual_dynamic_shared,binary_sha256,scope
+fp32_light,fp32_fma,light,32,22,1024,0,UNAVAILABLE_NOT_LAUNCHED,1daee1dd84515740d4e2e05d16634e708532d3f166b8e28397c058035a7c36e7,offline compiler metadata + planned launch; GPU attrs/correctness not verified
+fp32_heavy,fp32_fma,heavy,128,32,1024,32768,UNAVAILABLE_NOT_LAUNCHED,1daee1dd84515740d4e2e05d16634e708532d3f166b8e28397c058035a7c36e7,offline compiler metadata + planned launch; GPU attrs/correctness not verified
+tensor_light,bf16_mma,light,32,43,1024,1024,UNAVAILABLE_NOT_LAUNCHED,1daee1dd84515740d4e2e05d16634e708532d3f166b8e28397c058035a7c36e7,offline compiler metadata + planned launch; GPU attrs/correctness not verified
+tensor_heavy,bf16_mma,heavy,128,40,1024,32768,UNAVAILABLE_NOT_LAUNCHED,1daee1dd84515740d4e2e05d16634e708532d3f166b8e28397c058035a7c36e7,offline compiler metadata + planned launch; GPU attrs/correctness not verified

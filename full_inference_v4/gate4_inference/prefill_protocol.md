@@ -1,0 +1,9 @@
+# Prefill注入协议
+
+从真实Scheduler行识别scheduled_prefill_tokens与active_request_count。Probe或有用任务输入已经准备，生产Event已记录后，才可向独立Stream提交。记录CPU提交、GPU首Kernel开始、结束及与真实Prefill Kernel的交集。
+
+`stage_injection.py`接收实际调度行和readiness；CPU标签只决定“尝试注入”，GPU进入目标阶段状态始终UNVERIFIED直到P2确认。不能把提交在Prefill CPU区间内当成GPU执行在Prefill。
+
+主要指标为实际Prefill Tokens、真实GPU Prefill窗口、请求TTFT、吞吐、A损失和B完成量。若该Iteration同时有Decode Token，必须记MIXED并分开解释。异步CPU/GPU区间不直接等同，不在Prefill/Decode之间额外插全设备同步。
+
+当前只有契约与CPU测试，无活vLLM注入验证。

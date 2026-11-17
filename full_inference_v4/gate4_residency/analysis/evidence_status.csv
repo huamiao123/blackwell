@@ -1,0 +1,7 @@
+subject,status,scope,evidence
+live_occupancy_api,UNVERIFIED,NO_NEW_GPU_EXECUTION,CPU preparation only
+actual_kernel_overlap,UNVERIFIED,NO_NEW_GPU_EXECUTION,CPU preparation only
+actual_mixed_cta_residency,UNVERIFIED,NO_NEW_GPU_EXECUTION,CPU preparation only
+direct_same_sm_mapping,UNVERIFIED,NO_NEW_GPU_EXECUTION,CPU preparation only
+primary_interference,UNVERIFIED,NO_NEW_GPU_EXECUTION,CPU preparation only
+probe_throughput,UNVERIFIED,NO_NEW_GPU_EXECUTION,CPU preparation only

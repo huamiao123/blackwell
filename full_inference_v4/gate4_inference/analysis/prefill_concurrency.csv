@@ -1,0 +1,1 @@
+run_id,precision,paired_block,mode,prefill_tokens,prefill_latency_ns,ttft_ns,auxiliary_units,overlap_ns,evidence_status

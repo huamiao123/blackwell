@@ -1,0 +1,22 @@
+{
+  "task": "gate4_spatial",
+  "review_status": "CPU_REVIEW_PENDING",
+  "gpu_authorized": false,
+  "auto_next_gate": false,
+  "idle_polling": false,
+  "required": [
+    "human review",
+    "bounded user GPU window",
+    "existing supervisor integration",
+    "GPU correctness before concurrency"
+  ],
+  "prerequisites": {
+    "live_node_identity": "UNVERIFIED",
+    "safe_input_buffer_contract": "UNVERIFIED",
+    "output_reference": "UNVERIFIED",
+    "cache_protocol": "UNVERIFIED",
+    "probe_gpu_correctness": "UNVERIFIED",
+    "same_context_streams": "UNVERIFIED",
+    "non_overlap_control_verified": "UNVERIFIED"
+  }
+}

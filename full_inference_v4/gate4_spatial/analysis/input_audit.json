@@ -1,0 +1,172 @@
+{
+  "files": [
+    {
+      "path": "gate2_report.md",
+      "sha256": "81e7d7df4af1be391c88ef79021bec0724a444a66b59a1a100b4e860623673a7",
+      "bytes": 10870,
+      "lines": 173,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "gate3_attribution/diagnostic_report.md",
+      "sha256": "b84b18f2a353a6cc97880a18d4750b8449802cad13ea34a82f0fb57703d58102",
+      "bytes": 5959,
+      "lines": 102,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "gate3_backbone/paired_report.md",
+      "sha256": "7eb14cca2c5f0bda41a36f459c0edd4bbcb1d6a46fc0977c56060d19d05a51e5",
+      "bytes": 8195,
+      "lines": 127,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "gate3_backbone/analysis/graph_operator_mapping.csv",
+      "sha256": "c9c3a4d4f0560606f8769d393d826435035ca3df40345b74d260d02a445b787f",
+      "bytes": 61134,
+      "lines": 145,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "gate3_backbone/analysis/precision_comparison.csv",
+      "sha256": "ad81cb0a1b546770b8a2d963e41cf9727c8a09647c24068ec8c01444d57a0b2f",
+      "bytes": 1893,
+      "lines": 9,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "gate3_backbone/analysis/operator_timing.csv",
+      "sha256": "8c59f2cc6c3fdca6d1eeaefa0253bb8b297b57d1d6c966bce1162a40a71b22a5",
+      "bytes": 896,
+      "lines": 5,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "gate3_backbone/analysis/validation.json",
+      "sha256": "7a052882a328d162e80cf6d2dc540f9c60f6721926106c8784fc713b71b4bb83",
+      "bytes": 4454,
+      "lines": 192,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "gate3_backbone_bf16/analysis/graph_operator_mapping.csv",
+      "sha256": "c952aab5ffad56a105c7a36e6de6e6fbf8ac341e75a780ace87920acec8b5a2f",
+      "bytes": 34781,
+      "lines": 145,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "gate3_backbone_bf16/analysis/operator_timing.csv",
+      "sha256": "4e8b0d897cf4bf2e8426c9a82b87d86a080f3c343b5b3f42487e0e9ca7caae33",
+      "bytes": 894,
+      "lines": 5,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "gate3_backbone_bf16/analysis/validation.json",
+      "sha256": "da4c3d19172e9ae10f7e92bbf8b3f4865f24e9a7ccc0303e152aab9dcaa6de0e",
+      "bytes": 4463,
+      "lines": 192,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "gate3_backbone/src/graph_binding.py",
+      "sha256": "9693579366b7103f0cb16a9d0e3d250ae5fe273f1bd9d25f268a5dea949f6af6",
+      "bytes": 5668,
+      "lines": 119,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "gate3_backbone/src/backbone_worker.py",
+      "sha256": "db509d2ff436de1203a6054e3b56313a720065501f01ff686f9bea79982c9286",
+      "bytes": 2483,
+      "lines": 72,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "gate3_backbone/src/analyze_backbone.py",
+      "sha256": "b658d098d18efccae2c98126add2133e6423b521c4a7db14655cddaf3c83beee",
+      "bytes": 7963,
+      "lines": 116,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "src/run_full_inference.py",
+      "sha256": "c441e888cdbf8a9e0f25bbf0e70ebf491b1c477aab6b0959f6ca6d0ffcdd6cc1",
+      "bytes": 14346,
+      "lines": 247,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "src/run_supervised.py",
+      "sha256": "619b17fff5e303750b18cbe57970fae8c82e5f127c4c156546f52efa73731319",
+      "bytes": 8759,
+      "lines": 149,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "src/collect_nsys.py",
+      "sha256": "d9830456c9007ec5959900f69764fd8658ff40086f7ef30a45075de9c1efd827",
+      "bytes": 952,
+      "lines": 18,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "src/trace_state.py",
+      "sha256": "fc186d163356819c965a9e4db76c62ee41efd38f8e0e250c92f08ec6c0f4c873",
+      "bytes": 3504,
+      "lines": 67,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "gate3_backbone_bf16/src/bf16_observer.py",
+      "sha256": "5a25b2090d5c8bce70a6c4003970e173b3a35b72db041e4c6bf83335d7b05a70",
+      "bytes": 3141,
+      "lines": 53,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "gate3_backbone_bf16/src/bf16_worker.py",
+      "sha256": "56c5f7d7bb9d3b95882e52f6c78510c9bf8647d12b7565f6e69ff162cc1d8927",
+      "bytes": 856,
+      "lines": 21,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "gate3_backbone_bf16/analysis/failed_r01_source.json",
+      "sha256": "c714a9019432a960cd8640cb64dd85372bd9739ed6921a66014f74ea628d1151",
+      "bytes": 275,
+      "lines": 7,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "analysis/gate2_p0_summary.csv",
+      "sha256": "bb8b593e61ec7bb6e9a57cd126fa657ff9ff175335e8f6a14e04d0b540b62a34",
+      "bytes": 658,
+      "lines": 5,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "../audit_v3/source_audit.md",
+      "sha256": "011f691dd496e93f9b15061dbaa7af14631a1baaab513b2bbe5a9a9d8ccdb699",
+      "bytes": 10271,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "../audit_v3/corrected_results.md",
+      "sha256": "8d5fda613a8455d2684b251e7bb6a9386aee8bad195d1224497be2450ee37232",
+      "bytes": 16064,
+      "read_scope": "entire file"
+    },
+    {
+      "path": "../audit_v3/raw/gate9_M1024.json",
+      "sha256": "e78a9e7332016ddfe91770eaaa969c7354e2428ac6bce8ddd04fcced9a387e91",
+      "bytes": 12475,
+      "read_scope": "entire file"
+    }
+  ],
+  "gate4_valid_gpu_evidence_present": false,
+  "prior_claims": "Gate-2/3 only; Gate-4 and useful concurrency not established",
+  "gpu_started": false
+}

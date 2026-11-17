@@ -1,5 +1,17 @@
 # blackwell — RTX 5090 (SM120) BF16 vs native NVFP4 resource study
 
+
+## 最新准备：Gate 4 三任务 CPU 审查（2026-11-18）
+
+完成真实投影空间并发、CTA 资源驻留、完整推理有用并发的 CPU 侧代码与方法审查，25 项检查通过；四种辅助 Probe 已离线编译到 SM120 并确认 FFMA / HMMA.BF16 指令。
+**本次未加载模型权重、未运行 GPU 实验，没有新的并发或推理收益结论。** 真实主节点激活输入/输出适配仍待验收；理论资源模型不能替代实际共驻证据。
+
+- [三任务审查入口](full_inference_v4/gate4_cpu_review.md)
+- [CPU 实现报告及未解决问题](full_inference_v4/gate4_spatial/implementation_report.md)
+- [空间并发](full_inference_v4/gate4_spatial/final_report.md) · [资源驻留](full_inference_v4/gate4_residency/final_report.md) · [完整推理](full_inference_v4/gate4_inference/final_report.md)
+
+当前配置全部关闭 GPU 执行；先人工审查，再决定有限的正确性试点。下方历史测量保持原始计时边界，不能与本次 CPU 推导混算。
+
 ## 最新阶段：Gate 3 E2 Decode投影与Launch资源对照（2026-11-17）
 
 NVFP4和BF16各补采一份完整推理Node Trace，通过实际模块权重引用、Graph对象与CUDA tools ID，

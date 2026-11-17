@@ -1,0 +1,19 @@
+{
+  "cpu_only": true,
+  "gpu_module_loaded": false,
+  "command": [
+    "/usr/local/cuda-13.3/bin/nvcc",
+    "-arch=sm_120",
+    "-std=c++17",
+    "-O3",
+    "-lineinfo",
+    "--cubin",
+    "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/src/probes.cu",
+    "-o",
+    "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/build/offline_sm120_v2/probes_sm120.cubin"
+  ],
+  "source_sha256": "434d8e56a5b29a2c441368d00ae1053c93b77cad1b8fe7eaa24eff4ca2f71f89",
+  "cubin_sha256": "1daee1dd84515740d4e2e05d16634e708532d3f166b8e28397c058035a7c36e7",
+  "nvcc_version": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2026 NVIDIA Corporation\nBuilt on Tue_Jun_09_02:43:40_PM_PDT_2026\nCuda compilation tools, release 13.3, V13.3.73\nBuild cuda_13.3.r13.3/compiler.38244171_0\n",
+  "note": "SASS counts are static assembly evidence, not dynamic instruction counts or GPU correctness"
+}

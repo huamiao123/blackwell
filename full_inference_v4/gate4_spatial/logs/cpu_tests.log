@@ -1,0 +1,20 @@
+test_measured_serial_and_two_direction_effects (test_protocols.MetricsTests.test_measured_serial_and_two_direction_effects) ... ok
+test_overlap_not_tail_proration_or_independent_steps (test_protocols.MetricsTests.test_overlap_not_tail_proration_or_independent_steps) ... ok
+test_partial_work_profile_and_arithmetic_serial_rejected (test_protocols.MetricsTests.test_partial_work_profile_and_arithmetic_serial_rejected) ... ok
+test_all_nine_controls_and_gate_order (test_protocols.ProtocolTests.test_all_nine_controls_and_gate_order) ... ok
+test_context_and_scope_cannot_be_faked (test_protocols.ProtocolTests.test_context_and_scope_cannot_be_faked) ... ok
+test_clone_only_and_cannot_free_before_join (test_protocols.ReplayTests.test_clone_only_and_cannot_free_before_join) ... ok
+test_old_addresses_or_missing_input_proof_refused (test_protocols.ReplayTests.test_old_addresses_or_missing_input_proof_refused) ... ok
+test_prefix_plan_flags_external_events (test_protocols.ReplayTests.test_prefix_plan_flags_external_events) ... ok
+test_compiler_formats_and_wrong_dtype (test_protocols.WorkTests.test_compiler_formats_and_wrong_dtype) ... ok
+test_grid_scans_keep_actual_work_constant (test_protocols.WorkTests.test_grid_scans_keep_actual_work_constant) ... ok
+test_oracles_are_bounded_and_staging_invariant (test_protocols.WorkTests.test_oracles_are_bounded_and_staging_invariant) ... ok
+test_cpu_review_execute_never_imports_gpu_runtime (test_trace_and_guard.TraceTests.test_cpu_review_execute_never_imports_gpu_runtime) ... ok
+test_fallback_does_not_inject_into_empty_or_mixed_as_decode (test_trace_and_guard.TraceTests.test_fallback_does_not_inject_into_empty_or_mixed_as_decode) ... ok
+test_gpu_times_outside_cpu_range_still_join_by_correlation (test_trace_and_guard.TraceTests.test_gpu_times_outside_cpu_range_still_join_by_correlation) ... ok
+test_parallel_same_stream_and_wrong_gpu_refused (test_trace_and_guard.TraceTests.test_parallel_same_stream_and_wrong_gpu_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.931s
+
+OK

@@ -1,0 +1,1412 @@
+{
+  "schema": 1,
+  "cpu_preparation_only": true,
+  "gpu_authorized": false,
+  "standalone": [
+    {
+      "spec": {
+        "probe": "fp32_fma",
+        "variant": "light",
+        "threads": 32,
+        "shared_bytes": 0,
+        "items": 262144,
+        "vector": 16,
+        "rounds": 512,
+        "input_pattern": "0.25 + ((16*i+j)%64)/128",
+        "expected_flops": 4294967296,
+        "logical_work_hash": "dfc47cc0a3b9645b190996680b3cf8954f538c3de3312daca96edec818e02a52"
+      },
+      "grids": [
+        16,
+        32,
+        64,
+        128,
+        170,
+        192,
+        256
+      ],
+      "status": "PLANNED_NOT_RUN"
+    },
+    {
+      "spec": {
+        "probe": "fp32_fma",
+        "variant": "heavy",
+        "threads": 128,
+        "shared_bytes": 32768,
+        "items": 262144,
+        "vector": 16,
+        "rounds": 512,
+        "input_pattern": "0.25 + ((16*i+j)%64)/128",
+        "expected_flops": 4294967296,
+        "logical_work_hash": "cf9ed532cfc38555b265b498becc47906636ac86fb54d8a6a384554195663dab"
+      },
+      "grids": [
+        16,
+        32,
+        64,
+        128,
+        170,
+        192,
+        256
+      ],
+      "status": "PLANNED_NOT_RUN"
+    },
+    {
+      "spec": {
+        "probe": "bf16_mma",
+        "variant": "light",
+        "threads": 32,
+        "shared_bytes": 1024,
+        "tiles": 4096,
+        "m": 16,
+        "n": 16,
+        "k_step": 16,
+        "k_staging": 16,
+        "mma_rounds": 256,
+        "expected_flops": 8589934592,
+        "logical_work_hash": "86a9a674a92b78ce6dacbe683b83ca3bafbf091004c87c79e344d9d46f687e38"
+      },
+      "grids": [
+        16,
+        32,
+        64,
+        128,
+        170,
+        192,
+        256
+      ],
+      "status": "PLANNED_NOT_RUN"
+    },
+    {
+      "spec": {
+        "probe": "bf16_mma",
+        "variant": "heavy",
+        "threads": 128,
+        "shared_bytes": 32768,
+        "tiles": 4096,
+        "m": 16,
+        "n": 16,
+        "k_step": 16,
+        "k_staging": 128,
+        "mma_rounds": 256,
+        "expected_flops": 8589934592,
+        "logical_work_hash": "d2fbd3301e645e4d06dd2f28d8b52242cb494d3e232a66f5b3d3806f35e4b787"
+      },
+      "grids": [
+        16,
+        32,
+        64,
+        128,
+        170,
+        192,
+        256
+      ],
+      "status": "PLANNED_NOT_RUN"
+    }
+  ],
+  "pilot_blocks": [
+    {
+      "block": 0,
+      "condition": {
+        "case": {
+          "case_id": "nvfp4_qkv_proj",
+          "precision": "nvfp4",
+          "operator": "qkv_proj",
+          "layer": 18,
+          "module": "model.layers.18.self_attn.qkv_proj",
+          "historical_graph_id": 452,
+          "historical_tools_id": 1941325218046,
+          "historical_node_id": 254,
+          "grid": [
+            1,
+            48,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "parameter_sha256": "5621cbe7932b8beb80f5355a1b3a7009e8789a1fa001fc86747ebe3ac20a5c8a",
+          "cta": {
+            "precision": "nvfp4",
+            "logical_op": "qkv_proj",
+            "threads": 384,
+            "registers_per_thread": 168,
+            "static_shared_bytes": 0,
+            "dynamic_shared_bytes": 88064,
+            "grid_ctas": 48,
+            "source": "gate3_backbone/analysis/operator_timing.csv",
+            "source_sha256": "8c59f2cc6c3fdca6d1eeaefa0253bb8b297b57d1d6c966bce1162a40a71b22a5"
+          },
+          "address_scope": "historical identity only: never load historical device addresses into a new process",
+          "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+        },
+        "probe": {
+          "probe": "fp32_fma",
+          "variant": "light",
+          "threads": 32,
+          "shared_bytes": 0,
+          "items": 262144,
+          "vector": 16,
+          "rounds": 512,
+          "input_pattern": "0.25 + ((16*i+j)%64)/128",
+          "expected_flops": 4294967296,
+          "logical_work_hash": "dfc47cc0a3b9645b190996680b3cf8954f538c3de3312daca96edec818e02a52"
+        },
+        "probe_grid": 32
+      },
+      "modes": [
+        "parallel_ba",
+        "serial_ba",
+        "non_overlap_control",
+        "a_alone",
+        "parallel_ab",
+        "empty_control",
+        "same_stream_control",
+        "b_alone",
+        "serial_ab"
+      ],
+      "profile": "P0",
+      "status": "PLANNED_NOT_RUN"
+    },
+    {
+      "block": 0,
+      "condition": {
+        "case": {
+          "case_id": "nvfp4_qkv_proj",
+          "precision": "nvfp4",
+          "operator": "qkv_proj",
+          "layer": 18,
+          "module": "model.layers.18.self_attn.qkv_proj",
+          "historical_graph_id": 452,
+          "historical_tools_id": 1941325218046,
+          "historical_node_id": 254,
+          "grid": [
+            1,
+            48,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "parameter_sha256": "5621cbe7932b8beb80f5355a1b3a7009e8789a1fa001fc86747ebe3ac20a5c8a",
+          "cta": {
+            "precision": "nvfp4",
+            "logical_op": "qkv_proj",
+            "threads": 384,
+            "registers_per_thread": 168,
+            "static_shared_bytes": 0,
+            "dynamic_shared_bytes": 88064,
+            "grid_ctas": 48,
+            "source": "gate3_backbone/analysis/operator_timing.csv",
+            "source_sha256": "8c59f2cc6c3fdca6d1eeaefa0253bb8b297b57d1d6c966bce1162a40a71b22a5"
+          },
+          "address_scope": "historical identity only: never load historical device addresses into a new process",
+          "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+        },
+        "probe": {
+          "probe": "fp32_fma",
+          "variant": "light",
+          "threads": 32,
+          "shared_bytes": 0,
+          "items": 262144,
+          "vector": 16,
+          "rounds": 512,
+          "input_pattern": "0.25 + ((16*i+j)%64)/128",
+          "expected_flops": 4294967296,
+          "logical_work_hash": "dfc47cc0a3b9645b190996680b3cf8954f538c3de3312daca96edec818e02a52"
+        },
+        "probe_grid": 128
+      },
+      "modes": [
+        "parallel_ba",
+        "empty_control",
+        "parallel_ab",
+        "b_alone",
+        "non_overlap_control",
+        "serial_ab",
+        "serial_ba",
+        "a_alone",
+        "same_stream_control"
+      ],
+      "profile": "P0",
+      "status": "PLANNED_NOT_RUN"
+    },
+    {
+      "block": 0,
+      "condition": {
+        "case": {
+          "case_id": "bf16_qkv_proj",
+          "precision": "bf16",
+          "operator": "qkv_proj",
+          "layer": 18,
+          "module": "model.layers.18.self_attn.qkv_proj",
+          "historical_graph_id": 452,
+          "historical_tools_id": 1941325217991,
+          "historical_node_id": 199,
+          "grid": [
+            8,
+            48,
+            1
+          ],
+          "block": [
+            32,
+            1,
+            1
+          ],
+          "parameter_sha256": "a706d2f93455842bee1c10dd720468bc74d1f2199b4d24c8fd60ccc757779c79",
+          "cta": {
+            "precision": "bf16",
+            "logical_op": "qkv_proj",
+            "threads": 32,
+            "registers_per_thread": 124,
+            "static_shared_bytes": 0,
+            "dynamic_shared_bytes": 16896,
+            "grid_ctas": 384,
+            "source": "gate3_backbone_bf16/analysis/operator_timing.csv",
+            "source_sha256": "4e8b0d897cf4bf2e8426c9a82b87d86a080f3c343b5b3f42487e0e9ca7caae33"
+          },
+          "address_scope": "historical identity only: never load historical device addresses into a new process",
+          "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+        },
+        "probe": {
+          "probe": "fp32_fma",
+          "variant": "light",
+          "threads": 32,
+          "shared_bytes": 0,
+          "items": 262144,
+          "vector": 16,
+          "rounds": 512,
+          "input_pattern": "0.25 + ((16*i+j)%64)/128",
+          "expected_flops": 4294967296,
+          "logical_work_hash": "dfc47cc0a3b9645b190996680b3cf8954f538c3de3312daca96edec818e02a52"
+        },
+        "probe_grid": 32
+      },
+      "modes": [
+        "parallel_ba",
+        "serial_ba",
+        "non_overlap_control",
+        "a_alone",
+        "parallel_ab",
+        "empty_control",
+        "same_stream_control",
+        "b_alone",
+        "serial_ab"
+      ],
+      "profile": "P0",
+      "status": "PLANNED_NOT_RUN"
+    },
+    {
+      "block": 0,
+      "condition": {
+        "case": {
+          "case_id": "bf16_qkv_proj",
+          "precision": "bf16",
+          "operator": "qkv_proj",
+          "layer": 18,
+          "module": "model.layers.18.self_attn.qkv_proj",
+          "historical_graph_id": 452,
+          "historical_tools_id": 1941325217991,
+          "historical_node_id": 199,
+          "grid": [
+            8,
+            48,
+            1
+          ],
+          "block": [
+            32,
+            1,
+            1
+          ],
+          "parameter_sha256": "a706d2f93455842bee1c10dd720468bc74d1f2199b4d24c8fd60ccc757779c79",
+          "cta": {
+            "precision": "bf16",
+            "logical_op": "qkv_proj",
+            "threads": 32,
+            "registers_per_thread": 124,
+            "static_shared_bytes": 0,
+            "dynamic_shared_bytes": 16896,
+            "grid_ctas": 384,
+            "source": "gate3_backbone_bf16/analysis/operator_timing.csv",
+            "source_sha256": "4e8b0d897cf4bf2e8426c9a82b87d86a080f3c343b5b3f42487e0e9ca7caae33"
+          },
+          "address_scope": "historical identity only: never load historical device addresses into a new process",
+          "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+        },
+        "probe": {
+          "probe": "fp32_fma",
+          "variant": "light",
+          "threads": 32,
+          "shared_bytes": 0,
+          "items": 262144,
+          "vector": 16,
+          "rounds": 512,
+          "input_pattern": "0.25 + ((16*i+j)%64)/128",
+          "expected_flops": 4294967296,
+          "logical_work_hash": "dfc47cc0a3b9645b190996680b3cf8954f538c3de3312daca96edec818e02a52"
+        },
+        "probe_grid": 128
+      },
+      "modes": [
+        "parallel_ba",
+        "empty_control",
+        "parallel_ab",
+        "b_alone",
+        "non_overlap_control",
+        "serial_ab",
+        "serial_ba",
+        "a_alone",
+        "same_stream_control"
+      ],
+      "profile": "P0",
+      "status": "PLANNED_NOT_RUN"
+    },
+    {
+      "block": 1,
+      "condition": {
+        "case": {
+          "case_id": "bf16_qkv_proj",
+          "precision": "bf16",
+          "operator": "qkv_proj",
+          "layer": 18,
+          "module": "model.layers.18.self_attn.qkv_proj",
+          "historical_graph_id": 452,
+          "historical_tools_id": 1941325217991,
+          "historical_node_id": 199,
+          "grid": [
+            8,
+            48,
+            1
+          ],
+          "block": [
+            32,
+            1,
+            1
+          ],
+          "parameter_sha256": "a706d2f93455842bee1c10dd720468bc74d1f2199b4d24c8fd60ccc757779c79",
+          "cta": {
+            "precision": "bf16",
+            "logical_op": "qkv_proj",
+            "threads": 32,
+            "registers_per_thread": 124,
+            "static_shared_bytes": 0,
+            "dynamic_shared_bytes": 16896,
+            "grid_ctas": 384,
+            "source": "gate3_backbone_bf16/analysis/operator_timing.csv",
+            "source_sha256": "4e8b0d897cf4bf2e8426c9a82b87d86a080f3c343b5b3f42487e0e9ca7caae33"
+          },
+          "address_scope": "historical identity only: never load historical device addresses into a new process",
+          "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+        },
+        "probe": {
+          "probe": "fp32_fma",
+          "variant": "light",
+          "threads": 32,
+          "shared_bytes": 0,
+          "items": 262144,
+          "vector": 16,
+          "rounds": 512,
+          "input_pattern": "0.25 + ((16*i+j)%64)/128",
+          "expected_flops": 4294967296,
+          "logical_work_hash": "dfc47cc0a3b9645b190996680b3cf8954f538c3de3312daca96edec818e02a52"
+        },
+        "probe_grid": 32
+      },
+      "modes": [
+        "non_overlap_control",
+        "a_alone",
+        "empty_control",
+        "same_stream_control",
+        "b_alone",
+        "serial_ab",
+        "parallel_ba",
+        "parallel_ab",
+        "serial_ba"
+      ],
+      "profile": "P0",
+      "status": "PLANNED_NOT_RUN"
+    },
+    {
+      "block": 1,
+      "condition": {
+        "case": {
+          "case_id": "bf16_qkv_proj",
+          "precision": "bf16",
+          "operator": "qkv_proj",
+          "layer": 18,
+          "module": "model.layers.18.self_attn.qkv_proj",
+          "historical_graph_id": 452,
+          "historical_tools_id": 1941325217991,
+          "historical_node_id": 199,
+          "grid": [
+            8,
+            48,
+            1
+          ],
+          "block": [
+            32,
+            1,
+            1
+          ],
+          "parameter_sha256": "a706d2f93455842bee1c10dd720468bc74d1f2199b4d24c8fd60ccc757779c79",
+          "cta": {
+            "precision": "bf16",
+            "logical_op": "qkv_proj",
+            "threads": 32,
+            "registers_per_thread": 124,
+            "static_shared_bytes": 0,
+            "dynamic_shared_bytes": 16896,
+            "grid_ctas": 384,
+            "source": "gate3_backbone_bf16/analysis/operator_timing.csv",
+            "source_sha256": "4e8b0d897cf4bf2e8426c9a82b87d86a080f3c343b5b3f42487e0e9ca7caae33"
+          },
+          "address_scope": "historical identity only: never load historical device addresses into a new process",
+          "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+        },
+        "probe": {
+          "probe": "fp32_fma",
+          "variant": "light",
+          "threads": 32,
+          "shared_bytes": 0,
+          "items": 262144,
+          "vector": 16,
+          "rounds": 512,
+          "input_pattern": "0.25 + ((16*i+j)%64)/128",
+          "expected_flops": 4294967296,
+          "logical_work_hash": "dfc47cc0a3b9645b190996680b3cf8954f538c3de3312daca96edec818e02a52"
+        },
+        "probe_grid": 128
+      },
+      "modes": [
+        "same_stream_control",
+        "empty_control",
+        "parallel_ba",
+        "non_overlap_control",
+        "b_alone",
+        "parallel_ab",
+        "a_alone",
+        "serial_ab",
+        "serial_ba"
+      ],
+      "profile": "P0",
+      "status": "PLANNED_NOT_RUN"
+    },
+    {
+      "block": 1,
+      "condition": {
+        "case": {
+          "case_id": "nvfp4_qkv_proj",
+          "precision": "nvfp4",
+          "operator": "qkv_proj",
+          "layer": 18,
+          "module": "model.layers.18.self_attn.qkv_proj",
+          "historical_graph_id": 452,
+          "historical_tools_id": 1941325218046,
+          "historical_node_id": 254,
+          "grid": [
+            1,
+            48,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "parameter_sha256": "5621cbe7932b8beb80f5355a1b3a7009e8789a1fa001fc86747ebe3ac20a5c8a",
+          "cta": {
+            "precision": "nvfp4",
+            "logical_op": "qkv_proj",
+            "threads": 384,
+            "registers_per_thread": 168,
+            "static_shared_bytes": 0,
+            "dynamic_shared_bytes": 88064,
+            "grid_ctas": 48,
+            "source": "gate3_backbone/analysis/operator_timing.csv",
+            "source_sha256": "8c59f2cc6c3fdca6d1eeaefa0253bb8b297b57d1d6c966bce1162a40a71b22a5"
+          },
+          "address_scope": "historical identity only: never load historical device addresses into a new process",
+          "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+        },
+        "probe": {
+          "probe": "fp32_fma",
+          "variant": "light",
+          "threads": 32,
+          "shared_bytes": 0,
+          "items": 262144,
+          "vector": 16,
+          "rounds": 512,
+          "input_pattern": "0.25 + ((16*i+j)%64)/128",
+          "expected_flops": 4294967296,
+          "logical_work_hash": "dfc47cc0a3b9645b190996680b3cf8954f538c3de3312daca96edec818e02a52"
+        },
+        "probe_grid": 32
+      },
+      "modes": [
+        "non_overlap_control",
+        "a_alone",
+        "empty_control",
+        "same_stream_control",
+        "b_alone",
+        "serial_ab",
+        "parallel_ba",
+        "parallel_ab",
+        "serial_ba"
+      ],
+      "profile": "P0",
+      "status": "PLANNED_NOT_RUN"
+    },
+    {
+      "block": 1,
+      "condition": {
+        "case": {
+          "case_id": "nvfp4_qkv_proj",
+          "precision": "nvfp4",
+          "operator": "qkv_proj",
+          "layer": 18,
+          "module": "model.layers.18.self_attn.qkv_proj",
+          "historical_graph_id": 452,
+          "historical_tools_id": 1941325218046,
+          "historical_node_id": 254,
+          "grid": [
+            1,
+            48,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "parameter_sha256": "5621cbe7932b8beb80f5355a1b3a7009e8789a1fa001fc86747ebe3ac20a5c8a",
+          "cta": {
+            "precision": "nvfp4",
+            "logical_op": "qkv_proj",
+            "threads": 384,
+            "registers_per_thread": 168,
+            "static_shared_bytes": 0,
+            "dynamic_shared_bytes": 88064,
+            "grid_ctas": 48,
+            "source": "gate3_backbone/analysis/operator_timing.csv",
+            "source_sha256": "8c59f2cc6c3fdca6d1eeaefa0253bb8b297b57d1d6c966bce1162a40a71b22a5"
+          },
+          "address_scope": "historical identity only: never load historical device addresses into a new process",
+          "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+        },
+        "probe": {
+          "probe": "fp32_fma",
+          "variant": "light",
+          "threads": 32,
+          "shared_bytes": 0,
+          "items": 262144,
+          "vector": 16,
+          "rounds": 512,
+          "input_pattern": "0.25 + ((16*i+j)%64)/128",
+          "expected_flops": 4294967296,
+          "logical_work_hash": "dfc47cc0a3b9645b190996680b3cf8954f538c3de3312daca96edec818e02a52"
+        },
+        "probe_grid": 128
+      },
+      "modes": [
+        "same_stream_control",
+        "empty_control",
+        "parallel_ba",
+        "non_overlap_control",
+        "b_alone",
+        "parallel_ab",
+        "a_alone",
+        "serial_ab",
+        "serial_ba"
+      ],
+      "profile": "P0",
+      "status": "PLANNED_NOT_RUN"
+    },
+    {
+      "block": 2,
+      "condition": {
+        "case": {
+          "case_id": "nvfp4_qkv_proj",
+          "precision": "nvfp4",
+          "operator": "qkv_proj",
+          "layer": 18,
+          "module": "model.layers.18.self_attn.qkv_proj",
+          "historical_graph_id": 452,
+          "historical_tools_id": 1941325218046,
+          "historical_node_id": 254,
+          "grid": [
+            1,
+            48,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "parameter_sha256": "5621cbe7932b8beb80f5355a1b3a7009e8789a1fa001fc86747ebe3ac20a5c8a",
+          "cta": {
+            "precision": "nvfp4",
+            "logical_op": "qkv_proj",
+            "threads": 384,
+            "registers_per_thread": 168,
+            "static_shared_bytes": 0,
+            "dynamic_shared_bytes": 88064,
+            "grid_ctas": 48,
+            "source": "gate3_backbone/analysis/operator_timing.csv",
+            "source_sha256": "8c59f2cc6c3fdca6d1eeaefa0253bb8b297b57d1d6c966bce1162a40a71b22a5"
+          },
+          "address_scope": "historical identity only: never load historical device addresses into a new process",
+          "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+        },
+        "probe": {
+          "probe": "fp32_fma",
+          "variant": "light",
+          "threads": 32,
+          "shared_bytes": 0,
+          "items": 262144,
+          "vector": 16,
+          "rounds": 512,
+          "input_pattern": "0.25 + ((16*i+j)%64)/128",
+          "expected_flops": 4294967296,
+          "logical_work_hash": "dfc47cc0a3b9645b190996680b3cf8954f538c3de3312daca96edec818e02a52"
+        },
+        "probe_grid": 32
+      },
+      "modes": [
+        "parallel_ab",
+        "a_alone",
+        "non_overlap_control",
+        "serial_ba",
+        "serial_ab",
+        "same_stream_control",
+        "b_alone",
+        "parallel_ba",
+        "empty_control"
+      ],
+      "profile": "P0",
+      "status": "PLANNED_NOT_RUN"
+    },
+    {
+      "block": 2,
+      "condition": {
+        "case": {
+          "case_id": "nvfp4_qkv_proj",
+          "precision": "nvfp4",
+          "operator": "qkv_proj",
+          "layer": 18,
+          "module": "model.layers.18.self_attn.qkv_proj",
+          "historical_graph_id": 452,
+          "historical_tools_id": 1941325218046,
+          "historical_node_id": 254,
+          "grid": [
+            1,
+            48,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "parameter_sha256": "5621cbe7932b8beb80f5355a1b3a7009e8789a1fa001fc86747ebe3ac20a5c8a",
+          "cta": {
+            "precision": "nvfp4",
+            "logical_op": "qkv_proj",
+            "threads": 384,
+            "registers_per_thread": 168,
+            "static_shared_bytes": 0,
+            "dynamic_shared_bytes": 88064,
+            "grid_ctas": 48,
+            "source": "gate3_backbone/analysis/operator_timing.csv",
+            "source_sha256": "8c59f2cc6c3fdca6d1eeaefa0253bb8b297b57d1d6c966bce1162a40a71b22a5"
+          },
+          "address_scope": "historical identity only: never load historical device addresses into a new process",
+          "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+        },
+        "probe": {
+          "probe": "fp32_fma",
+          "variant": "light",
+          "threads": 32,
+          "shared_bytes": 0,
+          "items": 262144,
+          "vector": 16,
+          "rounds": 512,
+          "input_pattern": "0.25 + ((16*i+j)%64)/128",
+          "expected_flops": 4294967296,
+          "logical_work_hash": "dfc47cc0a3b9645b190996680b3cf8954f538c3de3312daca96edec818e02a52"
+        },
+        "probe_grid": 128
+      },
+      "modes": [
+        "serial_ab",
+        "parallel_ab",
+        "serial_ba",
+        "same_stream_control",
+        "b_alone",
+        "parallel_ba",
+        "empty_control",
+        "a_alone",
+        "non_overlap_control"
+      ],
+      "profile": "P0",
+      "status": "PLANNED_NOT_RUN"
+    },
+    {
+      "block": 2,
+      "condition": {
+        "case": {
+          "case_id": "bf16_qkv_proj",
+          "precision": "bf16",
+          "operator": "qkv_proj",
+          "layer": 18,
+          "module": "model.layers.18.self_attn.qkv_proj",
+          "historical_graph_id": 452,
+          "historical_tools_id": 1941325217991,
+          "historical_node_id": 199,
+          "grid": [
+            8,
+            48,
+            1
+          ],
+          "block": [
+            32,
+            1,
+            1
+          ],
+          "parameter_sha256": "a706d2f93455842bee1c10dd720468bc74d1f2199b4d24c8fd60ccc757779c79",
+          "cta": {
+            "precision": "bf16",
+            "logical_op": "qkv_proj",
+            "threads": 32,
+            "registers_per_thread": 124,
+            "static_shared_bytes": 0,
+            "dynamic_shared_bytes": 16896,
+            "grid_ctas": 384,
+            "source": "gate3_backbone_bf16/analysis/operator_timing.csv",
+            "source_sha256": "4e8b0d897cf4bf2e8426c9a82b87d86a080f3c343b5b3f42487e0e9ca7caae33"
+          },
+          "address_scope": "historical identity only: never load historical device addresses into a new process",
+          "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+        },
+        "probe": {
+          "probe": "fp32_fma",
+          "variant": "light",
+          "threads": 32,
+          "shared_bytes": 0,
+          "items": 262144,
+          "vector": 16,
+          "rounds": 512,
+          "input_pattern": "0.25 + ((16*i+j)%64)/128",
+          "expected_flops": 4294967296,
+          "logical_work_hash": "dfc47cc0a3b9645b190996680b3cf8954f538c3de3312daca96edec818e02a52"
+        },
+        "probe_grid": 32
+      },
+      "modes": [
+        "parallel_ab",
+        "a_alone",
+        "non_overlap_control",
+        "serial_ba",
+        "serial_ab",
+        "same_stream_control",
+        "b_alone",
+        "parallel_ba",
+        "empty_control"
+      ],
+      "profile": "P0",
+      "status": "PLANNED_NOT_RUN"
+    },
+    {
+      "block": 2,
+      "condition": {
+        "case": {
+          "case_id": "bf16_qkv_proj",
+          "precision": "bf16",
+          "operator": "qkv_proj",
+          "layer": 18,
+          "module": "model.layers.18.self_attn.qkv_proj",
+          "historical_graph_id": 452,
+          "historical_tools_id": 1941325217991,
+          "historical_node_id": 199,
+          "grid": [
+            8,
+            48,
+            1
+          ],
+          "block": [
+            32,
+            1,
+            1
+          ],
+          "parameter_sha256": "a706d2f93455842bee1c10dd720468bc74d1f2199b4d24c8fd60ccc757779c79",
+          "cta": {
+            "precision": "bf16",
+            "logical_op": "qkv_proj",
+            "threads": 32,
+            "registers_per_thread": 124,
+            "static_shared_bytes": 0,
+            "dynamic_shared_bytes": 16896,
+            "grid_ctas": 384,
+            "source": "gate3_backbone_bf16/analysis/operator_timing.csv",
+            "source_sha256": "4e8b0d897cf4bf2e8426c9a82b87d86a080f3c343b5b3f42487e0e9ca7caae33"
+          },
+          "address_scope": "historical identity only: never load historical device addresses into a new process",
+          "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+        },
+        "probe": {
+          "probe": "fp32_fma",
+          "variant": "light",
+          "threads": 32,
+          "shared_bytes": 0,
+          "items": 262144,
+          "vector": 16,
+          "rounds": 512,
+          "input_pattern": "0.25 + ((16*i+j)%64)/128",
+          "expected_flops": 4294967296,
+          "logical_work_hash": "dfc47cc0a3b9645b190996680b3cf8954f538c3de3312daca96edec818e02a52"
+        },
+        "probe_grid": 128
+      },
+      "modes": [
+        "serial_ab",
+        "parallel_ab",
+        "serial_ba",
+        "same_stream_control",
+        "b_alone",
+        "parallel_ba",
+        "empty_control",
+        "a_alone",
+        "non_overlap_control"
+      ],
+      "profile": "P0",
+      "status": "PLANNED_NOT_RUN"
+    },
+    {
+      "block": 3,
+      "condition": {
+        "case": {
+          "case_id": "bf16_qkv_proj",
+          "precision": "bf16",
+          "operator": "qkv_proj",
+          "layer": 18,
+          "module": "model.layers.18.self_attn.qkv_proj",
+          "historical_graph_id": 452,
+          "historical_tools_id": 1941325217991,
+          "historical_node_id": 199,
+          "grid": [
+            8,
+            48,
+            1
+          ],
+          "block": [
+            32,
+            1,
+            1
+          ],
+          "parameter_sha256": "a706d2f93455842bee1c10dd720468bc74d1f2199b4d24c8fd60ccc757779c79",
+          "cta": {
+            "precision": "bf16",
+            "logical_op": "qkv_proj",
+            "threads": 32,
+            "registers_per_thread": 124,
+            "static_shared_bytes": 0,
+            "dynamic_shared_bytes": 16896,
+            "grid_ctas": 384,
+            "source": "gate3_backbone_bf16/analysis/operator_timing.csv",
+            "source_sha256": "4e8b0d897cf4bf2e8426c9a82b87d86a080f3c343b5b3f42487e0e9ca7caae33"
+          },
+          "address_scope": "historical identity only: never load historical device addresses into a new process",
+          "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+        },
+        "probe": {
+          "probe": "fp32_fma",
+          "variant": "light",
+          "threads": 32,
+          "shared_bytes": 0,
+          "items": 262144,
+          "vector": 16,
+          "rounds": 512,
+          "input_pattern": "0.25 + ((16*i+j)%64)/128",
+          "expected_flops": 4294967296,
+          "logical_work_hash": "dfc47cc0a3b9645b190996680b3cf8954f538c3de3312daca96edec818e02a52"
+        },
+        "probe_grid": 32
+      },
+      "modes": [
+        "serial_ba",
+        "empty_control",
+        "non_overlap_control",
+        "serial_ab",
+        "parallel_ba",
+        "a_alone",
+        "parallel_ab",
+        "same_stream_control",
+        "b_alone"
+      ],
+      "profile": "P0",
+      "status": "PLANNED_NOT_RUN"
+    },
+    {
+      "block": 3,
+      "condition": {
+        "case": {
+          "case_id": "bf16_qkv_proj",
+          "precision": "bf16",
+          "operator": "qkv_proj",
+          "layer": 18,
+          "module": "model.layers.18.self_attn.qkv_proj",
+          "historical_graph_id": 452,
+          "historical_tools_id": 1941325217991,
+          "historical_node_id": 199,
+          "grid": [
+            8,
+            48,
+            1
+          ],
+          "block": [
+            32,
+            1,
+            1
+          ],
+          "parameter_sha256": "a706d2f93455842bee1c10dd720468bc74d1f2199b4d24c8fd60ccc757779c79",
+          "cta": {
+            "precision": "bf16",
+            "logical_op": "qkv_proj",
+            "threads": 32,
+            "registers_per_thread": 124,
+            "static_shared_bytes": 0,
+            "dynamic_shared_bytes": 16896,
+            "grid_ctas": 384,
+            "source": "gate3_backbone_bf16/analysis/operator_timing.csv",
+            "source_sha256": "4e8b0d897cf4bf2e8426c9a82b87d86a080f3c343b5b3f42487e0e9ca7caae33"
+          },
+          "address_scope": "historical identity only: never load historical device addresses into a new process",
+          "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+        },
+        "probe": {
+          "probe": "fp32_fma",
+          "variant": "light",
+          "threads": 32,
+          "shared_bytes": 0,
+          "items": 262144,
+          "vector": 16,
+          "rounds": 512,
+          "input_pattern": "0.25 + ((16*i+j)%64)/128",
+          "expected_flops": 4294967296,
+          "logical_work_hash": "dfc47cc0a3b9645b190996680b3cf8954f538c3de3312daca96edec818e02a52"
+        },
+        "probe_grid": 128
+      },
+      "modes": [
+        "a_alone",
+        "serial_ba",
+        "parallel_ba",
+        "parallel_ab",
+        "serial_ab",
+        "same_stream_control",
+        "non_overlap_control",
+        "empty_control",
+        "b_alone"
+      ],
+      "profile": "P0",
+      "status": "PLANNED_NOT_RUN"
+    },
+    {
+      "block": 3,
+      "condition": {
+        "case": {
+          "case_id": "nvfp4_qkv_proj",
+          "precision": "nvfp4",
+          "operator": "qkv_proj",
+          "layer": 18,
+          "module": "model.layers.18.self_attn.qkv_proj",
+          "historical_graph_id": 452,
+          "historical_tools_id": 1941325218046,
+          "historical_node_id": 254,
+          "grid": [
+            1,
+            48,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "parameter_sha256": "5621cbe7932b8beb80f5355a1b3a7009e8789a1fa001fc86747ebe3ac20a5c8a",
+          "cta": {
+            "precision": "nvfp4",
+            "logical_op": "qkv_proj",
+            "threads": 384,
+            "registers_per_thread": 168,
+            "static_shared_bytes": 0,
+            "dynamic_shared_bytes": 88064,
+            "grid_ctas": 48,
+            "source": "gate3_backbone/analysis/operator_timing.csv",
+            "source_sha256": "8c59f2cc6c3fdca6d1eeaefa0253bb8b297b57d1d6c966bce1162a40a71b22a5"
+          },
+          "address_scope": "historical identity only: never load historical device addresses into a new process",
+          "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+        },
+        "probe": {
+          "probe": "fp32_fma",
+          "variant": "light",
+          "threads": 32,
+          "shared_bytes": 0,
+          "items": 262144,
+          "vector": 16,
+          "rounds": 512,
+          "input_pattern": "0.25 + ((16*i+j)%64)/128",
+          "expected_flops": 4294967296,
+          "logical_work_hash": "dfc47cc0a3b9645b190996680b3cf8954f538c3de3312daca96edec818e02a52"
+        },
+        "probe_grid": 32
+      },
+      "modes": [
+        "serial_ba",
+        "empty_control",
+        "non_overlap_control",
+        "serial_ab",
+        "parallel_ba",
+        "a_alone",
+        "parallel_ab",
+        "same_stream_control",
+        "b_alone"
+      ],
+      "profile": "P0",
+      "status": "PLANNED_NOT_RUN"
+    },
+    {
+      "block": 3,
+      "condition": {
+        "case": {
+          "case_id": "nvfp4_qkv_proj",
+          "precision": "nvfp4",
+          "operator": "qkv_proj",
+          "layer": 18,
+          "module": "model.layers.18.self_attn.qkv_proj",
+          "historical_graph_id": 452,
+          "historical_tools_id": 1941325218046,
+          "historical_node_id": 254,
+          "grid": [
+            1,
+            48,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "parameter_sha256": "5621cbe7932b8beb80f5355a1b3a7009e8789a1fa001fc86747ebe3ac20a5c8a",
+          "cta": {
+            "precision": "nvfp4",
+            "logical_op": "qkv_proj",
+            "threads": 384,
+            "registers_per_thread": 168,
+            "static_shared_bytes": 0,
+            "dynamic_shared_bytes": 88064,
+            "grid_ctas": 48,
+            "source": "gate3_backbone/analysis/operator_timing.csv",
+            "source_sha256": "8c59f2cc6c3fdca6d1eeaefa0253bb8b297b57d1d6c966bce1162a40a71b22a5"
+          },
+          "address_scope": "historical identity only: never load historical device addresses into a new process",
+          "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+        },
+        "probe": {
+          "probe": "fp32_fma",
+          "variant": "light",
+          "threads": 32,
+          "shared_bytes": 0,
+          "items": 262144,
+          "vector": 16,
+          "rounds": 512,
+          "input_pattern": "0.25 + ((16*i+j)%64)/128",
+          "expected_flops": 4294967296,
+          "logical_work_hash": "dfc47cc0a3b9645b190996680b3cf8954f538c3de3312daca96edec818e02a52"
+        },
+        "probe_grid": 128
+      },
+      "modes": [
+        "a_alone",
+        "serial_ba",
+        "parallel_ba",
+        "parallel_ab",
+        "serial_ab",
+        "same_stream_control",
+        "non_overlap_control",
+        "empty_control",
+        "b_alone"
+      ],
+      "profile": "P0",
+      "status": "PLANNED_NOT_RUN"
+    },
+    {
+      "block": 4,
+      "condition": {
+        "case": {
+          "case_id": "nvfp4_qkv_proj",
+          "precision": "nvfp4",
+          "operator": "qkv_proj",
+          "layer": 18,
+          "module": "model.layers.18.self_attn.qkv_proj",
+          "historical_graph_id": 452,
+          "historical_tools_id": 1941325218046,
+          "historical_node_id": 254,
+          "grid": [
+            1,
+            48,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "parameter_sha256": "5621cbe7932b8beb80f5355a1b3a7009e8789a1fa001fc86747ebe3ac20a5c8a",
+          "cta": {
+            "precision": "nvfp4",
+            "logical_op": "qkv_proj",
+            "threads": 384,
+            "registers_per_thread": 168,
+            "static_shared_bytes": 0,
+            "dynamic_shared_bytes": 88064,
+            "grid_ctas": 48,
+            "source": "gate3_backbone/analysis/operator_timing.csv",
+            "source_sha256": "8c59f2cc6c3fdca6d1eeaefa0253bb8b297b57d1d6c966bce1162a40a71b22a5"
+          },
+          "address_scope": "historical identity only: never load historical device addresses into a new process",
+          "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+        },
+        "probe": {
+          "probe": "fp32_fma",
+          "variant": "light",
+          "threads": 32,
+          "shared_bytes": 0,
+          "items": 262144,
+          "vector": 16,
+          "rounds": 512,
+          "input_pattern": "0.25 + ((16*i+j)%64)/128",
+          "expected_flops": 4294967296,
+          "logical_work_hash": "dfc47cc0a3b9645b190996680b3cf8954f538c3de3312daca96edec818e02a52"
+        },
+        "probe_grid": 32
+      },
+      "modes": [
+        "b_alone",
+        "parallel_ba",
+        "empty_control",
+        "non_overlap_control",
+        "same_stream_control",
+        "parallel_ab",
+        "a_alone",
+        "serial_ba",
+        "serial_ab"
+      ],
+      "profile": "P0",
+      "status": "PLANNED_NOT_RUN"
+    },
+    {
+      "block": 4,
+      "condition": {
+        "case": {
+          "case_id": "nvfp4_qkv_proj",
+          "precision": "nvfp4",
+          "operator": "qkv_proj",
+          "layer": 18,
+          "module": "model.layers.18.self_attn.qkv_proj",
+          "historical_graph_id": 452,
+          "historical_tools_id": 1941325218046,
+          "historical_node_id": 254,
+          "grid": [
+            1,
+            48,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "parameter_sha256": "5621cbe7932b8beb80f5355a1b3a7009e8789a1fa001fc86747ebe3ac20a5c8a",
+          "cta": {
+            "precision": "nvfp4",
+            "logical_op": "qkv_proj",
+            "threads": 384,
+            "registers_per_thread": 168,
+            "static_shared_bytes": 0,
+            "dynamic_shared_bytes": 88064,
+            "grid_ctas": 48,
+            "source": "gate3_backbone/analysis/operator_timing.csv",
+            "source_sha256": "8c59f2cc6c3fdca6d1eeaefa0253bb8b297b57d1d6c966bce1162a40a71b22a5"
+          },
+          "address_scope": "historical identity only: never load historical device addresses into a new process",
+          "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+        },
+        "probe": {
+          "probe": "fp32_fma",
+          "variant": "light",
+          "threads": 32,
+          "shared_bytes": 0,
+          "items": 262144,
+          "vector": 16,
+          "rounds": 512,
+          "input_pattern": "0.25 + ((16*i+j)%64)/128",
+          "expected_flops": 4294967296,
+          "logical_work_hash": "dfc47cc0a3b9645b190996680b3cf8954f538c3de3312daca96edec818e02a52"
+        },
+        "probe_grid": 128
+      },
+      "modes": [
+        "non_overlap_control",
+        "parallel_ba",
+        "empty_control",
+        "serial_ab",
+        "b_alone",
+        "serial_ba",
+        "parallel_ab",
+        "a_alone",
+        "same_stream_control"
+      ],
+      "profile": "P0",
+      "status": "PLANNED_NOT_RUN"
+    },
+    {
+      "block": 4,
+      "condition": {
+        "case": {
+          "case_id": "bf16_qkv_proj",
+          "precision": "bf16",
+          "operator": "qkv_proj",
+          "layer": 18,
+          "module": "model.layers.18.self_attn.qkv_proj",
+          "historical_graph_id": 452,
+          "historical_tools_id": 1941325217991,
+          "historical_node_id": 199,
+          "grid": [
+            8,
+            48,
+            1
+          ],
+          "block": [
+            32,
+            1,
+            1
+          ],
+          "parameter_sha256": "a706d2f93455842bee1c10dd720468bc74d1f2199b4d24c8fd60ccc757779c79",
+          "cta": {
+            "precision": "bf16",
+            "logical_op": "qkv_proj",
+            "threads": 32,
+            "registers_per_thread": 124,
+            "static_shared_bytes": 0,
+            "dynamic_shared_bytes": 16896,
+            "grid_ctas": 384,
+            "source": "gate3_backbone_bf16/analysis/operator_timing.csv",
+            "source_sha256": "4e8b0d897cf4bf2e8426c9a82b87d86a080f3c343b5b3f42487e0e9ca7caae33"
+          },
+          "address_scope": "historical identity only: never load historical device addresses into a new process",
+          "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+        },
+        "probe": {
+          "probe": "fp32_fma",
+          "variant": "light",
+          "threads": 32,
+          "shared_bytes": 0,
+          "items": 262144,
+          "vector": 16,
+          "rounds": 512,
+          "input_pattern": "0.25 + ((16*i+j)%64)/128",
+          "expected_flops": 4294967296,
+          "logical_work_hash": "dfc47cc0a3b9645b190996680b3cf8954f538c3de3312daca96edec818e02a52"
+        },
+        "probe_grid": 32
+      },
+      "modes": [
+        "b_alone",
+        "parallel_ba",
+        "empty_control",
+        "non_overlap_control",
+        "same_stream_control",
+        "parallel_ab",
+        "a_alone",
+        "serial_ba",
+        "serial_ab"
+      ],
+      "profile": "P0",
+      "status": "PLANNED_NOT_RUN"
+    },
+    {
+      "block": 4,
+      "condition": {
+        "case": {
+          "case_id": "bf16_qkv_proj",
+          "precision": "bf16",
+          "operator": "qkv_proj",
+          "layer": 18,
+          "module": "model.layers.18.self_attn.qkv_proj",
+          "historical_graph_id": 452,
+          "historical_tools_id": 1941325217991,
+          "historical_node_id": 199,
+          "grid": [
+            8,
+            48,
+            1
+          ],
+          "block": [
+            32,
+            1,
+            1
+          ],
+          "parameter_sha256": "a706d2f93455842bee1c10dd720468bc74d1f2199b4d24c8fd60ccc757779c79",
+          "cta": {
+            "precision": "bf16",
+            "logical_op": "qkv_proj",
+            "threads": 32,
+            "registers_per_thread": 124,
+            "static_shared_bytes": 0,
+            "dynamic_shared_bytes": 16896,
+            "grid_ctas": 384,
+            "source": "gate3_backbone_bf16/analysis/operator_timing.csv",
+            "source_sha256": "4e8b0d897cf4bf2e8426c9a82b87d86a080f3c343b5b3f42487e0e9ca7caae33"
+          },
+          "address_scope": "historical identity only: never load historical device addresses into a new process",
+          "timing_scope": "new diagnostic single-node replay only after live memory contract; fallback is separately labelled"
+        },
+        "probe": {
+          "probe": "fp32_fma",
+          "variant": "light",
+          "threads": 32,
+          "shared_bytes": 0,
+          "items": 262144,
+          "vector": 16,
+          "rounds": 512,
+          "input_pattern": "0.25 + ((16*i+j)%64)/128",
+          "expected_flops": 4294967296,
+          "logical_work_hash": "dfc47cc0a3b9645b190996680b3cf8954f538c3de3312daca96edec818e02a52"
+        },
+        "probe_grid": 128
+      },
+      "modes": [
+        "non_overlap_control",
+        "parallel_ba",
+        "empty_control",
+        "serial_ab",
+        "b_alone",
+        "serial_ba",
+        "parallel_ab",
+        "a_alone",
+        "same_stream_control"
+      ],
+      "profile": "P0",
+      "status": "PLANNED_NOT_RUN"
+    }
+  ],
+  "later": "Gate/Up, Tensor probe and Heavy configurations only after pilot correctness/timeline review",
+  "independent_process_recheck": "required for key findings; separately authorized",
+  "trace_plan": "Separate P2 runs, same logical work/config hashes; never pooled into P0"
+}

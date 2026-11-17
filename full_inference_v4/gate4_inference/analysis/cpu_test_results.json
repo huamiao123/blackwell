@@ -1,0 +1,9 @@
+{
+  "task": "gate4_inference",
+  "exit_code": 0,
+  "test_count": 6,
+  "gpu_runtime_imports_denied": true,
+  "model_weight_reads_denied": true,
+  "scope": "CPU correctness tests; no GPU performance or co-residency validation",
+  "log_sha256": "7bdf6561768be958ea9d18a413e5dbdc15fd4c922cecc382f0b02a17c3007caf"
+}

@@ -1,0 +1,542 @@
+{
+  "scope": "CPU preparation only; no new GPU experiments",
+  "model_weights_loaded": false,
+  "historical_source_commit": "326e7d1e26460d37b588af91a3ea57136201a798",
+  "artifacts": [
+    {
+      "path": "gate4_spatial/.gitignore",
+      "bytes": 72,
+      "sha256": "322287f1214096ef6d3c9ffce4bb927e33c55d0028503b5bdcdc5c775e6550f3"
+    },
+    {
+      "path": "gate4_spatial/analysis/combined_cpu_tests.json",
+      "bytes": 992,
+      "sha256": "1c4e504986a46645749f4828b7c599102ab24771db257dc2d7b188fb3ff71bf3"
+    },
+    {
+      "path": "gate4_spatial/analysis/concurrency_runs.csv",
+      "bytes": 206,
+      "sha256": "1d06043a2c0d3c2b9577df4c675fa0c7569162bcbf796b92e8e15239c67e70aa"
+    },
+    {
+      "path": "gate4_spatial/analysis/concurrency_summary.csv",
+      "bytes": 115,
+      "sha256": "a247696b871dbc59e5c53fecd2d2aee322b6ee656b486d0953d776dc912f9f8b"
+    },
+    {
+      "path": "gate4_spatial/analysis/cpu_test_results.json",
+      "bytes": 310,
+      "sha256": "12a0a834b7ccf34a4b0082b3d19b6c6a93ef609dfd26bc256ba2e4004dcb1f6a"
+    },
+    {
+      "path": "gate4_spatial/analysis/input_audit.json",
+      "bytes": 5510,
+      "sha256": "7ad25bea4f1a760f11930210a17569e413ff01273b0cbfd21516702c7e3ed03b"
+    },
+    {
+      "path": "gate4_spatial/analysis/interference_matrix.csv",
+      "bytes": 116,
+      "sha256": "9d2072baba91056eee7ed88cd41854732eb8d809769f06606b44f3d2fd1dfc12"
+    },
+    {
+      "path": "gate4_spatial/analysis/offline_compile/compile_manifest.json",
+      "bytes": 918,
+      "sha256": "5fa5fc0ed1ed6d0e8042c69cfd3fb96e2463c0ab619db2fc61084c8a9cf4ae7d"
+    },
+    {
+      "path": "gate4_spatial/analysis/offline_compile/nvcc.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "gate4_spatial/analysis/offline_compile/probe_validation.csv",
+      "bytes": 1367,
+      "sha256": "7c6458b8aebe56dfc41c3bdcc65fb2ac47588d5db3a4c7539b200cb6ecdf8233"
+    },
+    {
+      "path": "gate4_spatial/analysis/offline_compile/resources.txt",
+      "bytes": 461,
+      "sha256": "0dad710a71ddbd4e44658e2b3a5ce58cd31c1d80706d3b55d3669cb61016a374"
+    },
+    {
+      "path": "gate4_spatial/analysis/offline_compile/sass.txt",
+      "bytes": 137863,
+      "sha256": "7773c14a3077801db1156aa764e1787e43046b862bdd187a4460c926a96fceba"
+    },
+    {
+      "path": "gate4_spatial/analysis/package_validation.json",
+      "bytes": 839,
+      "sha256": "aad348563665fca79ff27cbc1916fb678a9930de7a55b83acc52d4df4f9899ad"
+    },
+    {
+      "path": "gate4_spatial/analysis/probe_standalone.csv",
+      "bytes": 115,
+      "sha256": "43e6def45b48b9beb534afdcf4930cc3297fd4a1ff9fe0c65fa6fa58ea5344a0"
+    },
+    {
+      "path": "gate4_spatial/analysis/probe_validation.csv",
+      "bytes": 1367,
+      "sha256": "7c6458b8aebe56dfc41c3bdcc65fb2ac47588d5db3a4c7539b200cb6ecdf8233"
+    },
+    {
+      "path": "gate4_spatial/analysis/spatial_concurrency.csv",
+      "bytes": 177,
+      "sha256": "dfd7a8e9137fcdf255fd679abccbed46bdef42e91c9ff61caf3907aa8896f36c"
+    },
+    {
+      "path": "gate4_spatial/configs/experiment_plan.json",
+      "bytes": 44211,
+      "sha256": "a772b38f021e5e457894053c68f692368254590eee553d8963b687f714c86d42"
+    },
+    {
+      "path": "gate4_spatial/configs/gpu_window.example.json",
+      "bytes": 255,
+      "sha256": "8ab2932e10f1b289dbdcedabe34c098d8f65edc9d5cf4502280a7a10ee7048ef"
+    },
+    {
+      "path": "gate4_spatial/configs/hardware_from_gate3.json",
+      "bytes": 729,
+      "sha256": "7c7744ce636157f23e534a36f8c729c5ed63a213fb055073e85cdd9f9e926c11"
+    },
+    {
+      "path": "gate4_spatial/configs/kernel_selection.json",
+      "bytes": 4690,
+      "sha256": "6b4502ed6a872994862e871be70d950e014dbeba1f12fbe51d94342e4d881cb4"
+    },
+    {
+      "path": "gate4_spatial/configs/review.json",
+      "bytes": 624,
+      "sha256": "6d4eb82db948b8dff5df6f8f722cb8f1fd29b40b7c33e613d0a3e707733fd224"
+    },
+    {
+      "path": "gate4_spatial/experiment_matrix.md",
+      "bytes": 1376,
+      "sha256": "f4bed15360e2f36e1f567846e6516b48ff09cf889778fed66e0085e8e451b6cd"
+    },
+    {
+      "path": "gate4_spatial/figures/README.md",
+      "bytes": 268,
+      "sha256": "0a980fcc3635ab535e5f0ade31c9312b67bb915ea0a1239038559263e86e63a9"
+    },
+    {
+      "path": "gate4_spatial/final_report.md",
+      "bytes": 2109,
+      "sha256": "1cbc8097be42a93af36be117d6e2b62ee5a6f7dd4d7e2dfdaacd1025ff35a2d6"
+    },
+    {
+      "path": "gate4_spatial/implementation_notes.md",
+      "bytes": 3105,
+      "sha256": "c7c87be5f1c74dca36e35840ee144d9fe29599e1c52c3ad4c4b4c89be38f2677"
+    },
+    {
+      "path": "gate4_spatial/implementation_report.md",
+      "bytes": 3493,
+      "sha256": "a21ead880b6076548a52c4fc82d68807ebdd9f50ca97daca062100bbb47a113c"
+    },
+    {
+      "path": "gate4_spatial/kernel_selection.md",
+      "bytes": 1352,
+      "sha256": "1844a6396770f334bf8ef95b6ecd78d9050a1ae6d1668feba8a307b2be72d0f8"
+    },
+    {
+      "path": "gate4_spatial/logs/cpu_tests.log",
+      "bytes": 2082,
+      "sha256": "3934451b78d04be7ac84ee0aadaa196e354e1e45251ab83e26365a6cb59c427f"
+    },
+    {
+      "path": "gate4_spatial/methodology.md",
+      "bytes": 4437,
+      "sha256": "8a833aa907f1007eeccc27de9347c89d022bed9fbc5d906d922447d922ed9619"
+    },
+    {
+      "path": "gate4_spatial/probe_protocol.md",
+      "bytes": 2239,
+      "sha256": "7bceae3a8c6f980af756ac8eceecbf37e20bd8d3e167e784d54058f4fa1561b4"
+    },
+    {
+      "path": "gate4_spatial/raw/README.md",
+      "bytes": 253,
+      "sha256": "db3a82580eeb836d1cdf63f355546cdc8c390637cd85a95627d629cd0366975e"
+    },
+    {
+      "path": "gate4_spatial/README.md",
+      "bytes": 2200,
+      "sha256": "5252e7634e8d134f19b177d2094c66483975bd8e6f3da6945401d21825ab9870"
+    },
+    {
+      "path": "gate4_spatial/src/analyze_trace.py",
+      "bytes": 5007,
+      "sha256": "8e08740ccdfc6f7f181f75162966925fba4087640a2dbe216f85531167c02b15"
+    },
+    {
+      "path": "gate4_spatial/src/audit_inputs.py",
+      "bytes": 5649,
+      "sha256": "76999067fb6d27e3fa0e9b1b40542025ebd022b8a93010781c1ea8fe847ede19"
+    },
+    {
+      "path": "gate4_spatial/src/compile_probes.py",
+      "bytes": 3663,
+      "sha256": "8abd937c7d86541fc3a575ae49e42d0fa6e7f40eef61ac45a2df5aaaad8b89a6"
+    },
+    {
+      "path": "gate4_spatial/src/contracts.py",
+      "bytes": 2527,
+      "sha256": "33e2ec5045e15b6a3caf8e5541c9596446b5393aed900c479d04f3cb51ea7148"
+    },
+    {
+      "path": "gate4_spatial/src/cuda_stream_backend.py",
+      "bytes": 3808,
+      "sha256": "21df0007d0b5e1e3891a94304db1d6471ce940b1a7532c14fbae4fa00be915f1"
+    },
+    {
+      "path": "gate4_spatial/src/fallback_stage.py",
+      "bytes": 1571,
+      "sha256": "cd4799932338ec923a5db337f3034f0412046b7f9df60dfa2af4ff545ad6d4e4"
+    },
+    {
+      "path": "gate4_spatial/src/g4_common.py",
+      "bytes": 1253,
+      "sha256": "a836f43a211437a7fa6ba39ce7ff867cdb69cbafb150ad350efd31e6db07e519"
+    },
+    {
+      "path": "gate4_spatial/src/metrics.py",
+      "bytes": 2715,
+      "sha256": "28d49f2e40fb8ec2c40bb5e26944d778a3b4131c56a8c47b7d37fabba389860a"
+    },
+    {
+      "path": "gate4_spatial/src/plan.py",
+      "bytes": 2534,
+      "sha256": "b267e76a398e1e48ad4587dbf2f7a58e1f1110ec8331532b864d6eee8a76ed81"
+    },
+    {
+      "path": "gate4_spatial/src/probe_reference.py",
+      "bytes": 2699,
+      "sha256": "3cb943dfd4ddd52ce7d5ae02edd319c72be4c75b69baf620b51fdc00f948b76e"
+    },
+    {
+      "path": "gate4_spatial/src/probes.cu",
+      "bytes": 3831,
+      "sha256": "434d8e56a5b29a2c441368d00ae1053c93b77cad1b8fe7eaa24eff4ca2f71f89"
+    },
+    {
+      "path": "gate4_spatial/src/replay.py",
+      "bytes": 3423,
+      "sha256": "5258440e94a0a0b25530b8c961bd1ec7bdf8f4053559807ac92a681141d7d016"
+    },
+    {
+      "path": "gate4_spatial/src/review_gate.py",
+      "bytes": 2267,
+      "sha256": "632f0a183f022354666df29588748982c5c225289d1ae98af3a5ffc8ef5a95a2"
+    },
+    {
+      "path": "gate4_spatial/src/stream_protocol.py",
+      "bytes": 2049,
+      "sha256": "8bf2e570802ef27bb1142c8c919e3a4f3ac54766bf310c555060142f27f35555"
+    },
+    {
+      "path": "gate4_spatial/tests/test_protocols.py",
+      "bytes": 7774,
+      "sha256": "ccc0fcf6ad808c52783f28417b4a8afe95f28c85c57f2c1741fbaac794ee7f5b"
+    },
+    {
+      "path": "gate4_spatial/tests/test_trace_and_guard.py",
+      "bytes": 4100,
+      "sha256": "6968910ddbf780acac350d3f846369b10cc82a127138385fe7e64937b85a71ed"
+    },
+    {
+      "path": "gate4_spatial/tools/cpu_test_runner.py",
+      "bytes": 1251,
+      "sha256": "21b3d2285d6008dca157a9bd969ec497bd8a3b33f828d4f0208738c98cc77547"
+    },
+    {
+      "path": "gate4_spatial/tools/run_cpu_checks.py",
+      "bytes": 1669,
+      "sha256": "7a9ccbf8f5fd257c8296991115374de16eff020ffbcc9053d3c6f5f1e7ab9f9e"
+    },
+    {
+      "path": "gate4_spatial/tools/validate_package.py",
+      "bytes": 6239,
+      "sha256": "c584d72eabba58d71a3a01ef5901d9aff9f1467c1664f2ed09dda551bccebcbd"
+    },
+    {
+      "path": "gate4_residency/.gitignore",
+      "bytes": 65,
+      "sha256": "688e70f0da60361c6db57e9df4ce4da6dd702f506199e93c629d3c9a98abc79d"
+    },
+    {
+      "path": "gate4_residency/analysis/allocation_granularity_audit.json",
+      "bytes": 791,
+      "sha256": "99f817872ffe31820cb565420b52879a5451feb736449f68f7a00af86dd7320b"
+    },
+    {
+      "path": "gate4_residency/analysis/co_residency_matrix.csv",
+      "bytes": 25303,
+      "sha256": "0f2d2be5a4fc254816eab5d08f169fc6258417e8eba95910df6ee4116a21520d"
+    },
+    {
+      "path": "gate4_residency/analysis/concurrency_results.csv",
+      "bytes": 192,
+      "sha256": "a0e78e2c9771450c48f61e93c994a54ecabe82121699745a2adfcf7d1fad6287"
+    },
+    {
+      "path": "gate4_residency/analysis/cpu_test_results.json",
+      "bytes": 311,
+      "sha256": "826016fb97a4d25408e8ae05152ae41241f3ea5e7d6d02c18bdd84e81298f3b8"
+    },
+    {
+      "path": "gate4_residency/analysis/cta_resource_table.csv",
+      "bytes": 1290,
+      "sha256": "b6ab5061c2894574daf08cc8a9a64a065d1ed3f152451166f0dc1d9d9ec6299b"
+    },
+    {
+      "path": "gate4_residency/analysis/evidence_status.csv",
+      "bytes": 477,
+      "sha256": "65ec8ebbc0eef27e91534e2d0df270ef5b964e72304648b1a40df70f5f1124da"
+    },
+    {
+      "path": "gate4_residency/analysis/interference_results.csv",
+      "bytes": 155,
+      "sha256": "de1caee18be9aaaa1da097f7f536fddd46ef358c15a389c025ca089bc49daf2d"
+    },
+    {
+      "path": "gate4_residency/analysis/probe_resource_table.csv",
+      "bytes": 987,
+      "sha256": "85133f3f233bd0599a11aa86457cfa91c6afcb029168d499e71c8cd921599022"
+    },
+    {
+      "path": "gate4_residency/analysis/theoretical_residency.csv",
+      "bytes": 1142,
+      "sha256": "8ddb3e8f74c5a0af62e958f0843f9642efeda3a138d91e8abd05b1dbdacfd209"
+    },
+    {
+      "path": "gate4_residency/co_residency_protocol.md",
+      "bytes": 1309,
+      "sha256": "889c53fc66e517741091a2477a5c2efcc2f20ef67585322c6b721b6e61c32c3c"
+    },
+    {
+      "path": "gate4_residency/configs/gpu_window.example.json",
+      "bytes": 257,
+      "sha256": "72dcda9e564b65b91936f2806c392f79ba2dd34758d4e9d78470639cab96660d"
+    },
+    {
+      "path": "gate4_residency/configs/review.json",
+      "bytes": 626,
+      "sha256": "e0a583c0f3ddbb6cc8bae43cfe134cc7cf5590e25f01919537aada29fad4ae77"
+    },
+    {
+      "path": "gate4_residency/figures/README.md",
+      "bytes": 268,
+      "sha256": "0a980fcc3635ab535e5f0ade31c9312b67bb915ea0a1239038559263e86e63a9"
+    },
+    {
+      "path": "gate4_residency/final_report.md",
+      "bytes": 2288,
+      "sha256": "dd6fe8a3ba38264b5b31eb800efa0c3a9b5d60f4c1e0219b12d1490e7ef81462"
+    },
+    {
+      "path": "gate4_residency/logs/cpu_tests.log",
+      "bytes": 602,
+      "sha256": "e6d2b3ad664fc07247362e6bde087a69bc5dfc2979c20a3a1d054079cecb173d"
+    },
+    {
+      "path": "gate4_residency/methodology.md",
+      "bytes": 982,
+      "sha256": "dee64aeaf1b290b222f9af39f37f2225c45ab42089f97bed46e1a9e535f3ac9e"
+    },
+    {
+      "path": "gate4_residency/occupancy_analysis.md",
+      "bytes": 1318,
+      "sha256": "81cd855dc41a7ac3d2ce64063e656b5ae8a2d299124f3f90f8a6d3809d9e1136"
+    },
+    {
+      "path": "gate4_residency/raw/README.md",
+      "bytes": 253,
+      "sha256": "db3a82580eeb836d1cdf63f355546cdc8c390637cd85a95627d629cd0366975e"
+    },
+    {
+      "path": "gate4_residency/README.md",
+      "bytes": 1356,
+      "sha256": "910ac80f251ebb22073ca2bde6e295be4275475d8ca6c751033e95c4639810af"
+    },
+    {
+      "path": "gate4_residency/resource_model.md",
+      "bytes": 2663,
+      "sha256": "a083d5eb209452d44644babd36eb33e9a42e41f8c716d3550186a883aa718926"
+    },
+    {
+      "path": "gate4_residency/src/build_cpu_tables.py",
+      "bytes": 4032,
+      "sha256": "6989abe23a142369da108848beda4bb4df5cbb2ae16f7ef1507721fbafb80c2c"
+    },
+    {
+      "path": "gate4_residency/src/evidence.py",
+      "bytes": 1237,
+      "sha256": "308ed42b84362cfcab21c2822851f97fc67d0fd37676f751cd2d8a117174a6d8"
+    },
+    {
+      "path": "gate4_residency/src/partition_model.py",
+      "bytes": 1363,
+      "sha256": "67fe2ea9100c7579f33c882e004fdc36a9662f1887ecd0ed5179ca1ce1f195cf"
+    },
+    {
+      "path": "gate4_residency/src/resource_model.py",
+      "bytes": 4667,
+      "sha256": "96282bbb6a2d50cfe4aa338a6d3c02345a393dd2626c7f8a9a0edd70a9acadb3"
+    },
+    {
+      "path": "gate4_residency/tests/test_resource_cpu.py",
+      "bytes": 2276,
+      "sha256": "5188d4d6001d72bcf3d66b8216e3d161d9b43063f78cb317b95549ce8d5d1aa5"
+    },
+    {
+      "path": "gate4_inference/.gitignore",
+      "bytes": 65,
+      "sha256": "688e70f0da60361c6db57e9df4ce4da6dd702f506199e93c629d3c9a98abc79d"
+    },
+    {
+      "path": "gate4_inference/analysis/auxiliary_work.csv",
+      "bytes": 134,
+      "sha256": "5285a45c73e5644aad6c0039147779394fd91621dae307287a78cb6c13a9116f"
+    },
+    {
+      "path": "gate4_inference/analysis/concurrency_summary.csv",
+      "bytes": 130,
+      "sha256": "711bd2b25558c6c13b79ed7b0f9f42fb448f6de3ef1dc3ca3be9dffcfbb70321"
+    },
+    {
+      "path": "gate4_inference/analysis/cpu_test_results.json",
+      "bytes": 311,
+      "sha256": "1c5f9434ad4efd852b3469973d6d6d79994c84e0c4df1824206a402004d600a2"
+    },
+    {
+      "path": "gate4_inference/analysis/decode_concurrency.csv",
+      "bytes": 127,
+      "sha256": "369646faac87657a30a0e3fc7e00e51671f4e0d1b3d99b32283b327b4be6223f"
+    },
+    {
+      "path": "gate4_inference/analysis/e2e_comparison.csv",
+      "bytes": 123,
+      "sha256": "15f60993fcbe4de7c1fe2bf8bd6968aff606ead22aad1304195dc8c7960e7459"
+    },
+    {
+      "path": "gate4_inference/analysis/historical_p0_baseline.csv",
+      "bytes": 1304,
+      "sha256": "9fe06fa839b3bddef0b5d4077f171cb6e54e39590d108c7b31e451d343f9805c"
+    },
+    {
+      "path": "gate4_inference/analysis/paired_runs.csv",
+      "bytes": 132,
+      "sha256": "db7c21080bdcd8ab3f9409ea5674674f499c5651b57e949761202b154d25b70d"
+    },
+    {
+      "path": "gate4_inference/analysis/prefill_concurrency.csv",
+      "bytes": 120,
+      "sha256": "5e5b108fd66d773d46bb065cdfb47ac7e74f16f98ec8a71af1766c624c48fcb5"
+    },
+    {
+      "path": "gate4_inference/analysis/request_metrics.csv",
+      "bytes": 144,
+      "sha256": "9066332969ad8b517cfc8710ff57a82ed77388e5efbe9fe84acaec9e42941916"
+    },
+    {
+      "path": "gate4_inference/analysis/resource_aware_policy.csv",
+      "bytes": 102,
+      "sha256": "d4b8047454143fc582cd6b6891153c668764cf54b5ac8e9c23288d395221fa14"
+    },
+    {
+      "path": "gate4_inference/configs/gpu_window.example.json",
+      "bytes": 257,
+      "sha256": "0cc0273d4dc49fa87e1dcd14cb23d465417700fdaf21535cd9ecdeafd6395590"
+    },
+    {
+      "path": "gate4_inference/configs/review.json",
+      "bytes": 626,
+      "sha256": "c1324b47cb762ad406ab39d4f93f6346062b6e8e64e8df3b729443b2ff2a34c2"
+    },
+    {
+      "path": "gate4_inference/decode_protocol.md",
+      "bytes": 906,
+      "sha256": "f74cc6494d71884a9b8ff5e98c71d737c51fe51ddd1f664185c71efd589b4968"
+    },
+    {
+      "path": "gate4_inference/figures/README.md",
+      "bytes": 268,
+      "sha256": "0a980fcc3635ab535e5f0ade31c9312b67bb915ea0a1239038559263e86e63a9"
+    },
+    {
+      "path": "gate4_inference/final_report.md",
+      "bytes": 1857,
+      "sha256": "fb3ad8c4f228b0ed778ad26947a76767abe1632a54cb1a24270d91dfb23dea2c"
+    },
+    {
+      "path": "gate4_inference/lifecycle_protocol.md",
+      "bytes": 1316,
+      "sha256": "9b52d6784a785965e3af62ebb29026d9e0299494f9b5294fc0fad6b8141df273"
+    },
+    {
+      "path": "gate4_inference/logs/cpu_tests.log",
+      "bytes": 898,
+      "sha256": "7bdf6561768be958ea9d18a413e5dbdc15fd4c922cecc382f0b02a17c3007caf"
+    },
+    {
+      "path": "gate4_inference/methodology.md",
+      "bytes": 1307,
+      "sha256": "15cceedd0b8532ca774b28618a69e663ad5e42589b0395f981d42d161a50bba1"
+    },
+    {
+      "path": "gate4_inference/prefill_protocol.md",
+      "bytes": 836,
+      "sha256": "d30afff7b4393543483a95c732faa162b98ea1e7e4d6436ca5ca4e42d04c4aa9"
+    },
+    {
+      "path": "gate4_inference/raw/README.md",
+      "bytes": 253,
+      "sha256": "db3a82580eeb836d1cdf63f355546cdc8c390637cd85a95627d629cd0366975e"
+    },
+    {
+      "path": "gate4_inference/README.md",
+      "bytes": 1388,
+      "sha256": "4ee023197206744063f54fda84d9a9345df028cee790b2cb0e5e911e68c10309"
+    },
+    {
+      "path": "gate4_inference/scheduler_design.md",
+      "bytes": 1345,
+      "sha256": "81efa02738c4e1f5a8c57f4586f20bba42d421fa97b846fd2fc609cc751484d4"
+    },
+    {
+      "path": "gate4_inference/src/policy.py",
+      "bytes": 2412,
+      "sha256": "c66f80b8dda2d8d60b9cfe3cbcfc7795ef0117ffc9dfb5493afe64efed9fec44"
+    },
+    {
+      "path": "gate4_inference/src/request_metrics.py",
+      "bytes": 1621,
+      "sha256": "78544dad24cfa36f87f746e19afaabd51526a84f7ba0cb20b50191c57eb490bf"
+    },
+    {
+      "path": "gate4_inference/src/stage_injection.py",
+      "bytes": 1265,
+      "sha256": "a1ffcc6099767243560899af2e42860552085a242ce940b6ebf6c83f5299be3f"
+    },
+    {
+      "path": "gate4_inference/src/useful_work.py",
+      "bytes": 2851,
+      "sha256": "27a9809445e33199e61e4da95eb880f5009f641ecdc3cb29bc12c412853129b7"
+    },
+    {
+      "path": "gate4_inference/tests/test_inference_cpu.py",
+      "bytes": 2710,
+      "sha256": "8e3bc2ee367039230e8d883746e558134a2e014a19ae1a5964216abdee1290f6"
+    },
+    {
+      "path": "gate4_inference/useful_work_definition.md",
+      "bytes": 1247,
+      "sha256": "10e6e38281fede1fddda80fb0d12574671fb565e88ff258cda12a6c0bb13fb38"
+    },
+    {
+      "path": "gate4_cpu_review.md",
+      "bytes": 1644,
+      "sha256": "a8b359b5b390ae27bb728dd149b32246e8bef0a5acb1817b9464cd57f3f60b0e"
+    }
+  ]
+}

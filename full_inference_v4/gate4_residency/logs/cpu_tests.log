@@ -1,0 +1,9 @@
+test_global_fit_is_not_partition_fit (test_resource_cpu.ResourceTests.test_global_fit_is_not_partition_fit) ... ok
+test_heavy_impossible_with_one_nvfp4_cta (test_resource_cpu.ResourceTests.test_heavy_impossible_with_one_nvfp4_cta) ... ok
+test_main_packing_count_changes_budget (test_resource_cpu.ResourceTests.test_main_packing_count_changes_budget) ... ok
+test_overlap_or_asserted_booleans_never_direct_proof (test_resource_cpu.ResourceTests.test_overlap_or_asserted_booleans_never_direct_proof) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.009s
+
+OK

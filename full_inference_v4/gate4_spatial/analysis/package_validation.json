@@ -1,0 +1,32 @@
+{
+  "status": "CPU_PACKAGE_VALIDATED",
+  "new_gpu_workloads": 0,
+  "model_weights_loaded": false,
+  "historical_manifests": [
+    {
+      "manifest": "analysis/gate2_artifact_manifest.json",
+      "count": 314,
+      "all_hashes_unchanged": true
+    },
+    {
+      "manifest": "gate3_attribution/analysis/artifact_manifest.json",
+      "count": 28,
+      "all_hashes_unchanged": true
+    },
+    {
+      "manifest": "gate3_backbone/analysis/artifact_manifest.json",
+      "count": 54,
+      "all_hashes_unchanged": true
+    }
+  ],
+  "total_cpu_tests": 25,
+  "compiled_probe_count": 4,
+  "theoretical_combinations": 56,
+  "new_gpu_observation_rows": 0,
+  "limitations": [
+    "live activation replay adapter not validated",
+    "no live Occupancy API",
+    "no GPU probe output test",
+    "no useful consumer or E2E gain demonstrated"
+  ]
+}

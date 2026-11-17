@@ -1,0 +1,23 @@
+{
+  "source": "/usr/local/cuda-13.3/include/cuda_occupancy.h",
+  "source_sha256": "9aa9d20e11c10856b9748452119400141886a4b18f6a73f27e856b51a1053789",
+  "scope": "CPU header rules for computeMajor=12; not live Occupancy API result",
+  "rules": {
+    "register_quantum_per_warp": {
+      "function": "cudaOccRegAllocationGranularity",
+      "line": 680
+    },
+    "shared_quantum_bytes": {
+      "function": "cudaOccSMemAllocationGranularity",
+      "line": 620
+    },
+    "subpartitions": {
+      "function": "cudaOccSubPartitionsPerMultiprocessor",
+      "line": 708
+    }
+  },
+  "register_quantum_per_warp": 256,
+  "shared_quantum_bytes": 128,
+  "subpartitions": 4,
+  "uncertainty": "Reserved shared memory, cache carveout, dynamic register behavior and mixed scheduling not established"
+}

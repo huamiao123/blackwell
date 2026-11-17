@@ -1,0 +1,9 @@
+precision,logical_op,raw_homogeneous_cta_upper_bound,registers_upper_bound,shared_upper_bound,warps_upper_bound,threads_upper_bound,ctas_upper_bound,occupancy_api,actual_occupancy,uncertainty
+nvfp4,qkv_proj,1,1,1,4,4,24,NOT_RUN_CPU_ONLY,UNAVAILABLE,allocation rounding and function attributes not fully known
+nvfp4,o_proj,1,1,1,4,4,24,NOT_RUN_CPU_ONLY,UNAVAILABLE,allocation rounding and function attributes not fully known
+nvfp4,gate_up_proj,1,1,1,4,4,24,NOT_RUN_CPU_ONLY,UNAVAILABLE,allocation rounding and function attributes not fully known
+nvfp4,down_proj,1,1,1,4,4,24,NOT_RUN_CPU_ONLY,UNAVAILABLE,allocation rounding and function attributes not fully known
+bf16,qkv_proj,6,16,6,48,48,24,NOT_RUN_CPU_ONLY,UNAVAILABLE,allocation rounding and function attributes not fully known
+bf16,o_proj,6,16,6,48,48,24,NOT_RUN_CPU_ONLY,UNAVAILABLE,allocation rounding and function attributes not fully known
+bf16,gate_up_proj,6,16,6,48,48,24,NOT_RUN_CPU_ONLY,UNAVAILABLE,allocation rounding and function attributes not fully known
+bf16,down_proj,6,16,6,48,48,24,NOT_RUN_CPU_ONLY,UNAVAILABLE,allocation rounding and function attributes not fully known

@@ -1,0 +1,1 @@
+run_id,request_id,precision,prompt_hash,prompt_tokens,output_tokens,arrival_ns,first_token_ns,completion_ns,ttft_ns,tpot_ns,engine_e2e_ns,scope
