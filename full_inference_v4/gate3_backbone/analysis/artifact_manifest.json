@@ -85,8 +85,8 @@
     },
     {
       "path": "gate3_backbone/paired_report.md",
-      "bytes": 8072,
-      "sha256": "7b2e75068031c6e4ac780cdaa220ca653cbbc0984312f59ffc93ea31584092e5"
+      "bytes": 8195,
+      "sha256": "7eb14cca2c5f0bda41a36f459c0edd4bbcb1d6a46fc0977c56060d19d05a51e5"
     },
     {
       "path": "gate3_backbone/src/analyze_backbone.py",
@@ -115,8 +115,8 @@
     },
     {
       "path": "gate3_backbone/tools/report_and_plot.py",
-      "bytes": 12159,
-      "sha256": "87ec6dd7338ff87362107c2ea9c0da902b0253cb5d8e8834eea8f6b78bf10c9c"
+      "bytes": 12282,
+      "sha256": "087e639633c7ca162d6c3c3dad3e7b8e98a03d2aea41b1deae0180a4c5699228"
     },
     {
       "path": "gate3_backbone/tools/validate_release.py",

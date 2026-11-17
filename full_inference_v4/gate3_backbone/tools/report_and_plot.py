@@ -59,6 +59,7 @@ def main():
 基于此前Gate 2完整推理与Gate 3的LM Head归因，增加一份NVFP4及一份BF16的完整推理P2补采。
 同为Batch=8、不同合法Prompt各2048 Token、输出257 Token、256次真实Decode，KV为fp8_e4m3，
 关闭Prefix Cache与Chunked Prefill，保持Graph路径和既有配置。没有重跑P0，没有NCU或辅助并发。
+输入沿用Gate 2的`synthetic_control`硬件控制组，不是自然语言应用泛化；E3—E7尚未在本轮执行。
 
 已核验两种精度各**36层×4类投影=144个模块**，各映射**36864次Decode主GEMM**；
 每个模块均有256条实际执行记录。单次采样的测量边界与统计限制保留，不把Kernel次数当独立实验重复。
