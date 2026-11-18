@@ -32,7 +32,10 @@ def telemetry_fields(report):
 def analyze(root, manifest_path, output):
     manifest = load(manifest_path)
     compare_grids = manifest.get('compare_grids', False)
-    grids = [32, 128] if compare_grids else [128]
+    low_grid = manifest.get('comparison_grid', 32)
+    if compare_grids and low_grid not in [32, 64]:
+        raise ValueError('paired grid experiment requires a lower grid')
+    grids = [low_grid, 128] if compare_grids else [128]
     expected = [(block, precision) for block in range(6)
                 for precision in (PRECISIONS if block % 2 == 0 else PRECISIONS[::-1])]
     planned = [(row['block'], row['precision']) for row in manifest['planned_order']]
@@ -135,9 +138,9 @@ def analyze(root, manifest_path, output):
                           [a - b for a, b in zip(values['nvfp4', grid], values['bf16', grid])])
             if compare_grids:
                 for p in PRECISIONS:
-                    summarize(p, '32_minus_128', order, field,
-                              [a - b for a, b in zip(values[p, 32], values[p, 128])])
-    prefix = 'qkv_grid_p0' if compare_grids else 'qkv_p0'
+                    summarize(p, f'{low_grid}_minus_128', order, field,
+                              [a - b for a, b in zip(values[p, low_grid], values[p, 128])])
+    prefix = f'qkv_grid{low_grid}_p0' if compare_grids and low_grid != 32 else 'qkv_grid_p0' if compare_grids else 'qkv_p0'
     write_csv(output / f'{prefix}_run_inventory.csv', runs)
     write_csv(output / f'{prefix}_conditions.csv', measurements)
     write_csv(output / f'{prefix}_block_metrics.csv', blocks)

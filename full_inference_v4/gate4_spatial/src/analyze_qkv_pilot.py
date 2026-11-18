@@ -38,6 +38,8 @@ def load_run(run, trace):
         raise ValueError('supervision did not verify GPU release')
     identity = result['live_identity']
     pilot = result['overlap_pilot']
+    probe = pilot['fp32_probe']
+    probe_ident = pilot.get('probe_identity', dict(symbol='fp32_light', registers_per_thread=22))
     conditions = {r['mode']: r for r in pilot['conditions']}
     if set(conditions) != set(MODES) or len(pilot['conditions']) != len(MODES):
         raise ValueError('condition matrix mismatch')
@@ -64,7 +66,9 @@ def load_run(run, trace):
             raise ValueError('unknown or duplicate pilot activity')
         expected_identity = ((identity['kernel_name'], identity['grid'], identity['block'],
                               identity['register_and_shared_attributes']['NUM_REGS'], identity['dynamic_shared_bytes'])
-                             if role == 'A' else ('fp32_light', [pilot['fp32_probe']['grid'], 1, 1], [32, 1, 1], 22, 0))
+                             if role == 'A' else (probe_ident['symbol'], [probe['grid'], 1, 1],
+                                                  [probe['spec']['threads'], 1, 1], probe_ident['registers_per_thread'],
+                                                  probe['spec']['shared_bytes']))
         if (row['kernel_name'], dims, threads, row['registersPerThread'], row['dynamicSharedMemory']) != expected_identity:
             raise ValueError('captured function or launch configuration changed')
         if not row['graphId'] or not row['graphNodeId']:
@@ -118,7 +122,10 @@ if __name__ == '__main__':
     args = parser.parse_args()
     data = [load_run(run, trace) for run, trace in zip(args.run, args.trace)]
     a, b = (row[0] for row in data)
-    if ({a['case'], b['case']} != {'nvfp4_qkv_proj', 'bf16_qkv_proj'} or a['input_sha256'] != b['input_sha256'] or
+    if ({a['case'].removesuffix('_qkv_proj').removesuffix('_gate_up_proj'),
+         b['case'].removesuffix('_qkv_proj').removesuffix('_gate_up_proj')} != {'nvfp4', 'bf16'} or
+            a['case'].split('_', 1)[1] != b['case'].split('_', 1)[1] or
+            a['input_sha256'] != b['input_sha256'] or
             a['overlap_pilot']['fp32_probe'] != b['overlap_pilot']['fp32_probe']):
         raise ValueError('mismatched cross-precision workload')
     write_csv(args.output / 'qkv_pilot_intervals.csv', [r for _, intervals, _ in data for r in intervals])

@@ -23,7 +23,9 @@ def main():
     parser.add_argument('--mode', choices=['acceptance', 'qkv_calibration', 'qkv_replay_nvfp4', 'qkv_replay_bf16',
                                           'qkv_overlap_nvfp4', 'qkv_overlap_bf16'], default='acceptance')
     parser.add_argument('--p0-block', type=int, choices=range(6))
-    parser.add_argument('--probe-grid', type=int, choices=[32, 128], default=128)
+    parser.add_argument('--probe-grid', type=int, choices=[32, 64, 128], default=128)
+    parser.add_argument('--operator', choices=['qkv_proj', 'gate_up_proj'], default='qkv_proj')
+    parser.add_argument('--probe-symbol', choices=['fp32_light', 'fp32_heavy', 'tensor_light'], default='fp32_light')
     parser.add_argument('--compare-grids', action='store_true')
     args = parser.parse_args()
     if not re.fullmatch(r'probe_[a-z0-9_]+', args.run_id):
@@ -53,9 +55,9 @@ def main():
     worker = Path(__file__).with_name('validate_qkv_replay.py' if qkv_replay else 'validate_probe_gpu.py')
     command = [str(project / 'vllm/.venv/bin/python'), str(worker), str(run_dir)]
     if qkv_replay:
-        command.extend(['--precision', args.mode.rsplit('_', 1)[-1]])
+        command.extend(['--precision', args.mode.rsplit('_', 1)[-1], '--operator', args.operator])
         if qkv_overlap:
-            command.extend(['--overlap', '--probe-grid', str(args.probe_grid)])
+            command.extend(['--overlap', '--probe-grid', str(args.probe_grid), '--probe-symbol', args.probe_symbol])
         if p0:
             command.extend(['--p0-block', str(args.p0_block)])
         if args.compare_grids:

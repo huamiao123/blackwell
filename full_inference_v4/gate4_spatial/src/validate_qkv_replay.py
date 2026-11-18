@@ -12,14 +12,19 @@ from pathlib import Path
 from g4_common import SPATIAL, V4, load, save, sha
 from validate_probe_gpu import require_permit
 
+PROJECTION_SHARDS = {'qkv_proj': ('q', 'k', 'v'), 'gate_up_proj': ('gate', 'up')}
+REFERENCE_NAMES = {'qkv_proj': 'gate3_reference.json', 'gate_up_proj': 'gate_up_reference.json'}
+
 
 def read_projection(model, module_name, expected_keys, suffixes):
     from safetensors import safe_open
 
     index = model / 'model.safetensors.index.json'
     layouts = load(index)['weight_map']
-    prefix = module_name.removesuffix('qkv_proj')
-    names = [f'{prefix}{role}_proj.{suffix}' for suffix in suffixes for role in ('q', 'k', 'v')]
+    operator = module_name.rsplit('.', 1)[-1]
+    prefix = module_name.removesuffix(operator)
+    roles = PROJECTION_SHARDS[operator]
+    names = [f'{prefix}{role}_proj.{suffix}' for suffix in suffixes for role in roles]
     if not set(names).issubset(expected_keys):
         raise ValueError('checkpoint field list changed')
     sources = {name: layouts[name] for name in names}
@@ -29,7 +34,7 @@ def read_projection(model, module_name, expected_keys, suffixes):
         cursor = {name: stack.enter_context(safe_open(model / name, framework='pt', device='cpu'))
                   for name in sorted(set(sources.values()))}
         params = {field: [cursor[sources[name]].get_tensor(name)
-                          for name in (f'{prefix}{role}_proj.{field}' for role in ('q', 'k', 'v'))]
+                          for name in (f'{prefix}{role}_proj.{field}' for role in roles)]
                   for field in suffixes}
     return params, sources, sha(index)
 
@@ -55,7 +60,7 @@ def load_layer(torch, model, module_name, expected_keys):
         layer.register_parameter(field, torch.nn.Parameter(concatenate(params[field]), requires_grad=False))
     for field, source in [('input_global_scale', 'input_scale'), ('weight_global_scale', 'weight_scale_2')]:
         if any(tensor.numel() != 1 for tensor in params[source]):
-            raise ValueError('expected a global scale per Q/K/V shard')
+            raise ValueError('expected one global scale per fused projection shard')
         scale = torch.stack([tensor.reshape(()) for tensor in params[source]]).max().to('cuda', torch.float32)
         layer.register_parameter(field, torch.nn.Parameter(scale, requires_grad=False))
     layer.input_global_scale_inv = torch.nn.Parameter(1 / layer.input_global_scale, requires_grad=False)
@@ -119,7 +124,9 @@ def main():
     parser.add_argument('--precision', choices=['nvfp4', 'bf16'], default='nvfp4')
     parser.add_argument('--overlap', action='store_true')
     parser.add_argument('--p0-block', type=int, choices=range(6))
-    parser.add_argument('--probe-grid', type=int, choices=[32, 128], default=128)
+    parser.add_argument('--probe-grid', type=int, choices=[32, 64, 128], default=128)
+    parser.add_argument('--operator', choices=PROJECTION_SHARDS, default='qkv_proj')
+    parser.add_argument('--probe-symbol', choices=['fp32_light', 'fp32_heavy', 'tensor_light'], default='fp32_light')
     parser.add_argument('--compare-grids', action='store_true')
     args = parser.parse_args()
     p0 = args.p0_block is not None
@@ -131,8 +138,9 @@ def main():
     permit = require_permit(args.run_dir, scope, Path(__file__))
     candidates = load(SPATIAL / 'configs/kernel_selection.json')['cases']
     precision = args.precision
-    selected = next(row for row in candidates if row['case_id'] == precision + '_qkv_proj')
-    historical = load(SPATIAL / 'qkv_replay_validation/gate3_reference.json')[precision]
+    selected = next(row for row in candidates if row['case_id'] == precision + '_' + args.operator)
+    reference_file = SPATIAL / 'qkv_replay_validation' / REFERENCE_NAMES[args.operator]
+    historical = load(reference_file)[precision]
     expected = next(row for row in historical['nodes'] if row['tools_id'] == selected['historical_tools_id'])
 
     import torch
@@ -217,14 +225,15 @@ def main():
                       trials=observations, torch_version=torch.__version__,
                       vllm_version=importlib.metadata.version('vllm'),
                       backend_source_sha256=sha(Path(backend_path)),
-                      gate3_reference_sha256=sha(SPATIAL / 'qkv_replay_validation/gate3_reference.json'),
+                      gate3_reference_sha256=sha(reference_file),
                       full_model_loaded=False, metrics_scope='correctness, identity, and function attributes only')
         if args.overlap:
             from qkv_overlap_pilot import pilot
             overlap_results = pilot(torch, driver, args.run_dir, Path(__file__), selected['case_id'],
                                     graph, output, reference, permit['cubin_sha256'],
                                     profile='P0' if p0 else 'P2', block=args.p0_block if p0 else 0,
-                                    probe_grid=args.probe_grid, compare_grids=args.compare_grids)
+                                    probe_grid=args.probe_grid, compare_grids=args.compare_grids,
+                                    probe_symbol=args.probe_symbol)
             result['overlap_grid_comparison' if args.compare_grids else 'overlap_pilot'] = overlap_results
             result['status'] = 'QKV_OVERLAP_PILOT_OUTPUTS_VERIFIED'
         save(args.run_dir / 'result.json', result)

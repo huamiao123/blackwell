@@ -1,5 +1,7 @@
 # blackwell — RTX 5090 (SM120) BF16 vs native NVFP4 resource study
 
+Gate 4 的后续执行入口现支持 64 CTA、Gate/Up 和 Light/Heavy/Tensor 对照。已用实机函数属性重算混合 CTA 的理论必要条件，并用原始完整推理 Trace 筛查真实消费者和收益上限。最新准备还未产生新 GPU 观测。[继续执行顺序](full_inference_v4/gate4_spatial/qkv_replay_validation/continuation.md) · [驻留对照](full_inference_v4/gate4_residency/live_qkv_report.md) · [完整推理候选审计](full_inference_v4/gate4_inference/candidate_audit.md)
+
 ## 最新实测：QKV 的 32/128 CTA 对照（2026-11-18）
 
 保持探针总工作量不变，在每个进程内配对执行两个 Grid。NVFP4 QKV 的平均干扰由约 10.9%–11.7% 降到 1.6%–3.2%，联合完成却多用约 44–45 µs。NSYS 显示 32 CTA 在 QKV 结束后仍有约 48 µs 辅助任务尾部。六个配对块、216 条 P0 条件全部通过输出校验。[实验报告与时间线](full_inference_v4/gate4_spatial/qkv_replay_validation/qkv_grid_report.md)
