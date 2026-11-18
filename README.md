@@ -1,7 +1,11 @@
 # blackwell — RTX 5090 (SM120) BF16 vs native NVFP4 resource study
 
 
-## 最新准备：Gate 4 三任务 CPU 审查（2026-11-18）
+## 最新实测：Gate 4 独立探针验收（2026-11-18）
+
+FP32 FMA 和 BF16 Tensor Core 的 Light、Heavy 版本均通过 32 和 128 CTA 的全量输出验证。实机查到每 CTA 保留 1024 B Shared Memory。结合 Gate 3 启动元数据，BF16 投影仅按 Shared Memory 的理论驻留上限修正为 5，NVFP4 仍为 1。短探针校准遇到其他用户的自动实验控制器，在启动前被监督器拦下。真实 QKV 并发与同 SM 共驻仍待验证。[实验报告与原始数据](full_inference_v4/gate4_spatial/probe_gpu_validation/report.md)
+
+## 前一阶段准备：Gate 4 三任务 CPU 审查（2026-11-18）
 
 完成真实投影空间并发、CTA 资源驻留、完整推理有用并发的 CPU 侧代码与方法审查，25 项检查通过；四种辅助 Probe 已离线编译到 SM120 并确认 FFMA / HMMA.BF16 指令。
 **本次未加载模型权重、未运行 GPU 实验，没有新的并发或推理收益结论。** 真实主节点激活输入/输出适配仍待验收；理论资源模型不能替代实际共驻证据。

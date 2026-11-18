@@ -1,0 +1,18 @@
+{
+  "status": "STOPPED_OR_FAILED",
+  "start": "2026-11-18T20:02:17.979875+08:00",
+  "gpu_uuid": "GPU-022c5f55-490e-ec54-3887-5f12510d273d",
+  "command": [
+    "/home/wangzhihang/fp4-llm/vllm/.venv/bin/python",
+    "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/src/validate_probe_gpu.py",
+    "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/probe_gpu_validation/raw/probe_20261118_120214_utc",
+    "--mode",
+    "qkv_calibration"
+  ],
+  "worker_sha256": "9b256cd0dfd39c837eac98e848081ffbe090ba0919e2d92ad376138820415a18",
+  "supervisor_sha256": "678330ea4f1c9f059599005a1a39b713b73b62dbfe539ec5a634096702bb97ad",
+  "authorization_reference": "User authorized continuing the shared GPU experiment while idle",
+  "telemetry": [],
+  "error": "automatic GPU controller present",
+  "end": "2026-11-18T20:02:18.269602+08:00"
+}

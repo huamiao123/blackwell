@@ -1,0 +1,9 @@
+precision,logical_op,raw_shared_bytes,driver_reserved_bytes,modeled_allocated_shared_bytes,previous_smem_only_upper_bound,revised_smem_only_upper_bound,primary_function_occupancy_api,scope
+nvfp4,qkv_proj,88064,1024,89088,1,1,UNVERIFIED,Gate 3 launch metadata plus live device attribute; shared-memory-only upper bound
+nvfp4,o_proj,88064,1024,89088,1,1,UNVERIFIED,Gate 3 launch metadata plus live device attribute; shared-memory-only upper bound
+nvfp4,gate_up_proj,88064,1024,89088,1,1,UNVERIFIED,Gate 3 launch metadata plus live device attribute; shared-memory-only upper bound
+nvfp4,down_proj,88064,1024,89088,1,1,UNVERIFIED,Gate 3 launch metadata plus live device attribute; shared-memory-only upper bound
+bf16,qkv_proj,16896,1024,17920,6,5,UNVERIFIED,Gate 3 launch metadata plus live device attribute; shared-memory-only upper bound
+bf16,o_proj,16896,1024,17920,6,5,UNVERIFIED,Gate 3 launch metadata plus live device attribute; shared-memory-only upper bound
+bf16,gate_up_proj,16896,1024,17920,6,5,UNVERIFIED,Gate 3 launch metadata plus live device attribute; shared-memory-only upper bound
+bf16,down_proj,16896,1024,17920,6,5,UNVERIFIED,Gate 3 launch metadata plus live device attribute; shared-memory-only upper bound
