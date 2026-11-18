@@ -19,6 +19,8 @@ Gate 3 的 QKV 并集时间除以 9216 次调用约为 NVFP4 19.5 µs、BF16 32.
 
 20:02:17，第二轮校准前的 `gpu-who` 显示 0% 利用率，监督器随后检测到其他用户的自动实验控制器并在启动 worker 前拒绝执行。未等待控制器结束，也未启动第二轮 GPU 负载。首轮结果保留，第二轮只有[阻止记录](raw/probe_20261118_120214_utc/supervision.json)。
 
+22:01 重新获准使用空闲设备后，短探针校准的四组均通过全量输出校验，CUDA Event 中位数为 52.8–156.1 µs。后续以实际 GPU Kernel 区间核验是否与 QKV 的时间尺度匹配。[短探针校准报告](qkv_calibration.md)
+
 - **VERIFIED**。八组独立探针输出，探针实际函数属性，单函数 Occupancy API 及设备保留 Shared Memory。
 - **模型推导**。使用运行时设备保留量修正 Gate 3 主投影的 Shared Memory 容量上限。
 - **UNVERIFIED**。短探针时长，真实 QKV 节点安全重放，A/B GPU 重叠和干扰，同 SM 共驻。后续需要在可用窗口校准短探针并核验真实 QKV 的输入和输出，再比较实测串行与并发。

@@ -1,0 +1,198 @@
+{
+  "status": "STANDALONE_PROBE_GPU_VERIFIED",
+  "scope": "STANDALONE_PROBE_ONLY",
+  "gpu_uuid": "022c5f55-490e-ec54-3887-5f12510d273d",
+  "model_weights_loaded": false,
+  "driver_api_version": 13020,
+  "cuda_bindings_version": "13.5.0",
+  "device_attributes": {
+    "MULTIPROCESSOR_COUNT": 170,
+    "COMPUTE_CAPABILITY_MAJOR": 12,
+    "COMPUTE_CAPABILITY_MINOR": 0,
+    "MAX_REGISTERS_PER_MULTIPROCESSOR": 65536,
+    "MAX_SHARED_MEMORY_PER_MULTIPROCESSOR": 102400,
+    "RESERVED_SHARED_MEMORY_PER_BLOCK": 1024,
+    "CONCURRENT_KERNELS": 1,
+    "CAN_USE_STREAM_MEM_OPS": "UNAVAILABLE_IN_BINDING"
+  },
+  "cubin_sha256": "1daee1dd84515740d4e2e05d16634e708532d3f166b8e28397c058035a7c36e7",
+  "mode": "qkv_calibration",
+  "rows": [
+    {
+      "symbol": "fp32_light",
+      "grid": 32,
+      "threads": 32,
+      "spec": {
+        "probe": "fp32_fma",
+        "variant": "light",
+        "threads": 32,
+        "shared_bytes": 0,
+        "items": 65536,
+        "vector": 16,
+        "rounds": 8,
+        "input_pattern": "0.25 + ((16*i+j)%64)/128",
+        "expected_flops": 16777216
+      },
+      "dynamic_shared_bytes": 0,
+      "attributes": {
+        "NUM_REGS": 22,
+        "SHARED_SIZE_BYTES": 0,
+        "MAX_THREADS_PER_BLOCK": 32,
+        "MAX_DYNAMIC_SHARED_SIZE_BYTES": 49152,
+        "LOCAL_SIZE_BYTES": 0,
+        "PREFERRED_SHARED_MEMORY_CARVEOUT": -1
+      },
+      "homogeneous_blocks_per_sm": 24,
+      "fma_operations": 8388608,
+      "flops": 16777216,
+      "input_bytes": 4194304,
+      "output_bytes": 4194304,
+      "virtual_groups": 128,
+      "nonempty_ctas": 32,
+      "work_hash": "99a95785b68921ad5dcaa1528fd2baadfd0dffcabf8762c7cd3186d4753f2e94",
+      "correctness_passed": true,
+      "elements_checked": 1048576,
+      "output_sha256": "a8ee60e1f8ad228569f35c69498b726063331b80461cc5c5a64c52aaf28f2b57",
+      "elapsed_us": [
+        104.99200224876404,
+        96.22400254011154,
+        96.12800180912018,
+        92.12800115346909,
+        91.64799749851227
+      ],
+      "timing": "one warmup plus five CUDA event intervals; output copies outside intervals"
+    },
+    {
+      "symbol": "fp32_light",
+      "grid": 128,
+      "threads": 32,
+      "spec": {
+        "probe": "fp32_fma",
+        "variant": "light",
+        "threads": 32,
+        "shared_bytes": 0,
+        "items": 65536,
+        "vector": 16,
+        "rounds": 8,
+        "input_pattern": "0.25 + ((16*i+j)%64)/128",
+        "expected_flops": 16777216
+      },
+      "dynamic_shared_bytes": 0,
+      "attributes": {
+        "NUM_REGS": 22,
+        "SHARED_SIZE_BYTES": 0,
+        "MAX_THREADS_PER_BLOCK": 32,
+        "MAX_DYNAMIC_SHARED_SIZE_BYTES": 49152,
+        "LOCAL_SIZE_BYTES": 0,
+        "PREFERRED_SHARED_MEMORY_CARVEOUT": -1
+      },
+      "homogeneous_blocks_per_sm": 24,
+      "fma_operations": 8388608,
+      "flops": 16777216,
+      "input_bytes": 4194304,
+      "output_bytes": 4194304,
+      "virtual_groups": 128,
+      "nonempty_ctas": 128,
+      "work_hash": "99a95785b68921ad5dcaa1528fd2baadfd0dffcabf8762c7cd3186d4753f2e94",
+      "correctness_passed": true,
+      "elements_checked": 1048576,
+      "output_sha256": "a8ee60e1f8ad228569f35c69498b726063331b80461cc5c5a64c52aaf28f2b57",
+      "elapsed_us": [
+        55.71199953556061,
+        73.02399724721909,
+        45.343998819589615,
+        43.168000876903534,
+        66.30399823188782
+      ],
+      "timing": "one warmup plus five CUDA event intervals; output copies outside intervals"
+    },
+    {
+      "symbol": "fp32_light",
+      "grid": 32,
+      "threads": 32,
+      "spec": {
+        "probe": "fp32_fma",
+        "variant": "light",
+        "threads": 32,
+        "shared_bytes": 0,
+        "items": 65536,
+        "vector": 16,
+        "rounds": 32,
+        "input_pattern": "0.25 + ((16*i+j)%64)/128",
+        "expected_flops": 67108864
+      },
+      "dynamic_shared_bytes": 0,
+      "attributes": {
+        "NUM_REGS": 22,
+        "SHARED_SIZE_BYTES": 0,
+        "MAX_THREADS_PER_BLOCK": 32,
+        "MAX_DYNAMIC_SHARED_SIZE_BYTES": 49152,
+        "LOCAL_SIZE_BYTES": 0,
+        "PREFERRED_SHARED_MEMORY_CARVEOUT": -1
+      },
+      "homogeneous_blocks_per_sm": 24,
+      "fma_operations": 33554432,
+      "flops": 67108864,
+      "input_bytes": 4194304,
+      "output_bytes": 4194304,
+      "virtual_groups": 128,
+      "nonempty_ctas": 32,
+      "work_hash": "f684f00624183eab9fbb4b7e302ff50037e15f66344e953d46aef434b1da21a9",
+      "correctness_passed": true,
+      "elements_checked": 1048576,
+      "output_sha256": "0b324da89b9daef25dd9c63c1dd4981bcdd17b1241e2cb6907f3b21b7ddfe431",
+      "elapsed_us": [
+        159.4880074262619,
+        156.51200711727142,
+        156.0640037059784,
+        146.17599546909332,
+        149.02399480342865
+      ],
+      "timing": "one warmup plus five CUDA event intervals; output copies outside intervals"
+    },
+    {
+      "symbol": "fp32_light",
+      "grid": 128,
+      "threads": 32,
+      "spec": {
+        "probe": "fp32_fma",
+        "variant": "light",
+        "threads": 32,
+        "shared_bytes": 0,
+        "items": 65536,
+        "vector": 16,
+        "rounds": 32,
+        "input_pattern": "0.25 + ((16*i+j)%64)/128",
+        "expected_flops": 67108864
+      },
+      "dynamic_shared_bytes": 0,
+      "attributes": {
+        "NUM_REGS": 22,
+        "SHARED_SIZE_BYTES": 0,
+        "MAX_THREADS_PER_BLOCK": 32,
+        "MAX_DYNAMIC_SHARED_SIZE_BYTES": 49152,
+        "LOCAL_SIZE_BYTES": 0,
+        "PREFERRED_SHARED_MEMORY_CARVEOUT": -1
+      },
+      "homogeneous_blocks_per_sm": 24,
+      "fma_operations": 33554432,
+      "flops": 67108864,
+      "input_bytes": 4194304,
+      "output_bytes": 4194304,
+      "virtual_groups": 128,
+      "nonempty_ctas": 128,
+      "work_hash": "f684f00624183eab9fbb4b7e302ff50037e15f66344e953d46aef434b1da21a9",
+      "correctness_passed": true,
+      "elements_checked": 1048576,
+      "output_sha256": "0b324da89b9daef25dd9c63c1dd4981bcdd17b1241e2cb6907f3b21b7ddfe431",
+      "elapsed_us": [
+        63.551999628543854,
+        54.17599901556969,
+        52.799999713897705,
+        52.22399905323982,
+        46.65600135922432
+      ],
+      "timing": "one warmup plus five CUDA event intervals; output copies outside intervals"
+    }
+  ]
+}

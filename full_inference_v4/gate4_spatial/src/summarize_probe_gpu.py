@@ -25,6 +25,7 @@ def main():
     reserved = int(device['RESERVED_SHARED_MEMORY_PER_BLOCK'])
     summary = []
     rows = result['rows']
+    calibration = result.get('mode') == 'qkv_calibration'
     for row in rows:
         if not row['correctness_passed'] or len(row['elapsed_us']) != 5:
             raise ValueError('incomplete standalone validation or timing')
@@ -38,10 +39,15 @@ def main():
                             max_us=round(max(row['elapsed_us']), 3), work_hash=row['work_hash'],
                             output_sha256=row['output_sha256'], evidence='STANDALONE_PROBE_ONLY',
                             raw_sha256=sha(result_path)))
+        if calibration:
+            summary[-1].update(items=row['spec']['items'], rounds=row['spec']['rounds'])
     for work_hash in {r['work_hash'] for r in summary}:
         group = [r for r in summary if r['work_hash'] == work_hash]
         if {r['grid'] for r in group} != {32, 128} or len({r['output_sha256'] for r in group}) != 1:
             raise ValueError('matched grid work/output verification failed')
+    if calibration:
+        write_csv(args.output / 'qkv_calibration_summary.csv', summary)
+        return
     write_csv(args.output / 'standalone_probe_summary.csv', summary)
 
     granularity = load(V4 / 'gate4_residency/analysis/allocation_granularity_audit.json')
