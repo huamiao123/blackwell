@@ -1,6 +1,7 @@
 """Standalone probe acceptance with live attributes and full output checks."""
 
 import argparse
+from contextlib import nullcontext
 import ctypes
 import hashlib
 import importlib.metadata
@@ -24,7 +25,7 @@ def require_permit(run_dir):
     return permit
 
 
-def run_spec(driver, call, np, module, stream, spec, grids, result, checkpoint):
+def run_spec(driver, call, np, module, stream, spec, grids, result, checkpoint, annotate):
     is_fma = spec['probe'] == 'fp32_fma'
     prefix = 'fp32_' if is_fma else 'tensor_'
     symbol = prefix + spec['variant']
@@ -71,8 +72,9 @@ def run_spec(driver, call, np, module, stream, spec, grids, result, checkpoint):
             # Poison all outputs before each launch so stale data cannot pass.
             call(driver.cuMemsetD32Async, out_ptr, 0x7fc00000, count, stream)
             call(driver.cuEventRecord, begin, stream)
-            call(driver.cuLaunchKernel, function, grid, 1, 1, spec['threads'], 1, 1,
-                 spec['shared_bytes'], stream, arguments, 0)
+            with annotate(f'G4_PROBE|{symbol}|{work_size}|{rounds}|{grid}|{trial}'):
+                call(driver.cuLaunchKernel, function, grid, 1, 1, spec['threads'], 1, 1,
+                     spec['shared_bytes'], stream, arguments, 0)
             call(driver.cuEventRecord, end, stream)
             call(driver.cuEventSynchronize, end)
             elapsed_us = call(driver.cuEventElapsedTime, begin, end) * 1000
@@ -110,6 +112,11 @@ def main():
 
     import numpy as np
     from cuda.bindings import driver
+    profiling = os.environ.get('G4_PROBE_TRACE') == '1'
+    if profiling:
+        from nvtx import annotate
+    else:
+        annotate = nullcontext
 
     def call(api, *values):
         status, *returned = api(*values)
@@ -144,7 +151,7 @@ def main():
                   model_weights_loaded=False, driver_api_version=call(driver.cuDriverGetVersion),
                   cuda_bindings_version=importlib.metadata.version('cuda-bindings'),
                   device_attributes=device_info, cubin_sha256=permit['cubin_sha256'],
-                  mode=args.mode, rows=[])
+                  mode=args.mode, profile='P2' if profiling else 'P0', rows=[])
 
     def checkpoint():
         temp = args.run_dir / 'result.tmp'
@@ -159,7 +166,7 @@ def main():
         specs = [dict(specs[0], items=65536, rounds=rounds,
                       expected_flops=65536 * 16 * rounds * 2) for rounds in (8, 32)]
     for spec in specs:
-        run_spec(driver, call, np, module, stream, spec, [32, 128], result, checkpoint)
+        run_spec(driver, call, np, module, stream, spec, [32, 128], result, checkpoint, annotate)
     call(driver.cuStreamDestroy, stream)
     call(driver.cuModuleUnload, module)
     call(driver.cuCtxSetCurrent, driver.CUcontext(0))

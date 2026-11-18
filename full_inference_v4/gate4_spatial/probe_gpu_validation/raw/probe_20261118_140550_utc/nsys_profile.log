@@ -1,0 +1,15 @@
+Collecting data...
+Generating '/home/wangzhihang/fp4-llm/tmp/nsys-report-9fd4.qdstrm'
+
+[1/1] [0%                          ] calibration.nsys-rep
+[1/1] [0%                          ] calibration.nsys-rep
+[1/1] [==========47%               ] calibration.nsys-rep
+[1/1] [======================91%   ] calibration.nsys-rep
+[1/1] [======================92%   ] calibration.nsys-rep
+[1/1] [=======================93%  ] calibration.nsys-rep
+[1/1] [=======================94%  ] calibration.nsys-rep
+[1/1] [=======================95%  ] calibration.nsys-rep
+[1/1] [========================100%] calibration.nsys-rep
+[1/1] [========================100%] calibration.nsys-rep
+Generated:
+	/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/probe_gpu_validation/traces/probe_20261118_140550_utc/calibration.nsys-rep

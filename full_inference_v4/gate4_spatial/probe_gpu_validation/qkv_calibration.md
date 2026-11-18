@@ -12,3 +12,5 @@
 相较初版毫秒级探针，本轮四组的 Event 中位数进入 52.8–156.1 µs。它们仍长于 Gate 3 中 QKV 的历史 P2 平均 GPU 区间（NVFP4 约 19.5 µs，BF16 约 32.6 µs）。这两个来源的测量边界不同。当前 Event 围绕 Python 逐个提交的 Kernel，可能包含等待后续提交的时间，无法据此确定实际 GPU Kernel 时长。128 CTA 两档的范围也重叠，五次同进程记录不足以解释中位数的顺序。[完整汇总](analysis/qkv_calibration_summary.csv) · [Gate 3 投影归因](../../gate3_backbone/paired_report.md)
 
 下一项验收应使用 NSYS/CUPTI 的 GPU Kernel 区间核实探针设备时长，再判断是否需要缩小每 CTA 的逻辑分组。若改分组，保持两个测试 Grid 都有非空 CTA，每一档跨 Grid 固定总工作量，并复核实际寄存器、指令与输出。短探针校准尚无真实 QKV 并发、干扰或共驻数据。
+
+22:05 补采了实际 GPU Kernel 区间。128 CTA 的 8 轮和 32 轮中位数分别为 16.864 和 31.456 µs。[NSYS 复测](qkv_trace_report.md)
