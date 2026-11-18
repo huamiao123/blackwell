@@ -20,12 +20,17 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--run-id', required=True)
     parser.add_argument('--window', required=True, type=Path)
-    parser.add_argument('--mode', choices=['acceptance', 'qkv_calibration'], default='acceptance')
+    parser.add_argument('--mode', choices=['acceptance', 'qkv_calibration', 'qkv_replay_nvfp4', 'qkv_replay_bf16',
+                                          'qkv_overlap_nvfp4', 'qkv_overlap_bf16'], default='acceptance')
     args = parser.parse_args()
     if not re.fullmatch(r'probe_[a-z0-9_]+', args.run_id):
         raise ValueError('invalid run ID')
     window = load(args.window)
-    deadline = validate_window(window, 'standalone_probe_acceptance', time.time(), socket.gethostname())
+    qkv_replay = args.mode.startswith('qkv_') and args.mode != 'qkv_calibration'
+    qkv_overlap = args.mode.startswith('qkv_overlap_')
+    task = ('standalone_qkv_overlap' if qkv_overlap else
+            'standalone_qkv_replay' if qkv_replay else 'standalone_probe_acceptance')
+    deadline = validate_window(window, task, time.time(), socket.gethostname())
     project = Path.home() / 'fp4-llm'
     if not SPATIAL.is_relative_to(project.resolve()):
         raise RuntimeError('shared RTX 5090 project directory required')
@@ -33,11 +38,18 @@ def main():
     sys.path.insert(0, str(V4 / 'src'))
     from run_supervised import controllers, gpu_state
 
-    run_dir = SPATIAL / 'probe_gpu_validation' / 'raw' / args.run_id
+    validation_dir = 'qkv_replay_validation' if qkv_replay else 'probe_gpu_validation'
+    run_dir = SPATIAL / validation_dir / 'raw' / args.run_id
     run_dir.mkdir(parents=True, exist_ok=False)
     permit_path = run_dir / 'permit.json'
-    worker = Path(__file__).with_name('validate_probe_gpu.py')
-    command = [str(project / 'vllm/.venv/bin/python'), str(worker), str(run_dir), '--mode', args.mode]
+    worker = Path(__file__).with_name('validate_qkv_replay.py' if qkv_replay else 'validate_probe_gpu.py')
+    command = [str(project / 'vllm/.venv/bin/python'), str(worker), str(run_dir)]
+    if qkv_replay:
+        command.extend(['--precision', args.mode.rsplit('_', 1)[-1]])
+        if qkv_overlap:
+            command.append('--overlap')
+    else:
+        command.extend(['--mode', args.mode])
     gpu_uuid = window['gpu_uuid']
     deadline = min(deadline, time.time() + 90)
     report = dict(status='PRECHECK', start=dt.datetime.now().astimezone().isoformat(),
@@ -63,7 +75,7 @@ def main():
             raise RuntimeError('GPU_BUSY_NO_RUN')
         nonce = secrets.token_hex(24)
         compiled = load(SPATIAL / 'analysis/offline_compile/compile_manifest.json')
-        permit = dict(scope='probe_only', nonce=nonce, supervisor_pid=os.getpid(), deadline=deadline,
+        permit = dict(scope=task if qkv_replay else 'probe_only', nonce=nonce, supervisor_pid=os.getpid(), deadline=deadline,
                       gpu_uuid=gpu_uuid, worker_sha256=sha(worker), cubin_sha256=compiled['cubin_sha256'])
         with os.fdopen(os.open(permit_path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600), 'w') as stream:
             import json
@@ -86,7 +98,9 @@ def main():
             raise RuntimeError('probe worker failed, see worker.log')
         if snapshot() - {child.pid}:
             raise RuntimeError('foreign compute process at final check')
-        if load(run_dir / 'result.json')['status'] != 'STANDALONE_PROBE_GPU_VERIFIED':
+        expected_status = ('QKV_OVERLAP_PILOT_OUTPUTS_VERIFIED' if qkv_overlap else
+                           'QKV_REPLAY_OUTPUT_VERIFIED' if qkv_replay else 'STANDALONE_PROBE_GPU_VERIFIED')
+        if load(run_dir / 'result.json')['status'] != expected_status:
             raise RuntimeError('incomplete probe result')
         report['status'] = 'COMPLETED'
     except BaseException as error:

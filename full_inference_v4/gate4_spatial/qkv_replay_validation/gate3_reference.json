@@ -1,0 +1,271 @@
+{
+  "nvfp4": {
+    "nodes": [
+      {
+        "kernel_name": "_ZN7cutlass13device_kernelINS_4gemm6kernel13GemmUniversalIN4cute5tupleIJiiiiEEENS1_10collective13CollectiveMmaINS1_42MainloopSm120TmaWarpSpecializedBlockScaledILi4ELi3ENS5_IJNS4_1CILi1EEESB_SB_EEENS1_51KernelTmaWarpSpecializedCooperativeBlockScaledSm120ILi3EEEEENS5_IJNSA_ILi128EEESG_SG_EEENS5_IJNS_12float_e2m1_tENS_13float_ue4m3_tEEEENS5_IJNS5_IJlSB_lEEENS4_6LayoutINS5_IJNS5_IJNS5_IJNSA_ILi32EEENSA_ILi4EEEEEEiEEENS5_IJNS5_IJNSA_ILi16EEESO_EEEiEEENS5_IJSB_iEEEEEENS5_IJST_NS5_IJNS5_IJNSA_ILi0EEESB_EEENSA_ILi512EEEEEENS5_IJSW_iEEEEEEEEEEESK_S13_NS4_8TiledMMAINS4_8MMA_AtomIJNS4_5SM12011BLOCKSCALED19SM120_16x8x64_TN_VSISI_SI_fSJ_Li16EEEEEENSM_INS5_IJSO_NSA_ILi2EEESB_EEENS5_IJSB_SO_SW_EEEEENS5_IJSG_NSM_INS5_IJNSA_ILi8EEES1B_S1B_EEENS5_IJSB_SR_S1F_EEEEENSA_ILi64EEEEEEEENS5_IJNS4_13SM90_TMA_LOADES1M_EEENS5_IJNS4_14ComposedLayoutINS4_7SwizzleILi2ELi4ELi3EEENS4_18smem_ptr_flag_bitsILi4EEENSM_INS5_IJS1F_SG_EEENS5_IJSG_SB_EEEEEEENSM_INS5_IJNS5_IJSP_SB_EEENS5_IJSS_SB_S1B_EEEEEENS5_IJNS5_IJSS_SY_EEENS5_IJSX_SO_SY_EEEEEEEEEEENS5_IJNS4_9Copy_AtomIJNS4_17SM75_U32x4_LDSM_NENS_15integer_subbyteILi4ELb0EEEEEENS25_IJNS4_13UniversalCopyISJ_SJ_EESJ_EEEEEENS4_8identityES1N_S24_S2D_S2E_EENS_8epilogue10collective18CollectiveEpilogueINS2G_22Sm90TmaWarpSpecializedILi3ELi2ELi4ELb1ELb0EEEJSH_NS5_IJS1J_SN_EEENS_10bfloat16_tESL_S2M_SL_NS2G_6fusion15FusionCallbacksINS2G_23Sm120TmaWarpSpecializedILi3ELi2ELi4ELb1ELb0EEENS2N_17LinearCombinationIS2M_fS2M_fLNS_15FloatRoundStyleE2EEESH_S2L_JEEES1M_NS1O_IS1Q_NS1R_ILi16EEENSM_INS5_IJS1F_SN_EEENS5_IJSN_SB_EEEEEEENS4_17SM75_U32x2_LDSM_NENS4_14SM90_TMA_STOREES2Z_NS4_17SM90_U32x2_STSM_NENS25_IJS32_NS_6half_tEEEEvEEEvvEEEEvNT_6ParamsE",
+        "grid": [
+          1,
+          48,
+          1
+        ],
+        "block": [
+          384,
+          1,
+          1
+        ],
+        "shared_bytes": 88064,
+        "tools_id": 240518168585,
+        "parameter_size": 2176
+      },
+      {
+        "kernel_name": "_ZN7cutlass13device_kernelINS_4gemm6kernel13GemmUniversalIN4cute5tupleIJiiiiEEENS1_10collective13CollectiveMmaINS1_42MainloopSm120TmaWarpSpecializedBlockScaledILi4ELi3ENS5_IJNS4_1CILi1EEESB_SB_EEENS1_51KernelTmaWarpSpecializedCooperativeBlockScaledSm120ILi3EEEEENS5_IJNSA_ILi128EEESG_SG_EEENS5_IJNS_12float_e2m1_tENS_13float_ue4m3_tEEEENS5_IJNS5_IJlSB_lEEENS4_6LayoutINS5_IJNS5_IJNS5_IJNSA_ILi32EEENSA_ILi4EEEEEEiEEENS5_IJNS5_IJNSA_ILi16EEESO_EEEiEEENS5_IJSB_iEEEEEENS5_IJST_NS5_IJNS5_IJNSA_ILi0EEESB_EEENSA_ILi512EEEEEENS5_IJSW_iEEEEEEEEEEESK_S13_NS4_8TiledMMAINS4_8MMA_AtomIJNS4_5SM12011BLOCKSCALED19SM120_16x8x64_TN_VSISI_SI_fSJ_Li16EEEEEENSM_INS5_IJSO_NSA_ILi2EEESB_EEENS5_IJSB_SO_SW_EEEEENS5_IJSG_NSM_INS5_IJNSA_ILi8EEES1B_S1B_EEENS5_IJSB_SR_S1F_EEEEENSA_ILi64EEEEEEEENS5_IJNS4_13SM90_TMA_LOADES1M_EEENS5_IJNS4_14ComposedLayoutINS4_7SwizzleILi2ELi4ELi3EEENS4_18smem_ptr_flag_bitsILi4EEENSM_INS5_IJS1F_SG_EEENS5_IJSG_SB_EEEEEEENSM_INS5_IJNS5_IJSP_SB_EEENS5_IJSS_SB_S1B_EEEEEENS5_IJNS5_IJSS_SY_EEENS5_IJSX_SO_SY_EEEEEEEEEEENS5_IJNS4_9Copy_AtomIJNS4_17SM75_U32x4_LDSM_NENS_15integer_subbyteILi4ELb0EEEEEENS25_IJNS4_13UniversalCopyISJ_SJ_EESJ_EEEEEENS4_8identityES1N_S24_S2D_S2E_EENS_8epilogue10collective18CollectiveEpilogueINS2G_22Sm90TmaWarpSpecializedILi3ELi2ELi4ELb1ELb0EEEJSH_NS5_IJS1J_SN_EEENS_10bfloat16_tESL_S2M_SL_NS2G_6fusion15FusionCallbacksINS2G_23Sm120TmaWarpSpecializedILi3ELi2ELi4ELb1ELb0EEENS2N_17LinearCombinationIS2M_fS2M_fLNS_15FloatRoundStyleE2EEESH_S2L_JEEES1M_NS1O_IS1Q_NS1R_ILi16EEENSM_INS5_IJS1F_SN_EEENS5_IJSN_SB_EEEEEEENS4_17SM75_U32x2_LDSM_NENS4_14SM90_TMA_STOREES2Z_NS4_17SM90_U32x2_STSM_NENS25_IJS32_NS_6half_tEEEEvEEEvvEEEEvNT_6ParamsE",
+        "grid": [
+          1,
+          48,
+          1
+        ],
+        "block": [
+          384,
+          1,
+          1
+        ],
+        "shared_bytes": 88064,
+        "tools_id": 717259538441,
+        "parameter_size": 2176
+      },
+      {
+        "kernel_name": "_ZN7cutlass13device_kernelINS_4gemm6kernel13GemmUniversalIN4cute5tupleIJiiiiEEENS1_10collective13CollectiveMmaINS1_42MainloopSm120TmaWarpSpecializedBlockScaledILi4ELi3ENS5_IJNS4_1CILi1EEESB_SB_EEENS1_51KernelTmaWarpSpecializedCooperativeBlockScaledSm120ILi3EEEEENS5_IJNSA_ILi128EEESG_SG_EEENS5_IJNS_12float_e2m1_tENS_13float_ue4m3_tEEEENS5_IJNS5_IJlSB_lEEENS4_6LayoutINS5_IJNS5_IJNS5_IJNSA_ILi32EEENSA_ILi4EEEEEEiEEENS5_IJNS5_IJNSA_ILi16EEESO_EEEiEEENS5_IJSB_iEEEEEENS5_IJST_NS5_IJNS5_IJNSA_ILi0EEESB_EEENSA_ILi512EEEEEENS5_IJSW_iEEEEEEEEEEESK_S13_NS4_8TiledMMAINS4_8MMA_AtomIJNS4_5SM12011BLOCKSCALED19SM120_16x8x64_TN_VSISI_SI_fSJ_Li16EEEEEENSM_INS5_IJSO_NSA_ILi2EEESB_EEENS5_IJSB_SO_SW_EEEEENS5_IJSG_NSM_INS5_IJNSA_ILi8EEES1B_S1B_EEENS5_IJSB_SR_S1F_EEEEENSA_ILi64EEEEEEEENS5_IJNS4_13SM90_TMA_LOADES1M_EEENS5_IJNS4_14ComposedLayoutINS4_7SwizzleILi2ELi4ELi3EEENS4_18smem_ptr_flag_bitsILi4EEENSM_INS5_IJS1F_SG_EEENS5_IJSG_SB_EEEEEEENSM_INS5_IJNS5_IJSP_SB_EEENS5_IJSS_SB_S1B_EEEEEENS5_IJNS5_IJSS_SY_EEENS5_IJSX_SO_SY_EEEEEEEEEEENS5_IJNS4_9Copy_AtomIJNS4_17SM75_U32x4_LDSM_NENS_15integer_subbyteILi4ELb0EEEEEENS25_IJNS4_13UniversalCopyISJ_SJ_EESJ_EEEEEENS4_8identityES1N_S24_S2D_S2E_EENS_8epilogue10collective18CollectiveEpilogueINS2G_22Sm90TmaWarpSpecializedILi3ELi2ELi4ELb1ELb0EEEJSH_NS5_IJS1J_SN_EEENS_10bfloat16_tESL_S2M_SL_NS2G_6fusion15FusionCallbacksINS2G_23Sm120TmaWarpSpecializedILi3ELi2ELi4ELb1ELb0EEENS2N_17LinearCombinationIS2M_fS2M_fLNS_15FloatRoundStyleE2EEESH_S2L_JEEES1M_NS1O_IS1Q_NS1R_ILi16EEENSM_INS5_IJS1F_SN_EEENS5_IJSN_SB_EEEEEEENS4_17SM75_U32x2_LDSM_NENS4_14SM90_TMA_STOREES2Z_NS4_17SM90_U32x2_STSM_NENS25_IJS32_NS_6half_tEEEEvEEEvvEEEEvNT_6ParamsE",
+        "grid": [
+          1,
+          48,
+          1
+        ],
+        "block": [
+          384,
+          1,
+          1
+        ],
+        "shared_bytes": 88064,
+        "tools_id": 962072674558,
+        "parameter_size": 2176
+      },
+      {
+        "kernel_name": "_ZN7cutlass13device_kernelINS_4gemm6kernel13GemmUniversalIN4cute5tupleIJiiiiEEENS1_10collective13CollectiveMmaINS1_42MainloopSm120TmaWarpSpecializedBlockScaledILi4ELi3ENS5_IJNS4_1CILi1EEESB_SB_EEENS1_51KernelTmaWarpSpecializedCooperativeBlockScaledSm120ILi3EEEEENS5_IJNSA_ILi128EEESG_SG_EEENS5_IJNS_12float_e2m1_tENS_13float_ue4m3_tEEEENS5_IJNS5_IJlSB_lEEENS4_6LayoutINS5_IJNS5_IJNS5_IJNSA_ILi32EEENSA_ILi4EEEEEEiEEENS5_IJNS5_IJNSA_ILi16EEESO_EEEiEEENS5_IJSB_iEEEEEENS5_IJST_NS5_IJNS5_IJNSA_ILi0EEESB_EEENSA_ILi512EEEEEENS5_IJSW_iEEEEEEEEEEESK_S13_NS4_8TiledMMAINS4_8MMA_AtomIJNS4_5SM12011BLOCKSCALED19SM120_16x8x64_TN_VSISI_SI_fSJ_Li16EEEEEENSM_INS5_IJSO_NSA_ILi2EEESB_EEENS5_IJSB_SO_SW_EEEEENS5_IJSG_NSM_INS5_IJNSA_ILi8EEES1B_S1B_EEENS5_IJSB_SR_S1F_EEEEENSA_ILi64EEEEEEEENS5_IJNS4_13SM90_TMA_LOADES1M_EEENS5_IJNS4_14ComposedLayoutINS4_7SwizzleILi2ELi4ELi3EEENS4_18smem_ptr_flag_bitsILi4EEENSM_INS5_IJS1F_SG_EEENS5_IJSG_SB_EEEEEEENSM_INS5_IJNS5_IJSP_SB_EEENS5_IJSS_SB_S1B_EEEEEENS5_IJNS5_IJSS_SY_EEENS5_IJSX_SO_SY_EEEEEEEEEEENS5_IJNS4_9Copy_AtomIJNS4_17SM75_U32x4_LDSM_NENS_15integer_subbyteILi4ELb0EEEEEENS25_IJNS4_13UniversalCopyISJ_SJ_EESJ_EEEEEENS4_8identityES1N_S24_S2D_S2E_EENS_8epilogue10collective18CollectiveEpilogueINS2G_22Sm90TmaWarpSpecializedILi3ELi2ELi4ELb1ELb0EEEJSH_NS5_IJS1J_SN_EEENS_10bfloat16_tESL_S2M_SL_NS2G_6fusion15FusionCallbacksINS2G_23Sm120TmaWarpSpecializedILi3ELi2ELi4ELb1ELb0EEENS2N_17LinearCombinationIS2M_fS2M_fLNS_15FloatRoundStyleE2EEESH_S2L_JEEES1M_NS1O_IS1Q_NS1R_ILi16EEENSM_INS5_IJS1F_SN_EEENS5_IJSN_SB_EEEEEEENS4_17SM75_U32x2_LDSM_NENS4_14SM90_TMA_STOREES2Z_NS4_17SM90_U32x2_STSM_NENS25_IJS32_NS_6half_tEEEEvEEEvvEEEEvNT_6ParamsE",
+        "grid": [
+          1,
+          48,
+          1
+        ],
+        "block": [
+          384,
+          1,
+          1
+        ],
+        "shared_bytes": 88064,
+        "tools_id": 974957576446,
+        "parameter_size": 2176
+      },
+      {
+        "kernel_name": "_ZN7cutlass13device_kernelINS_4gemm6kernel13GemmUniversalIN4cute5tupleIJiiiiEEENS1_10collective13CollectiveMmaINS1_42MainloopSm120TmaWarpSpecializedBlockScaledILi4ELi3ENS5_IJNS4_1CILi1EEESB_SB_EEENS1_51KernelTmaWarpSpecializedCooperativeBlockScaledSm120ILi3EEEEENS5_IJNSA_ILi128EEESG_SG_EEENS5_IJNS_12float_e2m1_tENS_13float_ue4m3_tEEEENS5_IJNS5_IJlSB_lEEENS4_6LayoutINS5_IJNS5_IJNS5_IJNSA_ILi32EEENSA_ILi4EEEEEEiEEENS5_IJNS5_IJNSA_ILi16EEESO_EEEiEEENS5_IJSB_iEEEEEENS5_IJST_NS5_IJNS5_IJNSA_ILi0EEESB_EEENSA_ILi512EEEEEENS5_IJSW_iEEEEEEEEEEESK_S13_NS4_8TiledMMAINS4_8MMA_AtomIJNS4_5SM12011BLOCKSCALED19SM120_16x8x64_TN_VSISI_SI_fSJ_Li16EEEEEENSM_INS5_IJSO_NSA_ILi2EEESB_EEENS5_IJSB_SO_SW_EEEEENS5_IJSG_NSM_INS5_IJNSA_ILi8EEES1B_S1B_EEENS5_IJSB_SR_S1F_EEEEENSA_ILi64EEEEEEEENS5_IJNS4_13SM90_TMA_LOADES1M_EEENS5_IJNS4_14ComposedLayoutINS4_7SwizzleILi2ELi4ELi3EEENS4_18smem_ptr_flag_bitsILi4EEENSM_INS5_IJS1F_SG_EEENS5_IJSG_SB_EEEEEEENSM_INS5_IJNS5_IJSP_SB_EEENS5_IJSS_SB_S1B_EEEEEENS5_IJNS5_IJSS_SY_EEENS5_IJSX_SO_SY_EEEEEEEEEEENS5_IJNS4_9Copy_AtomIJNS4_17SM75_U32x4_LDSM_NENS_15integer_subbyteILi4ELb0EEEEEENS25_IJNS4_13UniversalCopyISJ_SJ_EESJ_EEEEEENS4_8identityES1N_S24_S2D_S2E_EENS_8epilogue10collective18CollectiveEpilogueINS2G_22Sm90TmaWarpSpecializedILi3ELi2ELi4ELb1ELb0EEEJSH_NS5_IJS1J_SN_EEENS_10bfloat16_tESL_S2M_SL_NS2G_6fusion15FusionCallbacksINS2G_23Sm120TmaWarpSpecializedILi3ELi2ELi4ELb1ELb0EEENS2N_17LinearCombinationIS2M_fS2M_fLNS_15FloatRoundStyleE2EEESH_S2L_JEEES1M_NS1O_IS1Q_NS1R_ILi16EEENSM_INS5_IJS1F_SN_EEENS5_IJSN_SB_EEEEEEENS4_17SM75_U32x2_LDSM_NENS4_14SM90_TMA_STOREES2Z_NS4_17SM90_U32x2_STSM_NENS25_IJS32_NS_6half_tEEEEvEEEvvEEEEvNT_6ParamsE",
+        "grid": [
+          1,
+          48,
+          1
+        ],
+        "block": [
+          384,
+          1,
+          1
+        ],
+        "shared_bytes": 88064,
+        "tools_id": 1219770712073,
+        "parameter_size": 2176
+      },
+      {
+        "kernel_name": "_ZN7cutlass13device_kernelINS_4gemm6kernel13GemmUniversalIN4cute5tupleIJiiiiEEENS1_10collective13CollectiveMmaINS1_42MainloopSm120TmaWarpSpecializedBlockScaledILi4ELi3ENS5_IJNS4_1CILi1EEESB_SB_EEENS1_51KernelTmaWarpSpecializedCooperativeBlockScaledSm120ILi3EEEEENS5_IJNSA_ILi128EEESG_SG_EEENS5_IJNS_12float_e2m1_tENS_13float_ue4m3_tEEEENS5_IJNS5_IJlSB_lEEENS4_6LayoutINS5_IJNS5_IJNS5_IJNSA_ILi32EEENSA_ILi4EEEEEEiEEENS5_IJNS5_IJNSA_ILi16EEESO_EEEiEEENS5_IJSB_iEEEEEENS5_IJST_NS5_IJNS5_IJNSA_ILi0EEESB_EEENSA_ILi512EEEEEENS5_IJSW_iEEEEEEEEEEESK_S13_NS4_8TiledMMAINS4_8MMA_AtomIJNS4_5SM12011BLOCKSCALED19SM120_16x8x64_TN_VSISI_SI_fSJ_Li16EEEEEENSM_INS5_IJSO_NSA_ILi2EEESB_EEENS5_IJSB_SO_SW_EEEEENS5_IJSG_NSM_INS5_IJNSA_ILi8EEES1B_S1B_EEENS5_IJSB_SR_S1F_EEEEENSA_ILi64EEEEEEEENS5_IJNS4_13SM90_TMA_LOADES1M_EEENS5_IJNS4_14ComposedLayoutINS4_7SwizzleILi2ELi4ELi3EEENS4_18smem_ptr_flag_bitsILi4EEENSM_INS5_IJS1F_SG_EEENS5_IJSG_SB_EEEEEEENSM_INS5_IJNS5_IJSP_SB_EEENS5_IJSS_SB_S1B_EEEEEENS5_IJNS5_IJSS_SY_EEENS5_IJSX_SO_SY_EEEEEEEEEEENS5_IJNS4_9Copy_AtomIJNS4_17SM75_U32x4_LDSM_NENS_15integer_subbyteILi4ELb0EEEEEENS25_IJNS4_13UniversalCopyISJ_SJ_EESJ_EEEEEENS4_8identityES1N_S24_S2D_S2E_EENS_8epilogue10collective18CollectiveEpilogueINS2G_22Sm90TmaWarpSpecializedILi3ELi2ELi4ELb1ELb0EEEJSH_NS5_IJS1J_SN_EEENS_10bfloat16_tESL_S2M_SL_NS2G_6fusion15FusionCallbacksINS2G_23Sm120TmaWarpSpecializedILi3ELi2ELi4ELb1ELb0EEENS2N_17LinearCombinationIS2M_fS2M_fLNS_15FloatRoundStyleE2EEESH_S2L_JEEES1M_NS1O_IS1Q_NS1R_ILi16EEENSM_INS5_IJS1F_SN_EEENS5_IJSN_SB_EEEEEEENS4_17SM75_U32x2_LDSM_NENS4_14SM90_TMA_STOREES2Z_NS4_17SM90_U32x2_STSM_NENS25_IJS32_NS_6half_tEEEEvEEEvvEEEEvNT_6ParamsE",
+        "grid": [
+          1,
+          48,
+          1
+        ],
+        "block": [
+          384,
+          1,
+          1
+        ],
+        "shared_bytes": 88064,
+        "tools_id": 1696512081929,
+        "parameter_size": 2176
+      },
+      {
+        "kernel_name": "_ZN7cutlass13device_kernelINS_4gemm6kernel13GemmUniversalIN4cute5tupleIJiiiiEEENS1_10collective13CollectiveMmaINS1_42MainloopSm120TmaWarpSpecializedBlockScaledILi4ELi3ENS5_IJNS4_1CILi1EEESB_SB_EEENS1_51KernelTmaWarpSpecializedCooperativeBlockScaledSm120ILi3EEEEENS5_IJNSA_ILi128EEESG_SG_EEENS5_IJNS_12float_e2m1_tENS_13float_ue4m3_tEEEENS5_IJNS5_IJlSB_lEEENS4_6LayoutINS5_IJNS5_IJNS5_IJNSA_ILi32EEENSA_ILi4EEEEEEiEEENS5_IJNS5_IJNSA_ILi16EEESO_EEEiEEENS5_IJSB_iEEEEEENS5_IJST_NS5_IJNS5_IJNSA_ILi0EEESB_EEENSA_ILi512EEEEEENS5_IJSW_iEEEEEEEEEEESK_S13_NS4_8TiledMMAINS4_8MMA_AtomIJNS4_5SM12011BLOCKSCALED19SM120_16x8x64_TN_VSISI_SI_fSJ_Li16EEEEEENSM_INS5_IJSO_NSA_ILi2EEESB_EEENS5_IJSB_SO_SW_EEEEENS5_IJSG_NSM_INS5_IJNSA_ILi8EEES1B_S1B_EEENS5_IJSB_SR_S1F_EEEEENSA_ILi64EEEEEEEENS5_IJNS4_13SM90_TMA_LOADES1M_EEENS5_IJNS4_14ComposedLayoutINS4_7SwizzleILi2ELi4ELi3EEENS4_18smem_ptr_flag_bitsILi4EEENSM_INS5_IJS1F_SG_EEENS5_IJSG_SB_EEEEEEENSM_INS5_IJNS5_IJSP_SB_EEENS5_IJSS_SB_S1B_EEEEEENS5_IJNS5_IJSS_SY_EEENS5_IJSX_SO_SY_EEEEEEEEEEENS5_IJNS4_9Copy_AtomIJNS4_17SM75_U32x4_LDSM_NENS_15integer_subbyteILi4ELb0EEEEEENS25_IJNS4_13UniversalCopyISJ_SJ_EESJ_EEEEEENS4_8identityES1N_S24_S2D_S2E_EENS_8epilogue10collective18CollectiveEpilogueINS2G_22Sm90TmaWarpSpecializedILi3ELi2ELi4ELb1ELb0EEEJSH_NS5_IJS1J_SN_EEENS_10bfloat16_tESL_S2M_SL_NS2G_6fusion15FusionCallbacksINS2G_23Sm120TmaWarpSpecializedILi3ELi2ELi4ELb1ELb0EEENS2N_17LinearCombinationIS2M_fS2M_fLNS_15FloatRoundStyleE2EEESH_S2L_JEEES1M_NS1O_IS1Q_NS1R_ILi16EEENSM_INS5_IJS1F_SN_EEENS5_IJSN_SB_EEEEEEENS4_17SM75_U32x2_LDSM_NENS4_14SM90_TMA_STOREES2Z_NS4_17SM90_U32x2_STSM_NENS25_IJS32_NS_6half_tEEEEvEEEvvEEEEvNT_6ParamsE",
+        "grid": [
+          1,
+          48,
+          1
+        ],
+        "block": [
+          384,
+          1,
+          1
+        ],
+        "shared_bytes": 88064,
+        "tools_id": 1941325218046,
+        "parameter_size": 2176
+      },
+      {
+        "kernel_name": "_ZN7cutlass13device_kernelINS_4gemm6kernel13GemmUniversalIN4cute5tupleIJiiiiEEENS1_10collective13CollectiveMmaINS1_42MainloopSm120TmaWarpSpecializedBlockScaledILi4ELi3ENS5_IJNS4_1CILi1EEESB_SB_EEENS1_51KernelTmaWarpSpecializedCooperativeBlockScaledSm120ILi3EEEEENS5_IJNSA_ILi128EEESG_SG_EEENS5_IJNS_12float_e2m1_tENS_13float_ue4m3_tEEEENS5_IJNS5_IJlSB_lEEENS4_6LayoutINS5_IJNS5_IJNS5_IJNSA_ILi32EEENSA_ILi4EEEEEEiEEENS5_IJNS5_IJNSA_ILi16EEESO_EEEiEEENS5_IJSB_iEEEEEENS5_IJST_NS5_IJNS5_IJNSA_ILi0EEESB_EEENSA_ILi512EEEEEENS5_IJSW_iEEEEEEEEEEESK_S13_NS4_8TiledMMAINS4_8MMA_AtomIJNS4_5SM12011BLOCKSCALED19SM120_16x8x64_TN_VSISI_SI_fSJ_Li16EEEEEENSM_INS5_IJSO_NSA_ILi2EEESB_EEENS5_IJSB_SO_SW_EEEEENS5_IJSG_NSM_INS5_IJNSA_ILi8EEES1B_S1B_EEENS5_IJSB_SR_S1F_EEEEENSA_ILi64EEEEEEEENS5_IJNS4_13SM90_TMA_LOADES1M_EEENS5_IJNS4_14ComposedLayoutINS4_7SwizzleILi2ELi4ELi3EEENS4_18smem_ptr_flag_bitsILi4EEENSM_INS5_IJS1F_SG_EEENS5_IJSG_SB_EEEEEEENSM_INS5_IJNS5_IJSP_SB_EEENS5_IJSS_SB_S1B_EEEEEENS5_IJNS5_IJSS_SY_EEENS5_IJSX_SO_SY_EEEEEEEEEEENS5_IJNS4_9Copy_AtomIJNS4_17SM75_U32x4_LDSM_NENS_15integer_subbyteILi4ELb0EEEEEENS25_IJNS4_13UniversalCopyISJ_SJ_EESJ_EEEEEENS4_8identityES1N_S24_S2D_S2E_EENS_8epilogue10collective18CollectiveEpilogueINS2G_22Sm90TmaWarpSpecializedILi3ELi2ELi4ELb1ELb0EEEJSH_NS5_IJS1J_SN_EEENS_10bfloat16_tESL_S2M_SL_NS2G_6fusion15FusionCallbacksINS2G_23Sm120TmaWarpSpecializedILi3ELi2ELi4ELb1ELb0EEENS2N_17LinearCombinationIS2M_fS2M_fLNS_15FloatRoundStyleE2EEESH_S2L_JEEES1M_NS1O_IS1Q_NS1R_ILi16EEENSM_INS5_IJS1F_SN_EEENS5_IJSN_SB_EEEEEEENS4_17SM75_U32x2_LDSM_NENS4_14SM90_TMA_STOREES2Z_NS4_17SM90_U32x2_STSM_NENS25_IJS32_NS_6half_tEEEEvEEEvvEEEEvNT_6ParamsE",
+        "grid": [
+          1,
+          48,
+          1
+        ],
+        "block": [
+          384,
+          1,
+          1
+        ],
+        "shared_bytes": 88064,
+        "tools_id": 1954210119934,
+        "parameter_size": 2176
+      }
+    ],
+    "tensors": [
+      {
+        "tensor": "weight",
+        "shape": [
+          6144,
+          2048
+        ],
+        "dtype": "torch.uint8"
+      },
+      {
+        "tensor": "weight_scale",
+        "shape": [
+          6144,
+          256
+        ],
+        "dtype": "torch.float8_e4m3fn"
+      },
+      {
+        "tensor": "weight_global_scale",
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      {
+        "tensor": "input_global_scale",
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      {
+        "tensor": "input_global_scale_inv",
+        "shape": [],
+        "dtype": "torch.float32"
+      },
+      {
+        "tensor": "alpha",
+        "shape": [],
+        "dtype": "torch.float32"
+      }
+    ],
+    "checkpoint_keys": [
+      "model.layers.18.self_attn.k_proj.input_scale",
+      "model.layers.18.self_attn.k_proj.k_scale",
+      "model.layers.18.self_attn.k_proj.weight",
+      "model.layers.18.self_attn.k_proj.weight_scale",
+      "model.layers.18.self_attn.k_proj.weight_scale_2",
+      "model.layers.18.self_attn.q_proj.input_scale",
+      "model.layers.18.self_attn.q_proj.weight",
+      "model.layers.18.self_attn.q_proj.weight_scale",
+      "model.layers.18.self_attn.q_proj.weight_scale_2",
+      "model.layers.18.self_attn.v_proj.input_scale",
+      "model.layers.18.self_attn.v_proj.v_scale",
+      "model.layers.18.self_attn.v_proj.weight",
+      "model.layers.18.self_attn.v_proj.weight_scale",
+      "model.layers.18.self_attn.v_proj.weight_scale_2"
+    ]
+  },
+  "bf16": {
+    "nodes": [
+      {
+        "kernel_name": "_ZN7cutlass7Kernel2I68cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8EEvNT_6ParamsE",
+        "grid": [
+          8,
+          48,
+          1
+        ],
+        "block": [
+          32,
+          1,
+          1
+        ],
+        "shared_bytes": 16896,
+        "tools_id": 240518168582,
+        "parameter_size": 360
+      },
+      {
+        "kernel_name": "_ZN7cutlass7Kernel2I68cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8EEvNT_6ParamsE",
+        "grid": [
+          8,
+          48,
+          1
+        ],
+        "block": [
+          32,
+          1,
+          1
+        ],
+        "shared_bytes": 16896,
+        "tools_id": 962072674503,
+        "parameter_size": 360
+      },
+      {
+        "kernel_name": "_ZN7cutlass7Kernel2I68cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8EEvNT_6ParamsE",
+        "grid": [
+          8,
+          48,
+          1
+        ],
+        "block": [
+          32,
+          1,
+          1
+        ],
+        "shared_bytes": 16896,
+        "tools_id": 1219770712070,
+        "parameter_size": 360
+      },
+      {
+        "kernel_name": "_ZN7cutlass7Kernel2I68cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8EEvNT_6ParamsE",
+        "grid": [
+          8,
+          48,
+          1
+        ],
+        "block": [
+          32,
+          1,
+          1
+        ],
+        "shared_bytes": 16896,
+        "tools_id": 1941325217991,
+        "parameter_size": 360
+      }
+    ],
+    "tensors": [
+      {
+        "tensor": "weight",
+        "shape": [
+          6144,
+          4096
+        ],
+        "dtype": "torch.bfloat16"
+      }
+    ],
+    "checkpoint_keys": [
+      "model.layers.18.self_attn.k_proj.weight",
+      "model.layers.18.self_attn.q_proj.weight",
+      "model.layers.18.self_attn.v_proj.weight"
+    ]
+  }
+}

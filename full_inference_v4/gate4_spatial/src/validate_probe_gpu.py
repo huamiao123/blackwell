@@ -14,13 +14,13 @@ from plan import probe_specs
 from probe_reference import validate_outputs, work_accounting
 
 
-def require_permit(run_dir):
+def require_permit(run_dir, scope='probe_only', worker_path=Path(__file__)):
     permit = load(run_dir / 'permit.json')
-    if (permit['scope'] != 'probe_only' or
+    if (permit['scope'] != scope or
             permit['nonce'] != os.environ.get('G4_PROBE_NONCE') or
             permit['supervisor_pid'] != os.getppid() or
             not time.time() < permit['deadline'] or
-            permit['worker_sha256'] != sha(Path(__file__))):
+            permit['worker_sha256'] != sha(worker_path)):
         raise RuntimeError('no valid supervisor permit for standalone probe')
     return permit
 

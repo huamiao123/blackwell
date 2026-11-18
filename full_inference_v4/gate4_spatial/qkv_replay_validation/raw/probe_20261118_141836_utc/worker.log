@@ -1,0 +1,13 @@
+W1118 22:18:41.636000 1198398 torch/_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1118 22:18:41.637000 1198398 torch/_library/opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1118 22:18:41.637000 1198398 torch/_library/opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+Traceback (most recent call last):
+  File "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/src/validate_qkv_replay.py", line 189, in <module>
+    main()
+  File "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/src/validate_qkv_replay.py", line 162, in main
+    identity = exact_graph_node(graph, driver, runtime, selected, expected, layer)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/src/validate_qkv_replay.py", line 100, in exact_graph_node
+    blocks = checked(driver.cuOccupancyMaxActiveBlocksPerMultiprocessor, params.func, block[0], params.sharedMemBytes)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: checked() takes 1 positional argument but 4 were given

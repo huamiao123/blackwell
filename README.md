@@ -1,5 +1,9 @@
 # blackwell — RTX 5090 (SM120) BF16 vs native NVFP4 resource study
 
+## 最新实测：真实 QKV 重放与并发试点（2026-11-18）
+
+两种精度各自复现 Gate 3 的第 18 层 QKV Kernel 和输出。实测单函数 Occupancy API 为 NVFP4 1 CTA/SM、BF16 5 CTA/SM。单个 NSYS 配对块中，两边与同工作量 FP32 探针的 Kernel 时间重叠均为 96%–98%，四类负对照均无重叠。NVFP4 主 Kernel 时长增加约 15%，BF16 两种提交顺序的变化分别为 −5.63% 和 +0.59%。仍需独立重复判断干扰差异。[试点报告与原始数据](full_inference_v4/gate4_spatial/qkv_replay_validation/report.md)
+
 
 ## 最新实测：Gate 4 独立探针验收（2026-11-18）
 
