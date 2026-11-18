@@ -1,0 +1,4 @@
+W1118 22:33:06.923000 1201707 torch/_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1118 22:33:06.924000 1201707 torch/_library/opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1118 22:33:06.924000 1201707 torch/_library/opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+QKV_OVERLAP_PILOT_OUTPUTS_VERIFIED 3 exact output matches

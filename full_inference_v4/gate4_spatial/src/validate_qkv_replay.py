@@ -118,8 +118,12 @@ def main():
     parser.add_argument('run_dir', type=Path)
     parser.add_argument('--precision', choices=['nvfp4', 'bf16'], default='nvfp4')
     parser.add_argument('--overlap', action='store_true')
+    parser.add_argument('--p0-block', type=int, choices=range(6))
     args = parser.parse_args()
-    scope = 'standalone_qkv_overlap' if args.overlap else 'standalone_qkv_replay'
+    p0 = args.p0_block is not None
+    if p0 and not args.overlap:
+        raise ValueError('P0 block requires an overlap experiment')
+    scope = 'standalone_qkv_p0' if p0 else 'standalone_qkv_overlap' if args.overlap else 'standalone_qkv_replay'
     permit = require_permit(args.run_dir, scope, Path(__file__))
     candidates = load(SPATIAL / 'configs/kernel_selection.json')['cases']
     precision = args.precision
@@ -214,7 +218,8 @@ def main():
         if args.overlap:
             from qkv_overlap_pilot import pilot
             result['overlap_pilot'] = pilot(torch, driver, args.run_dir, Path(__file__), selected['case_id'],
-                                            graph, output, reference, permit['cubin_sha256'])
+                                            graph, output, reference, permit['cubin_sha256'],
+                                            profile='P0' if p0 else 'P2', block=args.p0_block if p0 else 0)
             result['status'] = 'QKV_OVERLAP_PILOT_OUTPUTS_VERIFIED'
         save(args.run_dir / 'result.json', result)
         print(result['status'], f'{len(observations)} exact output matches', flush=True)

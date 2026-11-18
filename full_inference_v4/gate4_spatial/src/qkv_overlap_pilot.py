@@ -1,4 +1,4 @@
-"""One traced block with a verified single-node QKV and a calibrated FP32 probe."""
+"""One isolated QKV/FP32 block, with tracing only for the P2 diagnostic."""
 
 import ctypes
 import os
@@ -14,8 +14,11 @@ from stream_protocol import submit
 from validate_probe_gpu import require_permit
 
 
-def pilot(torch, driver, run_dir, worker_path, case, graph, output, reference, cubin_sha256):
-    from nvtx import annotate
+def pilot(torch, driver, run_dir, worker_path, case, graph, output, reference, cubin_sha256,
+          profile='P2', block=0):
+    if profile == 'P2':
+        from nvtx import annotate
+    scope = 'standalone_qkv_p0' if profile == 'P0' else 'standalone_qkv_overlap'
 
     uri = SPATIAL / 'build/offline_sm120_v2/probes_sm120.cubin'
     if sha(uri) != cubin_sha256:
@@ -43,7 +46,7 @@ def pilot(torch, driver, run_dir, worker_path, case, graph, output, reference, c
 
     class Permit:
         def validate_live(self):
-            require_permit(run_dir, 'standalone_qkv_overlap', worker_path)
+            require_permit(run_dir, scope, worker_path)
 
     # Verify the actual v2 operations with a condition that is already satisfied.
     flag = checked(driver.cuMemAlloc(4))
@@ -57,15 +60,18 @@ def pilot(torch, driver, run_dir, worker_path, case, graph, output, reference, c
         mode = None
 
         def launch(self, executable, stream):
-            role = 'A' if executable is a else 'B'
-            with annotate(f'G4|{case}|0|{self.mode}|{role}'):
+            if profile == 'P2':
+                role = 'A' if executable is a else 'B'
+                with annotate(f'G4|{case}|{block}|{self.mode}|{role}'):
+                    super().launch(executable, stream)
+            else:
                 super().launch(executable, stream)
 
     backend = TaggedBackend(driver, Permit(), context_id, True, prerequisite)
     modes = MODES[:]
-    random.Random(41023).shuffle(modes)
-    records = []
-    for mode in modes:
+    random.Random(41023 + block).shuffle(modes)
+
+    def run_condition(mode):
         output.fill_(float('nan'))
         destination.fill_(float('nan'))
         checked(driver.cuEventRecord(prerequisite, producer))
@@ -77,15 +83,19 @@ def pilot(torch, driver, run_dir, worker_path, case, graph, output, reference, c
             raise RuntimeError('QKV output changed under ' + mode)
         if did_b:
             validate_outputs(spec, destination.cpu().numpy())
-        records.append(dict(mode=mode, completed_A=int(did_a), completed_B=int(did_b),
-                            output_checks_passed=True,
-                            joint_event_ns=backend.elapsed_ns('joint_start', 'joint_end'),
-                            a_event_ns=backend.elapsed_ns('A_start', 'A_end') if did_a else None,
-                            b_event_ns=backend.elapsed_ns('B_start', 'B_end') if did_b else None))
+        return dict(mode=mode, completed_A=int(did_a), completed_B=int(did_b),
+                    output_checks_passed=True,
+                    joint_event_ns=backend.elapsed_ns('joint_start', 'joint_end'),
+                    a_event_ns=backend.elapsed_ns('A_start', 'A_end') if did_a else None,
+                    b_event_ns=backend.elapsed_ns('B_start', 'B_end') if did_b else None)
+
+    warmup = [run_condition(mode) for mode in MODES] if profile == 'P0' else []
+    records = [run_condition(mode) for mode in modes]
     backend.close_after_join()
     checked(driver.cuEventDestroy(prerequisite))
     b_graph.reset()
     checked(driver.cuModuleUnload(module))
-    return dict(scope='ONE_P2_BLOCK_ISOLATED_CHECKPOINT_PROJECTION',
+    return dict(scope=f'ONE_{profile}_BLOCK_ISOLATED_CHECKPOINT_PROJECTION', profile=profile, block=block,
                 fp32_probe=dict(spec=spec, grid=grid, cubin_sha256=cubin_sha256,
-                                **work_accounting(spec, grid)), conditions=records)
+                                **work_accounting(spec, grid)), conditions=records, warmup=warmup,
+                overlap_code_sha256=sha(Path(__file__)))
