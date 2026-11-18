@@ -1,0 +1,132 @@
+{
+  "profile": "P0",
+  "repetitions": 6,
+  "independent_worker_per_condition_block": true,
+  "compare_grids": true,
+  "fixed_gpu": "022c5f55-490e-ec54-3887-5f12510d273d",
+  "planned_order": [
+    {
+      "block": 0,
+      "precision": "nvfp4"
+    },
+    {
+      "block": 0,
+      "precision": "bf16"
+    },
+    {
+      "block": 1,
+      "precision": "bf16"
+    },
+    {
+      "block": 1,
+      "precision": "nvfp4"
+    },
+    {
+      "block": 2,
+      "precision": "nvfp4"
+    },
+    {
+      "block": 2,
+      "precision": "bf16"
+    },
+    {
+      "block": 3,
+      "precision": "bf16"
+    },
+    {
+      "block": 3,
+      "precision": "nvfp4"
+    },
+    {
+      "block": 4,
+      "precision": "nvfp4"
+    },
+    {
+      "block": 4,
+      "precision": "bf16"
+    },
+    {
+      "block": 5,
+      "precision": "bf16"
+    },
+    {
+      "block": 5,
+      "precision": "nvfp4"
+    }
+  ],
+  "status": "COMPLETED",
+  "runs": [
+    {
+      "block": 0,
+      "precision": "nvfp4",
+      "run_id": "probe_20261118_144301_utc",
+      "launcher_rc": 0
+    },
+    {
+      "block": 0,
+      "precision": "bf16",
+      "run_id": "probe_20261118_144315_utc",
+      "launcher_rc": 0
+    },
+    {
+      "block": 1,
+      "precision": "bf16",
+      "run_id": "probe_20261118_144330_utc",
+      "launcher_rc": 0
+    },
+    {
+      "block": 1,
+      "precision": "nvfp4",
+      "run_id": "probe_20261118_144344_utc",
+      "launcher_rc": 0
+    },
+    {
+      "block": 2,
+      "precision": "nvfp4",
+      "run_id": "probe_20261118_144358_utc",
+      "launcher_rc": 0
+    },
+    {
+      "block": 2,
+      "precision": "bf16",
+      "run_id": "probe_20261118_144411_utc",
+      "launcher_rc": 0
+    },
+    {
+      "block": 3,
+      "precision": "bf16",
+      "run_id": "probe_20261118_144425_utc",
+      "launcher_rc": 0
+    },
+    {
+      "block": 3,
+      "precision": "nvfp4",
+      "run_id": "probe_20261118_144440_utc",
+      "launcher_rc": 0
+    },
+    {
+      "block": 4,
+      "precision": "nvfp4",
+      "run_id": "probe_20261118_144453_utc",
+      "launcher_rc": 0
+    },
+    {
+      "block": 4,
+      "precision": "bf16",
+      "run_id": "probe_20261118_144508_utc",
+      "launcher_rc": 0
+    },
+    {
+      "block": 5,
+      "precision": "bf16",
+      "run_id": "probe_20261118_144522_utc",
+      "launcher_rc": 0
+    },
+    {
+      "block": 5,
+      "precision": "nvfp4",
+      "run_id": "probe_20261118_144536_utc",
+      "launcher_rc": 0
+    }
+  ]
+}

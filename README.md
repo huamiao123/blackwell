@@ -1,5 +1,9 @@
 # blackwell — RTX 5090 (SM120) BF16 vs native NVFP4 resource study
 
+## 最新实测：QKV 的 32/128 CTA 对照（2026-11-18）
+
+保持探针总工作量不变，在每个进程内配对执行两个 Grid。NVFP4 QKV 的平均干扰由约 10.9%–11.7% 降到 1.6%–3.2%，联合完成却多用约 44–45 µs。NSYS 显示 32 CTA 在 QKV 结束后仍有约 48 µs 辅助任务尾部。六个配对块、216 条 P0 条件全部通过输出校验。[实验报告与时间线](full_inference_v4/gate4_spatial/qkv_replay_validation/qkv_grid_report.md)
+
 ## 最新实测：真实 QKV 的无 Profiling 配对复测（2026-11-18）
 
 以 12 个独立进程完成六个 BF16/NVFP4 配对块。128 CTA FP32 探针使 NVFP4 QKV 的 Event 时长平均增加约 9.6%–9.8%，两个顺序的区间下界均高于 5%。BF16 平均约 4%，跨精度差异在两种顺序下的证据强度不同。计时来自孤立 QKV，同 SM 共驻和完整推理收益仍待验证。[复测报告与逐次数据](full_inference_v4/gate4_spatial/qkv_replay_validation/qkv_p0_report.md)

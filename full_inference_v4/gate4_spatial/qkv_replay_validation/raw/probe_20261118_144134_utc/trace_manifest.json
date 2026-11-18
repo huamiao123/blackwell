@@ -1,0 +1,45 @@
+{
+  "profile_command": [
+    "nsys",
+    "profile",
+    "--trace=cuda,nvtx",
+    "--sample=none",
+    "--cpuctxsw=none",
+    "--wait=all",
+    "--cuda-graph-trace=node",
+    "--output=/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/qkv_replay_validation/traces/probe_20261118_144134_utc/calibration",
+    "python3",
+    "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/src/run_probe_supervised.py",
+    "--run-id",
+    "probe_20261118_144134_utc",
+    "--window",
+    "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/probe-window-u2ynmkf2/window.json",
+    "--mode",
+    "qkv_overlap_nvfp4",
+    "--probe-grid",
+    "32"
+  ],
+  "export_command": [
+    "nsys",
+    "export",
+    "--type=sqlite",
+    "--output=/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/qkv_replay_validation/traces/probe_20261118_144134_utc/calibration.sqlite",
+    "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/qkv_replay_validation/traces/probe_20261118_144134_utc/calibration.nsys-rep"
+  ],
+  "environment": {
+    "G4_PROBE_TRACE": "1",
+    "TMPDIR": "/home/wangzhihang/fp4-llm/tmp"
+  },
+  "files": [
+    {
+      "server_path": "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/qkv_replay_validation/traces/probe_20261118_144134_utc/calibration.nsys-rep",
+      "bytes": 229708,
+      "sha256": "246d6c5abc76fbd706d290717b075ef4416da44604e76492f498e68a2390f416"
+    },
+    {
+      "server_path": "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/qkv_replay_validation/traces/probe_20261118_144134_utc/calibration.sqlite",
+      "bytes": 626688,
+      "sha256": "b22a1004667875dc8ece61af892f8d62c471f51a2180a15bb2194a4a90e34c30"
+    }
+  ]
+}

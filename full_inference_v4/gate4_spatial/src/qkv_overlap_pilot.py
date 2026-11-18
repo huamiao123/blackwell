@@ -15,7 +15,7 @@ from validate_probe_gpu import require_permit
 
 
 def pilot(torch, driver, run_dir, worker_path, case, graph, output, reference, cubin_sha256,
-          profile='P2', block=0):
+          profile='P2', block=0, probe_grid=128, compare_grids=False):
     if profile == 'P2':
         from nvtx import annotate
     scope = 'standalone_qkv_p0' if profile == 'P0' else 'standalone_qkv_overlap'
@@ -24,7 +24,11 @@ def pilot(torch, driver, run_dir, worker_path, case, graph, output, reference, c
     if sha(uri) != cubin_sha256:
         raise RuntimeError('calibrated CUBIN hash mismatch')
     spec = dict(probe_specs()[0], items=65536, rounds=8, expected_flops=16_777_216)
-    grid = 128
+    grids = [probe_grid]
+    if compare_grids:
+        if profile != 'P0':
+            raise ValueError('paired grid comparison is an unprofiled experiment')
+        grids = [32, 128] if block % 2 == 0 else [128, 32]
     elements = spec['items'] * 16
     source = (0.25 + (torch.arange(elements, dtype=torch.int32) % 64).float() / 128).to('cuda')
     destination = torch.empty_like(source)
@@ -35,12 +39,14 @@ def pilot(torch, driver, run_dir, worker_path, case, graph, output, reference, c
             (ctypes.c_uint64, ctypes.c_uint64, ctypes.c_uint32, ctypes.c_uint32))
     capture = torch.cuda.Stream()
     capture_driver = driver.CUstream(init_value=capture.cuda_stream)
-    b_graph = torch.cuda.CUDAGraph()
-    torch.cuda.synchronize()
-    with torch.cuda.graph(b_graph, stream=capture):
-        checked(driver.cuLaunchKernel(function, grid, 1, 1, 32, 1, 1, 0, capture_driver, args, 0))
     a = Executable(driver.CUgraphExec(init_value=graph.raw_cuda_graph_exec()), context_id, graph)
-    b = Executable(driver.CUgraphExec(init_value=b_graph.raw_cuda_graph_exec()), context_id, b_graph)
+    probes = {}
+    torch.cuda.synchronize()
+    for grid in grids:
+        b_graph = torch.cuda.CUDAGraph()
+        with torch.cuda.graph(b_graph, stream=capture):
+            checked(driver.cuLaunchKernel(function, grid, 1, 1, 32, 1, 1, 0, capture_driver, args, 0))
+        probes[grid] = Executable(driver.CUgraphExec(init_value=b_graph.raw_cuda_graph_exec()), context_id, b_graph)
     producer = driver.CUstream(init_value=torch.cuda.current_stream().cuda_stream)
     prerequisite = checked(driver.cuEventCreate(2))
 
@@ -71,12 +77,12 @@ def pilot(torch, driver, run_dir, worker_path, case, graph, output, reference, c
     modes = MODES[:]
     random.Random(41023 + block).shuffle(modes)
 
-    def run_condition(mode):
+    def run_condition(mode, probe):
         output.fill_(float('nan'))
         destination.fill_(float('nan'))
         checked(driver.cuEventRecord(prerequisite, producer))
         backend.mode = mode
-        submitted = submit(backend, mode, a, b)
+        submitted = submit(backend, mode, a, probe)
         did_a = 'A' in submitted['order']
         did_b = 'B' in submitted['order'] and mode != 'empty_control'
         if did_a and not torch.equal(output, reference):
@@ -89,13 +95,20 @@ def pilot(torch, driver, run_dir, worker_path, case, graph, output, reference, c
                     a_event_ns=backend.elapsed_ns('A_start', 'A_end') if did_a else None,
                     b_event_ns=backend.elapsed_ns('B_start', 'B_end') if did_b else None)
 
-    warmup = [run_condition(mode) for mode in MODES] if profile == 'P0' else []
-    records = [run_condition(mode) for mode in modes]
+    results = []
+    for grid in grids:
+        probe = probes[grid]
+        warmup = [run_condition(mode, probe) for mode in MODES] if profile == 'P0' else []
+        records = [run_condition(mode, probe) for mode in modes]
+        results.append(dict(scope=f'ONE_{profile}_BLOCK_ISOLATED_CHECKPOINT_PROJECTION', profile=profile, block=block,
+                            fp32_probe=dict(spec=spec, grid=grid, cubin_sha256=cubin_sha256,
+                                            **work_accounting(spec, grid)), conditions=records, warmup=warmup,
+                            overlap_code_sha256=sha(Path(__file__))))
     backend.close_after_join()
     checked(driver.cuEventDestroy(prerequisite))
-    b_graph.reset()
+    for probe in probes.values():
+        probe.owner.reset()
     checked(driver.cuModuleUnload(module))
-    return dict(scope=f'ONE_{profile}_BLOCK_ISOLATED_CHECKPOINT_PROJECTION', profile=profile, block=block,
-                fp32_probe=dict(spec=spec, grid=grid, cubin_sha256=cubin_sha256,
-                                **work_accounting(spec, grid)), conditions=records, warmup=warmup,
-                overlap_code_sha256=sha(Path(__file__)))
+    if compare_grids:
+        return dict(profile=profile, block=block, order=grids, same_probe_buffers=True, configurations=results)
+    return results[0]

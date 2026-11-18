@@ -87,15 +87,22 @@ def load_run(run, trace):
         if not a or not b:
             continue
         intersection, fraction = overlap((a['start_ns'], a['end_ns']), (b['start_ns'], b['end_ns']))
+        head = max(0, min(b['end_ns'], a['start_ns']) - b['start_ns'])
+        tail = max(0, b['end_ns'] - max(b['start_ns'], a['end_ns']))
+        if head + intersection + tail != b['duration_ns']:
+            raise ValueError('probe interval decomposition does not sum to elapsed time')
         parallel = mode.startswith('parallel_')
         if (intersection and not parallel) or (parallel and a['streamId'] == b['streamId']):
             raise ValueError('parallel stream or serial negative control does not match protocol')
         a_base = output[('a_alone', 'A')]['duration_ns']
         b_base = output[('b_alone', 'B')]['duration_ns']
         serial = conditions[mode.replace('parallel_', 'serial_')] if parallel else None
-        summaries.append(dict(case=result['case'], mode=mode, a_ns=a['duration_ns'], b_ns=b['duration_ns'],
+        summaries.append(dict(case=result['case'], mode=mode, probe_grid=pilot['fp32_probe']['grid'],
+                              a_ns=a['duration_ns'], b_ns=b['duration_ns'],
                               a_alone_ns=a_base, b_alone_ns=b_base, overlap_ns=intersection,
-                              fraction_of_shorter=fraction, a_duration_change=a['duration_ns'] / a_base - 1,
+                              fraction_of_shorter=fraction, fraction_of_probe=intersection / b['duration_ns'],
+                              b_before_a_ns=head, b_after_a_ns=tail, b_after_a_fraction=tail / b['duration_ns'],
+                              a_duration_change=a['duration_ns'] / a_base - 1,
                               b_throughput_retention=b_base / b['duration_ns'], joint_event_ns=row['joint_event_ns'],
                               matched_serial_event_ns=serial['joint_event_ns'] if serial else None,
                               joint_event_speedup=serial['joint_event_ns'] / row['joint_event_ns'] if serial else None,

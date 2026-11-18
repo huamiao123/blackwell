@@ -31,6 +31,8 @@ def telemetry_fields(report):
 
 def analyze(root, manifest_path, output):
     manifest = load(manifest_path)
+    compare_grids = manifest.get('compare_grids', False)
+    grids = [32, 128] if compare_grids else [128]
     expected = [(block, precision) for block in range(6)
                 for precision in (PRECISIONS if block % 2 == 0 else PRECISIONS[::-1])]
     planned = [(row['block'], row['precision']) for row in manifest['planned_order']]
@@ -50,7 +52,15 @@ def analyze(root, manifest_path, output):
         run_dir = root / 'raw' / run_id
         result = load(run_dir / 'result.json')
         guard = load(run_dir / 'supervision.json')
-        workload = result['overlap_pilot']
+        if compare_grids:
+            bundle = result['overlap_grid_comparison']
+            workloads = bundle['configurations']
+            expected_grids = grids if block % 2 == 0 else grids[::-1]
+            if (not bundle['same_probe_buffers'] or bundle['order'] != expected_grids or
+                    [w['fp32_probe']['grid'] for w in workloads] != expected_grids):
+                raise ValueError('grid order or same-buffer requirement failed')
+        else:
+            workloads = [result['overlap_pilot']]
         pid = guard['worker_pid']
         begin = datetime.fromisoformat(guard['start'])
         end = datetime.fromisoformat(guard['end'])
@@ -62,60 +72,76 @@ def analyze(root, manifest_path, output):
             raise ValueError('invalid run supervision or process independence')
         identifiers.add(pid)
         last_end = end
-        if (workload['profile'] != 'P0' or workload['block'] != block or
-                result['case'] != precision + '_qkv_proj' or result['full_model_loaded'] or
+        if (result['case'] != precision + '_qkv_proj' or result['full_model_loaded'] or
                 result['status'] != 'QKV_OVERLAP_PILOT_OUTPUTS_VERIFIED' or
                 (run_dir / 'trace_manifest.json').exists()):
             raise ValueError('invalid P0 measurement scope')
-        definition = workload['fp32_probe']
-        code = (guard['worker_sha256'], guard['supervisor_sha256'], workload['overlap_code_sha256'])
-        if sequence == 0:
-            fp32_definition, same_input, sources = definition, result['input_sha256'], code
-        if (definition != fp32_definition or result['input_sha256'] != same_input or code != sources or
-                definition['grid'] != 128 or definition['spec']['rounds'] != 8 or definition['flops'] != 16_777_216):
-            raise ValueError('source/workload drift across P0 runs')
-        work = digest(dict(case=result['case'], input=result['input_sha256'], probe=definition,
-                           graph=result['live_identity']['kernel_name'], graph_grid=result['live_identity']['grid'],
-                           cache='same layer and buffers in all conditions; no measured L2 state'))
-        rows = workload['conditions']
-        warmup = workload['warmup']
-        if ({row['mode'] for row in rows} != set(MODES) or len(rows) != len(MODES) or
-                [row['mode'] for row in warmup] != MODES or not all(row['output_checks_passed'] for row in warmup)):
-            raise ValueError('missing or unequal warmup / condition count')
-        one = {}
-        for condition in rows:
-            mode = condition['mode']
-            a = int(mode != 'b_alone')
-            b = int(mode not in ('a_alone', 'empty_control'))
-            if (condition['completed_A'], condition['completed_B']) != (a, b):
-                raise ValueError('actual completed work mismatch')
-            cooked = dict(profile='P0', measurement_scope=SCOPE, work_hash=work,
-                          work_completed=True, correctness_passed=condition['output_checks_passed'],
-                          serial_measured=mode.startswith('serial_'), a_completed_units=a, b_completed_units=b,
-                          a_ns=condition['a_event_ns'], b_ns=condition['b_event_ns'], joint_ns=condition['joint_event_ns'])
-            one[mode] = cooked
-            measurements.append(dict(run_id=run_id, precision=precision, block=block, mode=mode, **cooked))
-        for order in ORDERS:
-            blocks.append(dict(run_id=run_id, precision=precision, block=block, **paired(one, order)))
+        for workload in workloads:
+            definition = workload['fp32_probe']
+            grid = definition['grid']
+            if workload['profile'] != 'P0' or workload['block'] != block or grid not in grids:
+                raise ValueError('unexpected grid profile or paired block')
+            logical = {key: value for key, value in definition.items() if key not in ('grid', 'nonempty_ctas')}
+            code = (guard['worker_sha256'], guard['supervisor_sha256'], workload['overlap_code_sha256'])
+            if sources is None:
+                fp32_definition, same_input, sources = logical, result['input_sha256'], code
+            if (logical != fp32_definition or result['input_sha256'] != same_input or code != sources or
+                    definition['nonempty_ctas'] != grid or definition['spec']['rounds'] != 8 or
+                    definition['flops'] != 16_777_216):
+                raise ValueError('source/workload drift across P0 runs')
+            work = digest(dict(case=result['case'], input=result['input_sha256'], probe=definition,
+                               graph=result['live_identity']['kernel_name'], graph_grid=result['live_identity']['grid'],
+                               cache='same layer and buffers in all conditions; no measured L2 state'))
+            rows = workload['conditions']
+            warmup = workload['warmup']
+            if ({row['mode'] for row in rows} != set(MODES) or len(rows) != len(MODES) or
+                    [row['mode'] for row in warmup] != MODES or not all(row['output_checks_passed'] for row in warmup)):
+                raise ValueError('missing or unequal warmup / condition count')
+            one = {}
+            for condition in rows:
+                mode = condition['mode']
+                a = int(mode != 'b_alone')
+                b = int(mode not in ('a_alone', 'empty_control'))
+                if (condition['completed_A'], condition['completed_B']) != (a, b):
+                    raise ValueError('actual completed work mismatch')
+                cooked = dict(profile='P0', measurement_scope=SCOPE, work_hash=work,
+                              work_completed=True, correctness_passed=condition['output_checks_passed'],
+                              serial_measured=mode.startswith('serial_'), a_completed_units=a, b_completed_units=b,
+                              a_ns=condition['a_event_ns'], b_ns=condition['b_event_ns'], joint_ns=condition['joint_event_ns'])
+                one[mode] = cooked
+                measurements.append(dict(run_id=run_id, precision=precision, block=block, probe_grid=grid,
+                                         mode=mode, **cooked))
+            for order in ORDERS:
+                blocks.append(dict(run_id=run_id, precision=precision, block=block, probe_grid=grid, **paired(one, order)))
         runs.append(dict(sequence=sequence, run_id=run_id, precision=precision, block=block, pid=pid,
                          start=guard['start'], end=guard['end'], **telemetry_fields(guard),
                          result_sha256=sha(run_dir / 'result.json')))
     summaries = []
+
+    def summarize(group, grid, order, field, values):
+        stats = confidence(values)
+        stats['assumption'] = 'six matched blocks, t interval assumes independent block effects on this device'
+        summaries.append(dict(group=group, probe_grid=grid, order=order, metric=field, **stats,
+                              median=median(values), minimum=min(values), maximum=max(values)))
+
+    entries = {(r['precision'], r['probe_grid'], r['order'], r['block']): r for r in blocks}
     for order in ORDERS:
-        by_precision = {p: {r['block']: r for r in blocks if r['precision'] == p and r['order'] == order}
-                        for p in PRECISIONS}
-        for field in METRICS:
-            for group in (*PRECISIONS, 'nvfp4_minus_bf16'):
-                values = ([by_precision[group][i][field] for i in range(6)] if group in PRECISIONS else
-                          [by_precision['nvfp4'][i][field] - by_precision['bf16'][i][field] for i in range(6)])
-                stats = confidence(values)
-                stats['assumption'] = 'six distinct worker/process pairs, t interval assumes independent block effects on this device'
-                summaries.append(dict(group=group, order=order, metric=field, **stats,
-                                      median=median(values), minimum=min(values), maximum=max(values)))
-    write_csv(output / 'qkv_p0_run_inventory.csv', runs)
-    write_csv(output / 'qkv_p0_conditions.csv', measurements)
-    write_csv(output / 'qkv_p0_block_metrics.csv', blocks)
-    write_csv(output / 'qkv_p0_statistics.csv', summaries)
+        for field in (*METRICS, 'joint_ns') if compare_grids else METRICS:
+            values = {(p, g): [entries[p, g, order, i][field] for i in range(6)] for p in PRECISIONS for g in grids}
+            for grid in grids:
+                for p in PRECISIONS:
+                    summarize(p, grid, order, field, values[p, grid])
+                summarize('nvfp4_minus_bf16', grid, order, field,
+                          [a - b for a, b in zip(values['nvfp4', grid], values['bf16', grid])])
+            if compare_grids:
+                for p in PRECISIONS:
+                    summarize(p, '32_minus_128', order, field,
+                              [a - b for a, b in zip(values[p, 32], values[p, 128])])
+    prefix = 'qkv_grid_p0' if compare_grids else 'qkv_p0'
+    write_csv(output / f'{prefix}_run_inventory.csv', runs)
+    write_csv(output / f'{prefix}_conditions.csv', measurements)
+    write_csv(output / f'{prefix}_block_metrics.csv', blocks)
+    write_csv(output / f'{prefix}_statistics.csv', summaries)
     print(f'Validated {len(runs)} distinct processes, {len(measurements)} conditions, six matched cross-precision blocks')
 
 

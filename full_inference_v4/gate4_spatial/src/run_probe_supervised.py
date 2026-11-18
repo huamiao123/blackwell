@@ -23,6 +23,8 @@ def main():
     parser.add_argument('--mode', choices=['acceptance', 'qkv_calibration', 'qkv_replay_nvfp4', 'qkv_replay_bf16',
                                           'qkv_overlap_nvfp4', 'qkv_overlap_bf16'], default='acceptance')
     parser.add_argument('--p0-block', type=int, choices=range(6))
+    parser.add_argument('--probe-grid', type=int, choices=[32, 128], default=128)
+    parser.add_argument('--compare-grids', action='store_true')
     args = parser.parse_args()
     if not re.fullmatch(r'probe_[a-z0-9_]+', args.run_id):
         raise ValueError('invalid run ID')
@@ -32,6 +34,8 @@ def main():
     p0 = args.p0_block is not None
     if p0 and not qkv_overlap:
         raise ValueError('P0 block requires an overlap experiment')
+    if args.compare_grids and not p0:
+        raise ValueError('paired grid comparison requires a P0 block')
     task = ('standalone_qkv_p0' if p0 else 'standalone_qkv_overlap' if qkv_overlap else
             'standalone_qkv_replay' if qkv_replay else 'standalone_probe_acceptance')
     deadline = validate_window(window, task, time.time(), socket.gethostname())
@@ -51,9 +55,11 @@ def main():
     if qkv_replay:
         command.extend(['--precision', args.mode.rsplit('_', 1)[-1]])
         if qkv_overlap:
-            command.append('--overlap')
+            command.extend(['--overlap', '--probe-grid', str(args.probe_grid)])
         if p0:
             command.extend(['--p0-block', str(args.p0_block)])
+        if args.compare_grids:
+            command.append('--compare-grids')
     else:
         command.extend(['--mode', args.mode])
     gpu_uuid = window['gpu_uuid']

@@ -1,0 +1,470 @@
+{
+  "status": "QKV_OVERLAP_PILOT_OUTPUTS_VERIFIED",
+  "scope": "ISOLATED_CHECKPOINT_QKV_SYNTHETIC_ACTIVATION",
+  "case": "bf16_qkv_proj",
+  "module": "model.layers.18.self_attn.qkv_proj",
+  "live_identity": {
+    "kernel_name": "_ZN7cutlass7Kernel2I68cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8EEvNT_6ParamsE",
+    "grid": [
+      8,
+      48,
+      1
+    ],
+    "block": [
+      32,
+      1,
+      1
+    ],
+    "dynamic_shared_bytes": 16896,
+    "register_and_shared_attributes": {
+      "NUM_REGS": 124,
+      "SHARED_SIZE_BYTES": 0,
+      "MAX_DYNAMIC_SHARED_SIZE_BYTES": 49152
+    },
+    "homogeneous_api_blocks_per_sm": 5,
+    "tools_id": 4294967296,
+    "parameter_offset": 0,
+    "parameter_size": 360,
+    "live_reference_offsets": {
+      "weight": 288
+    }
+  },
+  "source_weights": {
+    "model.layers.18.self_attn.q_proj.weight": "model-00003-of-00005.safetensors",
+    "model.layers.18.self_attn.k_proj.weight": "model-00003-of-00005.safetensors",
+    "model.layers.18.self_attn.v_proj.weight": "model-00003-of-00005.safetensors"
+  },
+  "index_sha256": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc",
+  "input_shape": [
+    8,
+    4096
+  ],
+  "input_sha256": "730a07b3bd3a684e69a7ac700028a2d2eee6a5ad8e48812f582c6930b7a08749",
+  "input_is_synthetic": true,
+  "output_shape": [
+    8,
+    6144
+  ],
+  "trials": [
+    {
+      "trial": 0,
+      "exact_match": true,
+      "output_sha256": "8ce05fb335da459a55b6eb1d821c9ecc1ad9346672737ee9c0c7802375886eb1"
+    },
+    {
+      "trial": 1,
+      "exact_match": true,
+      "output_sha256": "8ce05fb335da459a55b6eb1d821c9ecc1ad9346672737ee9c0c7802375886eb1"
+    },
+    {
+      "trial": 2,
+      "exact_match": true,
+      "output_sha256": "8ce05fb335da459a55b6eb1d821c9ecc1ad9346672737ee9c0c7802375886eb1"
+    }
+  ],
+  "torch_version": "2.14.0+cu132",
+  "vllm_version": "0.33.0+precompiled",
+  "backend_source_sha256": "d045926d733d71e32a3aae306043b4bfd99093737898ac80919da7d4774d3878",
+  "gate3_reference_sha256": "072f98fc3de29b9a0e9d3172923bfa8c3cfee0ea3c76d00a69c7c2c2f6269b96",
+  "full_model_loaded": false,
+  "metrics_scope": "correctness, identity, and function attributes only",
+  "overlap_grid_comparison": {
+    "profile": "P0",
+    "block": 1,
+    "order": [
+      128,
+      32
+    ],
+    "same_probe_buffers": true,
+    "configurations": [
+      {
+        "scope": "ONE_P0_BLOCK_ISOLATED_CHECKPOINT_PROJECTION",
+        "profile": "P0",
+        "block": 1,
+        "fp32_probe": {
+          "spec": {
+            "probe": "fp32_fma",
+            "variant": "light",
+            "threads": 32,
+            "shared_bytes": 0,
+            "items": 65536,
+            "vector": 16,
+            "rounds": 8,
+            "input_pattern": "0.25 + ((16*i+j)%64)/128",
+            "expected_flops": 16777216
+          },
+          "grid": 128,
+          "cubin_sha256": "1daee1dd84515740d4e2e05d16634e708532d3f166b8e28397c058035a7c36e7",
+          "fma_operations": 8388608,
+          "flops": 16777216,
+          "input_bytes": 4194304,
+          "output_bytes": 4194304,
+          "virtual_groups": 128,
+          "nonempty_ctas": 128,
+          "work_hash": "99a95785b68921ad5dcaa1528fd2baadfd0dffcabf8762c7cd3186d4753f2e94"
+        },
+        "conditions": [
+          {
+            "mode": "b_alone",
+            "completed_A": 0,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 29567.99976527691,
+            "a_event_ns": null,
+            "b_event_ns": 18559.999763965607
+          },
+          {
+            "mode": "parallel_ab",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 33760.00002026558,
+            "a_event_ns": 22975.999861955643,
+            "b_event_ns": 22848.00074994564
+          },
+          {
+            "mode": "non_overlap_control",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 53888.000547885895,
+            "a_event_ns": 22495.999932289124,
+            "b_event_ns": 17632.000148296356
+          },
+          {
+            "mode": "empty_control",
+            "completed_A": 1,
+            "completed_B": 0,
+            "output_checks_passed": true,
+            "joint_event_ns": 34464.00165557861,
+            "a_event_ns": 22495.999932289124,
+            "b_event_ns": null
+          },
+          {
+            "mode": "serial_ab",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 52864.00020122528,
+            "a_event_ns": 22431.999444961548,
+            "b_event_ns": 17664.000391960144
+          },
+          {
+            "mode": "a_alone",
+            "completed_A": 1,
+            "completed_B": 0,
+            "output_checks_passed": true,
+            "joint_event_ns": 32000.00151991844,
+            "a_event_ns": 22463.999688625336,
+            "b_event_ns": null
+          },
+          {
+            "mode": "same_stream_control",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 51008.00096988678,
+            "a_event_ns": 22719.99977529049,
+            "b_event_ns": 18079.999834299088
+          },
+          {
+            "mode": "serial_ba",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 54880.00065088272,
+            "a_event_ns": 22528.00017595291,
+            "b_event_ns": 19168.000668287277
+          },
+          {
+            "mode": "parallel_ba",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 32992.00162291527,
+            "a_event_ns": 22975.999861955643,
+            "b_event_ns": 22848.00074994564
+          }
+        ],
+        "warmup": [
+          {
+            "mode": "a_alone",
+            "completed_A": 1,
+            "completed_B": 0,
+            "output_checks_passed": true,
+            "joint_event_ns": 33183.9993596077,
+            "a_event_ns": 22431.999444961548,
+            "b_event_ns": null
+          },
+          {
+            "mode": "b_alone",
+            "completed_A": 0,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 29440.000653266907,
+            "a_event_ns": null,
+            "b_event_ns": 19616.00035429001
+          },
+          {
+            "mode": "serial_ab",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 55551.99831724167,
+            "a_event_ns": 24544.00062561035,
+            "b_event_ns": 17696.000635623932
+          },
+          {
+            "mode": "serial_ba",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 53183.99891257286,
+            "a_event_ns": 22528.00017595291,
+            "b_event_ns": 18368.00016462803
+          },
+          {
+            "mode": "parallel_ab",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 35007.99834728241,
+            "a_event_ns": 22304.000332951546,
+            "b_event_ns": 24351.999163627625
+          },
+          {
+            "mode": "parallel_ba",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 34239.9999499321,
+            "a_event_ns": 22879.99913096428,
+            "b_event_ns": 22752.000018954277
+          },
+          {
+            "mode": "empty_control",
+            "completed_A": 1,
+            "completed_B": 0,
+            "output_checks_passed": true,
+            "joint_event_ns": 31968.001276254654,
+            "a_event_ns": 22495.999932289124,
+            "b_event_ns": null
+          },
+          {
+            "mode": "same_stream_control",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 52096.00180387497,
+            "a_event_ns": 22752.000018954277,
+            "b_event_ns": 18079.999834299088
+          },
+          {
+            "mode": "non_overlap_control",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 52671.998739242554,
+            "a_event_ns": 22431.999444961548,
+            "b_event_ns": 17696.000635623932
+          }
+        ],
+        "overlap_code_sha256": "322feb6ee88730c0203cff4ef01709539d92f3cd607698fb16abf8da220c403d"
+      },
+      {
+        "scope": "ONE_P0_BLOCK_ISOLATED_CHECKPOINT_PROJECTION",
+        "profile": "P0",
+        "block": 1,
+        "fp32_probe": {
+          "spec": {
+            "probe": "fp32_fma",
+            "variant": "light",
+            "threads": 32,
+            "shared_bytes": 0,
+            "items": 65536,
+            "vector": 16,
+            "rounds": 8,
+            "input_pattern": "0.25 + ((16*i+j)%64)/128",
+            "expected_flops": 16777216
+          },
+          "grid": 32,
+          "cubin_sha256": "1daee1dd84515740d4e2e05d16634e708532d3f166b8e28397c058035a7c36e7",
+          "fma_operations": 8388608,
+          "flops": 16777216,
+          "input_bytes": 4194304,
+          "output_bytes": 4194304,
+          "virtual_groups": 128,
+          "nonempty_ctas": 32,
+          "work_hash": "99a95785b68921ad5dcaa1528fd2baadfd0dffcabf8762c7cd3186d4753f2e94"
+        },
+        "conditions": [
+          {
+            "mode": "b_alone",
+            "completed_A": 0,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 77951.99751853943,
+            "a_event_ns": null,
+            "b_event_ns": 66656.00091218948
+          },
+          {
+            "mode": "parallel_ab",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 81087.99904584885,
+            "a_event_ns": 23199.99970495701,
+            "b_event_ns": 72255.99884986877
+          },
+          {
+            "mode": "non_overlap_control",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 103423.99775981903,
+            "a_event_ns": 22655.999287962914,
+            "b_event_ns": 66880.002617836
+          },
+          {
+            "mode": "empty_control",
+            "completed_A": 1,
+            "completed_B": 0,
+            "output_checks_passed": true,
+            "joint_event_ns": 32864.00064826012,
+            "a_event_ns": 22560.0004196167,
+            "b_event_ns": null
+          },
+          {
+            "mode": "serial_ab",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 101311.99657917023,
+            "a_event_ns": 22528.00017595291,
+            "b_event_ns": 66816.00213050842
+          },
+          {
+            "mode": "a_alone",
+            "completed_A": 1,
+            "completed_B": 0,
+            "output_checks_passed": true,
+            "joint_event_ns": 33055.998384952545,
+            "a_event_ns": 22784.000262618065,
+            "b_event_ns": null
+          },
+          {
+            "mode": "same_stream_control",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 99711.99929714203,
+            "a_event_ns": 22560.0004196167,
+            "b_event_ns": 67231.99784755707
+          },
+          {
+            "mode": "serial_ba",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 100543.99818181992,
+            "a_event_ns": 22528.00017595291,
+            "b_event_ns": 65792.00178384781
+          },
+          {
+            "mode": "parallel_ba",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 81887.99768686295,
+            "a_event_ns": 22560.0004196167,
+            "b_event_ns": 71520.00069618225
+          }
+        ],
+        "warmup": [
+          {
+            "mode": "a_alone",
+            "completed_A": 1,
+            "completed_B": 0,
+            "output_checks_passed": true,
+            "joint_event_ns": 33376.00082159042,
+            "a_event_ns": 22592.000663280487,
+            "b_event_ns": null
+          },
+          {
+            "mode": "b_alone",
+            "completed_A": 0,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 77568.00204515457,
+            "a_event_ns": null,
+            "b_event_ns": 67520.00004053116
+          },
+          {
+            "mode": "serial_ab",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 102912.00131177902,
+            "a_event_ns": 22560.0004196167,
+            "b_event_ns": 66880.002617836
+          },
+          {
+            "mode": "serial_ba",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 103583.99897813797,
+            "a_event_ns": 22528.00017595291,
+            "b_event_ns": 68191.9977068901
+          },
+          {
+            "mode": "parallel_ab",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 82240.00036716461,
+            "a_event_ns": 22624.000906944275,
+            "b_event_ns": 71680.00191450119
+          },
+          {
+            "mode": "parallel_ba",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 83392.00168848038,
+            "a_event_ns": 22560.0004196167,
+            "b_event_ns": 71616.00142717361
+          },
+          {
+            "mode": "empty_control",
+            "completed_A": 1,
+            "completed_B": 0,
+            "output_checks_passed": true,
+            "joint_event_ns": 32767.999917268753,
+            "a_event_ns": 22752.000018954277,
+            "b_event_ns": null
+          },
+          {
+            "mode": "same_stream_control",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 101056.00208044052,
+            "a_event_ns": 22911.999374628067,
+            "b_event_ns": 67231.99784755707
+          },
+          {
+            "mode": "non_overlap_control",
+            "completed_A": 1,
+            "completed_B": 1,
+            "output_checks_passed": true,
+            "joint_event_ns": 102880.00106811523,
+            "a_event_ns": 22592.000663280487,
+            "b_event_ns": 66752.00164318085
+          }
+        ],
+        "overlap_code_sha256": "322feb6ee88730c0203cff4ef01709539d92f3cd607698fb16abf8da220c403d"
+      }
+    ]
+  }
+}
