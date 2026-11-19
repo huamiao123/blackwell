@@ -201,12 +201,30 @@ def main():
     if fees.exists():
         overhead.extend(dict(row, gpu_uuid=uuid, measurement_tool='P0 and P1',
                              evidence_source=source(fees)) for row in records(fees))
+    dram_study = E2 / 'analysis/dram_20261119'
+    for path in sorted((E2 / 'raw/dram_20261119').glob('*/verified_intersections.json')):
+        trace = load(path)
+        for row in trace['rows']:
+            activity.append(dict(row, run_id=trace['run_id'], precision=trace['precision'], condition=trace['condition'],
+                                 primary_operator='DECODE_E2', probe_type=row['probe_symbol'], probe_grid=128,
+                                 gpu_uuid=trace['device_uuid'], context_id=row['context_id'], stream_id=row['probe_stream_id'],
+                                 correlation_id=row['probe_correlation'], overlap_ms=row['overlap_ns']/1e6,
+                                 completed_work=row['logical_read_bytes'], completed_work_unit='logical read bytes',
+                                 measurement_scope='E2 Decode target GPU kernel union', measurement_tool='P2 CUDA Node Timeline',
+                                 evidence_status='VERIFIED_TIME_INTERSECTION', evidence_source=source(path)))
+    path = dram_study / 'probe_competition.csv'
+    if path.exists():
+        for row in records(path):
+            phase_estimates.append(dict(row, metric='stage_serial_normalized_probe_rate', probe_type='dram_read_light',
+                                        primary_operator='DECODE_E2', gpu_uuid=uuid, measurement_tool=row['profile'],
+                                        measurement_scope='Decode 33–64, equal work serial control',
+                                        evidence_status='DESCRIPTIVE_ONE_PROCESS_PER_CONDITION', evidence_source=source(path)))
     emit('concurrency_runs', runs + phases)
     emit('paired_blocks', blocks + phase_pairs)
     emit('concurrency_summary', estimates + phase_estimates)
     emit('interference_matrix', [row for row in estimates + phase_estimates
                                 if row['metric'] in ('primary_interference', 'probe_throughput_retention',
-                                                     'main_wall_change', 'serial_parallel_joint_ratio')])
+                                                     'main_wall_change', 'serial_parallel_joint_ratio', 'stage_serial_normalized_probe_rate')])
     emit('probe_pressure_sweep', pressure)
     emit('profiling_overhead', overhead)
 
@@ -219,6 +237,20 @@ def main():
                    evidence_status='GPU_CORRECTNESS_VERIFIED', evidence_source=source(standalone))
               for row in records(standalone)]
     dram = SPATIAL / 'analysis/offline_compile/dram_20261119/dram_probe_validation.csv'
+    hardware = dram_study / 'acceptance.json'
+    if hardware.exists():
+        observed = {r['symbol']: r for r in load(hardware)['rows']}
+        path = dram_study / 'standalone.csv'
+        for r in records(path):
+            if r['profile'] != 'P0':
+                continue
+            evidence = observed[r['symbol']]
+            probes.append(dict(r, probe_type=r['symbol'], probe_grid=r['grid'], probe_resource_level=r['variant'],
+                               registers_per_thread=r['NUM_REGS'], dynamic_shared_memory=r['dynamic_shared_bytes'],
+                               kernel_duration_ms=float(r['median_us']) / 1000, measurement_tool='CUDA Event P0',
+                               evidence_status='GPU_CORRECTNESS_VERIFIED', measurement_scope='STANDALONE_STREAMING',
+                               direction_detected=evidence['direction_detected'], counter_samples=evidence['interior_samples'],
+                               counter_evidence=source(hardware), evidence_source=source(path)))
     emit('probe_standalone', probes)
     emit('probe_validation', probes + [dict(row, probe_type=row['symbol'], probe_resource_level=row['variant'],
          measurement_scope='OFFLINE_SM120_COMPILE', measurement_tool='nvcc and cuobjdump',

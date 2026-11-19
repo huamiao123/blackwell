@@ -1,0 +1,1 @@
+STANDALONE_FULL_OUTPUTS_VERIFIED [('dram_read_light', 723), ('dram_read_heavy', 389), ('dram_write_light', 243), ('dram_write_heavy', 246), ('dram_copy_light', 8296), ('dram_copy_heavy', 597)]

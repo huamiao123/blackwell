@@ -2,6 +2,8 @@
 
 **记录日期** 2026-11-19
 
+随后完成显存读、写、复制的六种探针 GPU 输出校验，五种取得足够的 DRAM 方向硬件采样。每次读取 384 MiB 的相同工作在 NVFP4、BF16 Decode 中分别保留 86.3% 和 84.7% 的条件串行吞吐。每种精度有一对 P2，模型级 P0 和带探针 E2 P1 待采集。[显存竞争实验](../gate4_inference/dram_20261119.md)
+
 11 月 19 日下午的独立进程复验再次观察到阶段排序反转。NVFP4 与 BF16 的同一 BF16 Tensor 探针在 Prefill 中分别保留约 17.0% 和 10.7% 的阶段串行吞吐，在 Decode 中分别保留约 79.6% 和 89.6%。新增 4 份 10 kHz 设备采样、4 份 Node 时间线和 40 次无 Profiling 完整推理。Decode 探针覆盖 Graph 入口的融合算子及 GEMM。完整请求的联合完成速度仍在 1× 附近。[独立复验、资源数据与测量边界](../gate4_inference/phase_recheck_20261119.md)
 
 ## 机理阶段进展
@@ -20,7 +22,7 @@
 
 ## 软件与数据完整性
 
-逐层资源表由已有 Gate 3 原始表自动关联 288 条记录，记录 Graph、Node、CUDA Tools ID、各维 Grid/Block 和占用上界。CPU 侧覆盖 32 项正确性检查。六种 DRAM Streaming 变体完成 SM120 离线编译和访存指令审核，实际 DRAM 性能及正确性待 GPU 验收。历史 Gate 2/3 文件保留原内容。
+逐层资源表由已有 Gate 3 原始表自动关联 288 条记录，记录 Graph、Node、CUDA Tools ID、各维 Grid/Block 和占用上界。六种 DRAM Streaming 变体完成 SM120 离线访存指令审核、实际 GPU 全输出核验和独立计时。Write Light 的设备流量方向尚需更多内点样本。
 
 场景限定于稳定输入的独立 CUDA Graph。原始源码、真实执行、PyTorch Graph 捕获与输出一致性均经过核对。全模型调度、全权重工作集和混合请求属于另一个适用范围。单机配对置信区间只描述当前设备和运行协议。
 

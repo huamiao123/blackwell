@@ -77,10 +77,13 @@ def analyze(run, guard):
                          tpot_mean_ms=mean(r['tpot_ms'] for r in summaries),
                          itl_p50_ms=percentile(gaps, .5), itl_p95_ms=percentile(gaps, .95),
                          request_p95_ms=percentile([r['model_request_ms'] for r in summaries], .95),
-                         completed_probes=expected, probe_flops=expected * aux['probe']['flops'],
+                         completed_probes=expected, probe_flops=expected * aux['probe'].get('flops', 0),
                          probe_envelope_mean_us=mean(samples) if samples else 'NOT_APPLICABLE',
                          probe_standalone_mean_us=mean(aux['standalone']['gpu_us']),
                          output_tokens=model_work[1], graph_replays=model_work[0]))
+        if 'logical_read_bytes' in aux['probe']:
+            rows[-1]['logical_read_bytes'] = expected * aux['probe']['logical_read_bytes']
+            rows[-1]['logical_write_bytes'] = expected * aux['probe']['logical_write_bytes']
     for start in range(0, len(rows), 4):
         block = {r['condition']: r for r in rows[start:start + 4]}
         if set(block) != {'a_alone', 'empty', 'serial', 'parallel'}:
@@ -88,6 +91,8 @@ def analyze(run, guard):
         a, empty, serial, parallel = (block[k] for k in ('a_alone', 'empty', 'serial', 'parallel'))
         if serial['probe_flops'] != parallel['probe_flops']:
             raise ValueError('unequal auxiliary work')
+        if serial.get('logical_read_bytes') != parallel.get('logical_read_bytes'):
+            raise ValueError('unequal streaming work')
         pairs.append(dict(run_id=run['run_id'], precision=a['precision'], phase=a['phase'], block=a['block'],
                           main_wall_change=parallel['model_wall_ms'] / a['model_wall_ms'] - 1,
                           empty_wall_change=empty['model_wall_ms'] / a['model_wall_ms'] - 1,

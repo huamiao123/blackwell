@@ -47,6 +47,19 @@ class Gate44Hooks(original.Hooks):
         self.pilot_replay = self.torch.cuda.CUDAGraph.replay
         self.core.model_executor.execute_model = self.dispatch
         self.torch.cuda.CUDAGraph.replay = self.replay_entry
+        output = self.prepare_probe()
+        self.ctx = int(checked(driver.cuCtxGetCurrent()))
+        self.trial = -1
+        self.previous_state = None
+        self.measurements = []
+        self.pending = {}
+        self.events = [[self.event_set() for _ in self.targets] for _ in self.conditions]
+        self.torch.cuda.synchronize()
+        self.baseline = self.validate_alone(output)
+        Gate44Hooks.active = self
+
+    def prepare_probe(self):
+        driver = self.driver
         cubin = SPATIAL / 'build/offline_sm120_v2/probes_sm120.cubin'
         self.cubin_sha = file_hash(cubin)
         manifest = load(SPATIAL / 'analysis/offline_compile/compile_manifest.json')
@@ -58,17 +71,14 @@ class Gate44Hooks(original.Hooks):
         self.module = checked(driver.cuModuleLoad(os.fsencode(cubin)))
         self.function = checked(driver.cuModuleGetFunction(self.module, b'tensor_light'))
         self.stream = self.torch.cuda.Stream()
-        self.ctx = int(checked(driver.cuCtxGetCurrent()))
         self.buffers = self.torch.full((len(self.conditions), len(self.targets), self.elements), float('nan'),
                                        dtype=self.torch.float32, device='cuda')
-        self.trial = -1
-        self.previous_state = None
-        self.measurements = []
-        self.pending = {}
-        self.events = [[self.event_set() for _ in self.targets] for _ in self.conditions]
-        self.torch.cuda.synchronize()
-        self.baseline = self.validate_alone(output)
-        self.__class__.active = self
+        self.work = work_accounting(self.spec, GRID)
+        return output
+
+    def verify_output(self, output):
+        actual = output.cpu().numpy()
+        return dict(validate_outputs(self.spec, actual), output_sha256=hashlib.sha256(actual.tobytes()).hexdigest())
 
     def event_set(self):
         events = tuple(self.torch.cuda.Event(enable_timing=i in (1, 2)) for i in range(3))
@@ -174,9 +184,7 @@ class Gate44Hooks(original.Hooks):
             _, begin, end = self.events[self.trial][row['slot']]
             elapsed_us = begin.elapsed_time(end) * 1000
             if condition != 'empty':
-                actual = self.buffers[self.trial, row['slot']].cpu().numpy()
-                evidence = validate_outputs(self.spec, actual)
-                row.update(evidence, output_sha256=hashlib.sha256(actual.tobytes()).hexdigest())
+                row.update(self.verify_output(self.buffers[self.trial, row['slot']]))
             completed.append(dict(iteration=iteration, elapsed_us=elapsed_us, **row))
         self.measurements.append(dict(trial=self.trial, condition=condition, completions=completed,
                                       completed_probes=len(completed) if condition != 'empty' else 0))
@@ -186,7 +194,7 @@ class Gate44Hooks(original.Hooks):
         super().restore()
 
 
-def main():
+def main(hooks_class=Gate44Hooks, worker_source=HERE):
     parser = argparse.ArgumentParser()
     parser.add_argument('--config', required=True)
     parser.add_argument('--run-id', required=True)
@@ -197,17 +205,17 @@ def main():
     parser.add_argument('--execute', action='store_true', required=True)
     args = parser.parse_args()
     original.require_permit(args.config, args.run_id)
-    Gate44Hooks.conditions = (tuple(condition for block in PAIRED_SEQUENCES for condition in block)
+    hooks_class.conditions = (tuple(condition for block in PAIRED_SEQUENCES for condition in block)
                               if args.condition == 'paired' else (args.condition,))
-    Gate44Hooks.targets = targets(args.phase)
-    original.Hooks = Gate44Hooks
+    hooks_class.targets = targets(args.phase)
+    original.Hooks = hooks_class
     prepare, save = original.prepare, original.save
 
     def configure(path):
         c, prompts = prepare(path)
         if (c['experiment'], c['batch'], c['decode_steps']) != ('E2', 8, 256):
             raise ValueError('expected frozen E2 workload')
-        c['trials'] = len(Gate44Hooks.conditions)
+        c['trials'] = len(hooks_class.conditions)
         return c, prompts
 
     def save_measurements(path, data, **kwargs):
@@ -218,8 +226,9 @@ def main():
             data['gate44'] = dict(phase=args.phase, condition=args.condition, targets=hooks.targets,
                                   condition_order=hooks.conditions, standalone=hooks.baseline,
                                   prefill_parallel_entry='AFTER_HOST_PREFILL_DISPATCH_WITH_PRE_DISPATCH_EVENT',
-                                  probe=work_accounting(hooks.spec, GRID), cubin_sha256=hooks.cubin_sha,
-                                  wrapper_sha256=file_hash(HERE), trials=hooks.measurements)
+                                  probe=hooks.work, cubin_sha256=hooks.cubin_sha,
+                                  wrapper_sha256=file_hash(worker_source), base_wrapper_sha256=file_hash(HERE),
+                                  trials=hooks.measurements)
         save(path, data, **kwargs)
 
     original.prepare, original.save = configure, save_measurements

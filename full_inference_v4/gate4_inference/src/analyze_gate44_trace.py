@@ -20,6 +20,11 @@ def analyze(db, run, guard):
     completions = {r['iteration']: r for r in measurements['completions']}
     wanted = set(stage['targets'])
     condition = measurements['condition']
+    work = stage['probe']
+    symbol = work.get('symbol', 'tensor_light')
+    if symbol not in ('tensor_light', 'dram_read_light'):
+        raise ValueError('unsupported probe')
+    shape = (128, 32, 0) if symbol == 'dram_read_light' else (64, 32, 1024)
     device, = db.execute('select d.*,g.uuid as physical_uuid from TARGET_INFO_CUDA_DEVICE d '
                          'join TARGET_INFO_GPU g on g.id=d.gpuId')
     if (device['uuid'] != device['physical_uuid'] or device['pid'] not in guard['known_child_pids']
@@ -61,7 +66,7 @@ def analyze(db, run, guard):
     for index in sorted(wanted):
         a = mapped((index, 'A'))
         phase = trial['scheduler_iterations'][index]['stage']
-        if (not a or any(k['short_name'] == 'tensor_light' for k in a)
+        if (not a or any(k['short_name'] == symbol for k in a)
                 or (phase == 'DECODE' and (not a[0]['graphId'] or len({k['graphId'] for k in a}) != 1))):
             raise ValueError('unmapped or unexpected primary Graph activities')
         if condition in ('empty', 'a_alone'):
@@ -69,7 +74,7 @@ def analyze(db, run, guard):
                 raise ValueError('empty control unexpectedly executed a probe kernel')
             continue
         b, = mapped((index, 'B'))
-        if (b['short_name'] != 'tensor_light' or (b['gridX'], b['blockX'], b['dynamicSharedMemory']) != (64, 32, 1024)
+        if (b['short_name'] != symbol or (b['gridX'], b['blockX'], b['dynamicSharedMemory']) != shape
                 or not completions[index]['correctness_passed']):
             raise ValueError('auxiliary launch or output differs from the verified probe')
         if ({k['deviceId'] for k in (*a, b)} != {device['cudaId']}
@@ -87,7 +92,9 @@ def analyze(db, run, guard):
                          primary_union_ns=duration(active), probe_start_ns=probe[0], probe_end_ns=probe[1],
                          probe_stream_id=b['streamId'], context_id=b['contextId'], probe_correlation=b['correlationId'],
                          overlap_ns=overlap_ns, fraction_probe=overlap_ns / (probe[1] - probe[0]),
-                         probe_tiles=256, same_sm='UNVERIFIED'))
+                         probe_tiles=work.get('tiles',256), same_sm='UNVERIFIED'))
+        if symbol == 'dram_read_light':
+            rows[-1].update(probe_symbol=symbol, logical_read_bytes=work['logical_read_bytes'])
     expected = 0 if condition in ('a_alone', 'empty') else len(wanted)
     if len(rows) != expected:
         raise ValueError('unexpected number of mapped probe launches')

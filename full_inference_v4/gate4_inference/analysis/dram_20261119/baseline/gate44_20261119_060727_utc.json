@@ -1,0 +1,14 @@
+{
+  "run_id": "gate44_20261119_060727_utc",
+  "precision": "nvfp4",
+  "phase": "first 500 us of Decode replays 33-64",
+  "probe_calls": 0,
+  "samples": 96,
+  "device_pct": {
+    "SMs Active": 49.625,
+    "Tensor Active": 16.59375,
+    "DRAM Read Bandwidth": 45.479166666666664,
+    "DRAM Write Bandwidth": 1
+  },
+  "scope": "archived A-alone P1 device control, independent of the new P2 run"
+}

@@ -1,0 +1,8 @@
+Capture range started in the application.
+Capture range ended in the application.
+Generating '/tmp/nsys-report-7efd.qdstrm'
+[1/1] [0%                          ] dram44_20261119_062549_utc.nsys-repProcessing events...
+[1/1] [0%                          ] dram44_20261119_062549_utc.nsys-rep[1/1] [10%                         ] dram44_20261119_062549_utc.nsys-rep[1/1] [==20%                       ] dram44_20261119_062549_utc.nsys-rep[1/1] [=====29%                    ] dram44_20261119_062549_utc.nsys-rep[1/1] [=======38%                  ] dram44_20261119_062549_utc.nsys-rep[1/1] [=========43%                ] dram44_20261119_062549_utc.nsys-rep[1/1] [==========49%               ] dram44_20261119_062549_utc.nsys-rep[1/1] [============56%             ] dram44_20261119_062549_utc.nsys-rep[1/1] [========================100%] dram44_20261119_062549_utc.nsys-rep[1/1] [========================100%] dram44_20261119_062549_utc.nsys-rep
+Generated:
+	/home/wangzhihang/fp4-llm/results/full_inference_v4/raw/dram44_20261119_062549_utc.nsys-rep
+STANDALONE_FULL_OUTPUTS_VERIFIED [('dram_read_light', 729), ('dram_read_heavy', 394), ('dram_write_light', 250), ('dram_write_heavy', 247), ('dram_copy_light', 8300), ('dram_copy_heavy', 599)]

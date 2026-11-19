@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_inference/src/dram_probe_gpu.py", line 137, in <module>
+    main()
+  File "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_inference/src/dram_probe_gpu.py", line 107, in main
+    p=StreamProbe(torch)
+      ^^^^^^^^^^^^^^^^^^
+  File "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_inference/src/dram_probe_gpu.py", line 33, in __init__
+    driver.CUdevice_attribute.CU_DEVICE_ATTRIBUTE_L2_CACHE_SIZE, checked(driver.cuCtxGetDevice())))
+                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/src/replay.py", line 5, in checked
+    if int(result[0])!=0:raise RuntimeError('CUDA API failed: '+str(result[0]))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA API failed: <CUresult.CUDA_ERROR_INVALID_CONTEXT: 201>
