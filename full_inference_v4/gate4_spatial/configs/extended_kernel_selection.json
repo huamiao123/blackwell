@@ -1,0 +1,122 @@
+{
+  "schema": 1,
+  "inventory_sha256": "47b86390d54af8904e758a46b9176b89be6641c62a20a8efd3b5b60065a0508c",
+  "cases": [
+    {
+      "case_id": "nvfp4_o_proj",
+      "precision": "nvfp4",
+      "operator": "o_proj",
+      "layer": 18,
+      "module": "model.layers.18.self_attn.o_proj",
+      "historical_graph_id": 452,
+      "historical_tools_id": 1941325218052,
+      "historical_node_id": 260,
+      "grid": [
+        1,
+        32,
+        1
+      ],
+      "block": [
+        384,
+        1,
+        1
+      ],
+      "parameter_sha256": "2c681435d75026407c11c52ff30b686abcbd9b514c86ea1839209180f7ef7914",
+      "cta": {
+        "threads": 384,
+        "registers_per_thread": 168,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 88064,
+        "grid_ctas": 32
+      },
+      "reference_sha256": "bb2acaedc31b0d18e6b33b5adc99d4534d4e8b037f1389cff92ce4b49f2a0f1a"
+    },
+    {
+      "case_id": "bf16_o_proj",
+      "precision": "bf16",
+      "operator": "o_proj",
+      "layer": 18,
+      "module": "model.layers.18.self_attn.o_proj",
+      "historical_graph_id": 452,
+      "historical_tools_id": 1941325217996,
+      "historical_node_id": 204,
+      "grid": [
+        8,
+        32,
+        1
+      ],
+      "block": [
+        32,
+        1,
+        1
+      ],
+      "parameter_sha256": "e3c86d710c7fa95f68312ca6ab40e23f4325174b6d5717377b646c64a631f294",
+      "cta": {
+        "threads": 32,
+        "registers_per_thread": 124,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 16896,
+        "grid_ctas": 256
+      },
+      "reference_sha256": "bb2acaedc31b0d18e6b33b5adc99d4534d4e8b037f1389cff92ce4b49f2a0f1a"
+    },
+    {
+      "case_id": "nvfp4_down_proj",
+      "precision": "nvfp4",
+      "operator": "down_proj",
+      "layer": 18,
+      "module": "model.layers.18.mlp.down_proj",
+      "historical_graph_id": 452,
+      "historical_tools_id": 1941325218057,
+      "historical_node_id": 265,
+      "grid": [
+        1,
+        32,
+        1
+      ],
+      "block": [
+        384,
+        1,
+        1
+      ],
+      "parameter_sha256": "3edf78474a0cb273abf094f26393afe3aee433ccd2ee9178f831b7a492b0ceb1",
+      "cta": {
+        "threads": 384,
+        "registers_per_thread": 168,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 88064,
+        "grid_ctas": 32
+      },
+      "reference_sha256": "0a0399a474287c6f5d30899649017d2bc7dead4688084d77d403b8158374151b"
+    },
+    {
+      "case_id": "bf16_down_proj",
+      "precision": "bf16",
+      "operator": "down_proj",
+      "layer": 18,
+      "module": "model.layers.18.mlp.down_proj",
+      "historical_graph_id": 452,
+      "historical_tools_id": 1941325218000,
+      "historical_node_id": 208,
+      "grid": [
+        8,
+        32,
+        1
+      ],
+      "block": [
+        32,
+        1,
+        1
+      ],
+      "parameter_sha256": "6dd235e151d19fa69a851daaee5019398a14451f5d84117468ed50432e38ca35",
+      "cta": {
+        "threads": 32,
+        "registers_per_thread": 124,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 16896,
+        "grid_ctas": 256
+      },
+      "reference_sha256": "0a0399a474287c6f5d30899649017d2bc7dead4688084d77d403b8158374151b"
+    }
+  ]
+}

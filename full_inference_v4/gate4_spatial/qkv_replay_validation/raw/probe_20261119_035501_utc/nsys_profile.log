@@ -1,0 +1,35 @@
+Collecting data...
+Generating '/home/wangzhihang/fp4-llm/tmp/nsys-report-b7aa.qdstrm'
+
+[1/1] [0%                          ] calibration.nsys-rep
+[1/1] [0%                          ] calibration.nsys-rep
+[1/1] [14%                         ] calibration.nsys-rep
+[1/1] [=======38%                  ] calibration.nsys-rep
+[1/1] [==============62%           ] calibration.nsys-rep
+[1/1] [==============63%           ] calibration.nsys-rep
+[1/1] [==============64%           ] calibration.nsys-rep
+[1/1] [===============65%          ] calibration.nsys-rep
+[1/1] [===============66%          ] calibration.nsys-rep
+[1/1] [===============67%          ] calibration.nsys-rep
+[1/1] [================68%         ] calibration.nsys-rep
+[1/1] [================69%         ] calibration.nsys-rep
+[1/1] [================70%         ] calibration.nsys-rep
+[1/1] [================71%         ] calibration.nsys-rep
+[1/1] [=================72%        ] calibration.nsys-rep
+[1/1] [=================73%        ] calibration.nsys-rep
+[1/1] [=================74%        ] calibration.nsys-rep
+[1/1] [==================75%       ] calibration.nsys-rep
+[1/1] [==================76%       ] calibration.nsys-rep
+[1/1] [==================77%       ] calibration.nsys-rep
+[1/1] [==================78%       ] calibration.nsys-rep
+[1/1] [===================79%      ] calibration.nsys-rep
+[1/1] [===================80%      ] calibration.nsys-rep
+[1/1] [===================81%      ] calibration.nsys-rep
+[1/1] [===================82%      ] calibration.nsys-rep
+[1/1] [====================83%     ] calibration.nsys-rep
+[1/1] [====================84%     ] calibration.nsys-rep
+[1/1] [====================85%     ] calibration.nsys-rep
+[1/1] [========================100%] calibration.nsys-rep
+[1/1] [========================100%] calibration.nsys-rep
+Generated:
+	/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/qkv_replay_validation/traces/probe_20261119_035501_utc/calibration.nsys-rep

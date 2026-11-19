@@ -24,7 +24,7 @@ def main():
                                           'qkv_overlap_nvfp4', 'qkv_overlap_bf16'], default='acceptance')
     parser.add_argument('--p0-block', type=int, choices=range(6))
     parser.add_argument('--probe-grid', type=int, choices=[32, 64, 128], default=128)
-    parser.add_argument('--operator', choices=['qkv_proj', 'gate_up_proj'], default='qkv_proj')
+    parser.add_argument('--operator', choices=['qkv_proj', 'gate_up_proj', 'o_proj', 'down_proj'], default='qkv_proj')
     parser.add_argument('--probe-symbol', choices=['fp32_light', 'fp32_heavy', 'tensor_light'], default='fp32_light')
     parser.add_argument('--compare-grids', action='store_true')
     args = parser.parse_args()

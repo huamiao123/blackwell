@@ -1,0 +1,281 @@
+{
+  "status": "QKV_OVERLAP_PILOT_OUTPUTS_VERIFIED",
+  "scope": "ISOLATED_CHECKPOINT_GATE_UP_SYNTHETIC_ACTIVATION",
+  "case": "bf16_gate_up_proj",
+  "module": "model.layers.18.mlp.gate_up_proj",
+  "live_identity": {
+    "kernel_name": "_ZN7cutlass7Kernel2I68cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8EEvNT_6ParamsE",
+    "grid": [
+      8,
+      192,
+      1
+    ],
+    "block": [
+      32,
+      1,
+      1
+    ],
+    "dynamic_shared_bytes": 16896,
+    "register_and_shared_attributes": {
+      "NUM_REGS": 124,
+      "SHARED_SIZE_BYTES": 0,
+      "MAX_DYNAMIC_SHARED_SIZE_BYTES": 49152
+    },
+    "homogeneous_api_blocks_per_sm": 5,
+    "tools_id": 4294967296,
+    "parameter_offset": 0,
+    "parameter_size": 360,
+    "live_reference_offsets": {
+      "weight": 288
+    }
+  },
+  "source_weights": {
+    "model.layers.18.mlp.gate_proj.weight": "model-00003-of-00005.safetensors",
+    "model.layers.18.mlp.up_proj.weight": "model-00003-of-00005.safetensors"
+  },
+  "index_sha256": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc",
+  "input_shape": [
+    8,
+    4096
+  ],
+  "input_sha256": "730a07b3bd3a684e69a7ac700028a2d2eee6a5ad8e48812f582c6930b7a08749",
+  "input_is_synthetic": true,
+  "output_shape": [
+    8,
+    24576
+  ],
+  "trials": [
+    {
+      "trial": 0,
+      "exact_match": true,
+      "output_sha256": "ac7c23b50bebe9503a3428830aadcd00c4eda2ac845c3ddb6e66ee87e07afedf"
+    },
+    {
+      "trial": 1,
+      "exact_match": true,
+      "output_sha256": "ac7c23b50bebe9503a3428830aadcd00c4eda2ac845c3ddb6e66ee87e07afedf"
+    },
+    {
+      "trial": 2,
+      "exact_match": true,
+      "output_sha256": "ac7c23b50bebe9503a3428830aadcd00c4eda2ac845c3ddb6e66ee87e07afedf"
+    }
+  ],
+  "torch_version": "2.14.0+cu132",
+  "vllm_version": "0.33.0+precompiled",
+  "backend_source_sha256": "d045926d733d71e32a3aae306043b4bfd99093737898ac80919da7d4774d3878",
+  "gate3_reference_sha256": "67eb9ac50b0fc61f636f494abae1861f7a967767f373095ad2f5538fd9f32a23",
+  "full_model_loaded": false,
+  "metrics_scope": "correctness, identity, and function attributes only",
+  "overlap_pilot": {
+    "scope": "ONE_P0_BLOCK_ISOLATED_CHECKPOINT_PROJECTION",
+    "profile": "P0",
+    "block": 5,
+    "fp32_probe": {
+      "spec": {
+        "probe": "bf16_mma",
+        "variant": "light",
+        "threads": 32,
+        "shared_bytes": 1024,
+        "tiles": 256,
+        "m": 16,
+        "n": 16,
+        "k_step": 16,
+        "k_staging": 16,
+        "mma_rounds": 128,
+        "expected_flops": 268435456
+      },
+      "grid": 64,
+      "cubin_sha256": "1daee1dd84515740d4e2e05d16634e708532d3f166b8e28397c058035a7c36e7",
+      "mma_operations": 32768,
+      "flops": 268435456,
+      "input_bytes": 262144,
+      "output_bytes": 262144,
+      "virtual_groups": 256,
+      "nonempty_ctas": 64,
+      "work_hash": "5d329020b88ded98c3b031ee7137224d184796405c10ab6aded1ec7d138fc509"
+    },
+    "conditions": [
+      {
+        "mode": "a_alone",
+        "completed_A": 1,
+        "completed_B": 0,
+        "output_checks_passed": true,
+        "joint_event_ns": 134752.00533866882,
+        "a_event_ns": 124959.99783277512,
+        "b_event_ns": null
+      },
+      {
+        "mode": "empty_control",
+        "completed_A": 1,
+        "completed_B": 0,
+        "output_checks_passed": true,
+        "joint_event_ns": 133151.99315547943,
+        "a_event_ns": 122847.99665212631,
+        "b_event_ns": null
+      },
+      {
+        "mode": "non_overlap_control",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 156448.00662994385,
+        "a_event_ns": 124927.99758911133,
+        "b_event_ns": 19648.000597953796
+      },
+      {
+        "mode": "serial_ba",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 157887.9952430725,
+        "a_event_ns": 124895.99734544754,
+        "b_event_ns": 18495.99927663803
+      },
+      {
+        "mode": "b_alone",
+        "completed_A": 0,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 30112.000182271004,
+        "a_event_ns": null,
+        "b_event_ns": 20735.999569296837
+      },
+      {
+        "mode": "parallel_ba",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 139295.99523544312,
+        "a_event_ns": 129023.99897575378,
+        "b_event_ns": 120704.00267839432
+      },
+      {
+        "mode": "same_stream_control",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 153632.0000886917,
+        "a_event_ns": 123871.99699878693,
+        "b_event_ns": 20128.000527620316
+      },
+      {
+        "mode": "serial_ab",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 157600.00050067902,
+        "a_event_ns": 124863.99710178375,
+        "b_event_ns": 19551.999866962433
+      },
+      {
+        "mode": "parallel_ab",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 139295.99523544312,
+        "a_event_ns": 128864.00520801544,
+        "b_event_ns": 108960.00266075134
+      }
+    ],
+    "warmup": [
+      {
+        "mode": "a_alone",
+        "completed_A": 1,
+        "completed_B": 0,
+        "output_checks_passed": true,
+        "joint_event_ns": 134655.99715709686,
+        "a_event_ns": 124895.99734544754,
+        "b_event_ns": null
+      },
+      {
+        "mode": "b_alone",
+        "completed_A": 0,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 30848.000198602676,
+        "a_event_ns": null,
+        "b_event_ns": 20608.000457286835
+      },
+      {
+        "mode": "serial_ab",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 157664.0009880066,
+        "a_event_ns": 124767.99637079239,
+        "b_event_ns": 19680.000841617584
+      },
+      {
+        "mode": "serial_ba",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 155616.00029468536,
+        "a_event_ns": 124927.99758911133,
+        "b_event_ns": 18559.999763965607
+      },
+      {
+        "mode": "parallel_ab",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 144511.99769973755,
+        "a_event_ns": 133087.99266815186,
+        "b_event_ns": 124863.99710178375
+      },
+      {
+        "mode": "parallel_ba",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 139103.9937734604,
+        "a_event_ns": 128959.99848842621,
+        "b_event_ns": 120768.0031657219
+      },
+      {
+        "mode": "empty_control",
+        "completed_A": 1,
+        "completed_B": 0,
+        "output_checks_passed": true,
+        "joint_event_ns": 134880.00631332397,
+        "a_event_ns": 124895.99734544754,
+        "b_event_ns": null
+      },
+      {
+        "mode": "same_stream_control",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 155328.00555229187,
+        "a_event_ns": 125152.00674533844,
+        "b_event_ns": 20128.000527620316
+      },
+      {
+        "mode": "non_overlap_control",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 157887.9952430725,
+        "a_event_ns": 124959.99783277512,
+        "b_event_ns": 19616.00035429001
+      }
+    ],
+    "probe_identity": {
+      "symbol": "tensor_light",
+      "registers_per_thread": 43,
+      "static_shared_bytes": 0,
+      "blocks_per_sm": 24
+    },
+    "standalone_acceptance": {
+      "mode": "b_alone",
+      "completed_A": 0,
+      "completed_B": 1,
+      "output_checks_passed": true,
+      "joint_event_ns": 29727.9991209507,
+      "a_event_ns": null,
+      "b_event_ns": 18432.000651955605
+    },
+    "overlap_code_sha256": "231fdd591993578521398d8f43f6f4e8dc7de053f5662c020a2d0f84fb817853"
+  }
+}

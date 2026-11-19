@@ -9,6 +9,7 @@ from plan import MODES,probe_specs,GRIDS,make_plan
 from probe_reference import work_accounting,fma_oracle,tensor_oracle,tensor_a,tensor_b
 from metrics import paired,overlap,confidence,completed_within_primary
 from compile_probes import parse_resources,parse_sass
+from g4_common import SPATIAL, load, sha
 
 class Recorder:
     def __init__(self):self.calls=[];self.events=set()
@@ -85,6 +86,19 @@ class MetricsTests(unittest.TestCase):
         with self.assertRaises(ContractError):confidence([1,2,3,4])
 
 class ReplayTests(unittest.TestCase):
+    def test_extended_projection_selection_binds_archived_nodes(self):
+        selection = load(SPATIAL / 'configs/extended_kernel_selection.json')
+        self.assertEqual({(row['precision'], row['operator']) for row in selection['cases']},
+                         {(precision, operator) for precision in ('nvfp4', 'bf16')
+                          for operator in ('o_proj', 'down_proj')})
+        for row in selection['cases']:
+            reference = SPATIAL / 'qkv_replay_validation' / (row['operator'].removesuffix('_proj') + '_reference.json')
+            self.assertEqual(row['reference_sha256'], sha(reference))
+            historical = load(reference)[row['precision']]
+            node, = (n for n in historical['nodes'] if n['tools_id'] == row['historical_tools_id'])
+            self.assertEqual((node['grid'], node['block'], node['shared_bytes']),
+                             (row['grid'], row['block'], row['cta']['dynamic_shared_bytes']))
+
     def lease(self,ready=True):
         l=LiveKernel('live',12,9,'uuid','model.layers.18.self_attn.qkv_proj',5,object(),object(),object())
         for k in ['input_ready','inputs_immutable_until_join','producer_dependencies_complete','output_region_verified',

@@ -12,7 +12,6 @@ from plan import MODES
 from probe_reference import work_accounting
 
 
-SCOPE = 'P0_GPU_EVENT_ENVELOPE_ISOLATED_QKV'
 PRECISIONS = ('nvfp4', 'bf16')
 ORDERS = ('ab', 'ba')
 METRICS = ('primary_interference', 'probe_throughput_retention', 'joint_speedup')
@@ -39,10 +38,11 @@ def analyze(root, manifest_path, output):
     operator = manifest.get('operator', 'qkv_proj')
     fixed_grid = manifest.get('fixed_grid', 128)
     probe_symbol = manifest.get('probe_symbol', 'fp32_light')
-    if (operator not in ('qkv_proj', 'gate_up_proj') or fixed_grid not in (32, 64, 128)
+    if (operator not in ('qkv_proj', 'gate_up_proj', 'o_proj', 'down_proj') or fixed_grid not in (32, 64, 128)
             or probe_symbol not in ('fp32_light', 'fp32_heavy', 'tensor_light')):
         raise ValueError('unknown primary operator or fixed probe grid')
-    scope = SCOPE if operator == 'qkv_proj' else 'P0_GPU_EVENT_ENVELOPE_ISOLATED_GATE_UP'
+    operator_label = operator.removesuffix('_proj')
+    scope = f'P0_GPU_EVENT_ENVELOPE_ISOLATED_{operator_label.upper()}'
     grids = [low_grid, 128] if compare_grids else [fixed_grid]
     expected = [(block, precision) for block in range(6)
                 for precision in (PRECISIONS if block % 2 == 0 else PRECISIONS[::-1])]
@@ -158,7 +158,8 @@ def analyze(root, manifest_path, output):
                     summarize(p, f'{low_grid}_minus_128', order, field,
                               [a - b for a, b in zip(values[p, low_grid], values[p, 128])])
     if operator != 'qkv_proj':
-        prefix = f'gate_up_grid{low_grid}_vs128_p0' if compare_grids else f'gate_up_grid{fixed_grid}_p0'
+        prefix = (f'{operator_label}_grid{low_grid}_vs128_p0' if compare_grids
+                  else f'{operator_label}_grid{fixed_grid}_p0')
     elif compare_grids:
         prefix = f'qkv_grid{low_grid}_p0' if low_grid != 32 else 'qkv_grid_p0'
     else:

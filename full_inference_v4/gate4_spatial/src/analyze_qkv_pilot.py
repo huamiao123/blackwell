@@ -81,6 +81,7 @@ def load_run(run, trace):
             len({r['correlationId'] for r in output.values()}) != len(output)):
         raise ValueError('invalid isolated graph association')
     summaries = []
+    operator = result['case'].split('_', 1)[1].removesuffix('_proj')
     for mode, row in conditions.items():
         a = output.get((mode, 'A'))
         b = output.get((mode, 'B'))
@@ -110,8 +111,7 @@ def load_run(run, trace):
                               b_throughput_retention=b_base / b['duration_ns'], joint_event_ns=row['joint_event_ns'],
                               matched_serial_event_ns=serial['joint_event_ns'] if serial else None,
                               joint_event_speedup=serial['joint_event_ns'] / row['joint_event_ns'] if serial else None,
-                              scope=('ONE_P2_BLOCK_ISOLATED_GATE_UP' if result['case'].endswith('_gate_up_proj')
-                                     else 'ONE_P2_BLOCK_ISOLATED_QKV'),
+                              scope=f'ONE_P2_BLOCK_ISOLATED_{operator.upper()}',
                               same_sm='UNVERIFIED'))
     return result, list(output.values()), summaries
 
@@ -124,8 +124,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     data = [load_run(run, trace) for run, trace in zip(args.run, args.trace)]
     a, b = (row[0] for row in data)
-    if ({a['case'].removesuffix('_qkv_proj').removesuffix('_gate_up_proj'),
-         b['case'].removesuffix('_qkv_proj').removesuffix('_gate_up_proj')} != {'nvfp4', 'bf16'} or
+    if ({a['case'].split('_', 1)[0], b['case'].split('_', 1)[0]} != {'nvfp4', 'bf16'} or
             a['case'].split('_', 1)[1] != b['case'].split('_', 1)[1] or
             a['input_sha256'] != b['input_sha256'] or
             a['overlap_pilot'].get('probe_identity') != b['overlap_pilot'].get('probe_identity') or

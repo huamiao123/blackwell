@@ -1,4 +1,4 @@
-"""Validate one exact NVFP4 projection with a private single-kernel Graph."""
+"""Validate one exact checkpoint projection with a private single-kernel Graph."""
 
 import argparse
 import ctypes
@@ -12,8 +12,10 @@ from pathlib import Path
 from g4_common import SPATIAL, V4, load, save, sha
 from validate_probe_gpu import require_permit
 
-PROJECTION_SHARDS = {'qkv_proj': ('q', 'k', 'v'), 'gate_up_proj': ('gate', 'up')}
-REFERENCE_NAMES = {'qkv_proj': 'gate3_reference.json', 'gate_up_proj': 'gate_up_reference.json'}
+PROJECTION_SHARDS = {'qkv_proj': ('q', 'k', 'v'), 'gate_up_proj': ('gate', 'up'),
+                     'o_proj': ('o',), 'down_proj': ('down',)}
+REFERENCE_NAMES = {'qkv_proj': 'gate3_reference.json', 'gate_up_proj': 'gate_up_reference.json',
+                   'o_proj': 'o_reference.json', 'down_proj': 'down_reference.json'}
 
 
 def read_projection(model, module_name, expected_keys, suffixes):
@@ -136,10 +138,14 @@ def main():
         raise ValueError('grid comparison requires a P0 block')
     scope = 'standalone_qkv_p0' if p0 else 'standalone_qkv_overlap' if args.overlap else 'standalone_qkv_replay'
     permit = require_permit(args.run_dir, scope, Path(__file__))
-    candidates = load(SPATIAL / 'configs/kernel_selection.json')['cases']
+    selection = ('extended_kernel_selection.json' if args.operator in ('o_proj', 'down_proj')
+                 else 'kernel_selection.json')
+    candidates = load(SPATIAL / 'configs' / selection)['cases']
     precision = args.precision
     selected = next(row for row in candidates if row['case_id'] == precision + '_' + args.operator)
     reference_file = SPATIAL / 'qkv_replay_validation' / REFERENCE_NAMES[args.operator]
+    if 'reference_sha256' in selected and selected['reference_sha256'] != sha(reference_file):
+        raise ValueError('historical reference hash changed')
     historical = load(reference_file)[precision]
     expected = next(row for row in historical['nodes'] if row['tools_id'] == selected['historical_tools_id'])
 
@@ -218,7 +224,8 @@ def main():
             observations.append(dict(trial=trial, exact_match=True, output_sha256=tensor_hash(torch, output)))
         if before != [tensor_hash(torch, tensor) for tensor in retained]:
             raise RuntimeError('projection mutated its input buffers')
-        result = dict(status='QKV_REPLAY_OUTPUT_VERIFIED', scope='ISOLATED_CHECKPOINT_QKV_SYNTHETIC_ACTIVATION',
+        result = dict(status='QKV_REPLAY_OUTPUT_VERIFIED',
+                      scope=f'ISOLATED_CHECKPOINT_{args.operator.removesuffix("_proj").upper()}_SYNTHETIC_ACTIVATION',
                       case=selected['case_id'], module=selected['module'], live_identity=identity,
                       source_weights=sources, index_sha256=index_sha, input_shape=list(x.shape),
                       input_sha256=tensor_hash(torch, x), input_is_synthetic=True, output_shape=list(output.shape),

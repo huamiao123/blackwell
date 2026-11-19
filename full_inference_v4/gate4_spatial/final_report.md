@@ -2,6 +2,8 @@
 
 2026-11-19 的优先矩阵已覆盖 BF16/NVFP4 QKV 和 Gate/Up，证据来自独立无 Profiling 配对和 CUDA 节点轨迹。固定工作量下，Gate/Up 的 FP32 探针与 QKV 呈现相反的联合完成收益。QKV 的 BF16 Tensor Light 组合在 NVFP4 上平均损失约 1.2%–1.3%，P2 两个顺序均在主投影窗口内完成。逐次数据、置信区间、有效辅助工作量和失败记录见 [实验报告](qkv_replay_validation/qkv_gateup_20261119.md)。
 
+固定 64 CTA Tensor 探针扩展到 O、Down 和 Gate/Up 后，Down 出现约 26 μs 的探针完成余量，Gate/Up 则在主任务几乎不变时使联合完成时间增加约 41%–42%。两者都有独立 P2 与六块 P0 对照。[跨投影实验](qkv_replay_validation/tensor_projection_extension_20261119.md)
+
 ## 首轮 CPU 审查存档
 
 

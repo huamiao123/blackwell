@@ -6,7 +6,7 @@
 | Gate/Up | FP32 Light，64 CTA | P2 两种精度，P0 固定 Grid 复测 |
 | QKV | FP32 Heavy，64 CTA | 同 Grid、同 FP32 FLOP 的 P2 资源对照 |
 | QKV | BF16 Tensor Light，64 CTA | P2 检查子区间，P0 比较可重复干扰 |
-| O、Down | 继承通过验收的候选 | 参照 Gate 3 精确映射，需单独验收 |
+| O、Down、Gate/Up | BF16 Tensor Light，64 CTA | 各自的 P2 和 P0 固定探针复测，使用 Gate 3 精确映射 |
 | 完整推理 | 有下游消费者的候选 | Prefill、Decode 和请求生命周期独立验证 |
 
-实验顺序与实测状态见 [后续对照计划](../gate4_spatial/qkv_replay_validation/continuation.md) 和 [阶段报告](final_report.md)。
+实验顺序与实测状态见 [最初对照计划](../gate4_spatial/qkv_replay_validation/continuation.md)、[跨投影复测](../gate4_spatial/qkv_replay_validation/tensor_projection_extension_20261119.md) 和 [阶段报告](final_report.md)。
