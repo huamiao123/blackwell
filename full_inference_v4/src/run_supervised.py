@@ -67,9 +67,9 @@ def environment():
     return env,selected
 
 
-def main():
+def main(profile_choices=('P0','P1','P2')):
     ap=argparse.ArgumentParser();ap.add_argument('--config',required=True);ap.add_argument('--run-id',required=True)
-    ap.add_argument('--profile',choices=['P0','P1','P2'],default='P0');ap.add_argument('--timeout',type=int,default=420)
+    ap.add_argument('--profile',choices=profile_choices,default=profile_choices[0]);ap.add_argument('--timeout',type=int,default=420)
     ap.add_argument('--window',default=str(ROOT/'configs/gpu_window.json'));ap.add_argument('--execute',action='store_true')
     a=ap.parse_args();c,ps=prepare(a.config)
     if not re.fullmatch('[a-z0-9_]+',a.run_id):raise ValueError('unsafe run ID')
@@ -125,7 +125,7 @@ def main():
         record['returncode']=child.returncode
         if child.returncode:raise RuntimeError('WORKLOAD_FAILED')
         record['status']='COMPLETED'
-        if a.profile!='P0':
+        if a.profile in ('P1','P2'):
             rep=ROOT/'raw'/(a.run_id+'.nsys-rep');db=ROOT/'sqlite'/(a.run_id+'.sqlite')
             db.parent.mkdir(exist_ok=True)
             if not rep.is_file() or rep.stat().st_size==0:raise RuntimeError('EMPTY_TRACE')

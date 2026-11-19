@@ -1,0 +1,10 @@
+W1119 15:29:12.293000 1531781 torch/_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1119 15:29:12.294000 1531781 torch/_library/opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1119 15:29:12.295000 1531781 torch/_library/opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+==WARNING== Note: Running with uncontrolled GPU caches. Profiling results may be inconsistent.
+==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.
+==PROF== Connected to process 1531781 (/usr/bin/python3.12)
+==PROF== Profiling "Kernel2" - 0 (1/1): 0%....50%....100% - 3 passes
+QKV_REPLAY_OUTPUT_VERIFIED 3 exact output matches
+==PROF== Disconnected from process 1531781
+==PROF== Report: /home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_microarch/reports/micro_20261119_072906_bf16_qkv_proj.ncu-rep

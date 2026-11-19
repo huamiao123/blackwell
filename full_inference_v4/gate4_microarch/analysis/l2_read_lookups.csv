@@ -1,0 +1,9 @@
+run_id,precision,operator,cache_control,passes,hit_read_sectors,miss_read_sectors,read_lookup_hit_pct,scope,evidence
+micro_20261119_072906_bf16_qkv_proj,bf16,qkv_proj,none,3,1743827,1,99.99994265489487,L2 read lookup sectors,MULTIPASS
+micro_20261119_072926_nvfp4_qkv_proj,nvfp4,qkv_proj,none,3,899647,0,100.0,L2 read lookup sectors,MULTIPASS
+micro_20261119_072944_bf16_o_proj,bf16,o_proj,none,3,1401748,1,99.99992866055193,L2 read lookup sectors,MULTIPASS
+micro_20261119_073002_nvfp4_o_proj,nvfp4,o_proj,none,3,604771,0,100.0,L2 read lookup sectors,MULTIPASS
+micro_20261119_073019_bf16_gate_up_proj,bf16,gate_up_proj,none,3,1543884,6293841,19.698113929743645,L2 read lookup sectors,MULTIPASS
+micro_20261119_073037_nvfp4_gate_up_proj,nvfp4,gate_up_proj,none,3,3229524,1,99.99996903569411,L2 read lookup sectors,MULTIPASS
+micro_20261119_073056_bf16_down_proj,bf16,down_proj,none,3,2008528,1623653,55.29812528615727,L2 read lookup sectors,MULTIPASS
+micro_20261119_073115_nvfp4_down_proj,nvfp4,down_proj,none,3,1752744,0,100.0,L2 read lookup sectors,MULTIPASS

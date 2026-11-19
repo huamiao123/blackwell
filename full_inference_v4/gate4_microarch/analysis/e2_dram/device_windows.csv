@@ -1,0 +1,33 @@
+precision,condition,run_id,window,metric,mean_pct,samples
+nvfp4,parallel,dram44_20261119_073214_utc,probe_inside_graph,SMs Active,93.78534031413612,191
+nvfp4,parallel,dram44_20261119_073214_utc,probe_inside_graph,Tensor Active,13.507853403141361,191
+nvfp4,parallel,dram44_20261119_073214_utc,probe_inside_graph,DRAM Read Bandwidth,65.282722513089,191
+nvfp4,parallel,dram44_20261119_073214_utc,probe_inside_graph,DRAM Write Bandwidth,1,191
+nvfp4,parallel,dram44_20261119_073214_utc,graph_first_500us,SMs Active,94.19791666666667,96
+nvfp4,parallel,dram44_20261119_073214_utc,graph_first_500us,Tensor Active,14.125,96
+nvfp4,parallel,dram44_20261119_073214_utc,graph_first_500us,DRAM Read Bandwidth,66.125,96
+nvfp4,parallel,dram44_20261119_073214_utc,graph_first_500us,DRAM Write Bandwidth,1,96
+nvfp4,serial,dram44_20261119_073418_utc,probe_before_graph,SMs Active,74.86075949367088,158
+nvfp4,serial,dram44_20261119_073418_utc,probe_before_graph,Tensor Active,0,158
+nvfp4,serial,dram44_20261119_073418_utc,probe_before_graph,DRAM Read Bandwidth,33.734177215189874,158
+nvfp4,serial,dram44_20261119_073418_utc,probe_before_graph,DRAM Write Bandwidth,1,158
+nvfp4,serial,dram44_20261119_073418_utc,graph_first_500us,SMs Active,49.6875,96
+nvfp4,serial,dram44_20261119_073418_utc,graph_first_500us,Tensor Active,16.583333333333332,96
+nvfp4,serial,dram44_20261119_073418_utc,graph_first_500us,DRAM Read Bandwidth,45.541666666666664,96
+nvfp4,serial,dram44_20261119_073418_utc,graph_first_500us,DRAM Write Bandwidth,1,96
+bf16,parallel,dram44_20261119_073304_utc,probe_inside_graph,SMs Active,97.5204081632653,196
+bf16,parallel,dram44_20261119_073304_utc,probe_inside_graph,Tensor Active,5.86734693877551,196
+bf16,parallel,dram44_20261119_073304_utc,probe_inside_graph,DRAM Read Bandwidth,76.58673469387755,196
+bf16,parallel,dram44_20261119_073304_utc,probe_inside_graph,DRAM Write Bandwidth,1,196
+bf16,parallel,dram44_20261119_073304_utc,graph_first_500us,SMs Active,98.86458333333333,96
+bf16,parallel,dram44_20261119_073304_utc,graph_first_500us,Tensor Active,6.09375,96
+bf16,parallel,dram44_20261119_073304_utc,graph_first_500us,DRAM Read Bandwidth,81.83333333333333,96
+bf16,parallel,dram44_20261119_073304_utc,graph_first_500us,DRAM Write Bandwidth,1,96
+bf16,serial,dram44_20261119_073509_utc,probe_before_graph,SMs Active,74.82692307692308,156
+bf16,serial,dram44_20261119_073509_utc,probe_before_graph,Tensor Active,0,156
+bf16,serial,dram44_20261119_073509_utc,probe_before_graph,DRAM Read Bandwidth,33.91025641025641,156
+bf16,serial,dram44_20261119_073509_utc,probe_before_graph,DRAM Write Bandwidth,1,156
+bf16,serial,dram44_20261119_073509_utc,graph_first_500us,SMs Active,90.58333333333333,96
+bf16,serial,dram44_20261119_073509_utc,graph_first_500us,Tensor Active,10.302083333333334,96
+bf16,serial,dram44_20261119_073509_utc,graph_first_500us,DRAM Read Bandwidth,82.60416666666667,96
+bf16,serial,dram44_20261119_073509_utc,graph_first_500us,DRAM Write Bandwidth,1,96

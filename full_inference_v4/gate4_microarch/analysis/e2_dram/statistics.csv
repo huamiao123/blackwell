@@ -1,0 +1,17 @@
+run_id,precision,phase,metric,n_paired_blocks,mean,median,ci95_low,ci95_high,scope
+dram44_20261119_073642_utc,nvfp4,decode,main_wall_change,5,0.0044326804832543806,0.005187443727941554,-0.00210353108954952,0.01096889205605828,five paired blocks using one loaded E2 engine; t interval is descriptive
+dram44_20261119_073642_utc,nvfp4,decode,empty_wall_change,5,0.0007290217734982951,0.0003579037103171867,-0.00450512019118026,0.005963163738176849,five paired blocks using one loaded E2 engine; t interval is descriptive
+dram44_20261119_073642_utc,nvfp4,decode,ttft_change,5,0.006513685560129612,-0.004785949633992259,-0.025529115912155082,0.03855648703241431,five paired blocks using one loaded E2 engine; t interval is descriptive
+dram44_20261119_073642_utc,nvfp4,decode,tpot_change,5,0.00429097826804743,0.005188766088315422,-0.0001206462238780414,0.0087026027599729,five paired blocks using one loaded E2 engine; t interval is descriptive
+dram44_20261119_073642_utc,nvfp4,decode,itl_p95_change,5,0.007994150080585728,0.010359462987015844,-0.010580196766020712,0.026568496927192167,five paired blocks using one loaded E2 engine; t interval is descriptive
+dram44_20261119_073642_utc,nvfp4,decode,request_p95_change,5,0.004488128765394506,0.0052165552634693135,-0.0021563651482414785,0.01113262267903049,five paired blocks using one loaded E2 engine; t interval is descriptive
+dram44_20261119_073642_utc,nvfp4,decode,probe_preflight_to_parallel_event_ratio,5,0.8920461590391371,0.8923912485310357,0.8903197445522772,0.8937725735259969,five paired blocks using one loaded E2 engine; t interval is descriptive
+dram44_20261119_073642_utc,nvfp4,decode,serial_parallel_joint_ratio,5,1.0098197947091772,1.0092862066958044,1.006169094236594,1.0134704951817604,five paired blocks using one loaded E2 engine; t interval is descriptive
+dram44_20261119_073813_utc,bf16,decode,main_wall_change,5,0.003680988167059107,0.003294763597276651,0.0014780323042391558,0.005883944029879058,five paired blocks using one loaded E2 engine; t interval is descriptive
+dram44_20261119_073813_utc,bf16,decode,empty_wall_change,5,0.00046854182168853953,-8.393121287830763e-05,-0.001835054045968132,0.002772137689345211,five paired blocks using one loaded E2 engine; t interval is descriptive
+dram44_20261119_073813_utc,bf16,decode,ttft_change,5,0.0024842301104336384,0.00016056512826811975,-0.005599729295573334,0.010568189516440611,five paired blocks using one loaded E2 engine; t interval is descriptive
+dram44_20261119_073813_utc,bf16,decode,tpot_change,5,0.004243537093451266,0.004109454637093446,0.002790409180219452,0.00569666500668308,five paired blocks using one loaded E2 engine; t interval is descriptive
+dram44_20261119_073813_utc,bf16,decode,itl_p95_change,5,0.0010712461742400814,0.0014276504214876251,-0.005026318814615835,0.007168811163095997,five paired blocks using one loaded E2 engine; t interval is descriptive
+dram44_20261119_073813_utc,bf16,decode,request_p95_change,5,0.0037017280766377335,0.003291218152487785,0.0014371453674586958,0.005966310785816772,five paired blocks using one loaded E2 engine; t interval is descriptive
+dram44_20261119_073813_utc,bf16,decode,probe_preflight_to_parallel_event_ratio,5,0.8861095001893107,0.8861829586847579,0.8854356332461495,0.8867833671324719,five paired blocks using one loaded E2 engine; t interval is descriptive
+dram44_20261119_073813_utc,bf16,decode,serial_parallel_joint_ratio,5,1.002312713821115,1.002408627714429,1.0019274239202258,1.0026980037220041,five paired blocks using one loaded E2 engine; t interval is descriptive

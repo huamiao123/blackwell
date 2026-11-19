@@ -1,0 +1,1 @@
+{"case": ["bf16", "gate_up_proj", "stalls", "none"], "run_id": "micro_20261119_072042_bf16_gate_up_proj"}

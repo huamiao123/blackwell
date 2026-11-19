@@ -138,6 +138,11 @@ def main():
         raise ValueError('grid comparison requires a P0 block')
     scope = 'standalone_qkv_p0' if p0 else 'standalone_qkv_overlap' if args.overlap else 'standalone_qkv_replay'
     permit = require_permit(args.run_dir, scope, Path(__file__))
+    run_projection(args, permit)
+
+
+def run_projection(args, permit, profile_node=False):
+    p0 = args.p0_block is not None
     selection = ('extended_kernel_selection.json' if args.operator in ('o_proj', 'down_proj')
                  else 'kernel_selection.json')
     candidates = load(SPATIAL / 'configs' / selection)['cases']
@@ -217,8 +222,13 @@ def main():
         for trial in range(3):
             # Retain graph, packed inputs, scales, weights and output for all launches.
             output.fill_(float('nan'))
+            if profile_node and trial == 2:
+                torch.cuda.synchronize()
+                torch.cuda.profiler.start()
             graph.replay()
             torch.cuda.synchronize()
+            if profile_node and trial == 2:
+                torch.cuda.profiler.stop()
             if not torch.equal(reference, output):
                 raise RuntimeError('single-node replay did not reproduce the original projected output')
             observations.append(dict(trial=trial, exact_match=True, output_sha256=tensor_hash(torch, output)))

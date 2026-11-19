@@ -1,0 +1,78 @@
+{
+  "status": "QKV_REPLAY_OUTPUT_VERIFIED",
+  "scope": "ISOLATED_CHECKPOINT_GATE_UP_SYNTHETIC_ACTIVATION",
+  "case": "nvfp4_gate_up_proj",
+  "module": "model.layers.18.mlp.gate_up_proj",
+  "live_identity": {
+    "kernel_name": "_ZN7cutlass13device_kernelINS_4gemm6kernel13GemmUniversalIN4cute5tupleIJiiiiEEENS1_10collective13CollectiveMmaINS1_42MainloopSm120TmaWarpSpecializedBlockScaledILi4ELi3ENS5_IJNS4_1CILi1EEESB_SB_EEENS1_51KernelTmaWarpSpecializedCooperativeBlockScaledSm120ILi3EEEEENS5_IJNSA_ILi128EEESG_SG_EEENS5_IJNS_12float_e2m1_tENS_13float_ue4m3_tEEEENS5_IJNS5_IJlSB_lEEENS4_6LayoutINS5_IJNS5_IJNS5_IJNSA_ILi32EEENSA_ILi4EEEEEEiEEENS5_IJNS5_IJNSA_ILi16EEESO_EEEiEEENS5_IJSB_iEEEEEENS5_IJST_NS5_IJNS5_IJNSA_ILi0EEESB_EEENSA_ILi512EEEEEENS5_IJSW_iEEEEEEEEEEESK_S13_NS4_8TiledMMAINS4_8MMA_AtomIJNS4_5SM12011BLOCKSCALED19SM120_16x8x64_TN_VSISI_SI_fSJ_Li16EEEEEENSM_INS5_IJSO_NSA_ILi2EEESB_EEENS5_IJSB_SO_SW_EEEEENS5_IJSG_NSM_INS5_IJNSA_ILi8EEES1B_S1B_EEENS5_IJSB_SR_S1F_EEEEENSA_ILi64EEEEEEEENS5_IJNS4_13SM90_TMA_LOADES1M_EEENS5_IJNS4_14ComposedLayoutINS4_7SwizzleILi2ELi4ELi3EEENS4_18smem_ptr_flag_bitsILi4EEENSM_INS5_IJS1F_SG_EEENS5_IJSG_SB_EEEEEEENSM_INS5_IJNS5_IJSP_SB_EEENS5_IJSS_SB_S1B_EEEEEENS5_IJNS5_IJSS_SY_EEENS5_IJSX_SO_SY_EEEEEEEEEEENS5_IJNS4_9Copy_AtomIJNS4_17SM75_U32x4_LDSM_NENS_15integer_subbyteILi4ELb0EEEEEENS25_IJNS4_13UniversalCopyISJ_SJ_EESJ_EEEEEENS4_8identityES1N_S24_S2D_S2E_EENS_8epilogue10collective18CollectiveEpilogueINS2G_22Sm90TmaWarpSpecializedILi3ELi2ELi4ELb1ELb0EEEJSH_NS5_IJS1J_SN_EEENS_10bfloat16_tESL_S2M_SL_NS2G_6fusion15FusionCallbacksINS2G_23Sm120TmaWarpSpecializedILi3ELi2ELi4ELb1ELb0EEENS2N_17LinearCombinationIS2M_fS2M_fLNS_15FloatRoundStyleE2EEESH_S2L_JEEES1M_NS1O_IS1Q_NS1R_ILi16EEENSM_INS5_IJS1F_SN_EEENS5_IJSN_SB_EEEEEEENS4_17SM75_U32x2_LDSM_NENS4_14SM90_TMA_STOREES2Z_NS4_17SM90_U32x2_STSM_NENS25_IJS32_NS_6half_tEEEEvEEEvvEEEEvNT_6ParamsE",
+    "grid": [
+      1,
+      192,
+      1
+    ],
+    "block": [
+      384,
+      1,
+      1
+    ],
+    "dynamic_shared_bytes": 88064,
+    "register_and_shared_attributes": {
+      "NUM_REGS": 168,
+      "SHARED_SIZE_BYTES": 0,
+      "MAX_DYNAMIC_SHARED_SIZE_BYTES": 88064
+    },
+    "homogeneous_api_blocks_per_sm": 1,
+    "tools_id": 4294967296,
+    "parameter_offset": 0,
+    "parameter_size": 2176,
+    "live_reference_offsets": {
+      "weight": 384,
+      "weight_scale": 896,
+      "alpha": 1320
+    }
+  },
+  "source_weights": {
+    "model.layers.18.mlp.gate_proj.weight": "model-00001-of-00002.safetensors",
+    "model.layers.18.mlp.up_proj.weight": "model-00001-of-00002.safetensors",
+    "model.layers.18.mlp.gate_proj.weight_scale": "model-00001-of-00002.safetensors",
+    "model.layers.18.mlp.up_proj.weight_scale": "model-00001-of-00002.safetensors",
+    "model.layers.18.mlp.gate_proj.weight_scale_2": "model-00001-of-00002.safetensors",
+    "model.layers.18.mlp.up_proj.weight_scale_2": "model-00001-of-00002.safetensors",
+    "model.layers.18.mlp.gate_proj.input_scale": "model-00001-of-00002.safetensors",
+    "model.layers.18.mlp.up_proj.input_scale": "model-00001-of-00002.safetensors"
+  },
+  "index_sha256": "d7cddcad23c80b41201f23e3fccb22ef200ed551da067c61afb0b09f67864f47",
+  "input_shape": [
+    8,
+    4096
+  ],
+  "input_sha256": "730a07b3bd3a684e69a7ac700028a2d2eee6a5ad8e48812f582c6930b7a08749",
+  "input_is_synthetic": true,
+  "output_shape": [
+    8,
+    24576
+  ],
+  "trials": [
+    {
+      "trial": 0,
+      "exact_match": true,
+      "output_sha256": "53a46d308bc7d6e1187a2e65801f80f639997eb101db1802abb5338947444c12"
+    },
+    {
+      "trial": 1,
+      "exact_match": true,
+      "output_sha256": "53a46d308bc7d6e1187a2e65801f80f639997eb101db1802abb5338947444c12"
+    },
+    {
+      "trial": 2,
+      "exact_match": true,
+      "output_sha256": "53a46d308bc7d6e1187a2e65801f80f639997eb101db1802abb5338947444c12"
+    }
+  ],
+  "torch_version": "2.14.0+cu132",
+  "vllm_version": "0.33.0+precompiled",
+  "backend_source_sha256": "b08e6e87b4a37ebb08ecbd01dcb90e8166a52e62cea491171d18a7cba6667615",
+  "gate3_reference_sha256": "67eb9ac50b0fc61f636f494abae1861f7a967767f373095ad2f5538fd9f32a23",
+  "full_model_loaded": false,
+  "metrics_scope": "correctness, identity, and function attributes only"
+}

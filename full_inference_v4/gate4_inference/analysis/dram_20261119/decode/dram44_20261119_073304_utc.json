@@ -1,0 +1,558 @@
+{
+  "run_id": "dram44_20261119_073304_utc",
+  "precision": "bf16",
+  "condition": "parallel",
+  "uuid": "022c5f55-490e-ec54-3887-5f12510d273d",
+  "conditional_device_metrics": [
+    {
+      "window": "probe_inside_graph",
+      "metric": "SMs Active",
+      "mean_pct": 97.5204081632653,
+      "samples": 196
+    },
+    {
+      "window": "probe_inside_graph",
+      "metric": "Tensor Active",
+      "mean_pct": 5.86734693877551,
+      "samples": 196
+    },
+    {
+      "window": "probe_inside_graph",
+      "metric": "DRAM Read Bandwidth",
+      "mean_pct": 76.58673469387755,
+      "samples": 196
+    },
+    {
+      "window": "probe_inside_graph",
+      "metric": "DRAM Write Bandwidth",
+      "mean_pct": 1,
+      "samples": 196
+    },
+    {
+      "window": "graph_first_500us",
+      "metric": "SMs Active",
+      "mean_pct": 98.86458333333333,
+      "samples": 96
+    },
+    {
+      "window": "graph_first_500us",
+      "metric": "Tensor Active",
+      "mean_pct": 6.09375,
+      "samples": 96
+    },
+    {
+      "window": "graph_first_500us",
+      "metric": "DRAM Read Bandwidth",
+      "mean_pct": 81.83333333333333,
+      "samples": 96
+    },
+    {
+      "window": "graph_first_500us",
+      "metric": "DRAM Write Bandwidth",
+      "mean_pct": 1,
+      "samples": 96
+    }
+  ],
+  "probe_kernel_us": [
+    821.15,
+    813.597,
+    823.229,
+    813.021,
+    803.933,
+    812.158,
+    812.733,
+    807.198,
+    820.509,
+    817.309,
+    813.053,
+    826.397,
+    805.086,
+    814.173,
+    829.021,
+    821.469,
+    809.693,
+    810.302,
+    810.429,
+    820.285,
+    814.813,
+    822.109,
+    814.045,
+    812.477,
+    822.654,
+    821.789,
+    822.11,
+    825.789,
+    821.534,
+    822.365,
+    821.534,
+    812.157
+  ],
+  "windows": [
+    {
+      "iteration": 33,
+      "graph_start": 1639396800,
+      "graph_end": 1650208892,
+      "probe_start": 1639396288,
+      "probe_end": 1640217438
+    },
+    {
+      "iteration": 34,
+      "graph_start": 1651111641,
+      "graph_end": 1661915444,
+      "probe_start": 1651111097,
+      "probe_end": 1651924694
+    },
+    {
+      "iteration": 35,
+      "graph_start": 1662832177,
+      "graph_end": 1673645325,
+      "probe_start": 1662831633,
+      "probe_end": 1663654862
+    },
+    {
+      "iteration": 36,
+      "graph_start": 1674549866,
+      "graph_end": 1685369669,
+      "probe_start": 1674549354,
+      "probe_end": 1675362375
+    },
+    {
+      "iteration": 37,
+      "graph_start": 1686265474,
+      "graph_end": 1697073213,
+      "probe_start": 1686264930,
+      "probe_end": 1687068863
+    },
+    {
+      "iteration": 38,
+      "graph_start": 1697972890,
+      "graph_end": 1708772726,
+      "probe_start": 1697972346,
+      "probe_end": 1698784504
+    },
+    {
+      "iteration": 39,
+      "graph_start": 1709668915,
+      "graph_end": 1720477358,
+      "probe_start": 1709668371,
+      "probe_end": 1710481104
+    },
+    {
+      "iteration": 40,
+      "graph_start": 1721380235,
+      "graph_end": 1732184871,
+      "probe_start": 1721379723,
+      "probe_end": 1722186921
+    },
+    {
+      "iteration": 41,
+      "graph_start": 1733092836,
+      "graph_end": 1743901247,
+      "probe_start": 1733092324,
+      "probe_end": 1733912833
+    },
+    {
+      "iteration": 42,
+      "graph_start": 1744806236,
+      "graph_end": 1755612728,
+      "probe_start": 1744805692,
+      "probe_end": 1745623001
+    },
+    {
+      "iteration": 43,
+      "graph_start": 1756538197,
+      "graph_end": 1767360784,
+      "probe_start": 1756537653,
+      "probe_end": 1757350706
+    },
+    {
+      "iteration": 44,
+      "graph_start": 1768263021,
+      "graph_end": 1779070440,
+      "probe_start": 1768262477,
+      "probe_end": 1769088874
+    },
+    {
+      "iteration": 45,
+      "graph_start": 1779980613,
+      "graph_end": 1790800417,
+      "probe_start": 1779980069,
+      "probe_end": 1780785155
+    },
+    {
+      "iteration": 46,
+      "graph_start": 1791706334,
+      "graph_end": 1802520601,
+      "probe_start": 1791705790,
+      "probe_end": 1792519963
+    },
+    {
+      "iteration": 47,
+      "graph_start": 1803411638,
+      "graph_end": 1814223634,
+      "probe_start": 1803411126,
+      "probe_end": 1804240147
+    },
+    {
+      "iteration": 48,
+      "graph_start": 1815123343,
+      "graph_end": 1825932778,
+      "probe_start": 1815122799,
+      "probe_end": 1815944268
+    },
+    {
+      "iteration": 49,
+      "graph_start": 1826821223,
+      "graph_end": 1837627651,
+      "probe_start": 1826820711,
+      "probe_end": 1827630404
+    },
+    {
+      "iteration": 50,
+      "graph_start": 1838538047,
+      "graph_end": 1849352251,
+      "probe_start": 1838537503,
+      "probe_end": 1839347805
+    },
+    {
+      "iteration": 51,
+      "graph_start": 1850216184,
+      "graph_end": 1861017620,
+      "probe_start": 1850215640,
+      "probe_end": 1851026069
+    },
+    {
+      "iteration": 52,
+      "graph_start": 1861882065,
+      "graph_end": 1872700140,
+      "probe_start": 1861881521,
+      "probe_end": 1862701806
+    },
+    {
+      "iteration": 53,
+      "graph_start": 1873574601,
+      "graph_end": 1884386213,
+      "probe_start": 1873574089,
+      "probe_end": 1874388902
+    },
+    {
+      "iteration": 54,
+      "graph_start": 1885256322,
+      "graph_end": 1896060637,
+      "probe_start": 1885255810,
+      "probe_end": 1886077919
+    },
+    {
+      "iteration": 55,
+      "graph_start": 1896930042,
+      "graph_end": 1907740854,
+      "probe_start": 1896929498,
+      "probe_end": 1897743543
+    },
+    {
+      "iteration": 56,
+      "graph_start": 1908603475,
+      "graph_end": 1919413614,
+      "probe_start": 1908602931,
+      "probe_end": 1909415408
+    },
+    {
+      "iteration": 57,
+      "graph_start": 1920277259,
+      "graph_end": 1931095687,
+      "probe_start": 1920276715,
+      "probe_end": 1921099369
+    },
+    {
+      "iteration": 58,
+      "graph_start": 1931966980,
+      "graph_end": 1942783007,
+      "probe_start": 1931966436,
+      "probe_end": 1932788225
+    },
+    {
+      "iteration": 59,
+      "graph_start": 1943654204,
+      "graph_end": 1954459096,
+      "probe_start": 1943653660,
+      "probe_end": 1944475770
+    },
+    {
+      "iteration": 60,
+      "graph_start": 1955318229,
+      "graph_end": 1966129488,
+      "probe_start": 1955317685,
+      "probe_end": 1956143474
+    },
+    {
+      "iteration": 61,
+      "graph_start": 1967004973,
+      "graph_end": 1977823561,
+      "probe_start": 1967004461,
+      "probe_end": 1967825995
+    },
+    {
+      "iteration": 62,
+      "graph_start": 1978689894,
+      "graph_end": 1989503553,
+      "probe_start": 1978689318,
+      "probe_end": 1979511683
+    },
+    {
+      "iteration": 63,
+      "graph_start": 1990380830,
+      "graph_end": 2001189498,
+      "probe_start": 1990380318,
+      "probe_end": 1991201852
+    },
+    {
+      "iteration": 64,
+      "graph_start": 2002049495,
+      "graph_end": 2012860178,
+      "probe_start": 2002048951,
+      "probe_end": 2002861108
+    }
+  ],
+  "stage_metrics": [
+    {
+      "metric": "SMs Active [Throughput %]",
+      "stage": "full_cpu_request",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 92.30292683247121,
+      "median_pct": 96,
+      "sample_intervals": 41545,
+      "interval_coverage": 1.0,
+      "window_ns": 4154740020
+    },
+    {
+      "metric": "SMs Active [Throughput %]",
+      "stage": "prefill_gpu_span",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 98.41026568178164,
+      "median_pct": 100,
+      "sample_intervals": 12239,
+      "interval_coverage": 1.0,
+      "window_ns": 1223910040
+    },
+    {
+      "metric": "SMs Active [Throughput %]",
+      "stage": "decode_33_64_graphs",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 90.3995629201398,
+      "median_pct": 93.0,
+      "sample_intervals": 3490,
+      "interval_coverage": 1.0,
+      "window_ns": 345949136
+    },
+    {
+      "metric": "SMs Active [Throughput %]",
+      "stage": "decode_all_graphs",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 89.82655075073215,
+      "median_pct": 92,
+      "sample_intervals": 27263,
+      "interval_coverage": 1.0,
+      "window_ns": 2703412733
+    },
+    {
+      "metric": "SM Issue [Throughput %]",
+      "stage": "full_cpu_request",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 6.639708347864326,
+      "median_pct": 6,
+      "sample_intervals": 41545,
+      "interval_coverage": 1.0,
+      "window_ns": 4154740020
+    },
+    {
+      "metric": "SM Issue [Throughput %]",
+      "stage": "prefill_gpu_span",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 9.841688300881984,
+      "median_pct": 9,
+      "sample_intervals": 12239,
+      "interval_coverage": 1.0,
+      "window_ns": 1223910040
+    },
+    {
+      "metric": "SM Issue [Throughput %]",
+      "stage": "decode_33_64_graphs",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 5.2364732889519345,
+      "median_pct": 5.0,
+      "sample_intervals": 3490,
+      "interval_coverage": 1.0,
+      "window_ns": 345949136
+    },
+    {
+      "metric": "SM Issue [Throughput %]",
+      "stage": "decode_all_graphs",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 5.388181898453757,
+      "median_pct": 5,
+      "sample_intervals": 27263,
+      "interval_coverage": 1.0,
+      "window_ns": 2703412733
+    },
+    {
+      "metric": "Tensor Active [Throughput %]",
+      "stage": "full_cpu_request",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 34.10377212796097,
+      "median_pct": 11,
+      "sample_intervals": 41545,
+      "interval_coverage": 1.0,
+      "window_ns": 4154740020
+    },
+    {
+      "metric": "Tensor Active [Throughput %]",
+      "stage": "prefill_gpu_span",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 91.55346539031578,
+      "median_pct": 98,
+      "sample_intervals": 12239,
+      "interval_coverage": 1.0,
+      "window_ns": 1223910040
+    },
+    {
+      "metric": "Tensor Active [Throughput %]",
+      "stage": "decode_33_64_graphs",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 9.896586531726445,
+      "median_pct": 10.0,
+      "sample_intervals": 3490,
+      "interval_coverage": 1.0,
+      "window_ns": 345949136
+    },
+    {
+      "metric": "Tensor Active [Throughput %]",
+      "stage": "decode_all_graphs",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 10.187348259412078,
+      "median_pct": 10,
+      "sample_intervals": 27263,
+      "interval_coverage": 1.0,
+      "window_ns": 2703412733
+    },
+    {
+      "metric": "Compute Warps in Flight [Throughput %]",
+      "stage": "full_cpu_request",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 8.108138418490022,
+      "median_pct": 8,
+      "sample_intervals": 41545,
+      "interval_coverage": 1.0,
+      "window_ns": 4154740020
+    },
+    {
+      "metric": "Compute Warps in Flight [Throughput %]",
+      "stage": "prefill_gpu_span",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 11.609988777443153,
+      "median_pct": 8,
+      "sample_intervals": 12239,
+      "interval_coverage": 1.0,
+      "window_ns": 1223910040
+    },
+    {
+      "metric": "Compute Warps in Flight [Throughput %]",
+      "stage": "decode_33_64_graphs",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 6.1239214426018975,
+      "median_pct": 6.0,
+      "sample_intervals": 3490,
+      "interval_coverage": 1.0,
+      "window_ns": 345949136
+    },
+    {
+      "metric": "Compute Warps in Flight [Throughput %]",
+      "stage": "decode_all_graphs",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 6.292782057411431,
+      "median_pct": 6,
+      "sample_intervals": 27263,
+      "interval_coverage": 1.0,
+      "window_ns": 2703412733
+    },
+    {
+      "metric": "DRAM Read Bandwidth [Throughput %]",
+      "stage": "full_cpu_request",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 63.944370469900065,
+      "median_pct": 76,
+      "sample_intervals": 41545,
+      "interval_coverage": 1.0,
+      "window_ns": 4154740020
+    },
+    {
+      "metric": "DRAM Read Bandwidth [Throughput %]",
+      "stage": "prefill_gpu_span",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 21.627252818352563,
+      "median_pct": 23,
+      "sample_intervals": 12239,
+      "interval_coverage": 1.0,
+      "window_ns": 1223910040
+    },
+    {
+      "metric": "DRAM Read Bandwidth [Throughput %]",
+      "stage": "decode_33_64_graphs",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 81.39157170203194,
+      "median_pct": 81.0,
+      "sample_intervals": 3490,
+      "interval_coverage": 1.0,
+      "window_ns": 345949136
+    },
+    {
+      "metric": "DRAM Read Bandwidth [Throughput %]",
+      "stage": "decode_all_graphs",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 81.69799001386889,
+      "median_pct": 82,
+      "sample_intervals": 27263,
+      "interval_coverage": 1.0,
+      "window_ns": 2703412733
+    },
+    {
+      "metric": "DRAM Write Bandwidth [Throughput %]",
+      "stage": "full_cpu_request",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 1.9092196088842162,
+      "median_pct": 1,
+      "sample_intervals": 41545,
+      "interval_coverage": 1.0,
+      "window_ns": 4154740020
+    },
+    {
+      "metric": "DRAM Write Bandwidth [Throughput %]",
+      "stage": "prefill_gpu_span",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 4.101267848901705,
+      "median_pct": 3,
+      "sample_intervals": 12239,
+      "interval_coverage": 1.0,
+      "window_ns": 1223910040
+    },
+    {
+      "metric": "DRAM Write Bandwidth [Throughput %]",
+      "stage": "decode_33_64_graphs",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 0.9990474495649557,
+      "median_pct": 1.0,
+      "sample_intervals": 3490,
+      "interval_coverage": 1.0,
+      "window_ns": 345949136
+    },
+    {
+      "metric": "DRAM Write Bandwidth [Throughput %]",
+      "stage": "decode_all_graphs",
+      "median_interval_ns": 100000.0,
+      "mean_pct": 0.9988001114441744,
+      "median_pct": 1,
+      "sample_intervals": 27263,
+      "interval_coverage": 1.0,
+      "window_ns": 2703412733
+    }
+  ]
+}

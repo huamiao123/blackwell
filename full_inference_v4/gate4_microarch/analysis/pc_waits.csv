@@ -1,0 +1,7 @@
+run_id,precision,operator,all_pc_samples,sleeping_samples,sleeping_pct,sleep_pc_sites,sleep_at_phasecheck_after_nanosleep,fraction_of_sleep_at_pair,samples_at_hottest_sleep_pc,passes
+micro_20261119_072517_nvfp4_gate_up_proj,nvfp4,gate_up_proj,5412,3302,61.01256467110126,12,3236,0.9800121138703816,2641,3
+micro_20261119_072620_nvfp4_down_proj,nvfp4,down_proj,861,128,14.866434378629501,5,81,0.6328125,66,3
+micro_20261119_072640_bf16_gate_up_proj,bf16,gate_up_proj,12413,0,0.0,0,0,,0,3
+micro_20261119_072659_nvfp4_gate_up_proj,nvfp4,gate_up_proj,5417,3349,61.82388776075319,12,3277,0.978501045088086,2674,3
+micro_20261119_072717_bf16_down_proj,bf16,down_proj,7591,0,0.0,0,0,,0,3
+micro_20261119_072736_nvfp4_down_proj,nvfp4,down_proj,862,125,14.501160092807424,5,81,0.648,70,3
