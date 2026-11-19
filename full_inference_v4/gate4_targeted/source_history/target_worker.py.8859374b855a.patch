@@ -1,0 +1,45 @@
+--- src/target_worker.py
++++ src/target_worker.py
+@@ -26,8 +26,6 @@
+         self.native=self.torch.cuda.CUDAGraph.replay
+         self.model=self.core.model_executor.driver_worker.worker.model_runner.model
+         output=self.prepare_probe()
+-        self.warm_buffer=output
+-        self.warm_launches=0
+         self.torch.cuda.synchronize()
+         self.baseline=self.validate_alone(output)
+         self.ctx=int(checked(driver.cuCtxGetCurrent()))
+@@ -35,15 +33,9 @@
+             if self.state is None:
+                 if not self.graphs.variants:
+                     self.graphs.build(graph,self,self.model,self.precision,SPATIAL,MODES)
+-                if self.warm_variants and graph is self.graphs.selected:
+-                    warm_mode=MODES[self.warm_launches%len(MODES)]
+-                    self.warm_launches+=1
+-                    if warm_mode!='original':
+-                        return self.graphs.launch(warm_mode,len(STEPS),self.torch.cuda.current_stream(),runtime)
+                 return self.native(graph,*args,**kwargs)
+             step=getattr(self.local,'iteration',None)
+             if graph is not self.graphs.selected:raise ValueError('unexpected E2 decode graph')
+-            if self.warm_variants and self.warm_launches<2*len(MODES):raise ValueError('incomplete diagnostic warmup')
+             if step not in STEPS:return self.native(graph,*args,**kwargs)
+             if (self.state.iterations[step]['stage'],self.state.iterations[step]['active_request_count'])!=('DECODE',8):
+                 raise ValueError('target shape/stage changed')
+@@ -88,7 +80,6 @@
+     import torch
+     from cuda.bindings import driver
+     TargetHooks.graphs=TargetGraphs(torch,driver)
+-    TargetHooks.warm_variants=a.profile=='P0'
+     TargetHooks.plan=schedules(a.profile,71011 if '_r2_' not in a.run_id else 84239)
+     prepare,save=original.prepare,original.save
+     def configure(path):
+@@ -103,8 +94,7 @@
+             if len(data['runs'])>len(h.measured):h.finish()
+             data['target_nodes']=dict(variants=h.graphs.info,work=h.work,probe_sha256=h.cubin_sha,
+                                       baseline=h.baseline,trials=h.measured,layer=18,
+-                                      native_signature=h.graphs.native_signature,
+-                                      warm_variant_launches=h.warm_launches)
++                                      native_signature=h.graphs.native_signature)
+         save(path,data,**kw)
+     original.HooksBase=original.Hooks
+     original.Hooks=TargetHooks

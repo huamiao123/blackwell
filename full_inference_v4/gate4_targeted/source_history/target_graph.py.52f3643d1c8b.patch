@@ -1,0 +1,11 @@
+--- src/target_graph.py
++++ src/target_graph.py
+@@ -88,7 +88,7 @@
+         base,originals,self.native_signature=self.captures[graph]
+         self.selected=graph
+         self.args=[]
+-        for out in [*hooks.buffers[0],hooks.warm_buffer]:
++        for out in hooks.buffers[0]:
+             ptrs=tuple(t.data_ptr() for t in (*hooks.sources,out))
+             params=d.CUDA_KERNEL_NODE_PARAMS()
+             params.func=hooks.function

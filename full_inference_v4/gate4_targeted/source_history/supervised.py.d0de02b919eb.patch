@@ -1,0 +1,14 @@
+--- src/supervised.py
++++ src/supervised.py
+@@ -7,10 +7,7 @@
+ 
+ def cmd(worker,profile,stem,env):
+     if not stem.name.startswith('nodetest_') or profile not in ('P2','P0'):raise ValueError('invalid target run')
+-    args=builder([worker[0],str(Path(__file__).with_name('target_worker.py')),*worker[2:]],profile,stem,env)
+-    if profile=='P2':
+-        args[args.index('--capture-range-end=stop-shutdown')]='--capture-range-end=stop'
+-    return args
++    return builder([worker[0],str(Path(__file__).with_name('target_worker.py')),*worker[2:]],profile,stem,env)
+ 
+ if __name__=='__main__':
+     profile=sys.argv[sys.argv.index('--profile')+1]

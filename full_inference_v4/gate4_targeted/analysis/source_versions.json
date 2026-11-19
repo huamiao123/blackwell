@@ -1,0 +1,50 @@
+{
+  "nodetest_20261119_075048_r1_nvfp4_p2": {
+    "protocol.py": "cf57afb6f83d28916557b02ebb460469a9c22c4a7cb95dde3bfc485a2640dd63",
+    "target_graph.py": "c189cdef7116415961694909bed8269d5149d1d2a5859a9cb33a1195e9cecfc0",
+    "target_worker.py": "d96eb6707a90547963876b1282bbfaf4518d8a0170bab45573ad591782da0ab3",
+    "supervised.py": "d0de02b919eb07c662ce5353cf760e144e32ca8954491abaae1c91225d3e2be3"
+  },
+  "nodetest_20261119_075619_r1_bf16_p2": {
+    "protocol.py": "cf57afb6f83d28916557b02ebb460469a9c22c4a7cb95dde3bfc485a2640dd63",
+    "target_graph.py": "52f3643d1c8b141c4e9529b9f51027cfb282626efafd727c35d5014b4affb86a",
+    "target_worker.py": "8859374b855a417b71a77582bd4ec34779023bf6542bf64b5207b9ffe765cda5",
+    "supervised.py": "9566e8947c32212f4f5da8f0d354161192ec005110dbb96182fb583d90f7eb41"
+  },
+  "nodetest_20261119_075731_r2_nvfp4_p2": {
+    "protocol.py": "cf57afb6f83d28916557b02ebb460469a9c22c4a7cb95dde3bfc485a2640dd63",
+    "target_graph.py": "52f3643d1c8b141c4e9529b9f51027cfb282626efafd727c35d5014b4affb86a",
+    "target_worker.py": "8859374b855a417b71a77582bd4ec34779023bf6542bf64b5207b9ffe765cda5",
+    "supervised.py": "9566e8947c32212f4f5da8f0d354161192ec005110dbb96182fb583d90f7eb41"
+  },
+  "nodetest_20261119_075828_r2_bf16_p2": {
+    "protocol.py": "cf57afb6f83d28916557b02ebb460469a9c22c4a7cb95dde3bfc485a2640dd63",
+    "target_graph.py": "52f3643d1c8b141c4e9529b9f51027cfb282626efafd727c35d5014b4affb86a",
+    "target_worker.py": "8859374b855a417b71a77582bd4ec34779023bf6542bf64b5207b9ffe765cda5",
+    "supervised.py": "9566e8947c32212f4f5da8f0d354161192ec005110dbb96182fb583d90f7eb41"
+  },
+  "nodetest_20261119_080004_r1_nvfp4_p0": {
+    "protocol.py": "cf57afb6f83d28916557b02ebb460469a9c22c4a7cb95dde3bfc485a2640dd63",
+    "target_graph.py": "2ca0a3b194950a410ae2b143108b9cdf9bb892867e136e3a4b90f53b8124be99",
+    "target_worker.py": "5cdd7e9476a29cb25accb9e72d7e8ea4f4507684afa3df6f2e877b90b3b3f221",
+    "supervised.py": "9566e8947c32212f4f5da8f0d354161192ec005110dbb96182fb583d90f7eb41"
+  },
+  "nodetest_20261119_080236_r1_bf16_p0": {
+    "protocol.py": "cf57afb6f83d28916557b02ebb460469a9c22c4a7cb95dde3bfc485a2640dd63",
+    "target_graph.py": "2ca0a3b194950a410ae2b143108b9cdf9bb892867e136e3a4b90f53b8124be99",
+    "target_worker.py": "5cdd7e9476a29cb25accb9e72d7e8ea4f4507684afa3df6f2e877b90b3b3f221",
+    "supervised.py": "9566e8947c32212f4f5da8f0d354161192ec005110dbb96182fb583d90f7eb41"
+  },
+  "nodetest_20261119_080718_r2_nvfp4_p0": {
+    "protocol.py": "cf57afb6f83d28916557b02ebb460469a9c22c4a7cb95dde3bfc485a2640dd63",
+    "target_graph.py": "2ca0a3b194950a410ae2b143108b9cdf9bb892867e136e3a4b90f53b8124be99",
+    "target_worker.py": "5cdd7e9476a29cb25accb9e72d7e8ea4f4507684afa3df6f2e877b90b3b3f221",
+    "supervised.py": "9566e8947c32212f4f5da8f0d354161192ec005110dbb96182fb583d90f7eb41"
+  },
+  "nodetest_20261119_080950_r2_bf16_p0": {
+    "protocol.py": "cf57afb6f83d28916557b02ebb460469a9c22c4a7cb95dde3bfc485a2640dd63",
+    "target_graph.py": "2ca0a3b194950a410ae2b143108b9cdf9bb892867e136e3a4b90f53b8124be99",
+    "target_worker.py": "5cdd7e9476a29cb25accb9e72d7e8ea4f4507684afa3df6f2e877b90b3b3f221",
+    "supervised.py": "9566e8947c32212f4f5da8f0d354161192ec005110dbb96182fb583d90f7eb41"
+  }
+}

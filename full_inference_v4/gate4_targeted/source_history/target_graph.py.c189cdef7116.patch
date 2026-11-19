@@ -1,0 +1,52 @@
+--- src/target_graph.py
++++ src/target_graph.py
+@@ -26,19 +26,10 @@
+         source=self.nodes(g)
+         base=checked(d.cuGraphClone(g))
+         originals={}
+-        signature={}
+         for n in source:
+             c=checked(d.cuGraphNodeFindInClone(n,base))
+             originals[int(c)]=int(checked(d.cuGraphNodeGetToolsId(n)))
+-            local=int(checked(d.cuGraphNodeGetLocalId(n)))
+-            if local!=int(checked(d.cuGraphNodeGetLocalId(c))) or local!=(originals[int(c)] & 0xffffffff):
+-                raise ValueError('clone changed local node identity')
+-            if checked(d.cuGraphNodeGetType(n))==d.CUgraphNodeType.CU_GRAPH_NODE_TYPE_KERNEL:
+-                par=checked(d.cuGraphKernelNodeGetParams(n))
+-                name=checked(d.cuFuncGetName(par.func))
+-                signature[local]=[name.decode() if isinstance(name,bytes) else name,
+-                                  par.gridDimX,par.gridDimY,par.gridDimZ,par.blockDimX,par.blockDimY,par.blockDimZ,par.sharedMemBytes]
+-        self.captures[graph]=(base,originals,signature)
++        self.captures[graph]=(base,originals)
+ 
+     def adjacent(self,node,fn):
+         _,_,count=checked(fn(node,0))
+@@ -85,10 +76,10 @@
+ 
+     def build(self,graph,hooks,model,precision,spatial,modes):
+         d=self.d
+-        base,originals,self.native_signature=self.captures[graph]
++        base,originals=self.captures[graph]
+         self.selected=graph
+         self.args=[]
+-        for out in [*hooks.buffers[0],hooks.warm_buffer]:
++        for out in hooks.buffers[0]:
+             ptrs=tuple(t.data_ptr() for t in (*hooks.sources,out))
+             params=d.CUDA_KERNEL_NODE_PARAMS()
+             params.func=hooks.function
+@@ -109,9 +100,6 @@
+             if mode=='original':continue
+             clone=checked(d.cuGraphClone(base))
+             current={k:checked(d.cuGraphNodeFindInClone(n,clone)) for k,(n,_) in targets.items()}
+-            for k,node in current.items():
+-                if int(checked(d.cuGraphNodeGetLocalId(node))) != (originals[int(targets[k][0])]&0xffffffff):
+-                    raise ValueError('target changed local identity')
+             b=None
+             if mode!='sham':
+                 op,order=mode.split('_')
+@@ -142,4 +130,4 @@
+         for clone,exe,_ in self.variants.values():
+             checked(self.d.cuGraphExecDestroy(exe))
+             checked(self.d.cuGraphDestroy(clone))
+-        for base,_,_ in self.captures.values():checked(self.d.cuGraphDestroy(base))
++        for base,_ in self.captures.values():checked(self.d.cuGraphDestroy(base))
