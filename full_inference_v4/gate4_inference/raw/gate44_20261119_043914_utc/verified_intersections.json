@@ -1,0 +1,35 @@
+{
+  "run_id": "gate44_20261119_043914_utc",
+  "precision": "nvfp4",
+  "phase": "prefill",
+  "condition": "parallel",
+  "device_uuid": "022c5f55-490e-ec54-3887-5f12510d273d",
+  "verified_targets": 1,
+  "probe_activity_count": 1,
+  "overlap_count": 0,
+  "overlap_total_ns": 0,
+  "rows": [
+    {
+      "iteration": 0,
+      "phase": "PREFILL",
+      "primary_kernels": 518,
+      "primary_graph_id": null,
+      "primary_stream_ids": [
+        7
+      ],
+      "primary_first_ns": 52172441,
+      "primary_last_ns": 356883833,
+      "primary_union_ns": 302174202,
+      "probe_start_ns": 51402723,
+      "probe_end_ns": 51420388,
+      "probe_stream_id": 33,
+      "context_id": 1,
+      "probe_correlation": 26,
+      "overlap_ns": 0,
+      "fraction_probe": 0.0,
+      "probe_tiles": 256,
+      "same_sm": "UNVERIFIED"
+    }
+  ],
+  "scope": "CUDA launch correlation with GPU kernel interval intersection"
+}

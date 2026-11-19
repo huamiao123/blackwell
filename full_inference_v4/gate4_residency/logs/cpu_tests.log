@@ -5,6 +5,6 @@ test_overlap_or_asserted_booleans_never_direct_proof (test_resource_cpu.Resource
 test_projection_inventory_matches_all_attributed_nodes (test_resource_cpu.ResourceTests.test_projection_inventory_matches_all_attributed_nodes) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.361s
+Ran 5 tests in 0.039s
 
 OK

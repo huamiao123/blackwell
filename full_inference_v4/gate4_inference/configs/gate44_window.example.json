@@ -1,0 +1,16 @@
+{
+  "enabled": false,
+  "gate": "4.4",
+  "hostname": "shared-rtx-5090-host",
+  "gpu_uuid": "GPU-022c5f55-490e-ec54-3887-5f12510d273d",
+  "not_before": "2026-11-19T12:30:00+08:00",
+  "expires_at": "2026-11-19T12:36:30+08:00",
+  "authorization_reference": "One explicit user-authorized E2 diagnostic",
+  "allowed_workload": {
+    "experiment": "E2",
+    "precision": "nvfp4",
+    "phase": "decode",
+    "condition": "parallel",
+    "profile": "P2"
+  }
+}

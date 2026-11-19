@@ -6,7 +6,7 @@
     "gpu_runtime_imports_denied": true,
     "model_weight_reads_denied": true,
     "scope": "CPU correctness tests; no GPU performance or co-residency validation",
-    "log_sha256": "5497c396a8a159d3119af8d8cce2d2a8f424165a61c9bf46e24455e9d29188e8"
+    "log_sha256": "1039bcdb6fcd72036e50a407cc5bb08568a805af5197965fbfc1ac3b0f266fc3"
   },
   {
     "task": "gate4_residency",
@@ -15,15 +15,15 @@
     "gpu_runtime_imports_denied": true,
     "model_weight_reads_denied": true,
     "scope": "CPU correctness tests; no GPU performance or co-residency validation",
-    "log_sha256": "8b727bb1fc90604d844ea86877863bcc12d39a742605ce6951259d1f165cf5a9"
+    "log_sha256": "0fbd133d1891a5937a80313cbfa01bb6e98916a3a8c06fc588ed4302b1f9de3e"
   },
   {
     "task": "gate4_inference",
     "exit_code": 0,
-    "test_count": 6,
+    "test_count": 9,
     "gpu_runtime_imports_denied": true,
     "model_weight_reads_denied": true,
     "scope": "CPU correctness tests; no GPU performance or co-residency validation",
-    "log_sha256": "25cd232df6cc1882faf188a259427330ada38c30aa80dd695b4bc9ec2fe795fd"
+    "log_sha256": "f4300b2bad4689bee2d9c86cfb3ba19b515f05142020137785ea5359fde2e67c"
   }
 ]

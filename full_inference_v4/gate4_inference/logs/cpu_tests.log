@@ -1,3 +1,6 @@
+test_probes_are_fixed_and_conditions_paired (test_gate44_cpu.Gate44Tests.test_probes_are_fixed_and_conditions_paired) ... ok
+test_request_itl_refuses_bundled_outputs (test_gate44_cpu.Gate44Tests.test_request_itl_refuses_bundled_outputs) ... ok
+test_scope_cannot_be_expanded_with_the_same_window (test_gate44_cpu.Gate44Tests.test_scope_cannot_be_expanded_with_the_same_window) ... ok
 test_faster_but_unused_output_is_not_inference_gain (test_inference_cpu.InferenceTests.test_faster_but_unused_output_is_not_inference_gain) ... ok
 test_itl_is_per_request_not_batch_progress (test_inference_cpu.InferenceTests.test_itl_is_per_request_not_batch_progress) ... ok
 test_mixed_is_not_decode_injection (test_inference_cpu.InferenceTests.test_mixed_is_not_decode_injection) ... ok
@@ -6,6 +9,6 @@ test_unmeasured_policy_falls_back (test_inference_cpu.InferenceTests.test_unmeas
 test_unused_or_future_dependent_work_is_not_useful (test_inference_cpu.InferenceTests.test_unused_or_future_dependent_work_is_not_useful) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.003s
+Ran 9 tests in 0.001s
 
 OK

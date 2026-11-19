@@ -1,0 +1,8 @@
+{
+  "time": "2026-11-19T12:56:58.458964+08:00",
+  "compute_pids": [],
+  "known_controller": false,
+  "gate44_pids": [],
+  "gate44_permits": 0,
+  "summary": "GPU 0  NVIDIA GeForce RTX 5090  mem 1048/32607 MiB  util 0%\n  (no compute processes)\n"
+}

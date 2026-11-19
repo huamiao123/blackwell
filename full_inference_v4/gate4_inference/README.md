@@ -1,4 +1,10 @@
-# Gate 4 Inference：完整推理中的有用并发准备
+# Gate 4.4 完整推理并发
+
+RTX 5090 上的完整 E2 实验采用 Qwen3-8B BF16 与原生 NVFP4，分别验证 Prefill、Decode 和生命周期并发。请求延迟和 GPU 重叠分别由无 Profiling 配对和独立 CUDA Node Timeline 测量。[实测报告](gate44_20261119.md)
+
+数据在 `analysis/gate44_20261119/`，运行入口为 `src/run_gate44.py`。每次运行保留压缩结果、监督信息和原始 Trace 哈希。有真实下游消费者的性能实验归入 Gate 4.5。
+
+## 初始 CPU 准备档案
 
 
 本次交付为 **CPU 侧审计、实现与审查材料**。没有加载模型权重，没有初始化 CUDA Context，没有运行 GPU Kernel、模型推理、NSYS 或 NCU。CUDA 离线编译与反汇编只使用 CPU，不等于 GPU 正确性验收。

@@ -10,3 +10,5 @@
 | 实验矩阵、探针及控制 | [实验矩阵](experiment_matrix.md)、[探针](probe_protocol.md)、[并发协议](concurrency_protocol.md) |
 | 共享 GPU | [监督协议](gpu_safety_protocol.md) |
 | 本阶段状态 | [阶段报告](final_report.md) |
+
+[统一结果表](analysis/) 按源文件和计时范围列出逐层资源、探针验收、同工作量配对、Kernel 时间重叠及混合 CTA 必要条件。完整 E2 的请求、阶段和设备 GPU Kernel 区间分别记录。带有 UNAVAILABLE 标记的 P1 指标仍缺当前阶段采样。[完整 E2 实测](../gate4_inference/gate44_20261119.md)

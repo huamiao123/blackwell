@@ -5,5 +5,5 @@
   "gpu_runtime_imports_denied": true,
   "model_weight_reads_denied": true,
   "scope": "CPU correctness tests; no GPU performance or co-residency validation",
-  "log_sha256": "5497c396a8a159d3119af8d8cce2d2a8f424165a61c9bf46e24455e9d29188e8"
+  "log_sha256": "1039bcdb6fcd72036e50a407cc5bb08568a805af5197965fbfc1ac3b0f266fc3"
 }
