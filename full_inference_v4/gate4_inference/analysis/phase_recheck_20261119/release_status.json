@@ -1,0 +1,1 @@
+{"time": "2026-11-19T14:18:07.134237+08:00", "gpu_uuid": "GPU-022c5f55-490e-ec54-3887-5f12510d273d", "compute_pids": [], "known_controller": false, "gate44_pids": [], "gate44_permits": 0, "summary": "GPU 0  NVIDIA GeForce RTX 5090  mem 1048/32607 MiB  util 0%\n  (no compute processes)\n"}

@@ -31,7 +31,7 @@ def main():
     parser.add_argument('--phase', choices=('decode', 'prefill', 'lifecycle'), required=True)
     parser.add_argument('--condition', choices=('parallel', 'serial', 'empty', 'a_alone', 'paired'), required=True)
     parser.add_argument('--run-id', required=True)
-    parser.add_argument('--profile', choices=('P0', 'P2'), required=True)
+    parser.add_argument('--profile', choices=('P0', 'P1', 'P2'), required=True)
     args, remaining = parser.parse_known_args()
     if not args.run_id.startswith('gate44_') or (args.condition == 'paired' and args.profile != 'P0'):
         raise ValueError('invalid Gate 4.4 run prefix or profile')

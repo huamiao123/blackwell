@@ -190,7 +190,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--config', required=True)
     parser.add_argument('--run-id', required=True)
-    parser.add_argument('--profile', choices=('P0', 'P2'), required=True)
+    parser.add_argument('--profile', choices=('P0', 'P1', 'P2'), required=True)
     parser.add_argument('--output', required=True)
     parser.add_argument('--phase', choices=('prefill', 'decode', 'lifecycle'), required=True)
     parser.add_argument('--condition', choices=('parallel', 'serial', 'empty', 'a_alone', 'paired'), required=True)

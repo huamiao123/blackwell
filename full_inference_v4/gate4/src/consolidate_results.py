@@ -114,18 +114,18 @@ def isolated_activity(primary):
     return rows
 
 
-def e2_runs(uuid):
+def e2_runs(uuid, analysis=E2_ANALYSIS, raw_dir=E2 / 'raw'):
     conditions, blocks, stats, traces, overhead = [], [], [], [], []
     mean_condition = {}
     starts = {}
-    for result in sorted(E2_ANALYSIS.glob('*/request_envelopes.csv')):
+    for result in sorted(analysis.glob('*/request_envelopes.csv')):
         for name, target in [('request_envelopes.csv', conditions), ('paired_blocks.csv', blocks),
                              ('statistics.csv', stats)]:
             path = result.with_name(name)
             for row in records(path):
                 stem = row['run_id']
                 if stem not in starts:
-                    starts[stem] = load(E2 / 'raw' / stem / (stem + '_supervision.json'))['start']
+                    starts[stem] = load(raw_dir / stem / (stem + '_supervision.json'))['start']
                 target.append(dict(row, primary_operator='FULL_E2', probe_type='tensor_light', probe_grid=64,
                                    timestamp=starts[stem], gpu_uuid=uuid,
                                    probe_resource_level='light', A_interference=row.get('main_wall_change', MISSING),
@@ -136,7 +136,6 @@ def e2_runs(uuid):
         for row in records(result):
             mean_condition.setdefault((row['precision'], row['phase'], row['condition']), []).append(float(row['model_wall_ms']))
 
-    raw_dir = E2 / 'raw'
     for path in sorted(raw_dir.glob('gate44_*/verified_intersections.json')):
         doc = load(path)
         stem = doc['run_id']
@@ -183,6 +182,25 @@ def main():
     primary = {(row['precision'], row['logical_op']): row for row in inventory}
     runs, blocks, estimates, pressure = isolated_runs(primary, uuid)
     phases, phase_pairs, phase_estimates, activity, overhead = e2_runs(uuid)
+    recheck = E2 / 'analysis/phase_recheck_20261119'
+    recheck_raw = E2 / 'raw/phase_recheck_20261119'
+    for target, addition in zip((phases, phase_pairs, phase_estimates, activity, overhead),
+                                e2_runs(uuid, recheck, recheck_raw)):
+        target.extend(addition)
+    metrics = []
+    for path in sorted((recheck / 'metrics').glob('*.json')):
+        doc = load(path)
+        stem = doc['run_id']
+        guard = load(recheck_raw / stem / (stem + '_supervision.json'))
+        for row in doc['rows']:
+            metrics.append(dict(row, run_id=stem, precision=doc['precision'], condition=doc['condition'],
+                                gpu_uuid=doc['uuid'], timestamp=guard['start'], measurement_scope=row['stage'],
+                                measurement_tool='P1 NSYS gb20x 10 kHz', evidence_status='DEVICE_STAGE_SAMPLE',
+                                evidence_source=source(path)))
+    fees = recheck / 'p1_overhead.csv'
+    if fees.exists():
+        overhead.extend(dict(row, gpu_uuid=uuid, measurement_tool='P0 and P1',
+                             evidence_source=source(fees)) for row in records(fees))
     emit('concurrency_runs', runs + phases)
     emit('paired_blocks', blocks + phase_pairs)
     emit('concurrency_summary', estimates + phase_estimates)
@@ -216,9 +234,9 @@ def main():
                                      evidence_source=source(path)))
     emit('co_residency_analysis', co_residency)
     emit('spatial_concurrency', isolated_activity(primary) + activity)
-    emit('gpu_metrics', [dict(gpu_uuid=uuid, measurement_scope='GATE4_DEVICE_METRICS',
-                              evidence_status='UNAVAILABLE', failure_reason='P1 device metrics not collected in Gate 4')])
-    print('Published 12 scoped Gate 4 CSV tables. GPU metrics are explicitly unavailable.')
+    emit('gpu_metrics', metrics or [dict(gpu_uuid=uuid, measurement_scope='GATE4_DEVICE_METRICS',
+                                          evidence_status='UNAVAILABLE', failure_reason='no archived P1 measurements')])
+    print('Published 12 scoped Gate 4 CSV tables.')
 
 
 if __name__ == '__main__':
