@@ -1,0 +1,570 @@
+{
+  "model_source": "vllm/vllm/model_executor/models/qwen3.py",
+  "model_source_sha256": "06bee457e1278cecc3d0745f45c44b4711243330e8c2c19d5c732625b67f1374",
+  "forward_lines": [
+    156,
+    173
+  ],
+  "compiled_sources": {
+    "29cd73a61354ae8adedcfc156e1e68dcaf69a269247694beadf0b9ddefc37dd6": {
+      "path": "cache/vllm/torch_compile_cache/torch_aot_compile/1a300ef190a0da322436218aad15159e323ab0c3f8ffb5995a274cc6bdb83b9d/inductor_cache/3b/c3bbzxvbcpxjjuax5jhskigkq4klpuobay3nr5blu5p4qfhnhiap.py",
+      "kernels": [
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_2",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "62152a7bae98e36a2651a7c947b9bb21605b9dbe45316e49e4d2e7bb1339fd9e"
+        },
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_3",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "ccf6c2c4f6d444224c79adb93cf135f453001a3ac5c0c3ca5a8b2bda230093c7"
+        }
+      ]
+    },
+    "81d2f88665e23f5bba7b694c46ebb343238c2aebfc6439015028ab1748c6f2ff": {
+      "path": "cache/vllm/torch_compile_cache/torch_aot_compile/1a300ef190a0da322436218aad15159e323ab0c3f8ffb5995a274cc6bdb83b9d/inductor_cache/wi/cwi6ji7pnlxtedh3glqgvtdsve55yy55xot5gs7reg6l7f6x6v2e.py",
+      "kernels": [
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_1",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "8c71ba85737b668e5a421835336f4e1b87fd4d74caafca54e7bc0577f5821f8f"
+        },
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_2",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "0b31639b10a226790515c1bbe84aefb225c7c0e884d5ec5ac0f311c3d662d010"
+        }
+      ]
+    },
+    "39fdc15683ab143c5be2fd43f2560249ee11f55e29e900767de99488e80ddc18": {
+      "path": "cache/vllm/torch_compile_cache/torch_aot_compile/385fe7d7f1e1d22e3ea4f756ea7cdd57837f9c462a54e8fff551cdc1b4a2a115/inductor_cache/rr/crrzi374xy6qub2yq7dqthpvu4vtvns3xm6b7jflbj6oqcaft5lr.py",
+      "kernels": [
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_1",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "f9cc28232f92510516d9d608a16e5395be1f9e5742b37a2965543fffa0918e25"
+        },
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_2",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "e2153e3214087a35967abf349295641c5b5d1f4f6b7073b2f973fdfad3a1490d"
+        }
+      ]
+    },
+    "fe463ee9fa50067048933eaef2288299150011a51c25958ed773b047a359e7a3": {
+      "path": "cache/vllm/torch_compile_cache/torch_aot_compile/385fe7d7f1e1d22e3ea4f756ea7cdd57837f9c462a54e8fff551cdc1b4a2a115/inductor_cache/ua/cuay25ptlmzsd455ympdcmz2qbc7netskjfcpffpwaxzh7bqelzk.py",
+      "kernels": [
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_2",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "d325a5f98c81bef3dfe88e1474777df629f528f91aaa8099fd9c0a0c3abcf247"
+        },
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_3",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "f0f2cda3d50d5669f83d0d9e9ae114b847591b378254a2df566129870879c9c3"
+        }
+      ]
+    },
+    "6ecc76d88863bd2b908fde38710367cfb9300d9bb848779d6deaba96184fc3db": {
+      "path": "cache/vllm/torch_compile_cache/torch_aot_compile/40ec42997a05a1e28937248a215cc34865174b4a1e918913130e7b2965b794cb/inductor_cache/fv/cfvpfknf2266u5mbcijoojj7pxxib2iljswrnq54xeqzha2knaa5.py",
+      "kernels": [
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_1",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "f9cc28232f92510516d9d608a16e5395be1f9e5742b37a2965543fffa0918e25"
+        },
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_2",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "e2153e3214087a35967abf349295641c5b5d1f4f6b7073b2f973fdfad3a1490d"
+        }
+      ]
+    },
+    "9cf3d078457836b38b166ed52b129a3fa671a1c53aa2df650c223142abc18dfe": {
+      "path": "cache/vllm/torch_compile_cache/torch_aot_compile/40ec42997a05a1e28937248a215cc34865174b4a1e918913130e7b2965b794cb/inductor_cache/l4/cl45uhbdqumo7vd556lzhtkm2orwn3koyqlgdpwnfuvjzqh37yi6.py",
+      "kernels": [
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_2",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "d325a5f98c81bef3dfe88e1474777df629f528f91aaa8099fd9c0a0c3abcf247"
+        },
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_3",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "f0f2cda3d50d5669f83d0d9e9ae114b847591b378254a2df566129870879c9c3"
+        }
+      ]
+    },
+    "c033a952aea37aa659a31608065fb422d73ff3bdf9627c6f7d31db3518e53025": {
+      "path": "cache/vllm/torch_compile_cache/torch_aot_compile/8cc5db46402590832e890043d3fde6fdfb604dd5ce6c6ffe029f5e8ce6f82326/inductor_cache/ev/cevg7cm3tm4c7mxt32s4tzb4kfkkvbdea33unyen23kfzah5y7tn.py",
+      "kernels": [
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_1",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "ddef96bd338d11b08ca381e30eec78f1b5c5cf4d0adb8a86a5c2685a2c73d0e9"
+        },
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_2",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "40e1b45e49f3f47b9e74074eaa800ba1ffd58059acfd328dfd59c5209e365410"
+        }
+      ]
+    },
+    "e2d5daf729a485cbe4cd3ab3dc7e14b008cc7ee643c7a3e3be54eab045ac801b": {
+      "path": "cache/vllm/torch_compile_cache/torch_aot_compile/8cc5db46402590832e890043d3fde6fdfb604dd5ce6c6ffe029f5e8ce6f82326/inductor_cache/l3/cl345brsfk4lca23dbnvc4rydrrvv723vmkopyrnwbmxnotjomhv.py",
+      "kernels": [
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_3",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "2d2b0bf1250f8148effcf12231fac3740ef16ce3bac373aaa3d0b32d28cfe2a5"
+        },
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_4",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "3ce78f664cb964e7da853106fdfee8f5fba1d98cacdd38d083e1263312d070fd"
+        }
+      ]
+    },
+    "5744dca7c8b04284ab8868b993b68ea574faadb1d2aa6a8c84d211b79e728be8": {
+      "path": "cache/vllm/torch_compile_cache/torch_aot_compile/9dd441577e6cae5edf84ef152ede34b3d401d9272723fc1f8689ad007fb8fc49/inductor_cache/qc/cqct6d33yfklf5f4lihqntp54jwsh5cnuisdtesxh2umcioyue5j.py",
+      "kernels": [
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_3",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "47348ece91a72e5eb673a9742686bad9a7dbb8dffd0016ba681e68c842f58c1c"
+        },
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_4",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "1977bc31a0876f247e3a508c7208b15e79d6a409955e1c9f04f884b2a71ffd96"
+        }
+      ]
+    },
+    "70bcacda1896d456eaf923e10dd18b200c6ea341e57bfe5decd9efd63d71f8ab": {
+      "path": "cache/vllm/torch_compile_cache/torch_aot_compile/9dd441577e6cae5edf84ef152ede34b3d401d9272723fc1f8689ad007fb8fc49/inductor_cache/ql/cqlaex6wiynoir5ca4t3yj4nazuocxj6o3j52wssa4l7ncleg72i.py",
+      "kernels": [
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_1",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "1749c604afb5bd07e7aee2c0caa9ea7c861f1fe314f0dc64428e705a607307b2"
+        },
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_2",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "a04d8e8cccd99b7da32ac6c0dbb12fbce73034ebe233b0d97d4392c31ecf19ca"
+        }
+      ]
+    },
+    "1298c6ca5f6a25dbe02ee0fce45a4f0ddb94efb200a34402e2b4ac78ddcb8872": {
+      "path": "cache/vllm/torch_compile_cache/torch_aot_compile/dc72a6b02ef8e8bd1a1b70c3a06b6c39c50b24ab07ed4beac8c9300a21bf7dd9/inductor_cache/h5/ch5ngpotmuergpy5vykqghytyn74o4z57c3elru3f2d3dezvwsm4.py",
+      "kernels": [
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_3",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "47348ece91a72e5eb673a9742686bad9a7dbb8dffd0016ba681e68c842f58c1c"
+        },
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_4",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "1977bc31a0876f247e3a508c7208b15e79d6a409955e1c9f04f884b2a71ffd96"
+        }
+      ]
+    },
+    "e9772a874b8e0934bfd079e078da6eba4578553814cf6981620046a1467527b4": {
+      "path": "cache/vllm/torch_compile_cache/torch_aot_compile/dc72a6b02ef8e8bd1a1b70c3a06b6c39c50b24ab07ed4beac8c9300a21bf7dd9/inductor_cache/qs/cqsetsq2skdel6pddp3ncdza5bxzjdxk6m5kfvb4e62ugbffmnki.py",
+      "kernels": [
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_1",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "1749c604afb5bd07e7aee2c0caa9ea7c861f1fe314f0dc64428e705a607307b2"
+        },
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_2",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "a04d8e8cccd99b7da32ac6c0dbb12fbce73034ebe233b0d97d4392c31ecf19ca"
+        }
+      ]
+    },
+    "50a2434d9a1a861cce995738f10341f4ae5380378dc678a95f023eb0e3ef1411": {
+      "path": "cache/vllm/torch_compile_cache/torch_aot_compile/e7aacaf26ed0acd74c47932e322c90401456fd3341c420703975e12bbc18a437/inductor_cache/6z/c6zlijy4ab3yvqay3vgou5yulcry3ijptzouapbydwwzhsyjyqtw.py",
+      "kernels": [
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_2",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "62152a7bae98e36a2651a7c947b9bb21605b9dbe45316e49e4d2e7bb1339fd9e"
+        },
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_3",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "ccf6c2c4f6d444224c79adb93cf135f453001a3ac5c0c3ca5a8b2bda230093c7"
+        }
+      ]
+    },
+    "b1b60a6ea0b2851a65addfd3fc7629ad6f5c5729c5899e394b17bd7afbbb2960": {
+      "path": "cache/vllm/torch_compile_cache/torch_aot_compile/e7aacaf26ed0acd74c47932e322c90401456fd3341c420703975e12bbc18a437/inductor_cache/wj/cwjih55ldzuu6haiqd2hp2dyf67tqmrjihdl73ikwkxxi7oagm7c.py",
+      "kernels": [
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_1",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "8c71ba85737b668e5a421835336f4e1b87fd4d74caafca54e7bc0577f5821f8f"
+        },
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_2",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "0b31639b10a226790515c1bbe84aefb225c7c0e884d5ec5ac0f311c3d662d010"
+        }
+      ]
+    },
+    "c1ceb83ead5dbbfd71710b07702b168d92d21d7c3529fb542417fea52be9cd46": {
+      "path": "cache/vllm/torch_compile_cache/torch_aot_compile/ebbb01d8da258df478fc611d004a72e353452ae919bb62ac74c15e38bdcfda11/inductor_cache/6a/c6apboopimxhcsuk3y6cqofr23x2z3ufqcgoenrjtumth5teh3b4.py",
+      "kernels": [
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_3",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "2d2b0bf1250f8148effcf12231fac3740ef16ce3bac373aaa3d0b32d28cfe2a5"
+        },
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_4",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "3ce78f664cb964e7da853106fdfee8f5fba1d98cacdd38d083e1263312d070fd"
+        }
+      ]
+    },
+    "11a17c4913c5c16448a7b088ee77c93e88cb00702a4705aa81aad4f00b497760": {
+      "path": "cache/vllm/torch_compile_cache/torch_aot_compile/ebbb01d8da258df478fc611d004a72e353452ae919bb62ac74c15e38bdcfda11/inductor_cache/ao/cao67mm6eyqhpf2ibqhwyfmxum2ambi74mbwcwdhi5pnfuh5ba7g.py",
+      "kernels": [
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_1",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "ddef96bd338d11b08ca381e30eec78f1b5c5cf4d0adb8a86a5c2685a2c73d0e9"
+        },
+        {
+          "name": "triton_per_fused_add_cat_index_select_mul_rms_norm_split_split_with_sizes_sub_unsqueeze_view_2",
+          "memory": {
+            "load": [
+              "in_ptr0",
+              "in_ptr1",
+              "in_ptr2",
+              "in_ptr3"
+            ],
+            "store": [
+              "out_ptr1"
+            ]
+          },
+          "source_sha256": "40e1b45e49f3f47b9e74074eaa800ba1ffd58059acfd328dfd59c5209e365410"
+        }
+      ]
+    }
+  }
+}

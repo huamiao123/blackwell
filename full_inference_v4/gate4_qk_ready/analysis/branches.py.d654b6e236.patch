@@ -1,0 +1,41 @@
+--- src/branches.py
++++ src/branches.py
+@@ -24,15 +24,12 @@
+ def disjoint(a, b):
+     return a[0] + a[1] <= b[0] or b[0] + b[1] <= a[0]
+ 
+-def adjacent(d, node, fn, retained_edge=None):
++def adjacent(d, node, fn):
+     _, _, count = checked(fn(node, 0))
+     if count == 0:
+         return []
+     mapped, edges, n = checked(fn(node, count))
+-    kinds = [(int(e.type),int(e.from_port),int(e.to_port)) for e in edges[:n]]
+-    if retained_edge is not None:
+-        retained_edge.extend(kinds)
+-    elif any(any(kind) for kind in kinds):
++    if any(int(e.type) or int(e.from_port) or int(e.to_port) for e in edges[:n]):
+         raise ValueError('unsupported dependency kind')
+     return list(mapped[:n])
+ 
+@@ -77,9 +74,7 @@
+             pred, _, pred_name = one(q, d.cuGraphNodeGetDependencies)
+             k, kp, kname = one(q, d.cuGraphNodeGetDependentNodes)
+             cache, cp, cache_name = one(k, d.cuGraphNodeGetDependentNodes)
+-            cache_edge = []
+-            att_handle, = adjacent(d,cache,d.cuGraphNodeGetDependentNodes,cache_edge)
+-            att, ap, att_name = data[int(att_handle)]
++            att, ap, att_name = one(cache, d.cuGraphNodeGetDependentNodes)
+             if not ('cutlass' in pred_name and kname.startswith(PREFIX) and kp.gridDimX == 8 and
+                     'reshape_and_cache_flash_kernel' in cache_name and 'kernel_mha' in att_name):
+                 raise ValueError('unexpected producer/consumer chain')
+@@ -102,8 +97,7 @@
+             groups.append((pred,q,k,cache))
+             records.append(dict(layer=layer,nodes=ids,q_name=qname,k_name=kname,producer=pred_name,
+                                 kv_consumer=cache_name,q_consumer=att_name,k_cache_arg=0,
+-                                q_attention_arg=att_args.index(qa[4]),retained_cache_edge=cache_edge,
+-                                disjoint_outputs_and_inputs=True))
++                                q_attention_arg=att_args.index(qa[4]),disjoint_outputs_and_inputs=True))
+         if sorted(row['layer'] for row in records) != list(range(36)):
+             raise ValueError(f'expected 36 recognized Q/K pairs, found {len(records)}')
+         self.records = sorted(records, key=lambda r:r['layer'])
