@@ -1,0 +1,271 @@
+{
+  "status": "QKV_OVERLAP_PILOT_OUTPUTS_VERIFIED",
+  "scope": "ISOLATED_CHECKPOINT_QKV_SYNTHETIC_ACTIVATION",
+  "case": "bf16_gate_up_proj",
+  "module": "model.layers.18.mlp.gate_up_proj",
+  "live_identity": {
+    "kernel_name": "_ZN7cutlass7Kernel2I68cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8EEvNT_6ParamsE",
+    "grid": [
+      8,
+      192,
+      1
+    ],
+    "block": [
+      32,
+      1,
+      1
+    ],
+    "dynamic_shared_bytes": 16896,
+    "register_and_shared_attributes": {
+      "NUM_REGS": 124,
+      "SHARED_SIZE_BYTES": 0,
+      "MAX_DYNAMIC_SHARED_SIZE_BYTES": 49152
+    },
+    "homogeneous_api_blocks_per_sm": 5,
+    "tools_id": 4294967296,
+    "parameter_offset": 0,
+    "parameter_size": 360,
+    "live_reference_offsets": {
+      "weight": 288
+    }
+  },
+  "source_weights": {
+    "model.layers.18.mlp.gate_proj.weight": "model-00003-of-00005.safetensors",
+    "model.layers.18.mlp.up_proj.weight": "model-00003-of-00005.safetensors"
+  },
+  "index_sha256": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc",
+  "input_shape": [
+    8,
+    4096
+  ],
+  "input_sha256": "730a07b3bd3a684e69a7ac700028a2d2eee6a5ad8e48812f582c6930b7a08749",
+  "input_is_synthetic": true,
+  "output_shape": [
+    8,
+    24576
+  ],
+  "trials": [
+    {
+      "trial": 0,
+      "exact_match": true,
+      "output_sha256": "ac7c23b50bebe9503a3428830aadcd00c4eda2ac845c3ddb6e66ee87e07afedf"
+    },
+    {
+      "trial": 1,
+      "exact_match": true,
+      "output_sha256": "ac7c23b50bebe9503a3428830aadcd00c4eda2ac845c3ddb6e66ee87e07afedf"
+    },
+    {
+      "trial": 2,
+      "exact_match": true,
+      "output_sha256": "ac7c23b50bebe9503a3428830aadcd00c4eda2ac845c3ddb6e66ee87e07afedf"
+    }
+  ],
+  "torch_version": "2.14.0+cu132",
+  "vllm_version": "0.33.0+precompiled",
+  "backend_source_sha256": "d045926d733d71e32a3aae306043b4bfd99093737898ac80919da7d4774d3878",
+  "gate3_reference_sha256": "67eb9ac50b0fc61f636f494abae1861f7a967767f373095ad2f5538fd9f32a23",
+  "full_model_loaded": false,
+  "metrics_scope": "correctness, identity, and function attributes only",
+  "overlap_pilot": {
+    "scope": "ONE_P0_BLOCK_ISOLATED_CHECKPOINT_PROJECTION",
+    "profile": "P0",
+    "block": 0,
+    "fp32_probe": {
+      "spec": {
+        "probe": "fp32_fma",
+        "variant": "light",
+        "threads": 32,
+        "shared_bytes": 0,
+        "items": 65536,
+        "vector": 16,
+        "rounds": 8,
+        "input_pattern": "0.25 + ((16*i+j)%64)/128",
+        "expected_flops": 16777216
+      },
+      "grid": 64,
+      "cubin_sha256": "1daee1dd84515740d4e2e05d16634e708532d3f166b8e28397c058035a7c36e7",
+      "fma_operations": 8388608,
+      "flops": 16777216,
+      "input_bytes": 4194304,
+      "output_bytes": 4194304,
+      "virtual_groups": 128,
+      "nonempty_ctas": 64,
+      "work_hash": "99a95785b68921ad5dcaa1528fd2baadfd0dffcabf8762c7cd3186d4753f2e94"
+    },
+    "conditions": [
+      {
+        "mode": "serial_ab",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 193568.00615787506,
+        "a_event_ns": 127039.99876976013,
+        "b_event_ns": 52416.00051522255
+      },
+      {
+        "mode": "same_stream_control",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 188191.9950246811,
+        "a_event_ns": 127232.00023174286,
+        "b_event_ns": 50815.99950790405
+      },
+      {
+        "mode": "parallel_ab",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 166400.0004529953,
+        "a_event_ns": 129247.9932308197,
+        "b_event_ns": 155775.9940624237
+      },
+      {
+        "mode": "parallel_ba",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 174784.00468826294,
+        "a_event_ns": 135424.00300502777,
+        "b_event_ns": 164031.9973230362
+      },
+      {
+        "mode": "b_alone",
+        "completed_A": 0,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 45248.00181388855,
+        "a_event_ns": null,
+        "b_event_ns": 34944.00158524513
+      },
+      {
+        "mode": "serial_ba",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 173856.0050725937,
+        "a_event_ns": 126975.99828243256,
+        "b_event_ns": 34816.00061058998
+      },
+      {
+        "mode": "non_overlap_control",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 189983.99376869202,
+        "a_event_ns": 126911.99779510498,
+        "b_event_ns": 50400.00006556511
+      },
+      {
+        "mode": "empty_control",
+        "completed_A": 1,
+        "completed_B": 0,
+        "output_checks_passed": true,
+        "joint_event_ns": 138687.99805641174,
+        "a_event_ns": 129023.99897575378,
+        "b_event_ns": null
+      },
+      {
+        "mode": "a_alone",
+        "completed_A": 1,
+        "completed_B": 0,
+        "output_checks_passed": true,
+        "joint_event_ns": 137024.00028705597,
+        "a_event_ns": 127232.00023174286,
+        "b_event_ns": null
+      }
+    ],
+    "warmup": [
+      {
+        "mode": "a_alone",
+        "completed_A": 1,
+        "completed_B": 0,
+        "output_checks_passed": true,
+        "joint_event_ns": 139456.00390434265,
+        "a_event_ns": 128767.99702644348,
+        "b_event_ns": null
+      },
+      {
+        "mode": "b_alone",
+        "completed_A": 0,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 62368.0017888546,
+        "a_event_ns": null,
+        "b_event_ns": 50335.99957823753
+      },
+      {
+        "mode": "serial_ab",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 195583.9991569519,
+        "a_event_ns": 128831.99751377106,
+        "b_event_ns": 50400.00006556511
+      },
+      {
+        "mode": "serial_ba",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 174239.99309539795,
+        "a_event_ns": 126975.99828243256,
+        "b_event_ns": 35551.998764276505
+      },
+      {
+        "mode": "parallel_ab",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 174208.00030231476,
+        "a_event_ns": 133087.99266815186,
+        "b_event_ns": 163711.99488639832
+      },
+      {
+        "mode": "parallel_ba",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 188767.99941062927,
+        "a_event_ns": 145375.99682807922,
+        "b_event_ns": 178080.0074338913
+      },
+      {
+        "mode": "empty_control",
+        "completed_A": 1,
+        "completed_B": 0,
+        "output_checks_passed": true,
+        "joint_event_ns": 136544.00408267975,
+        "a_event_ns": 126975.99828243256,
+        "b_event_ns": null
+      },
+      {
+        "mode": "same_stream_control",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 187071.9939470291,
+        "a_event_ns": 127167.99974441528,
+        "b_event_ns": 50847.99975156784
+      },
+      {
+        "mode": "non_overlap_control",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 192064.00215625763,
+        "a_event_ns": 128800.00472068787,
+        "b_event_ns": 50335.99957823753
+      }
+    ],
+    "probe_identity": {
+      "symbol": "fp32_light",
+      "registers_per_thread": 22,
+      "static_shared_bytes": 0,
+      "blocks_per_sm": 24
+    },
+    "standalone_acceptance": null,
+    "overlap_code_sha256": "231fdd591993578521398d8f43f6f4e8dc7de053f5662c020a2d0f84fb817853"
+  }
+}

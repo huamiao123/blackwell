@@ -1,3 +1,5 @@
+test_staging_permutation_preserves_read_digest (test_dram_reference.DramReferenceTests.test_staging_permutation_preserves_read_digest) ... ok
+test_work_is_equal_across_grid_and_cta_shape (test_dram_reference.DramReferenceTests.test_work_is_equal_across_grid_and_cta_shape) ... ok
 test_measured_serial_and_two_direction_effects (test_protocols.MetricsTests.test_measured_serial_and_two_direction_effects) ... ok
 test_overlap_not_tail_proration_or_independent_steps (test_protocols.MetricsTests.test_overlap_not_tail_proration_or_independent_steps) ... ok
 test_partial_work_profile_and_arithmetic_serial_rejected (test_protocols.MetricsTests.test_partial_work_profile_and_arithmetic_serial_rejected) ... ok
@@ -15,6 +17,6 @@ test_gpu_times_outside_cpu_range_still_join_by_correlation (test_trace_and_guard
 test_parallel_same_stream_and_wrong_gpu_refused (test_trace_and_guard.TraceTests.test_parallel_same_stream_and_wrong_gpu_refused) ... ok
 
 ----------------------------------------------------------------------
-Ran 15 tests in 0.931s
+Ran 17 tests in 1.074s
 
 OK

@@ -13,10 +13,11 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--analysis', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--grids', type=int, nargs='+', default=[128, 32])
     args = parser.parse_args()
-    fig, axes = plt.subplots(2, 1, figsize=(8.4, 4.3), sharex=True, layout='constrained')
+    fig, axes = plt.subplots(2, 1, figsize=(8.4, 2.5 + 0.9 * len(args.grids)), sharex=True, layout='constrained')
     for ax, precision in zip(axes, ['nvfp4', 'bf16']):
-        for y, grid in enumerate((128, 32)):
+        for y, grid in enumerate(args.grids):
             path = args.analysis / f'grid{grid}_trace/qkv_pilot_intervals.csv'
             rows = {r['role']: r for r in read_csv(path)
                     if r['case'] == precision + '_qkv_proj' and r['mode'] == 'parallel_ab'}
@@ -30,9 +31,9 @@ if __name__ == '__main__':
                 ax.broken_barh([(a_tail, b_end - a_tail)], (y + 0.03, 0.25),
                                facecolor='#edd0aa', edgecolor='#965225', hatch='///', linewidth=0.45)
                 ax.text(b_end + 0.8, y + 0.15, f'{b_end - a_tail:.1f} us tail', va='center', fontsize=8)
-        ax.set_yticks([0, 1], ['128 CTA', '32 CTA'])
+        ax.set_yticks(range(len(args.grids)), [f'{grid} CTA' for grid in args.grids])
         ax.set_title(f'{precision.upper()} QKV with FP32 Light', loc='left', fontsize=11)
-        ax.set_ylim(-0.45, 1.46)
+        ax.set_ylim(-0.45, len(args.grids) - 0.54)
         ax.grid(axis='x', alpha=0.2)
     axes[-1].set_xlabel('Time from first GPU kernel start (us)')
     axes[-1].set_xlim(0, 83)

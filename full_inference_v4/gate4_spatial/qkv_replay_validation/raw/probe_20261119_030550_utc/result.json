@@ -1,0 +1,282 @@
+{
+  "status": "QKV_OVERLAP_PILOT_OUTPUTS_VERIFIED",
+  "scope": "ISOLATED_CHECKPOINT_QKV_SYNTHETIC_ACTIVATION",
+  "case": "bf16_qkv_proj",
+  "module": "model.layers.18.self_attn.qkv_proj",
+  "live_identity": {
+    "kernel_name": "_ZN7cutlass7Kernel2I68cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8EEvNT_6ParamsE",
+    "grid": [
+      8,
+      48,
+      1
+    ],
+    "block": [
+      32,
+      1,
+      1
+    ],
+    "dynamic_shared_bytes": 16896,
+    "register_and_shared_attributes": {
+      "NUM_REGS": 124,
+      "SHARED_SIZE_BYTES": 0,
+      "MAX_DYNAMIC_SHARED_SIZE_BYTES": 49152
+    },
+    "homogeneous_api_blocks_per_sm": 5,
+    "tools_id": 4294967296,
+    "parameter_offset": 0,
+    "parameter_size": 360,
+    "live_reference_offsets": {
+      "weight": 288
+    }
+  },
+  "source_weights": {
+    "model.layers.18.self_attn.q_proj.weight": "model-00003-of-00005.safetensors",
+    "model.layers.18.self_attn.k_proj.weight": "model-00003-of-00005.safetensors",
+    "model.layers.18.self_attn.v_proj.weight": "model-00003-of-00005.safetensors"
+  },
+  "index_sha256": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc",
+  "input_shape": [
+    8,
+    4096
+  ],
+  "input_sha256": "730a07b3bd3a684e69a7ac700028a2d2eee6a5ad8e48812f582c6930b7a08749",
+  "input_is_synthetic": true,
+  "output_shape": [
+    8,
+    6144
+  ],
+  "trials": [
+    {
+      "trial": 0,
+      "exact_match": true,
+      "output_sha256": "8ce05fb335da459a55b6eb1d821c9ecc1ad9346672737ee9c0c7802375886eb1"
+    },
+    {
+      "trial": 1,
+      "exact_match": true,
+      "output_sha256": "8ce05fb335da459a55b6eb1d821c9ecc1ad9346672737ee9c0c7802375886eb1"
+    },
+    {
+      "trial": 2,
+      "exact_match": true,
+      "output_sha256": "8ce05fb335da459a55b6eb1d821c9ecc1ad9346672737ee9c0c7802375886eb1"
+    }
+  ],
+  "torch_version": "2.14.0+cu132",
+  "vllm_version": "0.33.0+precompiled",
+  "backend_source_sha256": "d045926d733d71e32a3aae306043b4bfd99093737898ac80919da7d4774d3878",
+  "gate3_reference_sha256": "072f98fc3de29b9a0e9d3172923bfa8c3cfee0ea3c76d00a69c7c2c2f6269b96",
+  "full_model_loaded": false,
+  "metrics_scope": "correctness, identity, and function attributes only",
+  "overlap_pilot": {
+    "scope": "ONE_P0_BLOCK_ISOLATED_CHECKPOINT_PROJECTION",
+    "profile": "P0",
+    "block": 1,
+    "fp32_probe": {
+      "spec": {
+        "probe": "bf16_mma",
+        "variant": "light",
+        "threads": 32,
+        "shared_bytes": 1024,
+        "tiles": 256,
+        "m": 16,
+        "n": 16,
+        "k_step": 16,
+        "k_staging": 16,
+        "mma_rounds": 128,
+        "expected_flops": 268435456
+      },
+      "grid": 64,
+      "cubin_sha256": "1daee1dd84515740d4e2e05d16634e708532d3f166b8e28397c058035a7c36e7",
+      "mma_operations": 32768,
+      "flops": 268435456,
+      "input_bytes": 262144,
+      "output_bytes": 262144,
+      "virtual_groups": 256,
+      "nonempty_ctas": 64,
+      "work_hash": "5d329020b88ded98c3b031ee7137224d184796405c10ab6aded1ec7d138fc509"
+    },
+    "conditions": [
+      {
+        "mode": "b_alone",
+        "completed_A": 0,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 28799.99950528145,
+        "a_event_ns": null,
+        "b_event_ns": 18688.000738620758
+      },
+      {
+        "mode": "parallel_ab",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 33087.99862861633,
+        "a_event_ns": 22911.999374628067,
+        "b_event_ns": 22784.000262618065
+      },
+      {
+        "mode": "non_overlap_control",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 53504.00134921074,
+        "a_event_ns": 22463.999688625336,
+        "b_event_ns": 17696.000635623932
+      },
+      {
+        "mode": "empty_control",
+        "completed_A": 1,
+        "completed_B": 0,
+        "output_checks_passed": true,
+        "joint_event_ns": 32960.00137925148,
+        "a_event_ns": 22528.00017595291,
+        "b_event_ns": null
+      },
+      {
+        "mode": "serial_ab",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 52287.9995405674,
+        "a_event_ns": 22431.999444961548,
+        "b_event_ns": 17664.000391960144
+      },
+      {
+        "mode": "a_alone",
+        "completed_A": 1,
+        "completed_B": 0,
+        "output_checks_passed": true,
+        "joint_event_ns": 32480.00144958496,
+        "a_event_ns": 22463.999688625336,
+        "b_event_ns": null
+      },
+      {
+        "mode": "same_stream_control",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 51231.998950242996,
+        "a_event_ns": 22624.000906944275,
+        "b_event_ns": 18079.999834299088
+      },
+      {
+        "mode": "serial_ba",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 53568.001836538315,
+        "a_event_ns": 22528.00017595291,
+        "b_event_ns": 18495.99927663803
+      },
+      {
+        "mode": "parallel_ba",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 32671.99918627739,
+        "a_event_ns": 22816.000506281853,
+        "b_event_ns": 22687.9995316267
+      }
+    ],
+    "warmup": [
+      {
+        "mode": "a_alone",
+        "completed_A": 1,
+        "completed_B": 0,
+        "output_checks_passed": true,
+        "joint_event_ns": 32896.000891923904,
+        "a_event_ns": 22495.999932289124,
+        "b_event_ns": null
+      },
+      {
+        "mode": "b_alone",
+        "completed_A": 0,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 28672.000393271446,
+        "a_event_ns": null,
+        "b_event_ns": 18656.00049495697
+      },
+      {
+        "mode": "serial_ab",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 56768.00012588501,
+        "a_event_ns": 24256.00029528141,
+        "b_event_ns": 17664.000391960144
+      },
+      {
+        "mode": "serial_ba",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 55263.99984955788,
+        "a_event_ns": 24576.00086927414,
+        "b_event_ns": 18271.999433636665
+      },
+      {
+        "mode": "parallel_ab",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 33376.00082159042,
+        "a_event_ns": 22879.99913096428,
+        "b_event_ns": 22752.000018954277
+      },
+      {
+        "mode": "parallel_ba",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 33215.999603271484,
+        "a_event_ns": 22911.999374628067,
+        "b_event_ns": 22816.000506281853
+      },
+      {
+        "mode": "empty_control",
+        "completed_A": 1,
+        "completed_B": 0,
+        "output_checks_passed": true,
+        "joint_event_ns": 31711.99932694435,
+        "a_event_ns": 22399.99920129776,
+        "b_event_ns": null
+      },
+      {
+        "mode": "same_stream_control",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 50464.000552892685,
+        "a_event_ns": 22752.000018954277,
+        "b_event_ns": 18079.999834299088
+      },
+      {
+        "mode": "non_overlap_control",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 52799.999713897705,
+        "a_event_ns": 22431.999444961548,
+        "b_event_ns": 17696.000635623932
+      }
+    ],
+    "probe_identity": {
+      "symbol": "tensor_light",
+      "registers_per_thread": 43,
+      "static_shared_bytes": 0,
+      "blocks_per_sm": 24
+    },
+    "standalone_acceptance": {
+      "mode": "b_alone",
+      "completed_A": 0,
+      "completed_B": 1,
+      "output_checks_passed": true,
+      "joint_event_ns": 29696.00073993206,
+      "a_event_ns": null,
+      "b_event_ns": 18624.000251293182
+    },
+    "overlap_code_sha256": "231fdd591993578521398d8f43f6f4e8dc7de053f5662c020a2d0f84fb817853"
+  }
+}

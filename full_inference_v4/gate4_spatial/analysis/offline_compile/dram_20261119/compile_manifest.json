@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/usr/local/cuda-13.3/bin/nvcc",
+    "-arch=sm_120",
+    "-std=c++17",
+    "-O3",
+    "-lineinfo",
+    "--cubin",
+    "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/build/dram_20261119_031204_utc/dram_streaming.cu",
+    "-o",
+    "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/build/dram_20261119_031204_utc/dram_streaming_sm120.cubin"
+  ],
+  "nvcc_version": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2026 NVIDIA Corporation\nBuilt on Tue_Jun_09_02:43:40_PM_PDT_2026\nCuda compilation tools, release 13.3, V13.3.73\nBuild cuda_13.3.r13.3/compiler.38244171_0\n",
+  "cpu_only": true,
+  "gpu_module_loaded": false,
+  "source_sha256": "a237e84ae39016e5d0c981070ae5acde73d9811b70b249cb1feebf7df55eed73",
+  "cubin_sha256": "de42382efd58fced532eaeff832df34c46ac57dfe90bea569dd0891e89b771c9"
+}

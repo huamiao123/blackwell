@@ -1,4 +1,8 @@
-# 资源驻留阶段报告：CPU模型及边界
+# 资源驻留阶段报告
+
+2026-11-19 实测 QKV 和 Gate/Up 的同质 Occupancy API 分别给出 NVFP4 1 CTA/SM、BF16 5 CTA/SM。NVFP4 QKV 与 64 CTA FP32 Heavy 的单 CTA 动态共享内存总量超出单 SM 上界，仍在设备的 Kernel 实际时间线上重叠 21.44–21.50 μs。必要条件及时间证据共同支持跨 SM 解释。同 SM CTA 位置证据尚未取得。[逐层资源表](analysis/projection_inventory.csv) [最新驻留与重叠对照](analysis/live_overlap_evidence_20261119.csv)
+
+## 首轮 CPU 审查存档
 
 
 本次交付为 **CPU 侧审计、实现与审查材料**。没有加载模型权重，没有初始化 CUDA Context，没有运行 GPU Kernel、模型推理、NSYS 或 NCU。CUDA 离线编译与反汇编只使用 CPU，不等于 GPU 正确性验收。

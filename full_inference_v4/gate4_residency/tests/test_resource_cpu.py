@@ -4,6 +4,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 from resource_model import *
 from partition_model import register_partition_fit
 from evidence import classify
+from build_projection_inventory import inventory
 
 class ResourceTests(unittest.TestCase):
     def setUp(self):
@@ -29,5 +30,14 @@ class ResourceTests(unittest.TestCase):
         probe=dict(threads=128,registers_per_thread=32,static_shared_bytes=1024,dynamic_shared_bytes=32768)
         self.assertFalse(mixed(self.main['bf16'],probe,self.caps,n_a=1)['shared_limited'])
         self.assertTrue(mixed(self.main['bf16'],probe,self.caps,n_a=6)['shared_limited'])
+
+    def test_projection_inventory_matches_all_attributed_nodes(self):
+        rows = inventory()
+        self.assertEqual(len(rows), len({(r['precision'], r['cuda_tools_id']) for r in rows}))
+        self.assertEqual(len({(r['precision'], r['logical_op']) for r in rows}), len(
+            read_csv(V4 / 'gate4_residency/analysis/cta_resource_table.csv')))
+        for row in rows:
+            self.assertEqual(row['actual_sm_distribution'], 'UNAVAILABLE')
+            self.assertLessEqual(row['grid_distinct_sm_fraction_upper_bound'], 1)
 
 if __name__=='__main__':unittest.main()

@@ -1,0 +1,49 @@
+{
+  "profile_command": [
+    "nsys",
+    "profile",
+    "--trace=cuda,nvtx",
+    "--sample=none",
+    "--cpuctxsw=none",
+    "--wait=all",
+    "--cuda-graph-trace=node",
+    "--output=/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/qkv_replay_validation/traces/probe_20261119_030023_utc/calibration",
+    "python3",
+    "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/src/run_probe_supervised.py",
+    "--run-id",
+    "probe_20261119_030023_utc",
+    "--window",
+    "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/probe-window-7q6wyou4/window.json",
+    "--mode",
+    "qkv_overlap_nvfp4",
+    "--operator",
+    "qkv_proj",
+    "--probe-grid",
+    "64",
+    "--probe-symbol",
+    "tensor_light"
+  ],
+  "export_command": [
+    "nsys",
+    "export",
+    "--type=sqlite",
+    "--output=/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/qkv_replay_validation/traces/probe_20261119_030023_utc/calibration.sqlite",
+    "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/qkv_replay_validation/traces/probe_20261119_030023_utc/calibration.nsys-rep"
+  ],
+  "environment": {
+    "G4_PROBE_TRACE": "1",
+    "TMPDIR": "/home/wangzhihang/fp4-llm/tmp"
+  },
+  "files": [
+    {
+      "server_path": "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/qkv_replay_validation/traces/probe_20261119_030023_utc/calibration.nsys-rep",
+      "bytes": 262923,
+      "sha256": "4a87edf3a453765e501fb25273c205781aefedc8747df38eaa19ee517b022d8d"
+    },
+    {
+      "server_path": "/home/wangzhihang/fp4-llm/results/full_inference_v4/gate4_spatial/qkv_replay_validation/traces/probe_20261119_030023_utc/calibration.sqlite",
+      "bytes": 659456,
+      "sha256": "83a03fb9c283da1cad39e86a70b6c039f939e2c22e6276f818f06aa0e889c66b"
+    }
+  ]
+}

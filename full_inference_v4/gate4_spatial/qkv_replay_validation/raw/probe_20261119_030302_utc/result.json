@@ -1,0 +1,271 @@
+{
+  "status": "QKV_OVERLAP_PILOT_OUTPUTS_VERIFIED",
+  "scope": "ISOLATED_CHECKPOINT_QKV_SYNTHETIC_ACTIVATION",
+  "case": "bf16_gate_up_proj",
+  "module": "model.layers.18.mlp.gate_up_proj",
+  "live_identity": {
+    "kernel_name": "_ZN7cutlass7Kernel2I68cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8EEvNT_6ParamsE",
+    "grid": [
+      8,
+      192,
+      1
+    ],
+    "block": [
+      32,
+      1,
+      1
+    ],
+    "dynamic_shared_bytes": 16896,
+    "register_and_shared_attributes": {
+      "NUM_REGS": 124,
+      "SHARED_SIZE_BYTES": 0,
+      "MAX_DYNAMIC_SHARED_SIZE_BYTES": 49152
+    },
+    "homogeneous_api_blocks_per_sm": 5,
+    "tools_id": 4294967296,
+    "parameter_offset": 0,
+    "parameter_size": 360,
+    "live_reference_offsets": {
+      "weight": 288
+    }
+  },
+  "source_weights": {
+    "model.layers.18.mlp.gate_proj.weight": "model-00003-of-00005.safetensors",
+    "model.layers.18.mlp.up_proj.weight": "model-00003-of-00005.safetensors"
+  },
+  "index_sha256": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc",
+  "input_shape": [
+    8,
+    4096
+  ],
+  "input_sha256": "730a07b3bd3a684e69a7ac700028a2d2eee6a5ad8e48812f582c6930b7a08749",
+  "input_is_synthetic": true,
+  "output_shape": [
+    8,
+    24576
+  ],
+  "trials": [
+    {
+      "trial": 0,
+      "exact_match": true,
+      "output_sha256": "ac7c23b50bebe9503a3428830aadcd00c4eda2ac845c3ddb6e66ee87e07afedf"
+    },
+    {
+      "trial": 1,
+      "exact_match": true,
+      "output_sha256": "ac7c23b50bebe9503a3428830aadcd00c4eda2ac845c3ddb6e66ee87e07afedf"
+    },
+    {
+      "trial": 2,
+      "exact_match": true,
+      "output_sha256": "ac7c23b50bebe9503a3428830aadcd00c4eda2ac845c3ddb6e66ee87e07afedf"
+    }
+  ],
+  "torch_version": "2.14.0+cu132",
+  "vllm_version": "0.33.0+precompiled",
+  "backend_source_sha256": "d045926d733d71e32a3aae306043b4bfd99093737898ac80919da7d4774d3878",
+  "gate3_reference_sha256": "67eb9ac50b0fc61f636f494abae1861f7a967767f373095ad2f5538fd9f32a23",
+  "full_model_loaded": false,
+  "metrics_scope": "correctness, identity, and function attributes only",
+  "overlap_pilot": {
+    "scope": "ONE_P0_BLOCK_ISOLATED_CHECKPOINT_PROJECTION",
+    "profile": "P0",
+    "block": 2,
+    "fp32_probe": {
+      "spec": {
+        "probe": "fp32_fma",
+        "variant": "light",
+        "threads": 32,
+        "shared_bytes": 0,
+        "items": 65536,
+        "vector": 16,
+        "rounds": 8,
+        "input_pattern": "0.25 + ((16*i+j)%64)/128",
+        "expected_flops": 16777216
+      },
+      "grid": 64,
+      "cubin_sha256": "1daee1dd84515740d4e2e05d16634e708532d3f166b8e28397c058035a7c36e7",
+      "fma_operations": 8388608,
+      "flops": 16777216,
+      "input_bytes": 4194304,
+      "output_bytes": 4194304,
+      "virtual_groups": 128,
+      "nonempty_ctas": 64,
+      "work_hash": "99a95785b68921ad5dcaa1528fd2baadfd0dffcabf8762c7cd3186d4753f2e94"
+    },
+    "conditions": [
+      {
+        "mode": "parallel_ba",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 174528.00273895264,
+        "a_event_ns": 133215.993642807,
+        "b_event_ns": 163936.00404262543
+      },
+      {
+        "mode": "serial_ba",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 176063.99953365326,
+        "a_event_ns": 126975.99828243256,
+        "b_event_ns": 36959.998309612274
+      },
+      {
+        "mode": "non_overlap_control",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 192320.00410556793,
+        "a_event_ns": 127008.00597667694,
+        "b_event_ns": 50367.99982190132
+      },
+      {
+        "mode": "b_alone",
+        "completed_A": 0,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 46847.99909591675,
+        "a_event_ns": null,
+        "b_event_ns": 37023.99879693985
+      },
+      {
+        "mode": "serial_ab",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 190975.99387168884,
+        "a_event_ns": 127008.00597667694,
+        "b_event_ns": 50271.99909090996
+      },
+      {
+        "mode": "same_stream_control",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 191648.00643920898,
+        "a_event_ns": 129056.00666999817,
+        "b_event_ns": 50847.99975156784
+      },
+      {
+        "mode": "empty_control",
+        "completed_A": 1,
+        "completed_B": 0,
+        "output_checks_passed": true,
+        "joint_event_ns": 136800.00603199005,
+        "a_event_ns": 127200.00743865967,
+        "b_event_ns": null
+      },
+      {
+        "mode": "a_alone",
+        "completed_A": 1,
+        "completed_B": 0,
+        "output_checks_passed": true,
+        "joint_event_ns": 137024.00028705597,
+        "a_event_ns": 127327.99351215363,
+        "b_event_ns": null
+      },
+      {
+        "mode": "parallel_ab",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 173184.00740623474,
+        "a_event_ns": 133024.00708198547,
+        "b_event_ns": 161599.9937057495
+      }
+    ],
+    "warmup": [
+      {
+        "mode": "a_alone",
+        "completed_A": 1,
+        "completed_B": 0,
+        "output_checks_passed": true,
+        "joint_event_ns": 141727.9988527298,
+        "a_event_ns": 128672.00374603271,
+        "b_event_ns": null
+      },
+      {
+        "mode": "b_alone",
+        "completed_A": 0,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 62176.00032687187,
+        "a_event_ns": null,
+        "b_event_ns": 50303.999334573746
+      },
+      {
+        "mode": "serial_ab",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 200064.0034675598,
+        "a_event_ns": 128703.9965391159,
+        "b_event_ns": 50335.99957823753
+      },
+      {
+        "mode": "serial_ba",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 176448.0024576187,
+        "a_event_ns": 127008.00597667694,
+        "b_event_ns": 34752.000123262405
+      },
+      {
+        "mode": "parallel_ab",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 194815.993309021,
+        "a_event_ns": 149312.00444698334,
+        "b_event_ns": 182016.00015163422
+      },
+      {
+        "mode": "parallel_ba",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 171360.00096797943,
+        "a_event_ns": 131007.99918174744,
+        "b_event_ns": 159520.0002193451
+      },
+      {
+        "mode": "empty_control",
+        "completed_A": 1,
+        "completed_B": 0,
+        "output_checks_passed": true,
+        "joint_event_ns": 137119.99356746674,
+        "a_event_ns": 126880.00500202179,
+        "b_event_ns": null
+      },
+      {
+        "mode": "same_stream_control",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 188032.00125694275,
+        "a_event_ns": 127167.99974441528,
+        "b_event_ns": 50847.99975156784
+      },
+      {
+        "mode": "non_overlap_control",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 192159.9954366684,
+        "a_event_ns": 126880.00500202179,
+        "b_event_ns": 50464.000552892685
+      }
+    ],
+    "probe_identity": {
+      "symbol": "fp32_light",
+      "registers_per_thread": 22,
+      "static_shared_bytes": 0,
+      "blocks_per_sm": 24
+    },
+    "standalone_acceptance": null,
+    "overlap_code_sha256": "231fdd591993578521398d8f43f6f4e8dc7de053f5662c020a2d0f84fb817853"
+  }
+}

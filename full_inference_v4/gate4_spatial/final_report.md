@@ -1,4 +1,8 @@
-# 空间并发阶段报告：CPU准备完成，GPU结果尚无
+# 空间并发阶段报告
+
+2026-11-19 的优先矩阵已覆盖 BF16/NVFP4 QKV 和 Gate/Up，证据来自独立无 Profiling 配对和 CUDA 节点轨迹。固定工作量下，Gate/Up 的 FP32 探针与 QKV 呈现相反的联合完成收益。QKV 的 BF16 Tensor Light 组合在 NVFP4 上平均损失约 1.2%–1.3%，P2 两个顺序均在主投影窗口内完成。逐次数据、置信区间、有效辅助工作量和失败记录见 [实验报告](qkv_replay_validation/qkv_gateup_20261119.md)。
+
+## 首轮 CPU 审查存档
 
 
 本次交付为 **CPU 侧审计、实现与审查材料**。没有加载模型权重，没有初始化 CUDA Context，没有运行 GPU Kernel、模型推理、NSYS 或 NCU。CUDA 离线编译与反汇编只使用 CPU，不等于 GPU 正确性验收。

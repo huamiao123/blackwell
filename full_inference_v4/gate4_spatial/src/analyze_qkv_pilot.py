@@ -1,4 +1,4 @@
-"""Validate a paired BF16/NVFP4 QKV trace and summarize one block per precision."""
+"""Validate paired BF16/NVFP4 projection traces, one block per precision."""
 
 import argparse
 from contextlib import closing
@@ -110,7 +110,9 @@ def load_run(run, trace):
                               b_throughput_retention=b_base / b['duration_ns'], joint_event_ns=row['joint_event_ns'],
                               matched_serial_event_ns=serial['joint_event_ns'] if serial else None,
                               joint_event_speedup=serial['joint_event_ns'] / row['joint_event_ns'] if serial else None,
-                              scope='ONE_P2_BLOCK_ISOLATED_QKV', same_sm='UNVERIFIED'))
+                              scope=('ONE_P2_BLOCK_ISOLATED_GATE_UP' if result['case'].endswith('_gate_up_proj')
+                                     else 'ONE_P2_BLOCK_ISOLATED_QKV'),
+                              same_sm='UNVERIFIED'))
     return result, list(output.values()), summaries
 
 
@@ -126,6 +128,7 @@ if __name__ == '__main__':
          b['case'].removesuffix('_qkv_proj').removesuffix('_gate_up_proj')} != {'nvfp4', 'bf16'} or
             a['case'].split('_', 1)[1] != b['case'].split('_', 1)[1] or
             a['input_sha256'] != b['input_sha256'] or
+            a['overlap_pilot'].get('probe_identity') != b['overlap_pilot'].get('probe_identity') or
             a['overlap_pilot']['fp32_probe'] != b['overlap_pilot']['fp32_probe']):
         raise ValueError('mismatched cross-precision workload')
     write_csv(args.output / 'qkv_pilot_intervals.csv', [r for _, intervals, _ in data for r in intervals])

@@ -2,20 +2,20 @@
   {
     "task": "gate4_spatial",
     "exit_code": 0,
-    "test_count": 15,
+    "test_count": 17,
     "gpu_runtime_imports_denied": true,
     "model_weight_reads_denied": true,
     "scope": "CPU correctness tests; no GPU performance or co-residency validation",
-    "log_sha256": "3934451b78d04be7ac84ee0aadaa196e354e1e45251ab83e26365a6cb59c427f"
+    "log_sha256": "991b3ae0b77575897aefda7906388bd59c1a0873d713093cc270f728e5ceb490"
   },
   {
     "task": "gate4_residency",
     "exit_code": 0,
-    "test_count": 4,
+    "test_count": 5,
     "gpu_runtime_imports_denied": true,
     "model_weight_reads_denied": true,
     "scope": "CPU correctness tests; no GPU performance or co-residency validation",
-    "log_sha256": "e6d2b3ad664fc07247362e6bde087a69bc5dfc2979c20a3a1d054079cecb173d"
+    "log_sha256": "1c11910812c132a8338bbd0da5bbb7c2f102bee01f0ddbacf6128a5570014beb"
   },
   {
     "task": "gate4_inference",

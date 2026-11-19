@@ -1,0 +1,271 @@
+{
+  "status": "QKV_OVERLAP_PILOT_OUTPUTS_VERIFIED",
+  "scope": "ISOLATED_CHECKPOINT_QKV_SYNTHETIC_ACTIVATION",
+  "case": "bf16_gate_up_proj",
+  "module": "model.layers.18.mlp.gate_up_proj",
+  "live_identity": {
+    "kernel_name": "_ZN7cutlass7Kernel2I68cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8EEvNT_6ParamsE",
+    "grid": [
+      8,
+      192,
+      1
+    ],
+    "block": [
+      32,
+      1,
+      1
+    ],
+    "dynamic_shared_bytes": 16896,
+    "register_and_shared_attributes": {
+      "NUM_REGS": 124,
+      "SHARED_SIZE_BYTES": 0,
+      "MAX_DYNAMIC_SHARED_SIZE_BYTES": 49152
+    },
+    "homogeneous_api_blocks_per_sm": 5,
+    "tools_id": 4294967296,
+    "parameter_offset": 0,
+    "parameter_size": 360,
+    "live_reference_offsets": {
+      "weight": 288
+    }
+  },
+  "source_weights": {
+    "model.layers.18.mlp.gate_proj.weight": "model-00003-of-00005.safetensors",
+    "model.layers.18.mlp.up_proj.weight": "model-00003-of-00005.safetensors"
+  },
+  "index_sha256": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc",
+  "input_shape": [
+    8,
+    4096
+  ],
+  "input_sha256": "730a07b3bd3a684e69a7ac700028a2d2eee6a5ad8e48812f582c6930b7a08749",
+  "input_is_synthetic": true,
+  "output_shape": [
+    8,
+    24576
+  ],
+  "trials": [
+    {
+      "trial": 0,
+      "exact_match": true,
+      "output_sha256": "ac7c23b50bebe9503a3428830aadcd00c4eda2ac845c3ddb6e66ee87e07afedf"
+    },
+    {
+      "trial": 1,
+      "exact_match": true,
+      "output_sha256": "ac7c23b50bebe9503a3428830aadcd00c4eda2ac845c3ddb6e66ee87e07afedf"
+    },
+    {
+      "trial": 2,
+      "exact_match": true,
+      "output_sha256": "ac7c23b50bebe9503a3428830aadcd00c4eda2ac845c3ddb6e66ee87e07afedf"
+    }
+  ],
+  "torch_version": "2.14.0+cu132",
+  "vllm_version": "0.33.0+precompiled",
+  "backend_source_sha256": "d045926d733d71e32a3aae306043b4bfd99093737898ac80919da7d4774d3878",
+  "gate3_reference_sha256": "67eb9ac50b0fc61f636f494abae1861f7a967767f373095ad2f5538fd9f32a23",
+  "full_model_loaded": false,
+  "metrics_scope": "correctness, identity, and function attributes only",
+  "overlap_pilot": {
+    "scope": "ONE_P0_BLOCK_ISOLATED_CHECKPOINT_PROJECTION",
+    "profile": "P0",
+    "block": 1,
+    "fp32_probe": {
+      "spec": {
+        "probe": "fp32_fma",
+        "variant": "light",
+        "threads": 32,
+        "shared_bytes": 0,
+        "items": 65536,
+        "vector": 16,
+        "rounds": 8,
+        "input_pattern": "0.25 + ((16*i+j)%64)/128",
+        "expected_flops": 16777216
+      },
+      "grid": 64,
+      "cubin_sha256": "1daee1dd84515740d4e2e05d16634e708532d3f166b8e28397c058035a7c36e7",
+      "fma_operations": 8388608,
+      "flops": 16777216,
+      "input_bytes": 4194304,
+      "output_bytes": 4194304,
+      "virtual_groups": 128,
+      "nonempty_ctas": 64,
+      "work_hash": "99a95785b68921ad5dcaa1528fd2baadfd0dffcabf8762c7cd3186d4753f2e94"
+    },
+    "conditions": [
+      {
+        "mode": "b_alone",
+        "completed_A": 0,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 46367.99916625023,
+        "a_event_ns": null,
+        "b_event_ns": 34848.00085425377
+      },
+      {
+        "mode": "parallel_ab",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 181600.00443458557,
+        "a_event_ns": 135168.00105571747,
+        "b_event_ns": 167968.0049419403
+      },
+      {
+        "mode": "non_overlap_control",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 191615.9987449646,
+        "a_event_ns": 127039.99876976013,
+        "b_event_ns": 50239.99884724617
+      },
+      {
+        "mode": "empty_control",
+        "completed_A": 1,
+        "completed_B": 0,
+        "output_checks_passed": true,
+        "joint_event_ns": 140479.99680042267,
+        "a_event_ns": 128895.99800109863,
+        "b_event_ns": null
+      },
+      {
+        "mode": "serial_ab",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 190272.0034122467,
+        "a_event_ns": 126719.99633312225,
+        "b_event_ns": 50175.998359918594
+      },
+      {
+        "mode": "a_alone",
+        "completed_A": 1,
+        "completed_B": 0,
+        "output_checks_passed": true,
+        "joint_event_ns": 137792.00613498688,
+        "a_event_ns": 126975.99828243256,
+        "b_event_ns": null
+      },
+      {
+        "mode": "same_stream_control",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 186207.99481868744,
+        "a_event_ns": 127232.00023174286,
+        "b_event_ns": 48799.99905824661
+      },
+      {
+        "mode": "serial_ba",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 173792.0045852661,
+        "a_event_ns": 126944.00548934937,
+        "b_event_ns": 34784.00036692619
+      },
+      {
+        "mode": "parallel_ba",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 171424.001455307,
+        "a_event_ns": 128864.00520801544,
+        "b_event_ns": 159520.0002193451
+      }
+    ],
+    "warmup": [
+      {
+        "mode": "a_alone",
+        "completed_A": 1,
+        "completed_B": 0,
+        "output_checks_passed": true,
+        "joint_event_ns": 142624.00567531586,
+        "a_event_ns": 130912.00590133667,
+        "b_event_ns": null
+      },
+      {
+        "mode": "b_alone",
+        "completed_A": 0,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 61376.00168585777,
+        "a_event_ns": null,
+        "b_event_ns": 50239.99884724617
+      },
+      {
+        "mode": "serial_ab",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 200095.996260643,
+        "a_event_ns": 126783.99682044983,
+        "b_event_ns": 50400.00006556511
+      },
+      {
+        "mode": "serial_ba",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 175999.99904632568,
+        "a_event_ns": 126975.99828243256,
+        "b_event_ns": 34527.99841761589
+      },
+      {
+        "mode": "parallel_ab",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 179680.0047159195,
+        "a_event_ns": 133024.00708198547,
+        "b_event_ns": 163680.00209331512
+      },
+      {
+        "mode": "parallel_ba",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 168576.00212097168,
+        "a_event_ns": 129664.00384902954,
+        "b_event_ns": 158271.99816703796
+      },
+      {
+        "mode": "empty_control",
+        "completed_A": 1,
+        "completed_B": 0,
+        "output_checks_passed": true,
+        "joint_event_ns": 138815.9990310669,
+        "a_event_ns": 126719.99633312225,
+        "b_event_ns": null
+      },
+      {
+        "mode": "same_stream_control",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 186912.00017929077,
+        "a_event_ns": 127136.00695133209,
+        "b_event_ns": 48799.99905824661
+      },
+      {
+        "mode": "non_overlap_control",
+        "completed_A": 1,
+        "completed_B": 1,
+        "output_checks_passed": true,
+        "joint_event_ns": 192256.00361824036,
+        "a_event_ns": 126880.00500202179,
+        "b_event_ns": 50367.99982190132
+      }
+    ],
+    "probe_identity": {
+      "symbol": "fp32_light",
+      "registers_per_thread": 22,
+      "static_shared_bytes": 0,
+      "blocks_per_sm": 24
+    },
+    "standalone_acceptance": null,
+    "overlap_code_sha256": "231fdd591993578521398d8f43f6f4e8dc7de053f5662c020a2d0f84fb817853"
+  }
+}

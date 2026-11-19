@@ -1,0 +1,68 @@
+{
+  "profile": "P0",
+  "repetitions": 6,
+  "independent_worker_per_condition_block": true,
+  "compare_grids": true,
+  "comparison_grid": 64,
+  "fixed_gpu": "022c5f55-490e-ec54-3887-5f12510d273d",
+  "planned_order": [
+    {
+      "block": 0,
+      "precision": "nvfp4"
+    },
+    {
+      "block": 0,
+      "precision": "bf16"
+    },
+    {
+      "block": 1,
+      "precision": "bf16"
+    },
+    {
+      "block": 1,
+      "precision": "nvfp4"
+    },
+    {
+      "block": 2,
+      "precision": "nvfp4"
+    },
+    {
+      "block": 2,
+      "precision": "bf16"
+    },
+    {
+      "block": 3,
+      "precision": "bf16"
+    },
+    {
+      "block": 3,
+      "precision": "nvfp4"
+    },
+    {
+      "block": 4,
+      "precision": "nvfp4"
+    },
+    {
+      "block": 4,
+      "precision": "bf16"
+    },
+    {
+      "block": 5,
+      "precision": "bf16"
+    },
+    {
+      "block": 5,
+      "precision": "nvfp4"
+    }
+  ],
+  "status": "STOPPED",
+  "runs": [
+    {
+      "block": 0,
+      "precision": "nvfp4",
+      "run_id": "probe_20261119_025208_utc",
+      "launcher_rc": 1
+    }
+  ],
+  "reason": "launch blocked or failed; no idle polling or retry"
+}
